@@ -164,12 +164,6 @@ const SOURCES = {
     ["Britannica: Ibn Khaldūn", "https://www.britannica.com/biography/Ibn-Khaldun"],
     ["TDV İslâm Ansiklopedisi: İbn Haldûn", "https://islamansiklopedisi.org.tr/ibn-haldun"]
   ],
-  "ibn-nafis": [
-    ["Britannica: Ibn an-Nafīs", "https://www.britannica.com/biography/Ibn-an-Nafis"],
-    ["Islam Museum: Pulmonary circulation", "https://www.islam.museum/en/invention/pulmonary-circulation/"],
-    ["PubMed: Ibn al-Nafis, the pulmonary circulation, and the Islamic Golden Age", "https://pubmed.ncbi.nlm.nih.gov/18845773/"],
-    ["Library of Congress: Ibn al-Nafis, Compendium of the Canon of Medicine (World Digital Library)", "https://www.loc.gov/resource/gdcwdl.wdl_16193/?sp=96", "the birth year"]
-  ],
   "ibn-qayyim": [
     ["Oxford Reference: Ibn Qayyim al-Jawzīyah (Oxford Encyclopedia of the Islamic World)", "https://www.oxfordreference.com/display/10.1093/oi/authority.20110803095955635"],
     ["Oxford Reference: Ibn Qayyim al-Jawziyya (Oxford International Encyclopedia of Legal History)", "https://www.oxfordreference.com/display/10.1093/acref/9780195134056.001.0001/acref-9780195134056-e-387"],
@@ -245,10 +239,6 @@ const SOURCES = {
     ["TDV İslâm Ansiklopedisi: Kâtib Çelebi", "https://islamansiklopedisi.org.tr/katib-celebi"],
     ["TDV İslâm Ansiklopedisi: Mîzânü’l-hak", "https://islamansiklopedisi.org.tr/mizanul-hak", "Mizan al-haqq"]
   ],
-  "khwarizmi": [
-    ["MacTutor History of Mathematics: al-Khwarizmi", "https://mathshistory.st-andrews.ac.uk/Biographies/Al-Khwarizmi/"],
-    ["Biographical Encyclopedia of Astronomers (ISMI): Khwārizmī", "https://ismi.mpiwg-berlin.mpg.de/biography/Khwarizmi_BEA.htm"]
-  ],
   "kindi": [
     ["Biographical Encyclopedia of Astronomers (ISMI): Kindī", "https://ismi.mpiwg-berlin.mpg.de/biography/Kindi_BEA.htm"],
     ["Stanford Encyclopedia of Philosophy: al-Kindi", "https://plato.stanford.edu/entries/al-kindi/"],
@@ -275,10 +265,6 @@ const SOURCES = {
   "marjani": [
     ["Minbar. Islamic Studies 13 (2020): The works of Shihab al-Din al-Marjani on Islamic scholastic theology", "https://doi.org/10.31162/2618-9569-2020-13-1-103-116"],
     ["TDV İslâm Ansiklopedisi: Mercânî", "https://islamansiklopedisi.org.tr/mercani"]
-  ],
-  "masudi": [
-    ["Encyclopaedia Iranica: Masʿudi", "https://www.iranicaonline.org/articles/masudi/"],
-    ["Routledge: The Meadows of Gold, the Abbasids (preview)", "https://api.pageplace.de/preview/DT0400.9781136145223_A29484269/preview-9781136145223_A29484269.pdf", "the birth year"]
   ],
   "maturidi": [
     ["Britannica: Māturīdiyyah", "https://www.britannica.com/topic/Maturidiyah"],
@@ -314,10 +300,6 @@ const SOURCES = {
     ["Biographical Encyclopedia of Astronomers (ISMI): Ṭūsī", "https://ismi.mpiwg-berlin.mpg.de/biography/Tusi_BEA.htm"],
     ["TDV İslâm Ansiklopedisi: Tûsî, Nasîrüddin", "https://islamansiklopedisi.org.tr/tusi-nasiruddin"],
     ["Brill: al-Tadhkira fī ʿilm al-hayʾa", "https://www.degruyterbrill.com/document/isbn/9789004406476/html", "al-Tadhkira fi ilm al-hay’a"]
-  ],
-  "navoi": [
-    ["TDV İslâm Ansiklopedisi: Ali Şîr Nevâî", "https://islamansiklopedisi.org.tr/ali-sir-nevai"],
-    ["Library of Congress: The life and work of Navoi", "https://loc.gov/loc/lcib/0705/navoi.html", "the link with Jami"]
   ],
   "nawawi": [
     ["Islam Museum: Imam al-Nawawi", "https://www.islam.museum/en/person/al-nawawi/"],

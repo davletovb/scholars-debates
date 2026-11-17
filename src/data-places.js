@@ -79,7 +79,6 @@ const PLACES = {
   suhraward: ["Suhraward", 36.55, 48.30, "iran"],
   nishapur: ["Nishapur", 36.21, 58.80, "iran"],
   tus: ["Tus", 36.48, 59.52, "iran"],
-  mashhad: ["Mashhad", 36.30, 59.60, "iran"],
   nasa: ["Nasa", 37.98, 58.20, "iran"],
   merv: ["Merv", 37.66, 62.19, "iran"],
   herat: ["Herat", 34.35, 62.20, "iran"],

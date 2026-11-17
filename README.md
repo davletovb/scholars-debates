@@ -2,7 +2,7 @@
 
 An interactive timeline of Muslim scholars and the debates they argued over, from 610 to 1988. A partial globe sits behind the timeline and turns to where things happened: select a scholar to follow the places of their life, or a debate to see where it was argued, year by year. With nothing selected, the globe follows the centuries in view.
 
-The first version holds 99 scholars, 18 debates and 29 events across seven eras.
+The first version holds 95 scholars, 18 debates and 29 events across seven eras.
 
 ## Using it
 
@@ -92,7 +92,7 @@ Add an entry to `DEBATES` in `src/data-debates.js` with `phases` (spans of years
 
 ## Status
 
-Birth years, teacher links, works and several itineraries and dated events were checked in a November 2026 audit against specialist reference works (TDV İslâm Ansiklopedisi, Encyclopaedia Iranica, the Stanford Encyclopedia of Philosophy and others). Every scholar, debate and event now lists its sources (`src/data-sources.js`), shown at the end of its panel. A full-content review later that month narrowed several position cards and biographies, added death-date notes where sources disagree, and corrected a few map sites and routes (Siffin, Ulugh Beg, Ali Qushji, al-Nawawi). Ibadi and Isma’ili scholars, Southeast Asia, Africa beyond Sokoto and more women scholars are still to be added.
+Birth years, teacher links, works and several itineraries and dated events were checked in a November 2026 audit against specialist reference works (TDV İslâm Ansiklopedisi, Encyclopaedia Iranica, the Stanford Encyclopedia of Philosophy and others). Every scholar, debate and event now lists its sources (`src/data-sources.js`), shown at the end of its panel. A full-content review later that month narrowed several position cards and biographies, added death-date notes where sources disagree, and corrected a few map sites and routes (Siffin, Ulugh Beg, Ali Qushji, al-Nawawi). Ibadi and Isma’ili scholars, Southeast Asia, Africa beyond Sokoto and more women scholars are still to be added, as are debates for the sixteen scholars not yet linked to one (`npm run check` lists them).
 
 ## Credits
 

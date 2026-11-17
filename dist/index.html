@@ -316,7 +316,7 @@ body.panel-open .top { right: var(--panel-w); }
     <p>Positions in each debate are short editorial summaries, not quotations. The scholars listed under a position are associated with it: some argued it directly, others developed or defended it later, and some stand for their school. On the globe, a debate’s lines join the places where it was argued in the order of the timeline; they do not trace documented routes of transmission. A scholar’s route shows selected places from the sources, in order, including returns.</p>
     <p>Dates are shown in both the Common Era and the Hijri calendar; a “c.” marks an approximate year, and Hijri years worked out from Common Era dates are marked the same way. Where a birth year is unknown or disputed, the scholar’s panel says so, and any year used only to draw the life line is marked as an estimate. The timeline runs from 610 to 1988, the latest death of a scholar in the dataset; the last dated debate entry is from 1980.</p>
     <h3>What still needs work</h3>
-    <p>This is a first version with 99 scholars and 18 debates. Each scholar, debate and event lists its sources at the end of its panel, mostly entries in Britannica, Encyclopaedia Iranica, the Stanford Encyclopedia of Philosophy, Oxford Reference and the TDV İslâm Ansiklopedisi (in Turkish), with specialist studies where a date or attribution is disputed. Every scholar has at least one source in English. Dated debate entries that go beyond those sources cite their own. Ibadi and Isma’ili scholars, Southeast Asia, Africa beyond Sokoto and more women scholars are still to be added.</p>
+    <p>This is a first version with 95 scholars and 18 debates. Sixteen scholars are not yet linked to a debate; the debates they took part in, such as the Ottoman disputes of the seventeenth century, are still to be added. Each scholar, debate and event lists its sources at the end of its panel, mostly entries in Britannica, Encyclopaedia Iranica, the Stanford Encyclopedia of Philosophy, Oxford Reference and the TDV İslâm Ansiklopedisi (in Turkish), with specialist studies where a date or attribution is disputed. Every scholar has at least one source in English. Dated debate entries that go beyond those sources cite their own. Ibadi and Isma’ili scholars, Southeast Asia, Africa beyond Sokoto and more women scholars are still to be added.</p>
     <h3>The map</h3>
     <p>Region names on the globe are historical: Mawara’ al-nahr, Khurasan, al-Andalus. Coastlines, rivers and lakes are modern, from Natural Earth (public domain), except the Aral Sea and Lake Chad, which are drawn as fixed outlines of their historical extent. City positions are approximate, and a few places, such as Jami’s birthplace in the district of Jam, are marked at the district rather than the village.</p>
     <h3>Keyboard</h3>
@@ -412,7 +412,6 @@ const PLACES = {
   suhraward: ["Suhraward", 36.55, 48.30, "iran"],
   nishapur: ["Nishapur", 36.21, 58.80, "iran"],
   tus: ["Tus", 36.48, 59.52, "iran"],
-  mashhad: ["Mashhad", 36.30, 59.60, "iran"],
   nasa: ["Nasa", 37.98, 58.20, "iran"],
   merv: ["Merv", 37.66, 62.19, "iran"],
   herat: ["Herat", 34.35, 62.20, "iran"],
@@ -568,9 +567,6 @@ const FIGURES = [
   { id: "ibn-hanbal", name: "Ahmad ibn Hanbal", short: "Ibn Hanbal", ar: "أحمد بن حنبل", b: 780, d: 855, dah: 241, lane: "hadith", also: ["law", "theology"], schools: ["Hanbali", "Athari"], places: ["baghdad"], teachers: ["shafii"],
     text: "Hadith scholar and jurist of Baghdad. He refused to affirm that the Qur’an is created during the Mihna and was imprisoned and flogged, which made him a symbol of steadfastness. His Musnad, transmitted with additions by his son Abd Allah, holds some 27,000 reports in a standard modern edition, and the Hanbali school is named after him.",
     works: [["al-Musnad", "The supported (collection)"]] },
-  { id: "khwarizmi", name: "Muhammad ibn Musa al-Khwarizmi", short: "al-Khwarizmi", ar: "محمد بن موسى الخوارزمي", b: 780, bc: true, bUnknown: true, bNote: "Birth year and birthplace are not recorded; c. 780 and c. 790 are modern estimates.", d: 850, dc: true, lane: "sciences", places: ["baghdad"],
-    text: "Mathematician and astronomer who worked in Baghdad under al-Ma’mun, by tradition at the House of Wisdom. His name links him to Khwarazm, though where he was born is not recorded. His book on “completion and balancing” gave algebra its name, and Latin forms of his name gave us the word algorithm.",
-    works: [["al-Kitab al-mukhtasar fi hisab al-jabr wa’l-muqabala", "The compendious book on calculation by completion and balancing"]] },
   { id: "kindi", name: "Ya’qub ibn Ishaq al-Kindi", short: "al-Kindi", ar: "يعقوب بن إسحاق الكندي", b: 801, bc: true, d: 873, dc: true, lane: "philosophy", places: ["kufa", "basra", "baghdad"],
     text: "First major philosopher to write in Arabic, called “the philosopher of the Arabs”. He worked with a circle of translators of Greek works, correcting some of their versions, and argued that philosophy and revelation lead to the same truths.",
     works: [["Fi’l-falsafa al-ula", "On first philosophy"]] },
@@ -611,9 +607,6 @@ const FIGURES = [
   { id: "ashari", name: "Abu al-Hasan al-Ash’ari", short: "al-Ash’ari", ar: "أبو الحسن الأشعري", b: 874, bc: true, d: 936, dah: 324, lane: "theology", schools: ["Ash’ari"], places: ["basra", "baghdad"],
     text: "Trained as a Mu’tazili in Basra, he broke with them around the age of forty. He defended doctrines such as the uncreated Qur’an and the divine attributes with rational argument, and the Ash’ari school became the leading Sunni theology.",
     works: [["Maqalat al-Islamiyyin", "The doctrines of the Muslims"], ["al-Ibana", "The elucidation"]] },
-  { id: "masudi", name: "Ali ibn al-Husayn al-Mas’udi", short: "al-Mas’udi", ar: "علي بن الحسين المسعودي", b: 893, bc: true, bNote: "Born in the 890s; estimates include c. 890 and c. 896.", d: 956, dah: 345, lane: "letters", places: ["baghdad", "fustat"],
-    text: "Historian and traveller from Baghdad who visited Iran, India, East Africa and Syria. His Meadows of Gold joins world history to geography and to what he saw on his journeys.",
-    works: [["Muruj al-dhahab", "The meadows of gold"]] },
 
   // 945–1258
   { id: "abd-al-jabbar", name: "Qadi Abd al-Jabbar", short: "Abd al-Jabbar", ar: "القاضي عبد الجبار", b: 935, bc: true, d: 1025, dah: 415, lane: "theology", schools: ["Mu’tazili", "Shafi’i"], places: ["asadabad", "baghdad", "rayy"],
@@ -700,9 +693,6 @@ const FIGURES = [
   { id: "rumi", name: "Jalal al-Din Rumi", short: "Rumi", ar: "جلال الدين الرومي", b: 1207, d: 1273, dah: 672, lane: "sufism", places: ["balkh", "konya"],
     text: "Persian poet and scholar born in the region of Balkh. His family moved west around 1216, before the Mongol invasion that later biographies say they fled, and settled in Konya. His meeting with the wanderer Shams of Tabriz turned him to mystical poetry. His Masnavi is among the most read works of Sufism, and the Mevlevi order formed around his tomb.",
     works: [["Masnavi-yi ma’navi", "The spiritual couplets"], ["Divan-i Shams-i Tabrizi", "Rumi’s collected lyrics, named for Shams of Tabriz"]] },
-  { id: "ibn-nafis", name: "Ibn al-Nafis", short: "Ibn al-Nafis", ar: "ابن النفيس", b: 1213, bc: true, bNote: "Estimates range from 1210 to 1213.", d: 1288, dah: 687, lane: "sciences", schools: ["Shafi’i"], places: ["damascus", "cairo"],
-    text: "Physician trained in Damascus who made his career in Cairo, where he worked in its hospitals and left his house and library to the Mansuri hospital. In a commentary on Ibn Sina’s Canon he described the pulmonary circulation, blood passing from the heart to the lungs and back, three centuries before European physicians.",
-    works: [["Sharh tashrih al-Qanun", "Commentary on the anatomy of the Canon"]] },
   { id: "nawawi", name: "Yahya ibn Sharaf al-Nawawi", short: "al-Nawawi", ar: "يحيى بن شرف النووي", b: 1233, d: 1277, dah: 676, lane: "hadith", also: ["law"], schools: ["Shafi’i"], places: ["nawa", "damascus", "nawa"],
     text: "Shafi’i jurist and hadith scholar of Damascus. His Forty Hadith and Gardens of the Righteous are among the most read books in the Muslim world, and his legal works define the Shafi’i school’s settled positions.",
     works: [["al-Arba’un", "The forty (hadith)"], ["Riyad al-salihin", "Gardens of the righteous"], ["Minhaj al-talibin", "The students’ path"]] },
@@ -741,9 +731,6 @@ const FIGURES = [
   { id: "jami", name: "Abd al-Rahman Jami", short: "Jami", ar: "عبد الرحمن جامي", b: 1414, d: 1492, dah: 898, lane: "sufism", also: ["letters"], schools: ["Naqshbandi"], places: ["jam", "herat", "samarkand", "herat"],
     text: "Persian poet and Naqshbandi Sufi of Herat, born at Kharjerd in the district of Jam, between Mashhad and Herat. His Seven Thrones and his works explaining Ibn Arabi’s thought made him the leading scholar-poet of Timurid Herat.",
     works: [["Haft awrang", "The seven thrones"], ["Nafahat al-uns", "Breaths of intimacy"], ["Lawa’ih", "Flashes of light"]] },
-  { id: "navoi", name: "Alisher Navoi", short: "Alisher Navoi", ar: "علي شير نوائي", b: 1441, d: 1501, dah: 906, lane: "letters", places: ["herat", "mashhad", "herat", "samarkand", "herat"], teachers: [{ id: "jami", rel: "spiritual mentorship" }],
-    text: "Poet and statesman of Timurid Herat and patron of scholars and artists. He wrote mainly in Chagatai Turkic, and in The Judgment of Two Languages argued that Turkic could match Persian as a literary language. He is honoured as the founder of Uzbek literature.",
-    works: [["Khamsa", "The quintet"], ["Muhakamat al-lughatayn", "The judgment of two languages"]] },
   { id: "suyuti", name: "Jalal al-Din al-Suyuti", short: "al-Suyuti", ar: "جلال الدين السيوطي", b: 1445, d: 1505, dah: 911, lane: "quran", also: ["hadith", "law"], schools: ["Shafi’i"], places: ["cairo"],
     text: "Shafi’i scholar of Cairo who wrote several hundred works on the Qur’an, hadith, law, grammar and history. His al-Itqan is a standard handbook of the Qur’anic sciences, and he completed the Tafsir al-Jalalayn begun by his teacher al-Mahalli.",
     works: [["al-Itqan fi ulum al-Qur’an", "Mastery of the Qur’anic sciences"], ["Tafsir al-Jalalayn", "Commentary of the two Jalals, al-Mahalli and al-Suyuti"]] },
@@ -1376,12 +1363,6 @@ const SOURCES = {
     ["Britannica: Ibn Khaldūn", "https://www.britannica.com/biography/Ibn-Khaldun"],
     ["TDV İslâm Ansiklopedisi: İbn Haldûn", "https://islamansiklopedisi.org.tr/ibn-haldun"]
   ],
-  "ibn-nafis": [
-    ["Britannica: Ibn an-Nafīs", "https://www.britannica.com/biography/Ibn-an-Nafis"],
-    ["Islam Museum: Pulmonary circulation", "https://www.islam.museum/en/invention/pulmonary-circulation/"],
-    ["PubMed: Ibn al-Nafis, the pulmonary circulation, and the Islamic Golden Age", "https://pubmed.ncbi.nlm.nih.gov/18845773/"],
-    ["Library of Congress: Ibn al-Nafis, Compendium of the Canon of Medicine (World Digital Library)", "https://www.loc.gov/resource/gdcwdl.wdl_16193/?sp=96", "the birth year"]
-  ],
   "ibn-qayyim": [
     ["Oxford Reference: Ibn Qayyim al-Jawzīyah (Oxford Encyclopedia of the Islamic World)", "https://www.oxfordreference.com/display/10.1093/oi/authority.20110803095955635"],
     ["Oxford Reference: Ibn Qayyim al-Jawziyya (Oxford International Encyclopedia of Legal History)", "https://www.oxfordreference.com/display/10.1093/acref/9780195134056.001.0001/acref-9780195134056-e-387"],
@@ -1457,10 +1438,6 @@ const SOURCES = {
     ["TDV İslâm Ansiklopedisi: Kâtib Çelebi", "https://islamansiklopedisi.org.tr/katib-celebi"],
     ["TDV İslâm Ansiklopedisi: Mîzânü’l-hak", "https://islamansiklopedisi.org.tr/mizanul-hak", "Mizan al-haqq"]
   ],
-  "khwarizmi": [
-    ["MacTutor History of Mathematics: al-Khwarizmi", "https://mathshistory.st-andrews.ac.uk/Biographies/Al-Khwarizmi/"],
-    ["Biographical Encyclopedia of Astronomers (ISMI): Khwārizmī", "https://ismi.mpiwg-berlin.mpg.de/biography/Khwarizmi_BEA.htm"]
-  ],
   "kindi": [
     ["Biographical Encyclopedia of Astronomers (ISMI): Kindī", "https://ismi.mpiwg-berlin.mpg.de/biography/Kindi_BEA.htm"],
     ["Stanford Encyclopedia of Philosophy: al-Kindi", "https://plato.stanford.edu/entries/al-kindi/"],
@@ -1487,10 +1464,6 @@ const SOURCES = {
   "marjani": [
     ["Minbar. Islamic Studies 13 (2020): The works of Shihab al-Din al-Marjani on Islamic scholastic theology", "https://doi.org/10.31162/2618-9569-2020-13-1-103-116"],
     ["TDV İslâm Ansiklopedisi: Mercânî", "https://islamansiklopedisi.org.tr/mercani"]
-  ],
-  "masudi": [
-    ["Encyclopaedia Iranica: Masʿudi", "https://www.iranicaonline.org/articles/masudi/"],
-    ["Routledge: The Meadows of Gold, the Abbasids (preview)", "https://api.pageplace.de/preview/DT0400.9781136145223_A29484269/preview-9781136145223_A29484269.pdf", "the birth year"]
   ],
   "maturidi": [
     ["Britannica: Māturīdiyyah", "https://www.britannica.com/topic/Maturidiyah"],
@@ -1526,10 +1499,6 @@ const SOURCES = {
     ["Biographical Encyclopedia of Astronomers (ISMI): Ṭūsī", "https://ismi.mpiwg-berlin.mpg.de/biography/Tusi_BEA.htm"],
     ["TDV İslâm Ansiklopedisi: Tûsî, Nasîrüddin", "https://islamansiklopedisi.org.tr/tusi-nasiruddin"],
     ["Brill: al-Tadhkira fī ʿilm al-hayʾa", "https://www.degruyterbrill.com/document/isbn/9789004406476/html", "al-Tadhkira fi ilm al-hay’a"]
-  ],
-  "navoi": [
-    ["TDV İslâm Ansiklopedisi: Ali Şîr Nevâî", "https://islamansiklopedisi.org.tr/ali-sir-nevai"],
-    ["Library of Congress: The life and work of Navoi", "https://loc.gov/loc/lcib/0705/navoi.html", "the link with Jami"]
   ],
   "nawawi": [
     ["Islam Museum: Imam al-Nawawi", "https://www.islam.museum/en/person/al-nawawi/"],
