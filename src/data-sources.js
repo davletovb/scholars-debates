@@ -20,6 +20,7 @@ const SOURCES = {
   "abu-bakr-razi": [
     ["Library of Congress: al-Razi, The Comprehensive Book on Medicine, part 2 (World Digital Library)", "https://www.loc.gov/resource/gdcwdl.wdl_07458/?st=gallery"],
     ["Cambridge: Al-Rāzī (Religion, Learning and Science in the ʿAbbasid Period)", "https://www.cambridge.org/core/books/abs/religion-learning-and-science-in-the-abbasid-period/alrazi/762B6225FF0F3508D6B7CD7CB494218C"],
+    ["Stanford Encyclopedia of Philosophy: Abu Bakr al-Razi", "https://plato.stanford.edu/entries/abu-bakr-al-razi/"],
     ["Encyclopaedia Iranica: al-Ḥāwi", "https://www.iranicaonline.org/articles/hawi-medical-book/", "al-Hawi"]
   ],
   "abu-dawud": [
@@ -160,6 +161,7 @@ const SOURCES = {
   "ibn-ishaq": [
     ["Britannica: Sīrat Muḥammad rasūl Allāh", "https://www.britannica.com/topic/Sirat-Muhammad-rasul-Allah"],
     ["Britannica: Muhammad: biographical sources", "https://www.britannica.com/biography/Muhammad"],
+    ["Britannica: Ibn Isḥāq", "https://www.britannica.com/biography/Ibn-Ishaq"],
     ["TDV İslâm Ansiklopedisi: İbn İshak", "https://islamansiklopedisi.org.tr/ibn-ishak"]
   ],
   "ibn-kathir": [
@@ -168,7 +170,9 @@ const SOURCES = {
   ],
   "ibn-khaldun": [
     ["Britannica: Ibn Khaldūn", "https://www.britannica.com/biography/Ibn-Khaldun"],
-    ["TDV İslâm Ansiklopedisi: İbn Haldûn", "https://islamansiklopedisi.org.tr/ibn-haldun"]
+    ["Britannica: Ibn Khaldūn, the Muqaddimah", "https://www.britannica.com/biography/Ibn-Khaldun/The-Muqaddimah-Ibn-Khalduns-philosophy-of-history"],
+    ["TDV İslâm Ansiklopedisi: İbn Haldûn", "https://islamansiklopedisi.org.tr/ibn-haldun"],
+    ["PhilPapers: Ibn Khaldun and Philosophy", "https://philpapers.org/rec/ILKIKA", "his critique of philosophy"]
   ],
   "ibn-qayyim": [
     ["Oxford Reference: Ibn Qayyim al-Jawzīyah (Oxford Encyclopedia of the Islamic World)", "https://www.oxfordreference.com/display/10.1093/oi/authority.20110803095955635"],
@@ -215,7 +219,8 @@ const SOURCES = {
   ],
   "jilani": [
     ["Encyclopaedia Iranica: ʿAbd-al-Qāder Jīlānī", "https://www.iranicaonline.org/articles/abd-al-qader-jilani/"],
-    ["Oxford Academic: ʿAbd al-Qadir al-Jilani", "https://academic.oup.com/reference/62361/reference-article-abstract/554575952"]
+    ["Oxford Academic: ʿAbd al-Qadir al-Jilani", "https://academic.oup.com/reference/62361/reference-article-abstract/554575952"],
+    ["Encyclopedia of the Modern Middle East: Qadiriyya Order", "https://encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/qadiriyya-order", "the joining of Hanbali and Sufi thought"]
   ],
   "junayd": [
     ["Britannica: Sufism: thought and practice", "https://www.britannica.com/topic/Sufism/Sufi-thought-and-practice"],
@@ -400,7 +405,8 @@ const SOURCES = {
   ],
   "taftazani": [
     ["ISMI (Max Planck Institute): Saʿd al-Dīn al-Taftāzānī", "https://ismi.mpiwg-berlin.mpg.de/person/8727"],
-    ["TDV İslâm Ansiklopedisi: Teftâzânî", "https://islamansiklopedisi.org.tr/teftazani"]
+    ["TDV İslâm Ansiklopedisi: Teftâzânî", "https://islamansiklopedisi.org.tr/teftazani"],
+    ["Encyclopedia of Religion: Taftāzānī, al-", "https://encyclopedia.com/environment/encyclopedias-almanacs-transcripts-and-maps/taftazani-al", "his view of takwin in the 1367 commentary"]
   ],
   "tahawi": [
     ["Oxford Reference: al-Tahawi (Biographical Encyclopaedia of Islamic Philosophy)", "https://oxfordreference.com/view/10.1093/oi/authority.20110803095405786"],
@@ -436,7 +442,8 @@ const SOURCES = {
   "debate:attributes": [
     ["Britannica: kalām", "https://www.britannica.com/topic/kalam-Islam"],
     ["Britannica: taʾwīl", "https://www.britannica.com/topic/tawil"],
-    ["Quranic Arabic Corpus: Q. 20:5 with translations", "https://corpus.quran.com/translation.jsp?chapter=20&verse=5", "the wording of Q. 20:5"]
+    ["Quranic Arabic Corpus: Q. 20:5 with translations", "https://corpus.quran.com/translation.jsp?chapter=20&verse=5", "the wording of Q. 20:5"],
+    ["Encyclopedia of Religion: Taftāzānī, al-", "https://encyclopedia.com/environment/encyclopedias-almanacs-transcripts-and-maps/taftazani-al", "al-Taftazani on takwin"]
   ],
   "debate:caliphate-modern": [
     ["Britannica: Islamic world: reform and revival in the colonial period", "https://www.britannica.com/topic/Islamic-world/The-rise-of-British-colonialism-to-the-end-of-the-Ottoman-Empire"],
@@ -684,6 +691,10 @@ const SOURCES = {
   "thread:hadith-criticism:1438": [
     ["Islam Museum: Completion of Fath al-Bari, 842/1438", "https://www.islam.museum/en/event/fath-al-bari-complete-842/"]
   ],
+  "thread:hadith-criticism:745": [
+    ["Akram Nadwi: The Status of Muhammad ibn Ishaq, Authority in Maghazi", "https://akramnadwi.com/?p=3561"],
+    ["Britannica: Ibn Isḥāq", "https://www.britannica.com/biography/Ibn-Ishaq"]
+  ],
   "thread:hadith-criticism:846": [
     ["Britannica: al-Bukhārī", "https://www.britannica.com/biography/al-Bukhari"],
     ["TDV İslâm Ansiklopedisi: el-Câmiu’s-sahîh", "https://islamansiklopedisi.org.tr/el-camius-sahih--buhari"],
@@ -717,9 +728,18 @@ const SOURCES = {
   "thread:maqasid:1946": [
     ["TDV İslâm Ansiklopedisi: Makāsıdü’ş-şerîa", "https://islamansiklopedisi.org.tr/makasidus-seria"]
   ],
+  "thread:philosophy:1377": [
+    ["Britannica: Ibn Khaldūn, the Muqaddimah", "https://www.britannica.com/biography/Ibn-Khaldun/The-Muqaddimah-Ibn-Khalduns-philosophy-of-history"],
+    ["CEEOL: Haris Dubravac, About Limitations of Intellect, Ibn Khaldūn’s Criticism of Philosophy", "https://ceeol.com/search/article-detail?id=1176198"],
+    ["Encyclopedia.com: Ibn Khaldūn", "https://encyclopedia.com/topic/Ibn_Khaldun.aspx", "completion in 1377"]
+  ],
   "thread:philosophy:838": [
     ["Oxford Academic: The rise of falsafa: al-Kindī, On First Philosophy", "https://academic.oup.com/edited-volume/38657/chapter-abstract/335767408"],
     ["Stanford Encyclopedia of Philosophy: al-Kindi", "https://plato.stanford.edu/entries/al-kindi/"]
+  ],
+  "thread:philosophy:920": [
+    ["DergiPark (PDF): Abu Hatim al-Razi’s responses to Abu Bakr al-Razi on prophecy in Aʿlam al-nubuwwa", "https://dergipark.org.tr/tr/download/article-file/918787"],
+    ["Stanford Encyclopedia of Philosophy: Abu Bakr al-Razi", "https://plato.stanford.edu/entries/abu-bakr-al-razi/", "Abu Hatim’s account of their debates and its reliability"]
   ],
   "thread:reason-law:815": [
     ["TDV İslâm Ansiklopedisi: Şâfiî", "https://islamansiklopedisi.org.tr/safii"]
@@ -760,6 +780,10 @@ const SOURCES = {
   ],
   "thread:sama:1380": [
     ["Shahzad Bashir: Movement and Stillness, the Practice of Sufi Dhikr in Fourteenth-Century Central Asia (PDF)", "https://www.themathesontrust.org/papers/islam/Bashir-Movement_and_Stillness_Sufi_Dhikr.pdf"]
+  ],
+  "thread:sufism-law:1127": [
+    ["Encyclopedia of the Modern Middle East: Qadiriyya Order", "https://encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/qadiriyya-order"],
+    ["Britannica: ʿAbd al-Qādir al-Jīlānī", "https://www.britannica.com/biography/Abd-al-Qadir-al-Jilani", "first preaching in 1127"]
   ],
   "thread:tafsir:1134": [
     ["Brill: Andrew Lane, A Traditional Muʿtazilite Qurʾān Commentary", "https://brill.com/display/book/9789047417767/front-4.pdf", "the completion date, 23 Rabiʿ II 528 (20 February 1134) at Mecca"]

@@ -46,6 +46,7 @@ const PLACES = {
   tahta: ["Tahta", 26.77, 31.50, "sham"],
   tunis: ["Tunis", 36.80, 10.18, "andalus"],
   fez: ["Fez", 34.06, -4.98, "andalus"],
+  qalat: ["Qal’at Ibn Salama, near Frenda", 35.02, 1.05, "andalus"],
   marrakesh: ["Marrakesh", 31.63, -7.99, "andalus"],
   cordoba: ["Cordoba", 37.88, -4.78, "andalus"],
   seville: ["Seville", 37.39, -5.98, "andalus"],

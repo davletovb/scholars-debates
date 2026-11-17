@@ -316,7 +316,7 @@ body.panel-open .top { right: var(--panel-w); }
     <p>Positions in each debate are short editorial summaries, not quotations. The scholars listed under a position are associated with it: some argued it directly, others developed or defended it later, and some stand for their school. On the globe, a debate’s lines join the places where it was argued in the order of the timeline; they do not trace documented routes of transmission. A scholar’s route shows selected places from the sources, in order, including returns.</p>
     <p>Dates are shown in both the Common Era and the Hijri calendar; a “c.” marks an approximate year, and Hijri years worked out from Common Era dates are marked the same way. Where a birth year is unknown or disputed, the scholar’s panel says so, and any year used only to draw the life line is marked as an estimate. The timeline runs from 610 to 1988, the latest death of a scholar in the dataset; the last dated debate entry is from 1980.</p>
     <h3>What still needs work</h3>
-    <p>This is a first version with 96 scholars and 20 debates. Eleven scholars are not yet linked to a debate; the debates they took part in, such as the Ottoman disputes of the sixteenth and seventeenth centuries, are still to be added. Each scholar, debate and event lists its sources at the end of its panel, mostly entries in Britannica, Encyclopaedia Iranica, the Stanford Encyclopedia of Philosophy, Oxford Reference and the TDV İslâm Ansiklopedisi (in Turkish), with specialist studies where a date or attribution is disputed. Every scholar has at least one source in English. Dated debate entries that go beyond those sources cite their own. Ibadi and Isma’ili scholars, Southeast Asia, Africa beyond Sokoto and more women scholars are still to be added.</p>
+    <p>This is a first version with 96 scholars and 20 debates. Six scholars are not yet linked to a debate; the debates they took part in, such as the Ottoman disputes of the sixteenth and seventeenth centuries, are still to be added. Each scholar, debate and event lists its sources at the end of its panel, mostly entries in Britannica, Encyclopaedia Iranica, the Stanford Encyclopedia of Philosophy, Oxford Reference and the TDV İslâm Ansiklopedisi (in Turkish), with specialist studies where a date or attribution is disputed. Every scholar has at least one source in English. Dated debate entries that go beyond those sources cite their own. Ibadi and Isma’ili scholars, Southeast Asia, Africa beyond Sokoto and more women scholars are still to be added.</p>
     <h3>The map</h3>
     <p>Region names on the globe are historical: Mawara’ al-nahr, Khurasan, al-Andalus. Coastlines, rivers and lakes are modern, from Natural Earth (public domain), except the Aral Sea and Lake Chad, which are drawn as fixed outlines of their historical extent. City positions are approximate, and a few places, such as Jami’s birthplace in the district of Jam, are marked at the district rather than the village.</p>
     <h3>Keyboard</h3>
@@ -379,6 +379,7 @@ const PLACES = {
   tahta: ["Tahta", 26.77, 31.50, "sham"],
   tunis: ["Tunis", 36.80, 10.18, "andalus"],
   fez: ["Fez", 34.06, -4.98, "andalus"],
+  qalat: ["Qal’at Ibn Salama, near Frenda", 35.02, 1.05, "andalus"],
   marrakesh: ["Marrakesh", 31.63, -7.99, "andalus"],
   cordoba: ["Cordoba", 37.88, -4.78, "andalus"],
   seville: ["Seville", 37.39, -5.98, "andalus"],
@@ -719,7 +720,7 @@ const FIGURES = [
   { id: "taftazani", name: "Sa’d al-Din al-Taftazani", short: "al-Taftazani", ar: "سعد الدين التفتازاني", b: 1322, d: 1390, dah: 792, lane: "theology", places: ["nasa", "herat", "samarkand"],
     text: "Scholar from Khurasan who taught at Timur’s court in Samarkand. His commentaries on logic, rhetoric, legal theory and al-Nasafi’s creed became core textbooks in madrasas from the Ottoman lands to India.",
     works: [["Sharh al-Aqa’id al-Nasafiyya", "Commentary on al-Nasafi’s creed"], ["al-Mutawwal", "The long (commentary on rhetoric)"]] },
-  { id: "ibn-khaldun", name: "Ibn Khaldun", short: "Ibn Khaldun", ar: "ابن خلدون", b: 1332, d: 1406, dah: 808, lane: "letters", schools: ["Maliki"], places: ["tunis", "fez", "granada", "cairo", "damascus", "cairo"],
+  { id: "ibn-khaldun", name: "Ibn Khaldun", short: "Ibn Khaldun", ar: "ابن خلدون", b: 1332, d: 1406, dah: 808, lane: "letters", schools: ["Maliki"], places: ["tunis", "fez", "granada", "qalat", "cairo", "damascus", "cairo"],
     text: "Historian and Maliki judge born in Tunis who served courts across North Africa and al-Andalus and ended his life in Cairo. In the Muqaddima he explained the rise and fall of dynasties through group solidarity. He met Timur outside Damascus in 1401.",
     works: [["al-Muqaddima", "The introduction to his Kitab al-ibar, often published on its own"], ["Kitab al-ibar", "The book of lessons"]] },
   { id: "ibn-hajar", name: "Ibn Hajar al-Asqalani", short: "Ibn Hajar", ar: "ابن حجر العسقلاني", b: 1372, d: 1449, dah: 852, lane: "hadith", schools: ["Shafi’i"], places: ["cairo"],
@@ -892,6 +893,7 @@ const DEBATES = [
     ],
     thread: [
       { y: 670, c: true, text: "Aisha teaches and corrects reports in Medina.", who: ["aisha"], at: ["medina"] },
+      { y: 745, c: true, text: "In Medina, Malik and others attack Ibn Ishaq’s reliability. Later critics such as Ibn Hanbal accept his reports on the Prophet’s campaigns but not as evidence for rulings of law.", who: ["ibn-ishaq", "malik"], at: ["medina"] },
       { y: 770, c: true, text: "Malik compiles the Muwatta’, joining hadith to Medinan practice.", who: ["malik"], at: ["medina"] },
       { y: 830, c: true, text: "Ibn Hanbal assembles his Musnad in Baghdad.", who: ["ibn-hanbal"], at: ["baghdad"] },
       { y: 846, c: true, text: "Al-Bukhari completes his Sahih, which he said took sixteen years. Reports place its writing in Mecca, Medina and Bukhara.", who: ["bukhari"], at: ["mecca", "medina", "bukhara"] },
@@ -931,7 +933,7 @@ const DEBATES = [
     positions: [
       { name: "No attributes distinct from the essence", text: "To protect God’s unity, His knowledge and power are not things added to His essence.", who: ["wasil", "abd-al-jabbar"] },
       { name: "Affirm without asking how", text: "Accept the texts as they come, without likening God to creatures and without explaining them away.", who: ["ibn-hanbal", "ibn-taymiyya"] },
-      { name: "Eternal attributes affirmed by argument", text: "God has eternal attributes such as knowledge, power and speech, and reason can argue for them.", who: ["ashari", "maturidi"] },
+      { name: "Eternal attributes affirmed by argument", text: "God has eternal attributes such as knowledge, power and speech, and reason can argue for them. Maturidis add that God’s act of bringing things into being (takwin) is itself an eternal attribute; al-Taftazani accepted this in his commentary on al-Nasafi’s creed (1367), though his later works side with the Ash’aris.", who: ["ashari", "maturidi", "taftazani"] },
       { name: "Figurative reading of bodily terms", text: "Texts that seem to give God a body or a place may be read figuratively, by their sense in Arabic and the demands of reason.", who: ["juwayni", "fakhr-razi"] }
     ],
     thread: [
@@ -969,7 +971,7 @@ const DEBATES = [
     text: "As ascetics became Sufis, they described states of the heart and a knowledge beyond outward rules. Some jurists feared this would loosen obedience to the Law; Sufi authors replied that the inner path fulfils it. Al-Hallaj’s execution sharpened the debate, and al-Qushayri and al-Ghazali gave Sufism a lasting place within Sunni learning.",
     positions: [
       { name: "Love beyond reward", text: "God is to be loved for Himself, not for paradise or out of fear of hell.", who: ["rabia"] },
-      { name: "The path within the Law", text: "Mystical experience is valid only within the bounds of the Law; sobriety is higher than ecstasy.", who: ["junayd", "qushayri", "ghazali"] },
+      { name: "The path within the Law", text: "Mystical experience is valid only within the bounds of the Law; sobriety is higher than ecstasy.", who: ["junayd", "qushayri", "ghazali", "jilani"] },
       { name: "Speech from the state of union", text: "Ecstatic sayings attributed to al-Hallaj, such as “I am the Truth”, were read as the mystic speaking from union with God; their meaning and his intent remain disputed.", who: ["hallaj"] },
       { name: "Suspicion of new practices", text: "Some jurists and hadith scholars opposed Sufi claims to special knowledge and practices such as listening to music.", who: [] }
     ],
@@ -978,7 +980,8 @@ const DEBATES = [
       { y: 880, c: true, text: "Al-Junayd teaches sober Sufism in Baghdad.", who: ["junayd"], at: ["baghdad"] },
       { y: 922, text: "Al-Hallaj is executed in Baghdad after a long trial.", who: ["hallaj"], at: ["baghdad"] },
       { y: 1045, text: "Al-Qushayri writes his Epistle in Nishapur.", who: ["qushayri"], at: ["nishapur"] },
-      { y: 1100, c: true, text: "Al-Ghazali writes The Revival of the Religious Sciences after leaving Baghdad.", who: ["ghazali"], at: ["damascus", "tus"] }
+      { y: 1100, c: true, text: "Al-Ghazali writes The Revival of the Religious Sciences after leaving Baghdad.", who: ["ghazali"], at: ["damascus", "tus"] },
+      { y: 1127, text: "Abd al-Qadir al-Jilani, trained in Hanbali law, begins preaching in Baghdad; his sermons and books join Hanbali law with Sufism.", who: ["jilani"], at: ["baghdad"] }
     ],
     related: ["unity-being", "sama"] },
 
@@ -1004,22 +1007,26 @@ const DEBATES = [
   { id: "philosophy", title: "Philosophy and revelation", term: "al-falsafa wa’l-shar’", ar: "الفلسفة والشرع",
     phases: [[830, 1040], [1090, 1200]], lanes: ["philosophy", "theology"],
     question: "Can Greek philosophy and revelation both be true, and who decides when they seem to clash?",
-    text: "The translation of Greek works raised the question of whether philosophy and revelation agree. Al-Kindi and al-Farabi argued that they reach the same truth by different paths; Ibn Sina built a complete system. Al-Ghazali judged three of its doctrines to be unbelief. Ibn Rushd replied that the Law commands philosophical study of those capable of demonstration, and that al-Ghazali misread the philosophers.",
+    text: "The translation of Greek works raised the question of whether philosophy and revelation agree. Al-Kindi and al-Farabi argued that they reach the same truth by different paths; Ibn Sina built a complete system. Al-Ghazali judged three of its doctrines to be unbelief. Ibn Rushd replied that the Law commands philosophical study of those capable of demonstration, and that al-Ghazali misread the philosophers. Earlier, Abu Bakr al-Razi was reported to deny that prophets are needed at all; later, Ibn Khaldun kept logic but doubted that the philosophers’ metaphysics could be proven.",
     positions: [
       { name: "One truth, two paths", text: "Philosophy and revelation express the same truth, one by demonstration and the other by images for all people.", who: ["kindi", "farabi", "ibn-sina", "ibn-tufayl"] },
       { name: "Philosophy errs on key points", text: "Logic and mathematics are sound, but three of the philosophers’ teachings contradict revelation, as al-Ghazali reads them: the eternity of the world, that God knows particulars only in a universal way, and the denial of bodily resurrection.", who: ["ghazali"] },
       { name: "The Law commands philosophy", text: "In the Decisive Treatise, scripture obliges those able to reason by demonstration to study philosophy, and where demonstration and the text seem to clash, the text is to be interpreted. The Incoherence of the Incoherence answers al-Ghazali point by point.", who: ["ibn-rushd"] },
-      { name: "Wisdom by illumination", text: "True philosophy joins reasoning with direct experience of light.", who: ["suhrawardi"] }
+      { name: "Wisdom by illumination", text: "True philosophy joins reasoning with direct experience of light.", who: ["suhrawardi"] },
+      { name: "Reason without prophets", text: "God gives reason to all people equally, so no one is singled out to bring a revealed law, and revelation is not needed. This view is known mainly from the account of a hostile opponent.", who: ["abu-bakr-razi"] },
+      { name: "Logic yes, metaphysics unproven", text: "Logic is a sound tool, but the philosophers’ claims about what lies beyond the senses cannot be proven and do not bring the happiness they promise.", who: ["ibn-khaldun"] }
     ],
     thread: [
       { y: 838, c: true, text: "Al-Kindi dedicates On First Philosophy to the caliph al-Mu’tasim (r. 833–842).", who: ["kindi"], at: ["baghdad"] },
+      { y: 920, c: true, text: "In Rayy, the Isma’ili missionary Abu Hatim al-Razi debates Abu Bakr al-Razi face to face; his later Proofs of Prophecy has al-Razi deny that prophets are needed.", who: ["abu-bakr-razi"], at: ["rayy"] },
       { y: 940, c: true, text: "Al-Farabi writes on the virtuous city.", who: ["farabi"], at: ["baghdad", "aleppo"] },
       { y: 1020, c: true, text: "Ibn Sina writes The Book of Healing.", who: ["ibn-sina"], at: ["hamadan", "isfahan"] },
       { y: 1095, text: "Al-Ghazali writes The Incoherence of the Philosophers.", who: ["ghazali"], at: ["baghdad"] },
       { y: 1170, c: true, text: "Ibn Tufayl writes Hayy ibn Yaqzan in Marrakesh.", who: ["ibn-tufayl"], at: ["marrakesh"] },
       { y: 1180, c: true, text: "Ibn Rushd answers al-Ghazali in The Incoherence of the Incoherence.", who: ["ibn-rushd"], at: ["cordoba"] },
       { y: 1186, c: true, text: "Suhrawardi writes The Philosophy of Illumination.", who: ["suhrawardi"], at: ["aleppo"] },
-      { y: 1205, c: true, text: "Fakhr al-Din al-Razi draws philosophy into theology.", who: ["fakhr-razi"], at: ["herat"] }
+      { y: 1205, c: true, text: "Fakhr al-Din al-Razi draws philosophy into theology.", who: ["fakhr-razi"], at: ["herat"] },
+      { y: 1377, text: "At Qal’at Ibn Salama, Ibn Khaldun completes the first draft of the Muqaddima, which he went on revising; its survey of the sciences includes a refutation of philosophy.", who: ["ibn-khaldun"], at: ["qalat"] }
     ],
     related: ["heavens", "unity-being"] },
 
@@ -1262,6 +1269,7 @@ const SOURCES = {
   "abu-bakr-razi": [
     ["Library of Congress: al-Razi, The Comprehensive Book on Medicine, part 2 (World Digital Library)", "https://www.loc.gov/resource/gdcwdl.wdl_07458/?st=gallery"],
     ["Cambridge: Al-Rāzī (Religion, Learning and Science in the ʿAbbasid Period)", "https://www.cambridge.org/core/books/abs/religion-learning-and-science-in-the-abbasid-period/alrazi/762B6225FF0F3508D6B7CD7CB494218C"],
+    ["Stanford Encyclopedia of Philosophy: Abu Bakr al-Razi", "https://plato.stanford.edu/entries/abu-bakr-al-razi/"],
     ["Encyclopaedia Iranica: al-Ḥāwi", "https://www.iranicaonline.org/articles/hawi-medical-book/", "al-Hawi"]
   ],
   "abu-dawud": [
@@ -1402,6 +1410,7 @@ const SOURCES = {
   "ibn-ishaq": [
     ["Britannica: Sīrat Muḥammad rasūl Allāh", "https://www.britannica.com/topic/Sirat-Muhammad-rasul-Allah"],
     ["Britannica: Muhammad: biographical sources", "https://www.britannica.com/biography/Muhammad"],
+    ["Britannica: Ibn Isḥāq", "https://www.britannica.com/biography/Ibn-Ishaq"],
     ["TDV İslâm Ansiklopedisi: İbn İshak", "https://islamansiklopedisi.org.tr/ibn-ishak"]
   ],
   "ibn-kathir": [
@@ -1410,7 +1419,9 @@ const SOURCES = {
   ],
   "ibn-khaldun": [
     ["Britannica: Ibn Khaldūn", "https://www.britannica.com/biography/Ibn-Khaldun"],
-    ["TDV İslâm Ansiklopedisi: İbn Haldûn", "https://islamansiklopedisi.org.tr/ibn-haldun"]
+    ["Britannica: Ibn Khaldūn, the Muqaddimah", "https://www.britannica.com/biography/Ibn-Khaldun/The-Muqaddimah-Ibn-Khalduns-philosophy-of-history"],
+    ["TDV İslâm Ansiklopedisi: İbn Haldûn", "https://islamansiklopedisi.org.tr/ibn-haldun"],
+    ["PhilPapers: Ibn Khaldun and Philosophy", "https://philpapers.org/rec/ILKIKA", "his critique of philosophy"]
   ],
   "ibn-qayyim": [
     ["Oxford Reference: Ibn Qayyim al-Jawzīyah (Oxford Encyclopedia of the Islamic World)", "https://www.oxfordreference.com/display/10.1093/oi/authority.20110803095955635"],
@@ -1457,7 +1468,8 @@ const SOURCES = {
   ],
   "jilani": [
     ["Encyclopaedia Iranica: ʿAbd-al-Qāder Jīlānī", "https://www.iranicaonline.org/articles/abd-al-qader-jilani/"],
-    ["Oxford Academic: ʿAbd al-Qadir al-Jilani", "https://academic.oup.com/reference/62361/reference-article-abstract/554575952"]
+    ["Oxford Academic: ʿAbd al-Qadir al-Jilani", "https://academic.oup.com/reference/62361/reference-article-abstract/554575952"],
+    ["Encyclopedia of the Modern Middle East: Qadiriyya Order", "https://encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/qadiriyya-order", "the joining of Hanbali and Sufi thought"]
   ],
   "junayd": [
     ["Britannica: Sufism: thought and practice", "https://www.britannica.com/topic/Sufism/Sufi-thought-and-practice"],
@@ -1642,7 +1654,8 @@ const SOURCES = {
   ],
   "taftazani": [
     ["ISMI (Max Planck Institute): Saʿd al-Dīn al-Taftāzānī", "https://ismi.mpiwg-berlin.mpg.de/person/8727"],
-    ["TDV İslâm Ansiklopedisi: Teftâzânî", "https://islamansiklopedisi.org.tr/teftazani"]
+    ["TDV İslâm Ansiklopedisi: Teftâzânî", "https://islamansiklopedisi.org.tr/teftazani"],
+    ["Encyclopedia of Religion: Taftāzānī, al-", "https://encyclopedia.com/environment/encyclopedias-almanacs-transcripts-and-maps/taftazani-al", "his view of takwin in the 1367 commentary"]
   ],
   "tahawi": [
     ["Oxford Reference: al-Tahawi (Biographical Encyclopaedia of Islamic Philosophy)", "https://oxfordreference.com/view/10.1093/oi/authority.20110803095405786"],
@@ -1678,7 +1691,8 @@ const SOURCES = {
   "debate:attributes": [
     ["Britannica: kalām", "https://www.britannica.com/topic/kalam-Islam"],
     ["Britannica: taʾwīl", "https://www.britannica.com/topic/tawil"],
-    ["Quranic Arabic Corpus: Q. 20:5 with translations", "https://corpus.quran.com/translation.jsp?chapter=20&verse=5", "the wording of Q. 20:5"]
+    ["Quranic Arabic Corpus: Q. 20:5 with translations", "https://corpus.quran.com/translation.jsp?chapter=20&verse=5", "the wording of Q. 20:5"],
+    ["Encyclopedia of Religion: Taftāzānī, al-", "https://encyclopedia.com/environment/encyclopedias-almanacs-transcripts-and-maps/taftazani-al", "al-Taftazani on takwin"]
   ],
   "debate:caliphate-modern": [
     ["Britannica: Islamic world: reform and revival in the colonial period", "https://www.britannica.com/topic/Islamic-world/The-rise-of-British-colonialism-to-the-end-of-the-Ottoman-Empire"],
@@ -1926,6 +1940,10 @@ const SOURCES = {
   "thread:hadith-criticism:1438": [
     ["Islam Museum: Completion of Fath al-Bari, 842/1438", "https://www.islam.museum/en/event/fath-al-bari-complete-842/"]
   ],
+  "thread:hadith-criticism:745": [
+    ["Akram Nadwi: The Status of Muhammad ibn Ishaq, Authority in Maghazi", "https://akramnadwi.com/?p=3561"],
+    ["Britannica: Ibn Isḥāq", "https://www.britannica.com/biography/Ibn-Ishaq"]
+  ],
   "thread:hadith-criticism:846": [
     ["Britannica: al-Bukhārī", "https://www.britannica.com/biography/al-Bukhari"],
     ["TDV İslâm Ansiklopedisi: el-Câmiu’s-sahîh", "https://islamansiklopedisi.org.tr/el-camius-sahih--buhari"],
@@ -1959,9 +1977,18 @@ const SOURCES = {
   "thread:maqasid:1946": [
     ["TDV İslâm Ansiklopedisi: Makāsıdü’ş-şerîa", "https://islamansiklopedisi.org.tr/makasidus-seria"]
   ],
+  "thread:philosophy:1377": [
+    ["Britannica: Ibn Khaldūn, the Muqaddimah", "https://www.britannica.com/biography/Ibn-Khaldun/The-Muqaddimah-Ibn-Khalduns-philosophy-of-history"],
+    ["CEEOL: Haris Dubravac, About Limitations of Intellect, Ibn Khaldūn’s Criticism of Philosophy", "https://ceeol.com/search/article-detail?id=1176198"],
+    ["Encyclopedia.com: Ibn Khaldūn", "https://encyclopedia.com/topic/Ibn_Khaldun.aspx", "completion in 1377"]
+  ],
   "thread:philosophy:838": [
     ["Oxford Academic: The rise of falsafa: al-Kindī, On First Philosophy", "https://academic.oup.com/edited-volume/38657/chapter-abstract/335767408"],
     ["Stanford Encyclopedia of Philosophy: al-Kindi", "https://plato.stanford.edu/entries/al-kindi/"]
+  ],
+  "thread:philosophy:920": [
+    ["DergiPark (PDF): Abu Hatim al-Razi’s responses to Abu Bakr al-Razi on prophecy in Aʿlam al-nubuwwa", "https://dergipark.org.tr/tr/download/article-file/918787"],
+    ["Stanford Encyclopedia of Philosophy: Abu Bakr al-Razi", "https://plato.stanford.edu/entries/abu-bakr-al-razi/", "Abu Hatim’s account of their debates and its reliability"]
   ],
   "thread:reason-law:815": [
     ["TDV İslâm Ansiklopedisi: Şâfiî", "https://islamansiklopedisi.org.tr/safii"]
@@ -2002,6 +2029,10 @@ const SOURCES = {
   ],
   "thread:sama:1380": [
     ["Shahzad Bashir: Movement and Stillness, the Practice of Sufi Dhikr in Fourteenth-Century Central Asia (PDF)", "https://www.themathesontrust.org/papers/islam/Bashir-Movement_and_Stillness_Sufi_Dhikr.pdf"]
+  ],
+  "thread:sufism-law:1127": [
+    ["Encyclopedia of the Modern Middle East: Qadiriyya Order", "https://encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/qadiriyya-order"],
+    ["Britannica: ʿAbd al-Qādir al-Jīlānī", "https://www.britannica.com/biography/Abd-al-Qadir-al-Jilani", "first preaching in 1127"]
   ],
   "thread:tafsir:1134": [
     ["Brill: Andrew Lane, A Traditional Muʿtazilite Qurʾān Commentary", "https://brill.com/display/book/9789047417767/front-4.pdf", "the completion date, 23 Rabiʿ II 528 (20 February 1134) at Mecca"]

@@ -74,6 +74,7 @@ const DEBATES = [
     ],
     thread: [
       { y: 670, c: true, text: "Aisha teaches and corrects reports in Medina.", who: ["aisha"], at: ["medina"] },
+      { y: 745, c: true, text: "In Medina, Malik and others attack Ibn Ishaq’s reliability. Later critics such as Ibn Hanbal accept his reports on the Prophet’s campaigns but not as evidence for rulings of law.", who: ["ibn-ishaq", "malik"], at: ["medina"] },
       { y: 770, c: true, text: "Malik compiles the Muwatta’, joining hadith to Medinan practice.", who: ["malik"], at: ["medina"] },
       { y: 830, c: true, text: "Ibn Hanbal assembles his Musnad in Baghdad.", who: ["ibn-hanbal"], at: ["baghdad"] },
       { y: 846, c: true, text: "Al-Bukhari completes his Sahih, which he said took sixteen years. Reports place its writing in Mecca, Medina and Bukhara.", who: ["bukhari"], at: ["mecca", "medina", "bukhara"] },
@@ -113,7 +114,7 @@ const DEBATES = [
     positions: [
       { name: "No attributes distinct from the essence", text: "To protect God’s unity, His knowledge and power are not things added to His essence.", who: ["wasil", "abd-al-jabbar"] },
       { name: "Affirm without asking how", text: "Accept the texts as they come, without likening God to creatures and without explaining them away.", who: ["ibn-hanbal", "ibn-taymiyya"] },
-      { name: "Eternal attributes affirmed by argument", text: "God has eternal attributes such as knowledge, power and speech, and reason can argue for them.", who: ["ashari", "maturidi"] },
+      { name: "Eternal attributes affirmed by argument", text: "God has eternal attributes such as knowledge, power and speech, and reason can argue for them. Maturidis add that God’s act of bringing things into being (takwin) is itself an eternal attribute; al-Taftazani accepted this in his commentary on al-Nasafi’s creed (1367), though his later works side with the Ash’aris.", who: ["ashari", "maturidi", "taftazani"] },
       { name: "Figurative reading of bodily terms", text: "Texts that seem to give God a body or a place may be read figuratively, by their sense in Arabic and the demands of reason.", who: ["juwayni", "fakhr-razi"] }
     ],
     thread: [
@@ -151,7 +152,7 @@ const DEBATES = [
     text: "As ascetics became Sufis, they described states of the heart and a knowledge beyond outward rules. Some jurists feared this would loosen obedience to the Law; Sufi authors replied that the inner path fulfils it. Al-Hallaj’s execution sharpened the debate, and al-Qushayri and al-Ghazali gave Sufism a lasting place within Sunni learning.",
     positions: [
       { name: "Love beyond reward", text: "God is to be loved for Himself, not for paradise or out of fear of hell.", who: ["rabia"] },
-      { name: "The path within the Law", text: "Mystical experience is valid only within the bounds of the Law; sobriety is higher than ecstasy.", who: ["junayd", "qushayri", "ghazali"] },
+      { name: "The path within the Law", text: "Mystical experience is valid only within the bounds of the Law; sobriety is higher than ecstasy.", who: ["junayd", "qushayri", "ghazali", "jilani"] },
       { name: "Speech from the state of union", text: "Ecstatic sayings attributed to al-Hallaj, such as “I am the Truth”, were read as the mystic speaking from union with God; their meaning and his intent remain disputed.", who: ["hallaj"] },
       { name: "Suspicion of new practices", text: "Some jurists and hadith scholars opposed Sufi claims to special knowledge and practices such as listening to music.", who: [] }
     ],
@@ -160,7 +161,8 @@ const DEBATES = [
       { y: 880, c: true, text: "Al-Junayd teaches sober Sufism in Baghdad.", who: ["junayd"], at: ["baghdad"] },
       { y: 922, text: "Al-Hallaj is executed in Baghdad after a long trial.", who: ["hallaj"], at: ["baghdad"] },
       { y: 1045, text: "Al-Qushayri writes his Epistle in Nishapur.", who: ["qushayri"], at: ["nishapur"] },
-      { y: 1100, c: true, text: "Al-Ghazali writes The Revival of the Religious Sciences after leaving Baghdad.", who: ["ghazali"], at: ["damascus", "tus"] }
+      { y: 1100, c: true, text: "Al-Ghazali writes The Revival of the Religious Sciences after leaving Baghdad.", who: ["ghazali"], at: ["damascus", "tus"] },
+      { y: 1127, text: "Abd al-Qadir al-Jilani, trained in Hanbali law, begins preaching in Baghdad; his sermons and books join Hanbali law with Sufism.", who: ["jilani"], at: ["baghdad"] }
     ],
     related: ["unity-being", "sama"] },
 
@@ -186,22 +188,26 @@ const DEBATES = [
   { id: "philosophy", title: "Philosophy and revelation", term: "al-falsafa wa’l-shar’", ar: "الفلسفة والشرع",
     phases: [[830, 1040], [1090, 1200]], lanes: ["philosophy", "theology"],
     question: "Can Greek philosophy and revelation both be true, and who decides when they seem to clash?",
-    text: "The translation of Greek works raised the question of whether philosophy and revelation agree. Al-Kindi and al-Farabi argued that they reach the same truth by different paths; Ibn Sina built a complete system. Al-Ghazali judged three of its doctrines to be unbelief. Ibn Rushd replied that the Law commands philosophical study of those capable of demonstration, and that al-Ghazali misread the philosophers.",
+    text: "The translation of Greek works raised the question of whether philosophy and revelation agree. Al-Kindi and al-Farabi argued that they reach the same truth by different paths; Ibn Sina built a complete system. Al-Ghazali judged three of its doctrines to be unbelief. Ibn Rushd replied that the Law commands philosophical study of those capable of demonstration, and that al-Ghazali misread the philosophers. Earlier, Abu Bakr al-Razi was reported to deny that prophets are needed at all; later, Ibn Khaldun kept logic but doubted that the philosophers’ metaphysics could be proven.",
     positions: [
       { name: "One truth, two paths", text: "Philosophy and revelation express the same truth, one by demonstration and the other by images for all people.", who: ["kindi", "farabi", "ibn-sina", "ibn-tufayl"] },
       { name: "Philosophy errs on key points", text: "Logic and mathematics are sound, but three of the philosophers’ teachings contradict revelation, as al-Ghazali reads them: the eternity of the world, that God knows particulars only in a universal way, and the denial of bodily resurrection.", who: ["ghazali"] },
       { name: "The Law commands philosophy", text: "In the Decisive Treatise, scripture obliges those able to reason by demonstration to study philosophy, and where demonstration and the text seem to clash, the text is to be interpreted. The Incoherence of the Incoherence answers al-Ghazali point by point.", who: ["ibn-rushd"] },
-      { name: "Wisdom by illumination", text: "True philosophy joins reasoning with direct experience of light.", who: ["suhrawardi"] }
+      { name: "Wisdom by illumination", text: "True philosophy joins reasoning with direct experience of light.", who: ["suhrawardi"] },
+      { name: "Reason without prophets", text: "God gives reason to all people equally, so no one is singled out to bring a revealed law, and revelation is not needed. This view is known mainly from the account of a hostile opponent.", who: ["abu-bakr-razi"] },
+      { name: "Logic yes, metaphysics unproven", text: "Logic is a sound tool, but the philosophers’ claims about what lies beyond the senses cannot be proven and do not bring the happiness they promise.", who: ["ibn-khaldun"] }
     ],
     thread: [
       { y: 838, c: true, text: "Al-Kindi dedicates On First Philosophy to the caliph al-Mu’tasim (r. 833–842).", who: ["kindi"], at: ["baghdad"] },
+      { y: 920, c: true, text: "In Rayy, the Isma’ili missionary Abu Hatim al-Razi debates Abu Bakr al-Razi face to face; his later Proofs of Prophecy has al-Razi deny that prophets are needed.", who: ["abu-bakr-razi"], at: ["rayy"] },
       { y: 940, c: true, text: "Al-Farabi writes on the virtuous city.", who: ["farabi"], at: ["baghdad", "aleppo"] },
       { y: 1020, c: true, text: "Ibn Sina writes The Book of Healing.", who: ["ibn-sina"], at: ["hamadan", "isfahan"] },
       { y: 1095, text: "Al-Ghazali writes The Incoherence of the Philosophers.", who: ["ghazali"], at: ["baghdad"] },
       { y: 1170, c: true, text: "Ibn Tufayl writes Hayy ibn Yaqzan in Marrakesh.", who: ["ibn-tufayl"], at: ["marrakesh"] },
       { y: 1180, c: true, text: "Ibn Rushd answers al-Ghazali in The Incoherence of the Incoherence.", who: ["ibn-rushd"], at: ["cordoba"] },
       { y: 1186, c: true, text: "Suhrawardi writes The Philosophy of Illumination.", who: ["suhrawardi"], at: ["aleppo"] },
-      { y: 1205, c: true, text: "Fakhr al-Din al-Razi draws philosophy into theology.", who: ["fakhr-razi"], at: ["herat"] }
+      { y: 1205, c: true, text: "Fakhr al-Din al-Razi draws philosophy into theology.", who: ["fakhr-razi"], at: ["herat"] },
+      { y: 1377, text: "At Qal’at Ibn Salama, Ibn Khaldun completes the first draft of the Muqaddima, which he went on revising; its survey of the sciences includes a refutation of philosophy.", who: ["ibn-khaldun"], at: ["qalat"] }
     ],
     related: ["heavens", "unity-being"] },
 

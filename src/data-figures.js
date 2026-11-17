@@ -197,7 +197,7 @@ const FIGURES = [
   { id: "taftazani", name: "Sa’d al-Din al-Taftazani", short: "al-Taftazani", ar: "سعد الدين التفتازاني", b: 1322, d: 1390, dah: 792, lane: "theology", places: ["nasa", "herat", "samarkand"],
     text: "Scholar from Khurasan who taught at Timur’s court in Samarkand. His commentaries on logic, rhetoric, legal theory and al-Nasafi’s creed became core textbooks in madrasas from the Ottoman lands to India.",
     works: [["Sharh al-Aqa’id al-Nasafiyya", "Commentary on al-Nasafi’s creed"], ["al-Mutawwal", "The long (commentary on rhetoric)"]] },
-  { id: "ibn-khaldun", name: "Ibn Khaldun", short: "Ibn Khaldun", ar: "ابن خلدون", b: 1332, d: 1406, dah: 808, lane: "letters", schools: ["Maliki"], places: ["tunis", "fez", "granada", "cairo", "damascus", "cairo"],
+  { id: "ibn-khaldun", name: "Ibn Khaldun", short: "Ibn Khaldun", ar: "ابن خلدون", b: 1332, d: 1406, dah: 808, lane: "letters", schools: ["Maliki"], places: ["tunis", "fez", "granada", "qalat", "cairo", "damascus", "cairo"],
     text: "Historian and Maliki judge born in Tunis who served courts across North Africa and al-Andalus and ended his life in Cairo. In the Muqaddima he explained the rise and fall of dynasties through group solidarity. He met Timur outside Damascus in 1401.",
     works: [["al-Muqaddima", "The introduction to his Kitab al-ibar, often published on its own"], ["Kitab al-ibar", "The book of lessons"]] },
   { id: "ibn-hajar", name: "Ibn Hajar al-Asqalani", short: "Ibn Hajar", ar: "ابن حجر العسقلاني", b: 1372, d: 1449, dah: 852, lane: "hadith", schools: ["Shafi’i"], places: ["cairo"],
