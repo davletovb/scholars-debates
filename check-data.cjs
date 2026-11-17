@@ -1,6 +1,7 @@
 const fs = require("fs"), vm = require("vm");
 const ctx = {}; vm.createContext(ctx);
 for (const f of ["data-places.js", "data-figures.js", "data-debates.js"]) vm.runInContext(fs.readFileSync(__dirname + "/src/" + f, "utf8") + "\n;globalThis.__x={PLACES,REGIONS,MAP_REGIONS,LANES,ERAS,EVENTS," + (f.includes("fig") || f.includes("deb") ? "FIGURES," : "") + (f.includes("deb") ? "DEBATES" : "") + "}", ctx);
+vm.runInContext(fs.readFileSync(__dirname + "/src/data-sources.js", "utf8") + "\n;globalThis.__s=SOURCES", ctx);
 const { PLACES, LANES, ERAS, EVENTS, FIGURES, DEBATES, REGIONS } = ctx.__x;
 const errs = [], warn = [];
 const lane = new Set(LANES.map(l => l.id)), fig = new Map(FIGURES.map(f => [f.id, f])), deb = new Set(DEBATES.map(d => d.id));
@@ -32,6 +33,17 @@ for (const d of DEBATES) {
   for (const [s, e] of d.phases) if (!(s < e)) errs.push(d.id + " phase");
 }
 for (const e of EVENTS) for (const p of e.places) if (!PLACES[p]) errs.push(e.id + " place " + p);
+// sources: every scholar, debate and event has at least one; every key points at something real
+{
+  const S = ctx.__s, need = [...FIGURES.map((f) => f.id), ...DEBATES.map((d) => "debate:" + d.id), ...EVENTS.map((e) => "event:" + e.id)];
+  for (const k of need) if (!S[k] || !S[k].length) errs.push("no sources for " + k);
+  const valid = new Set(need);
+  for (const d of DEBATES) for (const t of d.thread) valid.add(`thread:${d.id}:${t.y}`);
+  for (const [k, list] of Object.entries(S)) {
+    if (!valid.has(k)) errs.push("sources key matches nothing: " + k);
+    for (const r of list) if (!Array.isArray(r) || r.length < 2 || r.length > 3 || !r[0] || !/^https:\/\//.test(r[1])) errs.push("bad source under " + k + ": " + JSON.stringify(r));
+  }
+}
 for (let i = 1; i < EVENTS.length; i++) if (EVENTS[i].year < EVENTS[i - 1].year) errs.push(EVENTS[i].id + " event order");
 { const used = new Set([...FIGURES.flatMap((f) => f.places), ...DEBATES.flatMap((d) => d.thread.flatMap((t) => t.at)), ...EVENTS.flatMap((e) => e.places)]); for (const k of Object.keys(PLACES)) if (!used.has(k)) warn.push("place not used: " + k); }
 const inDebate = new Set(DEBATES.flatMap(d => [...d.thread.flatMap(t => t.who), ...d.positions.flatMap(p => p.who)]));

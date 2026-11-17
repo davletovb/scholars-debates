@@ -70,13 +70,28 @@ Add an entry to `FIGURES` in `src/data-figures.js`, then run `npm run check` and
 
 A scholar joins a debate by appearing in that debate's `positions[].who` or `thread[].who`, so nothing is entered twice.
 
+## Sources
+
+`src/data-sources.js` holds the sources, keyed by a scholar id, `debate:<id>`, `event:<id>`, or `thread:<debate>:<year>` for a single dated debate entry. Each source is `[label, url]`, or `[label, url, what it supports]` when it backs one claim such as a birth year:
+
+```js
+"ghazali": [
+  ["Stanford Encyclopedia of Philosophy: al-Ghazali", "https://plato.stanford.edu/entries/al-ghazali/"]
+],
+"thread:reform:1875": [
+  ["Aligarh Muslim University: History", "https://www.amu.ac.in/about-us/history"]
+]
+```
+
+`npm run check` fails if a scholar, debate or event has no source, or if a key points at nothing.
+
 ## Adding a debate
 
 Add an entry to `DEBATES` in `src/data-debates.js` with `phases` (spans of years when it was most active), a one-sentence `question`, a short `text`, `positions` written as short editorial summaries (the panel lists the scholars associated with each), a dated `thread`, and `related` debate ids. Each thread entry names the places where it happened in `at`, which the globe uses to draw how the debate travelled.
 
 ## Status
 
-Birth years, teacher links, works and several itineraries and dated events were checked in a November 2026 audit against specialist reference works (TDV İslâm Ansiklopedisi, Encyclopaedia Iranica, the Stanford Encyclopedia of Philosophy and others). References are not yet attached to each entry. Ibadi and Isma’ili scholars, Southeast Asia, Africa beyond Sokoto and more women scholars are still to be added.
+Birth years, teacher links, works and several itineraries and dated events were checked in a November 2026 audit against specialist reference works (TDV İslâm Ansiklopedisi, Encyclopaedia Iranica, the Stanford Encyclopedia of Philosophy and others). Every scholar, debate and event now lists its sources (`src/data-sources.js`), shown at the end of its panel. Ibadi and Isma’ili scholars, Southeast Asia, Africa beyond Sokoto and more women scholars are still to be added.
 
 ## Credits
 

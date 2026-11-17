@@ -915,6 +915,21 @@
     const panel = $("#panel"), body = $("#panelBody");
     const link = (kind, id, text) => { const b = el("button", "link", text); b.type = "button"; b.dataset.kind = kind; b.dataset.id = id; return b; };
     const section = (title) => { const h = el("h3", null, title); body.appendChild(h); return h; };
+    const extLink = (text, url, title) => { const a = el("a", "ext", text); a.href = url; a.target = "_blank"; a.rel = "noopener noreferrer"; if (title) a.title = title; return a; };
+    // a source list: [label, url, what it supports]
+    const sources = (list, after) => {
+      if (!list || !list.length) return;
+      section("Sources");
+      const ul = el("ul", "sources");
+      for (const [label, url, note] of list) {
+        const li = el("li");
+        li.appendChild(extLink(label, url));
+        if (note) li.appendChild(el("span", "src-note", ` for ${note}`));
+        ul.appendChild(li);
+      }
+      body.appendChild(ul);
+      if (after) body.appendChild(el("p", "src-after", after));
+    };
     const laneChip = (laneId) => {
       const l = LANE[laneId];
       const c = el("span", "chip");
@@ -998,6 +1013,7 @@
       }
       const cont = FIGURES.filter((g) => g.id !== f.id).map((g) => ({ g, o: Math.min(g.d, f.d) - Math.max(g.b, f.b) })).filter((x) => x.o >= 15).sort((a, b) => b.o - a.o).slice(0, 8);
       if (cont.length) { section("Contemporaries"); const d = el("div", "links"); for (const { g } of cont) d.appendChild(link("fig", g.id, g.short)); body.appendChild(d); }
+      sources(SOURCES[f.id]);
       const list = byLane[f.lane], i = list.indexOf(f);
       const nav = el("div", "nav-row");
       const prev = el("div"), next = el("div");
@@ -1036,11 +1052,18 @@
         t.at.forEach((p, i) => { if (i) meta.appendChild(document.createTextNode(", ")); meta.appendChild(link("place", p, placeName(p))); });
         if (t.who.length) { meta.appendChild(document.createTextNode(t.at.length ? ". " : "")); t.who.forEach((id, i) => { if (i) meta.appendChild(document.createTextNode(", ")); meta.appendChild(link("fig", id, FIG.get(id).short)); }); }
         tx.appendChild(meta);
+        const own = SOURCES[`thread:${d.id}:${t.y}`];
+        if (own) {
+          const s = el("span", "tsrc", own.length > 1 ? "Sources: " : "Source: ");
+          own.forEach((r, i) => { if (i) s.appendChild(document.createTextNode("; ")); s.appendChild(extLink(r[0].split(": ")[0], r[1], r[0])); });
+          tx.appendChild(s);
+        }
         li.appendChild(tx);
         ol.appendChild(li);
       }
       body.appendChild(ol);
       if (d.related.length) { section("Related debates"); const r = el("div", "links"); for (const id of d.related) r.appendChild(link("deb", id, DEB.get(id).title)); body.appendChild(r); }
+      sources(SOURCES[`debate:${d.id}`], "Dated entries without a source of their own rest on the sources listed for the scholars named in them.");
     }
 
     function event(e) {
@@ -1053,6 +1076,7 @@
       const d = el("div", "links");
       for (const p of e.places) d.appendChild(link("place", p, placeName(p)));
       body.appendChild(d);
+      sources(SOURCES[`event:${e.id}`]);
     }
 
     body.addEventListener("click", (e) => {

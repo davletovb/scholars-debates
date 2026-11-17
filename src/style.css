@@ -228,3 +228,9 @@ body.panel-open .top { right: var(--panel-w); }
 .plist .ret { font-size: 13px; color: var(--ink-3); }
 .rel-link { display: inline-flex; flex-direction: column; }
 .rel-link .rel { font-size: 13px; line-height: 1.3; color: var(--ink-3); }
+.sources { margin: 0; padding: 0 0 0 1.1em; display: grid; gap: 6px; font-size: 14.5px; line-height: 1.4; color: var(--ink-2); }
+.sources a.ext, .tsrc a.ext { color: var(--ink); text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 2px; }
+.sources a.ext:hover, .tsrc a.ext:hover { color: var(--gold-2); }
+.src-note { color: var(--ink-3); }
+.src-after { margin: 10px 0 0; font-size: 13.5px; color: var(--ink-3); }
+.tsrc { display: block; margin-top: 3px; font-size: 13px; color: var(--ink-3); }
