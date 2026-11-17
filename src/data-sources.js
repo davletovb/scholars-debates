@@ -8,8 +8,8 @@ const SOURCES = {
     ["Stanford Encyclopedia of Philosophy: Arabic and Islamic philosophy of religion", "https://plato.stanford.edu/entries/arabic-islamic-religion/index.html", "al-Mughni fi abwab al-tawhid wa’l-adl"]
   ],
   "abd-al-raziq": [
-    ["TDV İslâm Ansiklopedisi: Ali Abdürrâzık", "https://islamansiklopedisi.org.tr/ali-abdurrazik"],
-    ["Britannica: ʿAlī ʿAbd al-Rāziq", "https://www.britannica.com/biography/Abd-al-Raziq-Ali"]
+    ["Britannica: ʿAlī ʿAbd al-Rāziq", "https://www.britannica.com/biography/Abd-al-Raziq-Ali"],
+    ["TDV İslâm Ansiklopedisi: Ali Abdürrâzık", "https://islamansiklopedisi.org.tr/ali-abdurrazik"]
   ],
   "abduh": [
     ["Oxford Academic: Muhammad ʿAbduh", "https://academic.oup.com/reference/62361/reference-article-abstract/554568546"],
@@ -20,9 +20,11 @@ const SOURCES = {
     ["Encyclopaedia Iranica: al-Ḥāwi", "https://www.iranicaonline.org/articles/hawi-medical-book/", "al-Hawi"]
   ],
   "abu-dawud": [
+    ["Britannica: Abū Dāʾūd", "https://www.britannica.com/biography/Abu-Daud"],
     ["TDV İslâm Ansiklopedisi: Ebû Dâvûd es-Sicistânî", "https://islamansiklopedisi.org.tr/ebu-davud-es-sicistani"]
   ],
   "abu-hafs-nasafi": [
+    ["nasafi.org: al-ʿAqīda al-nasafiyya and its author", "https://nasafi.org/"],
     ["TDV İslâm Ansiklopedisi: Nesefî, Necmeddin", "https://islamansiklopedisi.org.tr/nesefi-necmeddin"]
   ],
   "abu-hanifa": [
@@ -35,6 +37,7 @@ const SOURCES = {
     ["Oxford Academic: Sayyid Jamal al-Din al-Afghani", "https://academic.oup.com/reference/62361/reference-article-abstract/554570507"]
   ],
   "aisha": [
+    ["Britannica: ʿĀʾishah", "https://www.britannica.com/biography/Aishah"],
     ["TDV İslâm Ansiklopedisi: Âişe", "https://islamansiklopedisi.org.tr/aise"]
   ],
   "aisha-bauniyya": [
@@ -50,6 +53,8 @@ const SOURCES = {
     ["Britannica: Abū al-Ḥasan al-Ashʿarī", "https://www.britannica.com/biography/Abu-al-Hasan-al-Ashari"]
   ],
   "baqir-sadr": [
+    ["Encyclopaedia Iranica: Iraq x. Shiʿites of Iraq", "https://www.iranicaonline.org/articles/iraq-x-shiites-of-iraq/"],
+    ["Encyclopaedia Iranica: Iraq xi. Shiʿite seminaries", "https://www.iranicaonline.org/articles/iraq-xi-shiite-seminaries/"],
     ["TDV İslâm Ansiklopedisi: Sadr, Muhammed Bâkır", "https://islamansiklopedisi.org.tr/sadr-muhammed-bakir"]
   ],
   "behbudi": [
@@ -68,6 +73,7 @@ const SOURCES = {
     ["Britannica: Usman dan Fodio", "https://www.britannica.com/biography/Usman-dan-Fodio"]
   ],
   "ebussuud": [
+    ["Oxford Reference: Ebussuud Efendi (Biographical Encyclopaedia of Islamic Philosophy)", "https://oxfordreference.com/view/10.1093/oi/authority.20110810104817111"],
     ["TDV İslâm Ansiklopedisi: Ebüssuûd Efendi", "https://islamansiklopedisi.org.tr/ebussuud-efendi"]
   ],
   "fakhr-razi": [
@@ -91,7 +97,8 @@ const SOURCES = {
   ],
   "hallaj": [
     ["Encyclopaedia Iranica: Ḥallāj, Abu’l-Moḡiṯ Ḥosayn", "https://www.iranicaonline.org/articles/hallaj/"],
-    ["Encyclopaedia Iranica: Ana’l-Ḥaqq", "https://www.iranicaonline.org/articles/anal-haqq-i-am-the-truth-the-most-famous-of-the-sufi-sathiyat-ecstatic-utterances-or-paradoxes/", "the teacher link"]
+    ["Encyclopaedia Iranica: Ana’l-Ḥaqq", "https://www.iranicaonline.org/articles/anal-haqq-i-am-the-truth-the-most-famous-of-the-sufi-sathiyat-ecstatic-utterances-or-paradoxes/", "the teacher link"],
+    ["Britannica: al-Ḥallāj", "https://www.britannica.com/biography/al-Hallaj", "the link with al-Junayd"]
   ],
   "hasan-basri": [
     ["Encyclopaedia Iranica: Ḥasan Baṣri", "https://www.iranicaonline.org/articles/hasan-basri-abu-said-b-abil-hasan-yasar/"]
@@ -100,6 +107,7 @@ const SOURCES = {
     ["Encyclopaedia Iranica: Ḥelli, Ḥasan b. Yusof", "https://www.iranicaonline.org/articles/helli-hasan-b-yusof-b-motahhar/"]
   ],
   "ibn-abbas": [
+    ["Britannica: ʿAbd Allāh ibn al-ʿAbbās", "https://www.britannica.com/biography/Abd-Allah-ibn-al-Abbas"],
     ["TDV İslâm Ansiklopedisi: Abdullah b. Abbas", "https://islamansiklopedisi.org.tr/abdullah-b-abbas"]
   ],
   "ibn-abd-al-wahhab": [
@@ -111,14 +119,16 @@ const SOURCES = {
     ["Library of Congress: The Meccan Revelations", "https://www.loc.gov/item/2021666160/", "al-Futuhat al-Makkiyya"]
   ],
   "ibn-ashur": [
+    ["IIIT: Ibn Ashur, Treatise on Maqasid al-Shariah, with a biographical introduction (sample PDF)", "https://iiit.org/wp-content/uploads/Ibn-Ashur-Treatise-on-Maqasid-Al-Shariah-Sample.pdf"],
     ["TDV İslâm Ansiklopedisi: İbn Âşûr, Muhammed Tâhir", "https://islamansiklopedisi.org.tr/ibn-asur-muhammed-tahir--1973"]
   ],
   "ibn-hajar": [
+    ["Oxford Reference: Ahmad ibn Hajar al-Asqalani", "https://www.oxfordreference.com/view/10.1093/oi/authority.20110803095429356"],
     ["TDV İslâm Ansiklopedisi: İbn Hacer el-Askalânî", "https://islamansiklopedisi.org.tr/ibn-hacer-el-askalani"]
   ],
   "ibn-hanbal": [
-    ["TDV İslâm Ansiklopedisi: Ahmed b. Hanbel", "https://islamansiklopedisi.org.tr/ahmed-b-hanbel"],
-    ["Britannica: Aḥmad ibn Ḥanbal", "https://www.britannica.com/biography/Ahmad-ibn-Hanbal"]
+    ["Britannica: Aḥmad ibn Ḥanbal", "https://www.britannica.com/biography/Ahmad-ibn-Hanbal"],
+    ["TDV İslâm Ansiklopedisi: Ahmed b. Hanbel", "https://islamansiklopedisi.org.tr/ahmed-b-hanbel"]
   ],
   "ibn-haytham": [
     ["Biographical Encyclopedia of Astronomers (ISMI): Ibn al-Haytham", "https://ismi.mpiwg-berlin.mpg.de/biography/Ibn_al-Haytham_BEA.htm"],
@@ -126,9 +136,12 @@ const SOURCES = {
     ["ISMI (Max Planck Institute): Šukūk ʿalā Baṭlamyūs", "https://ismi.mpiwg-berlin.mpg.de/text/167879", "al-Shukuk ala Batlamyus"]
   ],
   "ibn-hazm": [
+    ["Britannica: Ibn Ḥazm", "https://www.britannica.com/biography/Ibn-Hazm"],
     ["TDV İslâm Ansiklopedisi: İbn Hazm", "https://islamansiklopedisi.org.tr/ibn-hazm"]
   ],
   "ibn-ishaq": [
+    ["Britannica: Sīrat Muḥammad rasūl Allāh", "https://www.britannica.com/topic/Sirat-Muhammad-rasul-Allah"],
+    ["Britannica: Muhammad: biographical sources", "https://www.britannica.com/biography/Muhammad"],
     ["TDV İslâm Ansiklopedisi: İbn İshak", "https://islamansiklopedisi.org.tr/ibn-ishak"]
   ],
   "ibn-kathir": [
@@ -136,6 +149,7 @@ const SOURCES = {
     ["“Was Ibn Kathīr the ‘Spokesperson’ for Ibn Taymiyya?” (article, academia.edu)", "https://www.academia.edu/6996715/Was_Ibn_Kathir_the_Spokesperson_for_Ibn_Taymiyya_Jonah_as_a_Prophet_of_Obedience", "the link with Ibn Taymiyya"]
   ],
   "ibn-khaldun": [
+    ["Britannica: Ibn Khaldūn", "https://www.britannica.com/biography/Ibn-Khaldun"],
     ["TDV İslâm Ansiklopedisi: İbn Haldûn", "https://islamansiklopedisi.org.tr/ibn-haldun"]
   ],
   "ibn-nafis": [
@@ -143,6 +157,8 @@ const SOURCES = {
     ["Library of Congress: Ibn al-Nafis, Compendium of the Canon of Medicine (World Digital Library)", "https://www.loc.gov/resource/gdcwdl.wdl_16193/?sp=96", "the birth year"]
   ],
   "ibn-qayyim": [
+    ["Oxford Reference: Ibn Qayyim al-Jawzīyah (Oxford Encyclopedia of the Islamic World)", "https://www.oxfordreference.com/display/10.1093/oi/authority.20110803095955635"],
+    ["Oxford Reference: Ibn Qayyim al-Jawziyya (Oxford International Encyclopedia of Legal History)", "https://www.oxfordreference.com/display/10.1093/acref/9780195134056.001.0001/acref-9780195134056-e-387"],
     ["TDV İslâm Ansiklopedisi: İbn Kayyim el-Cevziyye", "https://islamansiklopedisi.org.tr/ibn-kayyim-el-cevziyye"]
   ],
   "ibn-rushd": [
@@ -159,8 +175,8 @@ const SOURCES = {
     ["Library of Congress: Ibn Taymiyyah on reason and revelation", "https://www.loc.gov/item/2019033460/", "Dar’ ta’arud al-aql wa’l-naql"]
   ],
   "ibn-tufayl": [
-    ["TDV İslâm Ansiklopedisi: İbn Tufeyl", "https://islamansiklopedisi.org.tr/ibn-tufeyl"],
-    ["Oxford Academic: Ibn Ṭufayl", "https://academic.oup.com/reference/62361/reference-article-abstract/554573383"]
+    ["Oxford Academic: Ibn Ṭufayl", "https://academic.oup.com/reference/62361/reference-article-abstract/554573383"],
+    ["TDV İslâm Ansiklopedisi: İbn Tufeyl", "https://islamansiklopedisi.org.tr/ibn-tufeyl"]
   ],
   "iqbal": [
     ["Britannica: Muhammad Iqbal", "https://www.britannica.com/biography/Muhammad-Iqbal"],
@@ -185,7 +201,9 @@ const SOURCES = {
     ["Oxford Academic: ʿAbd al-Qadir al-Jilani", "https://academic.oup.com/reference/62361/reference-article-abstract/554575952"]
   ],
   "junayd": [
-    ["TDV İslâm Ansiklopedisi: Cüneyd-i Bağdâdî", "https://islamansiklopedisi.org.tr/cuneyd-i-bagdadi"]
+    ["Britannica: Sufism: thought and practice", "https://www.britannica.com/topic/Sufism/Sufi-thought-and-practice"],
+    ["TDV İslâm Ansiklopedisi: Cüneyd-i Bağdâdî", "https://islamansiklopedisi.org.tr/cuneyd-i-bagdadi"],
+    ["Britannica: al-Ḥallāj", "https://www.britannica.com/biography/al-Hallaj", "his teaching of al-Hallaj"]
   ],
   "jurjani": [
     ["TDV İslâm Ansiklopedisi: Abdülkāhir el-Cürcânî", "https://islamansiklopedisi.org.tr/abdulkahir-el-curcani"],
@@ -200,9 +218,12 @@ const SOURCES = {
     ["TDV İslâm Ansiklopedisi: el-Câmiu’s-sahîh", "https://islamansiklopedisi.org.tr/el-camius-sahih--buhari", "her teaching of the Sahih in Mecca"]
   ],
   "kashgari": [
+    ["Britannica: Dīwān lughat al-Turk", "https://www.britannica.com/topic/Diwan-lughat-at-Turk"],
+    ["Britannica: history of Central Asia: the Khitans", "https://www.britannica.com/place/history-of-Central-Asia-102306/The-Khitans"],
     ["TDV İslâm Ansiklopedisi: Kâşgarlı Mahmud", "https://islamansiklopedisi.org.tr/kasgarli-mahmud"]
   ],
   "katib-celebi": [
+    ["Britannica: Kâtip Çelebi", "https://www.britannica.com/biography/Katip-Celebi"],
     ["TDV İslâm Ansiklopedisi: Kâtib Çelebi", "https://islamansiklopedisi.org.tr/katib-celebi"],
     ["TDV İslâm Ansiklopedisi: Mîzânü’l-hak", "https://islamansiklopedisi.org.tr/mizanul-hak", "Mizan al-haqq"]
   ],
@@ -230,9 +251,11 @@ const SOURCES = {
     ["Routledge: Yasin Dutton, The Origins of Islamic Law (preview)", "https://api.pageplace.de/preview/DT0400.9781136110665_A23827084/preview-9781136110665_A23827084.pdf", "the birth year"]
   ],
   "marghinani": [
+    ["Oxford Reference: al-Marghinani (Oxford Dictionary of Islam)", "https://www.oxfordreference.com/viewbydoi/10.1093/oi/authority.20110803100133763"],
     ["TDV İslâm Ansiklopedisi: Mergīnânî, Burhâneddin", "https://islamansiklopedisi.org.tr/merginani-burhaneddin"]
   ],
   "marjani": [
+    ["Minbar. Islamic Studies 13 (2020): The works of Shihab al-Din al-Marjani on Islamic scholastic theology", "https://doi.org/10.31162/2618-9569-2020-13-1-103-116"],
     ["TDV İslâm Ansiklopedisi: Mercânî", "https://islamansiklopedisi.org.tr/mercani"]
   ],
   "masudi": [
@@ -240,20 +263,25 @@ const SOURCES = {
     ["Routledge: The Meadows of Gold, the Abbasids (preview)", "https://api.pageplace.de/preview/DT0400.9781136145223_A29484269/preview-9781136145223_A29484269.pdf", "the birth year"]
   ],
   "maturidi": [
+    ["Britannica: Māturīdiyyah", "https://www.britannica.com/topic/Maturidiyah"],
     ["TDV İslâm Ansiklopedisi: Mâtürîdî", "https://islamansiklopedisi.org.tr/maturidi"],
     ["TDV İslâm Ansiklopedisi: Teʾvîlâtü’l-Kurʾân", "https://islamansiklopedisi.org.tr/tevilatul-kuran", "Ta’wilat al-Qur’an"]
   ],
   "mawardi": [
+    ["Britannica: al-Māwardī", "https://www.britannica.com/biography/al-Mawardi"],
     ["TDV İslâm Ansiklopedisi: Mâverdî", "https://islamansiklopedisi.org.tr/maverdi"]
   ],
   "mufid": [
-    ["TDV İslâm Ansiklopedisi: Müfîd, Şeyh", "https://islamansiklopedisi.org.tr/mufid-seyh"]
+    ["Encyclopaedia Iranica: Hadith ii. In Shiʿism", "https://www.iranicaonline.org/articles/hadith-ii/"],
+    ["TDV İslâm Ansiklopedisi: Müfîd, Şeyh", "https://islamansiklopedisi.org.tr/mufid-seyh"],
+    ["Encyclopaedia Iranica: Bibliographies and catalogues ii. In Iran", "https://www.iranicaonline.org/articles/bibliographies-iia/", "the dates 338–413 AH"]
   ],
   "mulla-sadra": [
     ["Stanford Encyclopedia of Philosophy: Mulla Sadra", "https://plato.stanford.edu/entries/mulla-sadra/"],
     ["Encyclopaedia Iranica: Asfār al-arbaʿa", "https://www.iranicaonline.org/articles/asfar-al-arbaa/", "al-Asfar al-arba’a"]
   ],
   "muslim": [
+    ["Britannica: Muslim ibn al-Ḥajjāj", "https://www.britannica.com/biography/Muslim-ibn-al-Hajjaj"],
     ["TDV İslâm Ansiklopedisi: Müslim b. Haccâc", "https://islamansiklopedisi.org.tr/muslim-b-haccac"]
   ],
   "nana-asmau": [
@@ -272,9 +300,11 @@ const SOURCES = {
     ["Library of Congress: The life and work of Navoi", "https://loc.gov/loc/lcib/0705/navoi.html", "the link with Jami"]
   ],
   "nawawi": [
-    ["TDV İslâm Ansiklopedisi: Nevevî", "https://islamansiklopedisi.org.tr/nevevi"]
+    ["TDV İslâm Ansiklopedisi: Nevevî", "https://islamansiklopedisi.org.tr/nevevi"],
+    ["Britannica: Hadith", "https://www.britannica.com/topic/Hadith", "Riyad al-salihin"]
   ],
   "nursi": [
+    ["Oxford Reference: Said Nursi (Oxford Encyclopedia of the Islamic World)", "https://www.oxfordreference.com/view/10.1093/oi/authority.20110803100242365"],
     ["TDV İslâm Ansiklopedisi: Said Nursî", "https://islamansiklopedisi.org.tr/said-nursi"]
   ],
   "omar-khayyam": [
@@ -291,7 +321,8 @@ const SOURCES = {
     ["Biographical Encyclopedia of Astronomers (ISMI): Qūshjī", "https://ismi.mpiwg-berlin.mpg.de/biography/Qushji_BEA.htm", "the teacher link"]
   ],
   "rabia": [
-    ["TDV İslâm Ansiklopedisi: Râbia el-Adeviyye", "https://islamansiklopedisi.org.tr/rabia-el-adeviyye"]
+    ["TDV İslâm Ansiklopedisi: Râbia el-Adeviyye", "https://islamansiklopedisi.org.tr/rabia-el-adeviyye"],
+    ["Britannica: Sufism: history", "https://www.britannica.com/topic/Sufism/History", "Rabiʿa and the love of God"]
   ],
   "rida": [
     ["Britannica: Rashīd Riḍā", "https://www.britannica.com/biography/Rashid-Rida"],
@@ -307,6 +338,8 @@ const SOURCES = {
     ["Aligarh Muslim University: History", "https://www.amu.ac.in/about-us/history", "the 1875 school and the 1877 college"]
   ],
   "shafii": [
+    ["Britannica: Shāfiʿī (school of law)", "https://www.britannica.com/topic/Shafiiyah"],
+    ["Britannica: Islamic world: Sharīʿah, al-Shāfiʿī", "https://www.britannica.com/topic/Islamic-world/Sunnis-and-Shiites"],
     ["TDV İslâm Ansiklopedisi: Şâfiî", "https://islamansiklopedisi.org.tr/safii"]
   ],
   "shah-wali-allah": [
@@ -314,13 +347,16 @@ const SOURCES = {
     ["Brill: The Conclusive Argument from God (Ḥujjat Allāh al-bāligha)", "https://www.degruyterbrill.com/document/isbn/9789004444768/html", "Hujjat Allah al-baligha"]
   ],
   "shatibi": [
+    ["Oxford Reference: Abu Ishaq Ibrahim al-Shatibi", "https://oxfordreference.com/view/10.1093/oi/authority.20110810105832366"],
     ["TDV İslâm Ansiklopedisi: Şâtıbî, İbrâhim b. Mûsâ", "https://islamansiklopedisi.org.tr/satibi-ibrahim-b-musa"],
     ["TDV İslâm Ansiklopedisi: el-İʿtisâm", "https://islamansiklopedisi.org.tr/el-itisam", "al-I’tisam"]
   ],
   "shawkani": [
+    ["Oxford Reference: Muhammad al-Shawkani", "https://www.oxfordreference.com/display/10.1093/oi/authority.20110803100500203"],
     ["TDV İslâm Ansiklopedisi: Şevkânî", "https://islamansiklopedisi.org.tr/sevkani"]
   ],
   "shaykh-tusi": [
+    ["Encyclopaedia Iranica: Hadith ii. In Shiʿism", "https://www.iranicaonline.org/articles/hadith-ii/"],
     ["TDV İslâm Ansiklopedisi: Tûsî, Ebû Caʿfer", "https://islamansiklopedisi.org.tr/tusi-ebu-cafer"]
   ],
   "sibawayh": [
@@ -342,33 +378,41 @@ const SOURCES = {
     ["Britannica: al-Ṭabarī", "https://www.britannica.com/biography/al-Tabari"]
   ],
   "tabatabai": [
+    ["Encyclopaedia Iranica: Ṭabāṭabāʾi, Moḥammad-Ḥosayn", "https://www.iranicaonline.org/articles/tabatabai-mohammad-hosayn/"],
+    ["Oxford Reference: Muhammad Husayn Tabatabai (Oxford Dictionary of Islam)", "https://www.oxfordreference.com/display/10.1093/oi/authority.20110803101820828"],
     ["TDV İslâm Ansiklopedisi: Tabâtabâî, Muhammed Hüseyin", "https://islamansiklopedisi.org.tr/tabatabai-muhammed-huseyin"]
   ],
   "taftazani": [
-    ["TDV İslâm Ansiklopedisi: Teftâzânî", "https://islamansiklopedisi.org.tr/teftazani"],
-    ["ISMI (Max Planck Institute): Saʿd al-Dīn al-Taftāzānī", "https://ismi.mpiwg-berlin.mpg.de/person/8727"]
+    ["ISMI (Max Planck Institute): Saʿd al-Dīn al-Taftāzānī", "https://ismi.mpiwg-berlin.mpg.de/person/8727"],
+    ["TDV İslâm Ansiklopedisi: Teftâzânî", "https://islamansiklopedisi.org.tr/teftazani"]
   ],
   "tahawi": [
+    ["Oxford Reference: al-Tahawi (Biographical Encyclopaedia of Islamic Philosophy)", "https://oxfordreference.com/view/10.1093/oi/authority.20110803095405786"],
     ["TDV İslâm Ansiklopedisi: Tahâvî", "https://islamansiklopedisi.org.tr/tahavi"]
   ],
   "tahtawi": [
+    ["Britannica: Rifāʿah Rāfiʿ al-Ṭahṭāwī", "https://www.britannica.com/biography/Rifaah-Rafi-al-Tahtawi"],
     ["TDV İslâm Ansiklopedisi: Rifâa et-Tahtâvî", "https://islamansiklopedisi.org.tr/rifaa-et-tahtavi"]
   ],
   "tirmidhi": [
+    ["Britannica: al-Tirmidhī", "https://www.britannica.com/biography/al-Tirmidhi"],
     ["TDV İslâm Ansiklopedisi: Tirmizî", "https://islamansiklopedisi.org.tr/tirmizi"]
   ],
   "ulugh-beg": [
     ["Biographical Encyclopedia of Astronomers (ISMI): Ulugh Beg", "https://ismi.mpiwg-berlin.mpg.de/index.php/biography/Ulugh_Beg_BEA.htm"]
   ],
   "wasil": [
+    ["Britannica: Muʿtazilah", "https://www.britannica.com/topic/Mutazilah"],
     ["TDV İslâm Ansiklopedisi: Vâsıl b. Atâ", "https://islamansiklopedisi.org.tr/vasil-b-ata"]
   ],
   "yasawi": [
+    ["Britannica: Uzbek literature", "https://www.britannica.com/art/Uzbek-literature", "his place in early Turkic literature"],
     ["TDV İslâm Ansiklopedisi: Dîvân-ı Hikmet", "https://islamansiklopedisi.org.tr/divan-i-hikmet", "Divan-i hikmat"],
     ["TDV İslâm Ansiklopedisi: Ahmed Yesevî", "https://islamansiklopedisi.org.tr/ahmed-yesevi", "the unknown birth year"],
     ["ISAM: “Ahmad Yasawi” (encyclopedia entry, PDF)", "https://isamveri.org/pdfdkm/01/DKM011071.pdf", "the reported birth years"]
   ],
   "zamakhshari": [
+    ["Britannica: al-Kashshāf ʿan ḥaqāʾiq al-tanzīl", "https://www.britannica.com/topic/Al-Kashshafan-Haqaiq-at-Tanzil"],
     ["TDV İslâm Ansiklopedisi: Zemahşerî", "https://islamansiklopedisi.org.tr/zemahseri"]
   ],
   "debate:attributes": [
@@ -474,8 +518,8 @@ const SOURCES = {
     ["Britannica: Fall of Constantinople", "https://www.britannica.com/event/Fall-of-Constantinople-1453"]
   ],
   "event:death-prophet": [
-    ["TDV İslâm Ansiklopedisi: Muhammed", "https://islamansiklopedisi.org.tr/muhammed"],
-    ["Britannica: Muhammad: biography according to the Islamic tradition", "https://www.britannica.com/biography/Muhammad/Biography-according-to-the-Islamic-tradition"]
+    ["Britannica: Muhammad: biography according to the Islamic tradition", "https://www.britannica.com/biography/Muhammad/Biography-according-to-the-Islamic-tradition"],
+    ["TDV İslâm Ansiklopedisi: Muhammed", "https://islamansiklopedisi.org.tr/muhammed"]
   ],
   "event:egypt-invasion": [
     ["Britannica: Egypt: the French occupation (1798–1805)", "https://www.britannica.com/place/Egypt/From-the-French-to-the-British-occupation-1798-1882"],
@@ -498,8 +542,8 @@ const SOURCES = {
     ["Britannica: Mongol empire", "https://www.britannica.com/place/Mongol-empire"]
   ],
   "event:hijra": [
-    ["TDV İslâm Ansiklopedisi: Muhammed", "https://islamansiklopedisi.org.tr/muhammed"],
-    ["Britannica: Islamic world (the Hijrah and the Islamic era)", "https://www.britannica.com/topic/Islamic-world"]
+    ["Britannica: Islamic world (the Hijrah and the Islamic era)", "https://www.britannica.com/topic/Islamic-world"],
+    ["TDV İslâm Ansiklopedisi: Muhammed", "https://islamansiklopedisi.org.tr/muhammed"]
   ],
   "event:karbala": [
     ["Britannica: Battle of Karbala", "https://www.britannica.com/event/Battle-of-Karbala"]
@@ -523,12 +567,12 @@ const SOURCES = {
     ["Britannica: Niẓām al-Mulk (summary)", "https://www.britannica.com/summary/Nizam-al-Mulk-Seljuq-vizier"]
   ],
   "event:printing": [
-    ["ISAM: “Müteferrika and the age of the printed manuscript” (PDF)", "https://isamveri.org/pdfdkm/09/DKM091120.pdf"],
-    ["University of Reading: thesis on the Ottoman-Muslim printing venture (PDF)", "https://centaur.reading.ac.uk/80437/1/16021166_Conidi_redacted.pdf"]
+    ["University of Reading: thesis on the Ottoman-Muslim printing venture (PDF)", "https://centaur.reading.ac.uk/80437/1/16021166_Conidi_redacted.pdf"],
+    ["ISAM: “Müteferrika and the age of the printed manuscript” (PDF)", "https://isamveri.org/pdfdkm/09/DKM091120.pdf"]
   ],
   "event:revelation": [
-    ["TDV İslâm Ansiklopedisi: Muhammed", "https://islamansiklopedisi.org.tr/muhammed"],
-    ["Britannica: Muhammad", "https://www.britannica.com/biography/Muhammad"]
+    ["Britannica: Muhammad", "https://www.britannica.com/biography/Muhammad"],
+    ["TDV İslâm Ansiklopedisi: Muhammed", "https://islamansiklopedisi.org.tr/muhammed"]
   ],
   "event:safavids": [
     ["Britannica: Safavid dynasty", "https://www.britannica.com/topic/Safavid-dynasty"],
@@ -572,8 +616,8 @@ const SOURCES = {
     ["TDV İslâm Ansiklopedisi: Vâsıl b. Atâ", "https://islamansiklopedisi.org.tr/vasil-b-ata"]
   ],
   "thread:hadith-criticism:846": [
-    ["TDV İslâm Ansiklopedisi: el-Câmiu’s-sahîh", "https://islamansiklopedisi.org.tr/el-camius-sahih--buhari"],
-    ["Britannica: al-Bukhārī", "https://www.britannica.com/biography/al-Bukhari"]
+    ["Britannica: al-Bukhārī", "https://www.britannica.com/biography/al-Bukhari"],
+    ["TDV İslâm Ansiklopedisi: el-Câmiu’s-sahîh", "https://islamansiklopedisi.org.tr/el-camius-sahih--buhari"]
   ],
   "thread:maqasid:1078": [
     ["TDV İslâm Ansiklopedisi: Cüveynî, İmâmü’l-Haremeyn", "https://islamansiklopedisi.org.tr/cuveyni-imamul-haremeyn"]
