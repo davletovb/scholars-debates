@@ -162,7 +162,7 @@ const DEBATES = [
       { y: 1045, text: "Al-Qushayri writes his Epistle in Nishapur.", who: ["qushayri"], at: ["nishapur"] },
       { y: 1100, c: true, text: "Al-Ghazali writes The Revival of the Religious Sciences after leaving Baghdad.", who: ["ghazali"], at: ["damascus", "tus"] }
     ],
-    related: ["unity-being"] },
+    related: ["unity-being", "sama"] },
 
   { id: "created-quran", title: "The createdness of the Qur’an and the Mihna", term: "khalq al-Qur’an", ar: "خلق القرآن",
     phases: [[800, 855]], lanes: ["theology"],
@@ -181,7 +181,7 @@ const DEBATES = [
       { y: 864, c: true, text: "In Nishapur al-Bukhari is accused over whether the recitation of the Qur’an is created.", who: ["bukhari"], at: ["nishapur"] },
       { y: 915, c: true, text: "Al-Ash’ari separates God’s eternal speech from its created expression.", who: ["ashari"], at: ["baghdad"] }
     ],
-    related: ["attributes"] },
+    related: ["attributes", "ijaz"] },
 
   { id: "philosophy", title: "Philosophy and revelation", term: "al-falsafa wa’l-shar’", ar: "الفلسفة والشرع",
     phases: [[830, 1040], [1090, 1200]], lanes: ["philosophy", "theology"],
@@ -205,6 +205,24 @@ const DEBATES = [
     ],
     related: ["heavens", "unity-being"] },
 
+  { id: "ijaz", title: "What makes the Qur’an inimitable", term: "i’jaz al-Qur’an", ar: "إعجاز القرآن",
+    phases: [[830, 1080], [1130, 1210]], lanes: ["quran", "letters", "theology"],
+    question: "The Qur’an challenges its hearers to produce its like. Why could no one do so?",
+    text: "Theologians agreed that no one could match the Qur’an but disagreed on why. Al-Nazzam held that God turned people away from trying, a view called sarfa. Al-Jahiz and later Qadi Abd al-Jabbar located the miracle in its eloquence. In the eleventh century Abd al-Qahir al-Jurjani argued that it lies in nazm, the way words are arranged to carry meaning, and his theory shaped later commentary and the science of rhetoric.",
+    positions: [
+      { name: "God turned them away (sarfa)", text: "The Qur’an’s language was not beyond the Arabs in itself, but God prevented them from matching it; that prevention is the miracle.", who: ["nazzam"] },
+      { name: "Eloquence beyond human reach", text: "The miracle lies in the Qur’an’s eloquence, which reaches a degree no human speaker can attain.", who: ["jahiz", "abd-al-jabbar"] },
+      { name: "The arrangement of words (nazm)", text: "The miracle lies in nazm: the way words are joined through the meanings of grammar to say exactly what is meant. Sarfa would make the miracle the silencing of the Arabs rather than the text itself.", who: ["jurjani", "zamakhshari", "fakhr-razi"] }
+    ],
+    thread: [
+      { y: 830, c: true, text: "Al-Nazzam teaches that God turned the Arabs away from matching the Qur’an.", who: ["nazzam"], at: ["baghdad"] },
+      { y: 850, c: true, text: "Al-Jahiz, al-Nazzam’s student, explains the Qur’an’s inimitability through its rhetoric instead.", who: ["jahiz"], at: ["basra"] },
+      { y: 985, c: true, text: "Qadi Abd al-Jabbar devotes a volume of al-Mughni to the Qur’an’s inimitability.", who: ["abd-al-jabbar"], at: ["rayy"] },
+      { y: 1070, c: true, text: "Abd al-Qahir al-Jurjani writes The Proofs of Inimitability, rejecting sarfa and grounding the miracle in nazm.", who: ["jurjani"], at: ["jurjan"] },
+      { y: 1134, text: "Al-Zamakhshari completes al-Kashshaf; its introduction holds that only masters of the sciences of meaning and expression can reach the Qur’an’s secrets.", who: ["zamakhshari"], at: ["mecca"] }
+    ],
+    related: ["tafsir", "created-quran"] },
+
   { id: "tafsir", title: "How to interpret the Qur’an", term: "manahij al-tafsir", ar: "مناهج التفسير",
     phases: [[870, 1375], [1880, 1985]], lanes: ["quran"],
     question: "Should the Qur’an be read through transmitted reports, through language and reason, or through inner insight?",
@@ -227,7 +245,7 @@ const DEBATES = [
       { y: 1972, c: true, text: "Tabataba’i completes al-Mizan in Qom.", who: ["tabatabai"], at: ["qom"] },
       { y: 1980, text: "Fazlur Rahman publishes Major Themes of the Qur’an.", who: ["fazlur-rahman"], at: ["chicago"] }
     ],
-    related: ["reform"] },
+    related: ["reform", "ijaz"] },
 
   { id: "heavens", title: "Rethinking the heavens", term: "al-shukuk ala Batlamyus", ar: "الشكوك على بطلميوس",
     phases: [[1025, 1475]], lanes: ["sciences", "philosophy"],
@@ -249,6 +267,28 @@ const DEBATES = [
       { y: 1472, c: true, text: "Ali Qushji teaches in Istanbul.", who: ["qushji"], at: ["istanbul"] }
     ],
     related: ["philosophy"] },
+
+  { id: "sama", title: "Music, dance and the remembrance of God", term: "al-sama’ wa’l-dhikr", ar: "السماع والذكر",
+    phases: [[1040, 1200], [1250, 1390]], lanes: ["sufism", "law"],
+    question: "May Sufis use music, dance and chanting aloud to draw near to God, or should remembrance be silent?",
+    text: "Sufis gathered to listen to poetry and music (sama’) and to repeat the names of God (dhikr), sometimes with movement and dance. Al-Ghazali devoted a book of The Revival of the Religious Sciences to listening and set conditions for it; Hanbali critics such as Ibn al-Jawzi and Ibn Taymiyya called such gatherings an innovation. The orders differed as well: Rumi’s followers made music and turning their central ritual, while in fourteenth-century Central Asia the circles of Baha’ al-Din Naqshband and Sayyid Ali Hamadani came to stand for silent and vocal remembrance.",
+    positions: [
+      { name: "Listening is lawful under conditions", text: "Listening to music and poetry is lawful and can stir the love of God when the time, the place and the company are right; it is forbidden where it stirs base desire.", who: ["ghazali", "qushayri"] },
+      { name: "Music and turning as worship", text: "Listening to music with turning movement belongs to the path itself; it became the central ritual of Rumi’s followers.", who: ["rumi"] },
+      { name: "Remembrance aloud", text: "God’s names are repeated aloud and in company, often with set movements of the body.", who: ["yasawi", "hamadani"] },
+      { name: "Remembrance in silence", text: "The heart repeats the remembrance without moving the tongue or body, which avoids display; vocal dhikr and music gatherings are not needed and may be unlawful.", who: ["naqshband"] },
+      { name: "A forbidden innovation", text: "Gatherings for music and dance were unknown to the Prophet’s Companions and are an innovation in worship.", who: ["ibn-taymiyya"] }
+    ],
+    thread: [
+      { y: 1100, c: true, text: "In The Revival of the Religious Sciences, al-Ghazali devotes a book to the proper conduct of listening and ecstasy.", who: ["ghazali"], at: ["damascus", "tus"] },
+      { y: 1160, c: true, text: "Ahmad Yasawi teaches at Yasi; the Yasawi order that traces itself to him becomes known for remembrance with voice and movement.", who: ["yasawi"], at: ["turkistan"] },
+      { y: 1190, c: true, text: "Ibn al-Jawzi’s Devil’s Deception attacks the Sufis’ listening and chanting as innovations.", who: [], at: ["baghdad"] },
+      { y: 1250, c: true, text: "In Konya, Rumi makes listening to music and turning part of his circle’s worship.", who: ["rumi"], at: ["konya"] },
+      { y: 1290, c: true, text: "Rumi’s son Sultan Walad organises his followers into the Mawlawi order, with the turning dance as its main ritual.", who: [], at: ["konya"] },
+      { y: 1310, c: true, text: "Ibn Taymiyya and his circle write against Sufi listening as an innovation.", who: ["ibn-taymiyya"], at: ["damascus"] },
+      { y: 1380, c: true, text: "In Central Asia, the followers of Naqshband and of Sayyid Ali Hamadani divide over silent and vocal remembrance; later biographies make the two masters the faces of each side.", who: ["naqshband", "hamadani"], at: ["bukhara", "kulob"] }
+    ],
+    related: ["sufism-law", "unity-being"] },
 
   { id: "ijtihad", title: "Ijtihad and taqlid", term: "al-ijtihad wa’l-taqlid", ar: "الاجتهاد والتقليد",
     phases: [[1050, 1330], [1700, 1935]], lanes: ["law"],

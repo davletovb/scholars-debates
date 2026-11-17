@@ -316,7 +316,7 @@ body.panel-open .top { right: var(--panel-w); }
     <p>Positions in each debate are short editorial summaries, not quotations. The scholars listed under a position are associated with it: some argued it directly, others developed or defended it later, and some stand for their school. On the globe, a debate’s lines join the places where it was argued in the order of the timeline; they do not trace documented routes of transmission. A scholar’s route shows selected places from the sources, in order, including returns.</p>
     <p>Dates are shown in both the Common Era and the Hijri calendar; a “c.” marks an approximate year, and Hijri years worked out from Common Era dates are marked the same way. Where a birth year is unknown or disputed, the scholar’s panel says so, and any year used only to draw the life line is marked as an estimate. The timeline runs from 610 to 1988, the latest death of a scholar in the dataset; the last dated debate entry is from 1980.</p>
     <h3>What still needs work</h3>
-    <p>This is a first version with 95 scholars and 18 debates. Sixteen scholars are not yet linked to a debate; the debates they took part in, such as the Ottoman disputes of the seventeenth century, are still to be added. Each scholar, debate and event lists its sources at the end of its panel, mostly entries in Britannica, Encyclopaedia Iranica, the Stanford Encyclopedia of Philosophy, Oxford Reference and the TDV İslâm Ansiklopedisi (in Turkish), with specialist studies where a date or attribution is disputed. Every scholar has at least one source in English. Dated debate entries that go beyond those sources cite their own. Ibadi and Isma’ili scholars, Southeast Asia, Africa beyond Sokoto and more women scholars are still to be added.</p>
+    <p>This is a first version with 96 scholars and 20 debates. Eleven scholars are not yet linked to a debate; the debates they took part in, such as the Ottoman disputes of the sixteenth and seventeenth centuries, are still to be added. Each scholar, debate and event lists its sources at the end of its panel, mostly entries in Britannica, Encyclopaedia Iranica, the Stanford Encyclopedia of Philosophy, Oxford Reference and the TDV İslâm Ansiklopedisi (in Turkish), with specialist studies where a date or attribution is disputed. Every scholar has at least one source in English. Dated debate entries that go beyond those sources cite their own. Ibadi and Isma’ili scholars, Southeast Asia, Africa beyond Sokoto and more women scholars are still to be added.</p>
     <h3>The map</h3>
     <p>Region names on the globe are historical: Mawara’ al-nahr, Khurasan, al-Andalus. Coastlines, rivers and lakes are modern, from Natural Earth (public domain), except the Aral Sea and Lake Chad, which are drawn as fixed outlines of their historical extent. City positions are approximate, and a few places, such as Jami’s birthplace in the district of Jam, are marked at the district rather than the village.</p>
     <h3>Keyboard</h3>
@@ -421,6 +421,7 @@ const PLACES = {
   kabul: ["Kabul", 34.53, 69.17, "iran"],
   zaranj: ["Zaranj (Sijistan)", 30.96, 61.86, "iran"],
   bukhara: ["Bukhara", 39.77, 64.42, "transoxiana"],
+  kulob: ["Khuttalan (Kulob)", 37.91, 69.78, "transoxiana"],
   samarkand: ["Samarkand", 39.65, 66.96, "transoxiana"],
   nasaf: ["Nasaf (Qarshi)", 38.86, 65.79, "transoxiana"],
   termez: ["Termez", 37.22, 67.28, "transoxiana"],
@@ -431,12 +432,12 @@ const PLACES = {
   sayram: ["Sayram", 42.30, 69.77, "transoxiana"],
   turkistan: ["Yasi (Turkistan)", 43.30, 68.27, "transoxiana"],
   marghinan: ["Marghinan", 40.47, 71.72, "transoxiana"],
-  kashgar: ["Kashgar", 39.47, 75.99, "transoxiana"],
   tashkent: ["Tashkent", 41.30, 69.24, "transoxiana"],
   multan: ["Multan", 30.20, 71.47, "southasia"],
   delhi: ["Delhi", 28.65, 77.23, "southasia"],
   agra: ["Agra", 27.18, 78.01, "southasia"],
   sirhind: ["Sirhind", 30.64, 76.38, "southasia"],
+  srinagar: ["Srinagar", 34.08, 74.80, "southasia"],
   lahore: ["Lahore", 31.55, 74.34, "southasia"],
   sialkot: ["Sialkot", 32.49, 74.53, "southasia"],
   aligarh: ["Aligarh", 27.88, 78.08, "southasia"],
@@ -561,7 +562,9 @@ const FIGURES = [
   { id: "shafii", name: "Muhammad ibn Idris al-Shafi’i", short: "al-Shafi’i", ar: "محمد بن إدريس الشافعي", b: 767, d: 820, dah: 204, lane: "law", schools: ["Shafi’i"], places: ["gaza", "mecca", "medina", "baghdad", "fustat"], teachers: ["malik"],
     text: "Jurist who studied with Malik and with the Hanafis of Iraq. In the Risala he ranked the sources of law: the Qur’an, the Prophet’s practice as known through hadith, consensus and analogy. He is the founder of the Shafi’i school, and the conventional account also makes him the founder of legal theory; some historians argue that the classical theory took shape only later.",
     works: [["al-Risala", "The epistle"], ["Kitab al-Umm", "The mother book"]] },
-  { id: "jahiz", name: "al-Jahiz", short: "al-Jahiz", ar: "الجاحظ", b: 776, bc: true, d: 868, dah: 255, dNote: "Died in 255 AH, a year that runs from December 868 to December 869 CE.", lane: "letters", also: ["theology"], schools: ["Mu’tazili"], places: ["basra", "baghdad"],
+  { id: "nazzam", name: "Ibrahim ibn Sayyar al-Nazzam", short: "al-Nazzam", ar: "إبراهيم بن سيار النظام", b: 778, bc: true, bNote: "Reported between 154 and 168 AH (775–782 CE).", d: 840, dc: true, dNote: "Died between about 835 and 845; the year is not known.", lane: "theology", schools: ["Mu’tazili"], places: ["basra", "baghdad"],
+    text: "Mu’tazili theologian of Basra who moved to Baghdad in the 820s and taught al-Jahiz, among others. He rejected the atomism of his teacher Abu al-Hudhayl and, by several reports, held that the Qur’an is inimitable because God turned people away from matching it. His works survive only in fragments quoted by others." },
+  { id: "jahiz", name: "al-Jahiz", short: "al-Jahiz", ar: "الجاحظ", b: 776, bc: true, d: 868, dah: 255, dNote: "Died in 255 AH, a year that runs from December 868 to December 869 CE.", lane: "letters", also: ["theology"], schools: ["Mu’tazili"], places: ["basra", "baghdad"], teachers: [{ id: "nazzam", rel: "student and follower" }],
     text: "Prose writer and Mu’tazili theologian of Basra. His Book of Animals and his essays on rhetoric, society and theology set the standard for Arabic literary prose.",
     works: [["Kitab al-hayawan", "The book of animals"], ["al-Bayan wa’l-tabyin", "Eloquence and clear expression"]] },
   { id: "ibn-hanbal", name: "Ahmad ibn Hanbal", short: "Ibn Hanbal", ar: "أحمد بن حنبل", b: 780, d: 855, dah: 241, lane: "hadith", also: ["law", "theology"], schools: ["Hanbali", "Athari"], places: ["baghdad"], teachers: ["shafii"],
@@ -638,9 +641,6 @@ const FIGURES = [
   { id: "shaykh-tusi", name: "al-Shaykh al-Tusi", short: "al-Shaykh al-Tusi", ar: "الشيخ الطوسي", b: 995, d: 1067, dah: 460, lane: "law", also: ["hadith"], schools: ["Ja’fari"], places: ["tus", "baghdad", "najaf"], teachers: ["mufid"],
     text: "Twelver scholar from Tus who studied with al-Mufid in Baghdad. He wrote two of the Four Books of Shi’i hadith and major works on law and its theory. After his house was burned in 1056 he moved to Najaf, which became a centre of Shi’i learning.",
     works: [["Tahdhib al-ahkam", "The refinement of rulings"], ["al-Istibsar", "The examination"]] },
-  { id: "kashgari", name: "Mahmud al-Kashgari", short: "al-Kashgari", ar: "محمود الكاشغري", b: 1005, bc: true, bUnknown: true, bNote: "Birth year unknown; proposed dates range from 1008 to the 1030s.", d: 1102, dc: true, dNote: "Death year unknown; c. 1102 is only where the life line ends, and modern writers also give 1105. A tomb at Opal near Kashgar is traditionally his.", lane: "letters", places: ["kashgar", "baghdad"],
-    text: "Turkic scholar from the Karakhanid lands, whose father came from Barsgan, who settled in Baghdad. His Compendium of the Languages of the Turks, finished in 1072–74, is the first dictionary of the Turkic languages, explained in Arabic, with poems, proverbs and a round map.",
-    works: [["Diwan lughat al-Turk", "Compendium of the languages of the Turks"]] },
   { id: "jurjani", name: "Abd al-Qahir al-Jurjani", short: "Abd al-Qahir al-Jurjani", ar: "عبد القاهر الجرجاني", b: 1009, bc: true, bNote: "An estimate, about 400 AH (1009–1010 CE).", d: 1078, dah: 471, lane: "letters", places: ["jurjan"],
     text: "Grammarian of Jurjan whose work laid the foundations of the later science of Arabic rhetoric. He argued that eloquence lies in the arrangement of words, and used this to explain the inimitability of the Qur’an.",
     works: [["Dala’il al-i’jaz", "Proofs of inimitability"], ["Asrar al-balagha", "The secrets of eloquence"]] },
@@ -708,6 +708,9 @@ const FIGURES = [
   { id: "ibn-kathir", name: "Isma’il ibn Kathir", short: "Ibn Kathir", ar: "إسماعيل بن كثير", b: 1301, bc: true, bNote: "Born 700 or 701 AH (1300–1302 CE).", d: 1373, dah: 774, lane: "quran", also: ["letters"], schools: ["Shafi’i"], places: ["bosra", "damascus"], teachers: [{ id: "ibn-taymiyya", rel: "study and lasting influence" }],
     text: "Shafi’i scholar of Damascus and a student of Ibn Taymiyya. His Qur’an commentary explains verses first by other verses and by hadith, and became one of the most widely read. His history runs from creation to his own day.",
     works: [["Tafsir al-Qur’an al-azim", "Commentary on the mighty Qur’an"], ["al-Bidaya wa’l-nihaya", "The beginning and the end"]] },
+  { id: "hamadani", name: "Mir Sayyid Ali Hamadani", short: "Sayyid Ali Hamadani", ar: "مير سيد علي همداني", b: 1314, d: 1385, dah: 786, lane: "sufism", schools: ["Kubrawi"], places: ["hamadan", "srinagar", "kulob"],
+    text: "Kubrawi Sufi from Hamadan who travelled widely and led a celebrated mission to Kashmir, where his followers were based in Srinagar. Later biographies portray him practising vocal remembrance with set movements of the head, and listening to music. He died on a journey in 1385 and was buried at Khuttalan, where his shrine still stands.",
+    works: [["Dhakhirat al-muluk", "Provisions for kings"]] },
   { id: "naqshband", name: "Baha’ al-Din Naqshband", short: "Baha’ al-Din Naqshband", ar: "بهاء الدين نقشبند", b: 1318, d: 1389, dah: 791, lane: "sufism", places: ["bukhara"],
     text: "Sufi master of Qasr-i Arifan near Bukhara. He taught silent remembrance of God and “solitude in the crowd”, staying engaged in daily life. The Naqshbandi order spread from Bukhara across Central Asia, India and the Ottoman lands." },
   { id: "shatibi", name: "Abu Ishaq al-Shatibi", short: "al-Shatibi", ar: "أبو إسحاق الشاطبي", b: 1320, bc: true, bUnknown: true, bNote: "Birth year unknown.", d: 1388, dah: 790, lane: "law", schools: ["Maliki"], places: ["granada"],
@@ -977,7 +980,7 @@ const DEBATES = [
       { y: 1045, text: "Al-Qushayri writes his Epistle in Nishapur.", who: ["qushayri"], at: ["nishapur"] },
       { y: 1100, c: true, text: "Al-Ghazali writes The Revival of the Religious Sciences after leaving Baghdad.", who: ["ghazali"], at: ["damascus", "tus"] }
     ],
-    related: ["unity-being"] },
+    related: ["unity-being", "sama"] },
 
   { id: "created-quran", title: "The createdness of the Qur’an and the Mihna", term: "khalq al-Qur’an", ar: "خلق القرآن",
     phases: [[800, 855]], lanes: ["theology"],
@@ -996,7 +999,7 @@ const DEBATES = [
       { y: 864, c: true, text: "In Nishapur al-Bukhari is accused over whether the recitation of the Qur’an is created.", who: ["bukhari"], at: ["nishapur"] },
       { y: 915, c: true, text: "Al-Ash’ari separates God’s eternal speech from its created expression.", who: ["ashari"], at: ["baghdad"] }
     ],
-    related: ["attributes"] },
+    related: ["attributes", "ijaz"] },
 
   { id: "philosophy", title: "Philosophy and revelation", term: "al-falsafa wa’l-shar’", ar: "الفلسفة والشرع",
     phases: [[830, 1040], [1090, 1200]], lanes: ["philosophy", "theology"],
@@ -1020,6 +1023,24 @@ const DEBATES = [
     ],
     related: ["heavens", "unity-being"] },
 
+  { id: "ijaz", title: "What makes the Qur’an inimitable", term: "i’jaz al-Qur’an", ar: "إعجاز القرآن",
+    phases: [[830, 1080], [1130, 1210]], lanes: ["quran", "letters", "theology"],
+    question: "The Qur’an challenges its hearers to produce its like. Why could no one do so?",
+    text: "Theologians agreed that no one could match the Qur’an but disagreed on why. Al-Nazzam held that God turned people away from trying, a view called sarfa. Al-Jahiz and later Qadi Abd al-Jabbar located the miracle in its eloquence. In the eleventh century Abd al-Qahir al-Jurjani argued that it lies in nazm, the way words are arranged to carry meaning, and his theory shaped later commentary and the science of rhetoric.",
+    positions: [
+      { name: "God turned them away (sarfa)", text: "The Qur’an’s language was not beyond the Arabs in itself, but God prevented them from matching it; that prevention is the miracle.", who: ["nazzam"] },
+      { name: "Eloquence beyond human reach", text: "The miracle lies in the Qur’an’s eloquence, which reaches a degree no human speaker can attain.", who: ["jahiz", "abd-al-jabbar"] },
+      { name: "The arrangement of words (nazm)", text: "The miracle lies in nazm: the way words are joined through the meanings of grammar to say exactly what is meant. Sarfa would make the miracle the silencing of the Arabs rather than the text itself.", who: ["jurjani", "zamakhshari", "fakhr-razi"] }
+    ],
+    thread: [
+      { y: 830, c: true, text: "Al-Nazzam teaches that God turned the Arabs away from matching the Qur’an.", who: ["nazzam"], at: ["baghdad"] },
+      { y: 850, c: true, text: "Al-Jahiz, al-Nazzam’s student, explains the Qur’an’s inimitability through its rhetoric instead.", who: ["jahiz"], at: ["basra"] },
+      { y: 985, c: true, text: "Qadi Abd al-Jabbar devotes a volume of al-Mughni to the Qur’an’s inimitability.", who: ["abd-al-jabbar"], at: ["rayy"] },
+      { y: 1070, c: true, text: "Abd al-Qahir al-Jurjani writes The Proofs of Inimitability, rejecting sarfa and grounding the miracle in nazm.", who: ["jurjani"], at: ["jurjan"] },
+      { y: 1134, text: "Al-Zamakhshari completes al-Kashshaf; its introduction holds that only masters of the sciences of meaning and expression can reach the Qur’an’s secrets.", who: ["zamakhshari"], at: ["mecca"] }
+    ],
+    related: ["tafsir", "created-quran"] },
+
   { id: "tafsir", title: "How to interpret the Qur’an", term: "manahij al-tafsir", ar: "مناهج التفسير",
     phases: [[870, 1375], [1880, 1985]], lanes: ["quran"],
     question: "Should the Qur’an be read through transmitted reports, through language and reason, or through inner insight?",
@@ -1042,7 +1063,7 @@ const DEBATES = [
       { y: 1972, c: true, text: "Tabataba’i completes al-Mizan in Qom.", who: ["tabatabai"], at: ["qom"] },
       { y: 1980, text: "Fazlur Rahman publishes Major Themes of the Qur’an.", who: ["fazlur-rahman"], at: ["chicago"] }
     ],
-    related: ["reform"] },
+    related: ["reform", "ijaz"] },
 
   { id: "heavens", title: "Rethinking the heavens", term: "al-shukuk ala Batlamyus", ar: "الشكوك على بطلميوس",
     phases: [[1025, 1475]], lanes: ["sciences", "philosophy"],
@@ -1064,6 +1085,28 @@ const DEBATES = [
       { y: 1472, c: true, text: "Ali Qushji teaches in Istanbul.", who: ["qushji"], at: ["istanbul"] }
     ],
     related: ["philosophy"] },
+
+  { id: "sama", title: "Music, dance and the remembrance of God", term: "al-sama’ wa’l-dhikr", ar: "السماع والذكر",
+    phases: [[1040, 1200], [1250, 1390]], lanes: ["sufism", "law"],
+    question: "May Sufis use music, dance and chanting aloud to draw near to God, or should remembrance be silent?",
+    text: "Sufis gathered to listen to poetry and music (sama’) and to repeat the names of God (dhikr), sometimes with movement and dance. Al-Ghazali devoted a book of The Revival of the Religious Sciences to listening and set conditions for it; Hanbali critics such as Ibn al-Jawzi and Ibn Taymiyya called such gatherings an innovation. The orders differed as well: Rumi’s followers made music and turning their central ritual, while in fourteenth-century Central Asia the circles of Baha’ al-Din Naqshband and Sayyid Ali Hamadani came to stand for silent and vocal remembrance.",
+    positions: [
+      { name: "Listening is lawful under conditions", text: "Listening to music and poetry is lawful and can stir the love of God when the time, the place and the company are right; it is forbidden where it stirs base desire.", who: ["ghazali", "qushayri"] },
+      { name: "Music and turning as worship", text: "Listening to music with turning movement belongs to the path itself; it became the central ritual of Rumi’s followers.", who: ["rumi"] },
+      { name: "Remembrance aloud", text: "God’s names are repeated aloud and in company, often with set movements of the body.", who: ["yasawi", "hamadani"] },
+      { name: "Remembrance in silence", text: "The heart repeats the remembrance without moving the tongue or body, which avoids display; vocal dhikr and music gatherings are not needed and may be unlawful.", who: ["naqshband"] },
+      { name: "A forbidden innovation", text: "Gatherings for music and dance were unknown to the Prophet’s Companions and are an innovation in worship.", who: ["ibn-taymiyya"] }
+    ],
+    thread: [
+      { y: 1100, c: true, text: "In The Revival of the Religious Sciences, al-Ghazali devotes a book to the proper conduct of listening and ecstasy.", who: ["ghazali"], at: ["damascus", "tus"] },
+      { y: 1160, c: true, text: "Ahmad Yasawi teaches at Yasi; the Yasawi order that traces itself to him becomes known for remembrance with voice and movement.", who: ["yasawi"], at: ["turkistan"] },
+      { y: 1190, c: true, text: "Ibn al-Jawzi’s Devil’s Deception attacks the Sufis’ listening and chanting as innovations.", who: [], at: ["baghdad"] },
+      { y: 1250, c: true, text: "In Konya, Rumi makes listening to music and turning part of his circle’s worship.", who: ["rumi"], at: ["konya"] },
+      { y: 1290, c: true, text: "Rumi’s son Sultan Walad organises his followers into the Mawlawi order, with the turning dance as its main ritual.", who: [], at: ["konya"] },
+      { y: 1310, c: true, text: "Ibn Taymiyya and his circle write against Sufi listening as an innovation.", who: ["ibn-taymiyya"], at: ["damascus"] },
+      { y: 1380, c: true, text: "In Central Asia, the followers of Naqshband and of Sayyid Ali Hamadani divide over silent and vocal remembrance; later biographies make the two masters the faces of each side.", who: ["naqshband", "hamadani"], at: ["bukhara", "kulob"] }
+    ],
+    related: ["sufism-law", "unity-being"] },
 
   { id: "ijtihad", title: "Ijtihad and taqlid", term: "al-ijtihad wa’l-taqlid", ar: "الاجتهاد والتقليد",
     phases: [[1050, 1330], [1700, 1935]], lanes: ["law"],
@@ -1286,7 +1329,8 @@ const SOURCES = {
   ],
   "fakhr-razi": [
     ["University of Edinburgh Research Explorer: Fakhr al-Din al-Razi", "https://www.research.ed.ac.uk/en/publications/fakhr-al-din-al-razi/"],
-    ["Stanford Encyclopedia of Philosophy: Fakhr al-Din al-Razi", "https://plato.stanford.edu/entries/al-din-al-razi/", "al-Matalib al-aliya"]
+    ["Stanford Encyclopedia of Philosophy: Fakhr al-Din al-Razi", "https://plato.stanford.edu/entries/al-din-al-razi/", "al-Matalib al-aliya"],
+    ["Journal of Critical Studies on the Quranic Exegesis (2024): Fakhr al-Dīn al-Rāzī and the Concept of Ṣarfa (PDF)", "https://www.ensani.ir/fa/article/download/592643", "his Nihayat al-iʿjaz and its rejection of sarfa"]
   ],
   "farabi": [
     ["Stanford Encyclopedia of Philosophy: al-Farabi", "https://plato.stanford.edu/entries/al-farabi/"],
@@ -1301,12 +1345,17 @@ const SOURCES = {
   ],
   "ghazali": [
     ["Stanford Encyclopedia of Philosophy: al-Ghazali", "https://plato.stanford.edu/entries/al-ghazali/"],
-    ["Oxford Academic: al-Ghazālī’s Incoherence of the Philosophers", "https://academic.oup.com/edited-volume/38657/chapter-abstract/335768202", "Tahafut al-falasifa"]
+    ["Oxford Academic: al-Ghazālī’s Incoherence of the Philosophers", "https://academic.oup.com/edited-volume/38657/chapter-abstract/335768202", "Tahafut al-falasifa"],
+    ["Institute of Ismaili Studies: Leonard Lewisohn, The Sacred Music of Islam, Samaʿ in the Persian Sufi Tradition (PDF)", "https://iis.ac.uk/wp-content/uploads/2024/10/the-sacred-music-of-islam_pdf-366408512.pdf", "his defence of listening"]
   ],
   "hallaj": [
     ["Encyclopaedia Iranica: Ḥallāj, Abu’l-Moḡiṯ Ḥosayn", "https://www.iranicaonline.org/articles/hallaj/"],
     ["Encyclopaedia Iranica: Ana’l-Ḥaqq", "https://www.iranicaonline.org/articles/anal-haqq-i-am-the-truth-the-most-famous-of-the-sufi-sathiyat-ecstatic-utterances-or-paradoxes/", "the teacher link"],
     ["Britannica: al-Ḥallāj", "https://www.britannica.com/biography/al-Hallaj", "the link with al-Junayd"]
+  ],
+  "hamadani": [
+    ["Encyclopaedia Iranica: Hamadāni, Sayyed ʿAli", "https://iranicaonline.org/articles/hamadani-sayyedali"],
+    ["Shahzad Bashir: Movement and Stillness, the Practice of Sufi Dhikr in Fourteenth-Century Central Asia (PDF)", "https://www.themathesontrust.org/papers/islam/Bashir-Movement_and_Stillness_Sufi_Dhikr.pdf", "his vocal dhikr and listening, as later biographies tell it"]
   ],
   "hasan-basri": [
     ["Encyclopaedia Iranica: Ḥasan Baṣri", "https://www.iranicaonline.org/articles/hasan-basri-abu-said-b-abil-hasan-yasar/"]
@@ -1379,7 +1428,8 @@ const SOURCES = {
   ],
   "ibn-taymiyya": [
     ["Oxford Academic: Ibn Taymiyya", "https://academic.oup.com/reference/62361/reference-article-abstract/554574605"],
-    ["Library of Congress: Ibn Taymiyyah on reason and revelation", "https://www.loc.gov/item/2019033460/", "Dar’ ta’arud al-aql wa’l-naql"]
+    ["Library of Congress: Ibn Taymiyyah on reason and revelation", "https://www.loc.gov/item/2019033460/", "Dar’ ta’arud al-aql wa’l-naql"],
+    ["Islamic Law and Society (2024): Ibn Taymiyya and his Circle on samāʿ (RelBib record)", "https://relbib.de/Record/1890306797", "his writing against Sufi listening"]
   ],
   "ibn-tufayl": [
     ["Oxford Academic: Ibn Ṭufayl", "https://academic.oup.com/reference/62361/reference-article-abstract/554573383"],
@@ -1415,6 +1465,7 @@ const SOURCES = {
     ["Britannica: al-Ḥallāj", "https://www.britannica.com/biography/al-Hallaj", "his teaching of al-Hallaj"]
   ],
   "jurjani": [
+    ["JILSA (PDF): ʿAbd al-Qāhir al-Jurjānī on Qur’anic nazm and his criticism of ṣarfa", "https://jurnalfahum.uinsa.ac.id/index.php/jilsa/article/download/1432/584"],
     ["TDV İslâm Ansiklopedisi: Abdülkāhir el-Cürcânî", "https://islamansiklopedisi.org.tr/abdulkahir-el-curcani"],
     ["Durham E-Theses (PDF)", "https://etheses.durham.ac.uk/id/eprint/238/1/Thesis.pdf", "the estimated birth year"]
   ],
@@ -1426,12 +1477,6 @@ const SOURCES = {
   "karima": [
     ["Cambridge University Press: Karīma al-Marwaziyya and the transmission of al-Bukhārī’s Ṣaḥīḥ", "https://www.cambridge.org/core/books/abs/oriental-languages-and-civilizations/karima-bint-ahmad-almarwaziyya-and-thetransmission-of-muhammad-b-ismail-albukharisaljami-alsahih/6C1A98CD93F80E957B40ACFD6C427178"],
     ["TDV İslâm Ansiklopedisi: el-Câmiu’s-sahîh", "https://islamansiklopedisi.org.tr/el-camius-sahih--buhari", "her teaching of the Sahih in Mecca"]
-  ],
-  "kashgari": [
-    ["Britannica: Dīwān lughat al-Turk", "https://www.britannica.com/topic/Diwan-lughat-at-Turk"],
-    ["Britannica: history of Central Asia: the Khitans", "https://www.britannica.com/place/history-of-Central-Asia-102306/The-Khitans"],
-    ["TDV İslâm Ansiklopedisi: Kâşgarlı Mahmud", "https://islamansiklopedisi.org.tr/kasgarli-mahmud"],
-    ["DergiPark (2025): Kâşgarlı Mahmud, Dîvânu Lugâti’t-Türk and its world map", "https://dergipark.org.tr/tr/download/article-file/4618227", "the uncertain birth and death years"]
   ],
   "katib-celebi": [
     ["Britannica: Kâtip Çelebi", "https://www.britannica.com/biography/Katip-Celebi"],
@@ -1493,7 +1538,8 @@ const SOURCES = {
     ["Revue de la FM6OA: The life and contribution of Nana Asmaʾu", "https://www.fm6oa.org/revue/article/the-life-and-contribution-of-nana-asmau/"]
   ],
   "naqshband": [
-    ["Encyclopaedia Iranica: Bahāʾ-al-Dīn Naqšband", "https://www.iranicaonline.org/articles/baha-al-din-naqsband-kaja-mohammad-b/"]
+    ["Encyclopaedia Iranica: Bahāʾ-al-Dīn Naqšband", "https://www.iranicaonline.org/articles/baha-al-din-naqsband-kaja-mohammad-b/"],
+    ["Shahzad Bashir: Movement and Stillness, the Practice of Sufi Dhikr in Fourteenth-Century Central Asia (PDF)", "https://www.themathesontrust.org/papers/islam/Bashir-Movement_and_Stillness_Sufi_Dhikr.pdf", "his silent dhikr, as later biographies tell it"]
   ],
   "nasir-tusi": [
     ["Biographical Encyclopedia of Astronomers (ISMI): Ṭūsī", "https://ismi.mpiwg-berlin.mpg.de/biography/Tusi_BEA.htm"],
@@ -1504,6 +1550,10 @@ const SOURCES = {
     ["Islam Museum: Imam al-Nawawi", "https://www.islam.museum/en/person/al-nawawi/"],
     ["TDV İslâm Ansiklopedisi: Nevevî", "https://islamansiklopedisi.org.tr/nevevi"],
     ["Britannica: Hadith", "https://www.britannica.com/topic/Hadith", "Riyad al-salihin"]
+  ],
+  "nazzam": [
+    ["Encyclopedia of Religion: Nazzam, al- (782–c. 840)", "https://encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/nazzam-al-782-c-840"],
+    ["DergiPark (PDF): al-Naẓẓām’s ṣarfa and al-Jāḥiẓ on the inimitability of the Qur’an", "https://dergipark.org.tr/en/download/article-file/4746272", "his view of sarfa"]
   ],
   "nursi": [
     ["Oxford Reference: Said Nursi (Oxford Encyclopedia of the Islamic World)", "https://www.oxfordreference.com/view/10.1093/oi/authority.20110803100242365"],
@@ -1536,6 +1586,7 @@ const SOURCES = {
   ],
   "rumi": [
     ["Britannica: Rūmī", "https://www.britannica.com/biography/Rumi"],
+    ["Britannica: Mawlawīyah", "https://www.britannica.com/topic/Mawlawiyah"],
     ["Foundation for Iranian Studies: Franklin Lewis on Rumi", "https://fis-iran.org/our-programs/noruz-lectures/rumi-icon-man/", "the family’s move west"]
   ],
   "sayyid-ahmad-khan": [
@@ -1615,6 +1666,7 @@ const SOURCES = {
   ],
   "yasawi": [
     ["Britannica: Uzbek literature", "https://www.britannica.com/art/Uzbek-literature", "his place in early Turkic literature"],
+    ["Shahzad Bashir: Movement and Stillness, the Practice of Sufi Dhikr in Fourteenth-Century Central Asia (PDF)", "https://www.themathesontrust.org/papers/islam/Bashir-Movement_and_Stillness_Sufi_Dhikr.pdf", "the Yasawi order’s dhikr with movement"],
     ["TDV İslâm Ansiklopedisi: Dîvân-ı Hikmet", "https://islamansiklopedisi.org.tr/divan-i-hikmet", "Divan-i hikmat"],
     ["TDV İslâm Ansiklopedisi: Ahmed Yesevî", "https://islamansiklopedisi.org.tr/ahmed-yesevi", "the unknown birth year"],
     ["ISAM: “Ahmad Yasawi” (encyclopedia entry, PDF)", "https://isamveri.org/pdfdkm/01/DKM011071.pdf", "the reported birth years"]
@@ -1662,6 +1714,12 @@ const SOURCES = {
   "debate:heavens": [
     ["Stanford Encyclopedia of Philosophy: Arabic and Islamic natural philosophy and natural science", "https://plato.stanford.edu/entries/arabic-islamic-natural/"]
   ],
+  "debate:ijaz": [
+    ["Oxford Handbook of Qur’anic Studies: Muhammad Abdel Haleem, Rhetorical Devices and Stylistic Features of Qur’anic Grammar (PDF)", "https://soas-repository.worktribe.com/OutputFile/365441"],
+    ["JILSA (PDF): ʿAbd al-Qāhir al-Jurjānī on Qur’anic nazm and his criticism of ṣarfa", "https://jurnalfahum.uinsa.ac.id/index.php/jilsa/article/download/1432/584"],
+    ["McGill (MA thesis): Yusuf Rahman, The Miraculous Nature of Muslim Scripture, a Study of ʿAbd al-Jabbār’s Iʿjāz al-Qurʾān", "https://escholarship.mcgill.ca/downloads/6w924d79j"],
+    ["DergiPark (PDF): al-Naẓẓām’s ṣarfa and al-Jāḥiẓ on the inimitability of the Qur’an", "https://dergipark.org.tr/en/download/article-file/4746272"]
+  ],
   "debate:ijtihad": [
     ["Britannica: ijtihād", "https://www.britannica.com/topic/ijtihad"],
     ["Britannica: taqlīd", "https://www.britannica.com/topic/taqlid"]
@@ -1692,6 +1750,12 @@ const SOURCES = {
     ["Britannica: Islamic world: reform from 1683", "https://www.britannica.com/topic/Islamic-world/Islamic-history-from-1683-to-the-present-reform-dependency-and-recovery"],
     ["Britannica: Wahhābī", "https://www.britannica.com/topic/Wahhabi"],
     ["Oxford Academic: Asmaʾu, Nana", "https://academic.oup.com/edited-volume/61663/chapter-abstract/553437989"]
+  ],
+  "debate:sama": [
+    ["Britannica: samāʿ", "https://www.britannica.com/topic/sama-Sufi-religious-practice"],
+    ["Institute of Ismaili Studies: Leonard Lewisohn, The Sacred Music of Islam, Samaʿ in the Persian Sufi Tradition (PDF)", "https://iis.ac.uk/wp-content/uploads/2024/10/the-sacred-music-of-islam_pdf-366408512.pdf"],
+    ["Shahzad Bashir: Movement and Stillness, the Practice of Sufi Dhikr in Fourteenth-Century Central Asia (PDF)", "https://www.themathesontrust.org/papers/islam/Bashir-Movement_and_Stillness_Sufi_Dhikr.pdf"],
+    ["Religions (2023): pre-modern Muslim treatments of listening to music (samāʿ)", "https://www2.mdpi.com/2077-1444/14/6/780"]
   ],
   "debate:sufism-law": [
     ["Britannica: Sufism: history", "https://www.britannica.com/topic/Sufism/History"],
@@ -1867,6 +1931,19 @@ const SOURCES = {
     ["TDV İslâm Ansiklopedisi: el-Câmiu’s-sahîh", "https://islamansiklopedisi.org.tr/el-camius-sahih--buhari"],
     ["Library of Congress: The Fourth Volume of al-Bukhari’s Collection of Authentic Hadiths", "https://www.loc.gov/item/2021667384/", "the date 846"]
   ],
+  "thread:ijaz:1070": [
+    ["JILSA (PDF): ʿAbd al-Qāhir al-Jurjānī on Qur’anic nazm and his criticism of ṣarfa", "https://jurnalfahum.uinsa.ac.id/index.php/jilsa/article/download/1432/584"]
+  ],
+  "thread:ijaz:1134": [
+    ["Oxford Handbook of Qur’anic Studies: Muhammad Abdel Haleem, Rhetorical Devices and Stylistic Features of Qur’anic Grammar (PDF)", "https://soas-repository.worktribe.com/OutputFile/365441"]
+  ],
+  "thread:ijaz:850": [
+    ["DergiPark (PDF): al-Naẓẓām’s ṣarfa and al-Jāḥiẓ on the inimitability of the Qur’an", "https://dergipark.org.tr/en/download/article-file/4746272"]
+  ],
+  "thread:ijaz:985": [
+    ["McGill (MA thesis): Yusuf Rahman, The Miraculous Nature of Muslim Scripture, a Study of ʿAbd al-Jabbār’s Iʿjāz al-Qurʾān", "https://escholarship.mcgill.ca/downloads/6w924d79j"],
+    ["Religions (2025): theories of Qur’anic inimitability after ʿAbd al-Jabbār", "https://www.mdpi.com/2077-1444/16/12/1584", "the volume of al-Mughni on iʿjāz"]
+  ],
   "thread:imamate:632": [
     ["Britannica: Abū Bakr", "https://www.britannica.com/biography/Abu-Bakr"]
   ],
@@ -1904,6 +1981,27 @@ const SOURCES = {
   "thread:renewal:1840": [
     ["Revue de la FM6OA: The life and contribution of Nana Asmaʾu", "https://www.fm6oa.org/revue/article/the-life-and-contribution-of-nana-asmau/"],
     ["Brill: Sufi Feminism, Women Leaders in African Sufi Movements", "https://doi.org/10.1163/15700666-12340258"]
+  ],
+  "thread:sama:1100": [
+    ["Institute of Ismaili Studies: Leonard Lewisohn, The Sacred Music of Islam, Samaʿ in the Persian Sufi Tradition (PDF)", "https://iis.ac.uk/wp-content/uploads/2024/10/the-sacred-music-of-islam_pdf-366408512.pdf", "al-Ghazali’s book on listening and its conditions"]
+  ],
+  "thread:sama:1160": [
+    ["Shahzad Bashir: Movement and Stillness, the Practice of Sufi Dhikr in Fourteenth-Century Central Asia (PDF)", "https://www.themathesontrust.org/papers/islam/Bashir-Movement_and_Stillness_Sufi_Dhikr.pdf", "the Yasawi order’s dhikr with movement"]
+  ],
+  "thread:sama:1190": [
+    ["Journal of Oriental Studies (2026): Ibn al-Jawzī’s Critique of Sufi Dhikr, Samāʿ and Ritual Chanting in Talbīs Iblīs (PDF)", "https://journals.ysu.am/j-orient-stud/article/download/vol29_no1_2026_44/pdf/37134"]
+  ],
+  "thread:sama:1250": [
+    ["EBSCO Research Starters: Sufi Order Mawlawiyah", "https://ebsco.com/research-starters/history/sufi-order-mawlawiyah", "Rumi beginning the ritual"]
+  ],
+  "thread:sama:1290": [
+    ["Britannica: Rūmī, death and legacy", "https://britannica.com/biography/Rumi/Death-and-legacy"]
+  ],
+  "thread:sama:1310": [
+    ["Islamic Law and Society (2024): Ibn Taymiyya and his Circle on samāʿ (RelBib record)", "https://relbib.de/Record/1890306797"]
+  ],
+  "thread:sama:1380": [
+    ["Shahzad Bashir: Movement and Stillness, the Practice of Sufi Dhikr in Fourteenth-Century Central Asia (PDF)", "https://www.themathesontrust.org/papers/islam/Bashir-Movement_and_Stillness_Sufi_Dhikr.pdf"]
   ],
   "thread:tafsir:1134": [
     ["Brill: Andrew Lane, A Traditional Muʿtazilite Qurʾān Commentary", "https://brill.com/display/book/9789047417767/front-4.pdf", "the completion date, 23 Rabiʿ II 528 (20 February 1134) at Mecca"]

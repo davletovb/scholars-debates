@@ -87,7 +87,8 @@ const SOURCES = {
   ],
   "fakhr-razi": [
     ["University of Edinburgh Research Explorer: Fakhr al-Din al-Razi", "https://www.research.ed.ac.uk/en/publications/fakhr-al-din-al-razi/"],
-    ["Stanford Encyclopedia of Philosophy: Fakhr al-Din al-Razi", "https://plato.stanford.edu/entries/al-din-al-razi/", "al-Matalib al-aliya"]
+    ["Stanford Encyclopedia of Philosophy: Fakhr al-Din al-Razi", "https://plato.stanford.edu/entries/al-din-al-razi/", "al-Matalib al-aliya"],
+    ["Journal of Critical Studies on the Quranic Exegesis (2024): Fakhr al-Dīn al-Rāzī and the Concept of Ṣarfa (PDF)", "https://www.ensani.ir/fa/article/download/592643", "his Nihayat al-iʿjaz and its rejection of sarfa"]
   ],
   "farabi": [
     ["Stanford Encyclopedia of Philosophy: al-Farabi", "https://plato.stanford.edu/entries/al-farabi/"],
@@ -102,12 +103,17 @@ const SOURCES = {
   ],
   "ghazali": [
     ["Stanford Encyclopedia of Philosophy: al-Ghazali", "https://plato.stanford.edu/entries/al-ghazali/"],
-    ["Oxford Academic: al-Ghazālī’s Incoherence of the Philosophers", "https://academic.oup.com/edited-volume/38657/chapter-abstract/335768202", "Tahafut al-falasifa"]
+    ["Oxford Academic: al-Ghazālī’s Incoherence of the Philosophers", "https://academic.oup.com/edited-volume/38657/chapter-abstract/335768202", "Tahafut al-falasifa"],
+    ["Institute of Ismaili Studies: Leonard Lewisohn, The Sacred Music of Islam, Samaʿ in the Persian Sufi Tradition (PDF)", "https://iis.ac.uk/wp-content/uploads/2024/10/the-sacred-music-of-islam_pdf-366408512.pdf", "his defence of listening"]
   ],
   "hallaj": [
     ["Encyclopaedia Iranica: Ḥallāj, Abu’l-Moḡiṯ Ḥosayn", "https://www.iranicaonline.org/articles/hallaj/"],
     ["Encyclopaedia Iranica: Ana’l-Ḥaqq", "https://www.iranicaonline.org/articles/anal-haqq-i-am-the-truth-the-most-famous-of-the-sufi-sathiyat-ecstatic-utterances-or-paradoxes/", "the teacher link"],
     ["Britannica: al-Ḥallāj", "https://www.britannica.com/biography/al-Hallaj", "the link with al-Junayd"]
+  ],
+  "hamadani": [
+    ["Encyclopaedia Iranica: Hamadāni, Sayyed ʿAli", "https://iranicaonline.org/articles/hamadani-sayyedali"],
+    ["Shahzad Bashir: Movement and Stillness, the Practice of Sufi Dhikr in Fourteenth-Century Central Asia (PDF)", "https://www.themathesontrust.org/papers/islam/Bashir-Movement_and_Stillness_Sufi_Dhikr.pdf", "his vocal dhikr and listening, as later biographies tell it"]
   ],
   "hasan-basri": [
     ["Encyclopaedia Iranica: Ḥasan Baṣri", "https://www.iranicaonline.org/articles/hasan-basri-abu-said-b-abil-hasan-yasar/"]
@@ -180,7 +186,8 @@ const SOURCES = {
   ],
   "ibn-taymiyya": [
     ["Oxford Academic: Ibn Taymiyya", "https://academic.oup.com/reference/62361/reference-article-abstract/554574605"],
-    ["Library of Congress: Ibn Taymiyyah on reason and revelation", "https://www.loc.gov/item/2019033460/", "Dar’ ta’arud al-aql wa’l-naql"]
+    ["Library of Congress: Ibn Taymiyyah on reason and revelation", "https://www.loc.gov/item/2019033460/", "Dar’ ta’arud al-aql wa’l-naql"],
+    ["Islamic Law and Society (2024): Ibn Taymiyya and his Circle on samāʿ (RelBib record)", "https://relbib.de/Record/1890306797", "his writing against Sufi listening"]
   ],
   "ibn-tufayl": [
     ["Oxford Academic: Ibn Ṭufayl", "https://academic.oup.com/reference/62361/reference-article-abstract/554573383"],
@@ -216,6 +223,7 @@ const SOURCES = {
     ["Britannica: al-Ḥallāj", "https://www.britannica.com/biography/al-Hallaj", "his teaching of al-Hallaj"]
   ],
   "jurjani": [
+    ["JILSA (PDF): ʿAbd al-Qāhir al-Jurjānī on Qur’anic nazm and his criticism of ṣarfa", "https://jurnalfahum.uinsa.ac.id/index.php/jilsa/article/download/1432/584"],
     ["TDV İslâm Ansiklopedisi: Abdülkāhir el-Cürcânî", "https://islamansiklopedisi.org.tr/abdulkahir-el-curcani"],
     ["Durham E-Theses (PDF)", "https://etheses.durham.ac.uk/id/eprint/238/1/Thesis.pdf", "the estimated birth year"]
   ],
@@ -227,12 +235,6 @@ const SOURCES = {
   "karima": [
     ["Cambridge University Press: Karīma al-Marwaziyya and the transmission of al-Bukhārī’s Ṣaḥīḥ", "https://www.cambridge.org/core/books/abs/oriental-languages-and-civilizations/karima-bint-ahmad-almarwaziyya-and-thetransmission-of-muhammad-b-ismail-albukharisaljami-alsahih/6C1A98CD93F80E957B40ACFD6C427178"],
     ["TDV İslâm Ansiklopedisi: el-Câmiu’s-sahîh", "https://islamansiklopedisi.org.tr/el-camius-sahih--buhari", "her teaching of the Sahih in Mecca"]
-  ],
-  "kashgari": [
-    ["Britannica: Dīwān lughat al-Turk", "https://www.britannica.com/topic/Diwan-lughat-at-Turk"],
-    ["Britannica: history of Central Asia: the Khitans", "https://www.britannica.com/place/history-of-Central-Asia-102306/The-Khitans"],
-    ["TDV İslâm Ansiklopedisi: Kâşgarlı Mahmud", "https://islamansiklopedisi.org.tr/kasgarli-mahmud"],
-    ["DergiPark (2025): Kâşgarlı Mahmud, Dîvânu Lugâti’t-Türk and its world map", "https://dergipark.org.tr/tr/download/article-file/4618227", "the uncertain birth and death years"]
   ],
   "katib-celebi": [
     ["Britannica: Kâtip Çelebi", "https://www.britannica.com/biography/Katip-Celebi"],
@@ -294,7 +296,8 @@ const SOURCES = {
     ["Revue de la FM6OA: The life and contribution of Nana Asmaʾu", "https://www.fm6oa.org/revue/article/the-life-and-contribution-of-nana-asmau/"]
   ],
   "naqshband": [
-    ["Encyclopaedia Iranica: Bahāʾ-al-Dīn Naqšband", "https://www.iranicaonline.org/articles/baha-al-din-naqsband-kaja-mohammad-b/"]
+    ["Encyclopaedia Iranica: Bahāʾ-al-Dīn Naqšband", "https://www.iranicaonline.org/articles/baha-al-din-naqsband-kaja-mohammad-b/"],
+    ["Shahzad Bashir: Movement and Stillness, the Practice of Sufi Dhikr in Fourteenth-Century Central Asia (PDF)", "https://www.themathesontrust.org/papers/islam/Bashir-Movement_and_Stillness_Sufi_Dhikr.pdf", "his silent dhikr, as later biographies tell it"]
   ],
   "nasir-tusi": [
     ["Biographical Encyclopedia of Astronomers (ISMI): Ṭūsī", "https://ismi.mpiwg-berlin.mpg.de/biography/Tusi_BEA.htm"],
@@ -305,6 +308,10 @@ const SOURCES = {
     ["Islam Museum: Imam al-Nawawi", "https://www.islam.museum/en/person/al-nawawi/"],
     ["TDV İslâm Ansiklopedisi: Nevevî", "https://islamansiklopedisi.org.tr/nevevi"],
     ["Britannica: Hadith", "https://www.britannica.com/topic/Hadith", "Riyad al-salihin"]
+  ],
+  "nazzam": [
+    ["Encyclopedia of Religion: Nazzam, al- (782–c. 840)", "https://encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/nazzam-al-782-c-840"],
+    ["DergiPark (PDF): al-Naẓẓām’s ṣarfa and al-Jāḥiẓ on the inimitability of the Qur’an", "https://dergipark.org.tr/en/download/article-file/4746272", "his view of sarfa"]
   ],
   "nursi": [
     ["Oxford Reference: Said Nursi (Oxford Encyclopedia of the Islamic World)", "https://www.oxfordreference.com/view/10.1093/oi/authority.20110803100242365"],
@@ -337,6 +344,7 @@ const SOURCES = {
   ],
   "rumi": [
     ["Britannica: Rūmī", "https://www.britannica.com/biography/Rumi"],
+    ["Britannica: Mawlawīyah", "https://www.britannica.com/topic/Mawlawiyah"],
     ["Foundation for Iranian Studies: Franklin Lewis on Rumi", "https://fis-iran.org/our-programs/noruz-lectures/rumi-icon-man/", "the family’s move west"]
   ],
   "sayyid-ahmad-khan": [
@@ -416,6 +424,7 @@ const SOURCES = {
   ],
   "yasawi": [
     ["Britannica: Uzbek literature", "https://www.britannica.com/art/Uzbek-literature", "his place in early Turkic literature"],
+    ["Shahzad Bashir: Movement and Stillness, the Practice of Sufi Dhikr in Fourteenth-Century Central Asia (PDF)", "https://www.themathesontrust.org/papers/islam/Bashir-Movement_and_Stillness_Sufi_Dhikr.pdf", "the Yasawi order’s dhikr with movement"],
     ["TDV İslâm Ansiklopedisi: Dîvân-ı Hikmet", "https://islamansiklopedisi.org.tr/divan-i-hikmet", "Divan-i hikmat"],
     ["TDV İslâm Ansiklopedisi: Ahmed Yesevî", "https://islamansiklopedisi.org.tr/ahmed-yesevi", "the unknown birth year"],
     ["ISAM: “Ahmad Yasawi” (encyclopedia entry, PDF)", "https://isamveri.org/pdfdkm/01/DKM011071.pdf", "the reported birth years"]
@@ -463,6 +472,12 @@ const SOURCES = {
   "debate:heavens": [
     ["Stanford Encyclopedia of Philosophy: Arabic and Islamic natural philosophy and natural science", "https://plato.stanford.edu/entries/arabic-islamic-natural/"]
   ],
+  "debate:ijaz": [
+    ["Oxford Handbook of Qur’anic Studies: Muhammad Abdel Haleem, Rhetorical Devices and Stylistic Features of Qur’anic Grammar (PDF)", "https://soas-repository.worktribe.com/OutputFile/365441"],
+    ["JILSA (PDF): ʿAbd al-Qāhir al-Jurjānī on Qur’anic nazm and his criticism of ṣarfa", "https://jurnalfahum.uinsa.ac.id/index.php/jilsa/article/download/1432/584"],
+    ["McGill (MA thesis): Yusuf Rahman, The Miraculous Nature of Muslim Scripture, a Study of ʿAbd al-Jabbār’s Iʿjāz al-Qurʾān", "https://escholarship.mcgill.ca/downloads/6w924d79j"],
+    ["DergiPark (PDF): al-Naẓẓām’s ṣarfa and al-Jāḥiẓ on the inimitability of the Qur’an", "https://dergipark.org.tr/en/download/article-file/4746272"]
+  ],
   "debate:ijtihad": [
     ["Britannica: ijtihād", "https://www.britannica.com/topic/ijtihad"],
     ["Britannica: taqlīd", "https://www.britannica.com/topic/taqlid"]
@@ -493,6 +508,12 @@ const SOURCES = {
     ["Britannica: Islamic world: reform from 1683", "https://www.britannica.com/topic/Islamic-world/Islamic-history-from-1683-to-the-present-reform-dependency-and-recovery"],
     ["Britannica: Wahhābī", "https://www.britannica.com/topic/Wahhabi"],
     ["Oxford Academic: Asmaʾu, Nana", "https://academic.oup.com/edited-volume/61663/chapter-abstract/553437989"]
+  ],
+  "debate:sama": [
+    ["Britannica: samāʿ", "https://www.britannica.com/topic/sama-Sufi-religious-practice"],
+    ["Institute of Ismaili Studies: Leonard Lewisohn, The Sacred Music of Islam, Samaʿ in the Persian Sufi Tradition (PDF)", "https://iis.ac.uk/wp-content/uploads/2024/10/the-sacred-music-of-islam_pdf-366408512.pdf"],
+    ["Shahzad Bashir: Movement and Stillness, the Practice of Sufi Dhikr in Fourteenth-Century Central Asia (PDF)", "https://www.themathesontrust.org/papers/islam/Bashir-Movement_and_Stillness_Sufi_Dhikr.pdf"],
+    ["Religions (2023): pre-modern Muslim treatments of listening to music (samāʿ)", "https://www2.mdpi.com/2077-1444/14/6/780"]
   ],
   "debate:sufism-law": [
     ["Britannica: Sufism: history", "https://www.britannica.com/topic/Sufism/History"],
@@ -668,6 +689,19 @@ const SOURCES = {
     ["TDV İslâm Ansiklopedisi: el-Câmiu’s-sahîh", "https://islamansiklopedisi.org.tr/el-camius-sahih--buhari"],
     ["Library of Congress: The Fourth Volume of al-Bukhari’s Collection of Authentic Hadiths", "https://www.loc.gov/item/2021667384/", "the date 846"]
   ],
+  "thread:ijaz:1070": [
+    ["JILSA (PDF): ʿAbd al-Qāhir al-Jurjānī on Qur’anic nazm and his criticism of ṣarfa", "https://jurnalfahum.uinsa.ac.id/index.php/jilsa/article/download/1432/584"]
+  ],
+  "thread:ijaz:1134": [
+    ["Oxford Handbook of Qur’anic Studies: Muhammad Abdel Haleem, Rhetorical Devices and Stylistic Features of Qur’anic Grammar (PDF)", "https://soas-repository.worktribe.com/OutputFile/365441"]
+  ],
+  "thread:ijaz:850": [
+    ["DergiPark (PDF): al-Naẓẓām’s ṣarfa and al-Jāḥiẓ on the inimitability of the Qur’an", "https://dergipark.org.tr/en/download/article-file/4746272"]
+  ],
+  "thread:ijaz:985": [
+    ["McGill (MA thesis): Yusuf Rahman, The Miraculous Nature of Muslim Scripture, a Study of ʿAbd al-Jabbār’s Iʿjāz al-Qurʾān", "https://escholarship.mcgill.ca/downloads/6w924d79j"],
+    ["Religions (2025): theories of Qur’anic inimitability after ʿAbd al-Jabbār", "https://www.mdpi.com/2077-1444/16/12/1584", "the volume of al-Mughni on iʿjāz"]
+  ],
   "thread:imamate:632": [
     ["Britannica: Abū Bakr", "https://www.britannica.com/biography/Abu-Bakr"]
   ],
@@ -705,6 +739,27 @@ const SOURCES = {
   "thread:renewal:1840": [
     ["Revue de la FM6OA: The life and contribution of Nana Asmaʾu", "https://www.fm6oa.org/revue/article/the-life-and-contribution-of-nana-asmau/"],
     ["Brill: Sufi Feminism, Women Leaders in African Sufi Movements", "https://doi.org/10.1163/15700666-12340258"]
+  ],
+  "thread:sama:1100": [
+    ["Institute of Ismaili Studies: Leonard Lewisohn, The Sacred Music of Islam, Samaʿ in the Persian Sufi Tradition (PDF)", "https://iis.ac.uk/wp-content/uploads/2024/10/the-sacred-music-of-islam_pdf-366408512.pdf", "al-Ghazali’s book on listening and its conditions"]
+  ],
+  "thread:sama:1160": [
+    ["Shahzad Bashir: Movement and Stillness, the Practice of Sufi Dhikr in Fourteenth-Century Central Asia (PDF)", "https://www.themathesontrust.org/papers/islam/Bashir-Movement_and_Stillness_Sufi_Dhikr.pdf", "the Yasawi order’s dhikr with movement"]
+  ],
+  "thread:sama:1190": [
+    ["Journal of Oriental Studies (2026): Ibn al-Jawzī’s Critique of Sufi Dhikr, Samāʿ and Ritual Chanting in Talbīs Iblīs (PDF)", "https://journals.ysu.am/j-orient-stud/article/download/vol29_no1_2026_44/pdf/37134"]
+  ],
+  "thread:sama:1250": [
+    ["EBSCO Research Starters: Sufi Order Mawlawiyah", "https://ebsco.com/research-starters/history/sufi-order-mawlawiyah", "Rumi beginning the ritual"]
+  ],
+  "thread:sama:1290": [
+    ["Britannica: Rūmī, death and legacy", "https://britannica.com/biography/Rumi/Death-and-legacy"]
+  ],
+  "thread:sama:1310": [
+    ["Islamic Law and Society (2024): Ibn Taymiyya and his Circle on samāʿ (RelBib record)", "https://relbib.de/Record/1890306797"]
+  ],
+  "thread:sama:1380": [
+    ["Shahzad Bashir: Movement and Stillness, the Practice of Sufi Dhikr in Fourteenth-Century Central Asia (PDF)", "https://www.themathesontrust.org/papers/islam/Bashir-Movement_and_Stillness_Sufi_Dhikr.pdf"]
   ],
   "thread:tafsir:1134": [
     ["Brill: Andrew Lane, A Traditional Muʿtazilite Qurʾān Commentary", "https://brill.com/display/book/9789047417767/front-4.pdf", "the completion date, 23 Rabiʿ II 528 (20 February 1134) at Mecca"]
