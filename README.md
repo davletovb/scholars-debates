@@ -1,8 +1,8 @@
 # Scholars and debates
 
-An interactive timeline of Muslim scholars and the debates they argued over, from 610 to 1980. A partial globe sits behind the timeline and turns to where things happened: select a scholar to follow the places of their life, or a debate to see where it was argued, year by year. With nothing selected, the globe follows the centuries in view.
+An interactive timeline of Muslim scholars and the debates they argued over, from 610 to 1988. A partial globe sits behind the timeline and turns to where things happened: select a scholar to follow the places of their life, or a debate to see where it was argued, year by year. With nothing selected, the globe follows the centuries in view.
 
-The first version holds 99 scholars, 18 debates and 28 events across seven eras.
+The first version holds 99 scholars, 18 debates and 29 events across seven eras.
 
 ## Using it
 
@@ -51,8 +51,9 @@ Add an entry to `FIGURES` in `src/data-figures.js`, then run `npm run check` and
 
 ```js
 { id: "ghazali", name: "Abu Hamid al-Ghazali", short: "al-Ghazali", ar: "أبو حامد الغزالي",
-  b: 1058, d: 1111, dah: 505, lane: "theology", also: ["sufism", "law"],
-  schools: ["Ash’ari", "Shafi’i"], places: ["tus", "nishapur", "baghdad", "damascus", "jerusalem", "tus"],
+  b: 1058, bc: true, bNote: "Medieval biographers give 1058 or 1059; …", d: 1111, dah: 505,
+  lane: "theology", also: ["sufism", "law"], schools: ["Ash’ari", "Shafi’i"],
+  places: ["tus", "nishapur", "baghdad", "damascus", "jerusalem", "mecca", "baghdad", "tus", "nishapur", "tus"],
   teachers: ["juwayni"],
   text: "Two or three sentences.",
   works: [["Ihya’ ulum al-din", "The revival of the religious sciences"]] }
@@ -60,20 +61,22 @@ Add an entry to `FIGURES` in `src/data-figures.js`, then run `npm run check` and
 
 - `id` is permanent and used in addresses: lowercase letters, digits and hyphens.
 - `b` and `d` are years CE. Add `bc: true` or `dc: true` when a year is approximate.
+- `bNote` explains a disputed or uncertain birth year in one sentence; the panel shows it under the dates.
+- `bUnknown: true` (with `bc: true`) marks a birth year the sources do not give. `b` is then only where the life line starts: the page shows "d. 1102 CE" instead of a birth year and says the start is an estimate.
 - `dah` is the death year AH where sources give it; otherwise the page works one out and marks it approximate.
 - `lane` is one of `quran`, `hadith`, `law`, `theology`, `sufism`, `philosophy`, `sciences`, `letters`.
-- `places` run in the order of the life and must exist in `PLACES`; the globe draws the route through them.
-- `teachers` lists ids of other scholars; students are worked out from it.
+- `places` run in the order of the life, returns included, and must exist in `PLACES`; the globe draws the route through them.
+- `teachers` lists ids of other scholars; students are worked out from it. Where the link is weaker or different from direct study, write `{ id: "jafar", rel: "hadith transmission" }`; the label shows under the name on both scholars' panels, so phrase it to read either way.
 
 A scholar joins a debate by appearing in that debate's `positions[].who` or `thread[].who`, so nothing is entered twice.
 
 ## Adding a debate
 
-Add an entry to `DEBATES` in `src/data-debates.js` with `phases` (spans of years when it was most active), a one-sentence `question`, a short `text`, `positions` stated as their holders stated them, a dated `thread`, and `related` debate ids. Each thread entry names the places where it happened in `at`, which the globe uses to draw how the debate travelled.
+Add an entry to `DEBATES` in `src/data-debates.js` with `phases` (spans of years when it was most active), a one-sentence `question`, a short `text`, `positions` written as short editorial summaries (the panel lists the scholars associated with each), a dated `thread`, and `related` debate ids. Each thread entry names the places where it happened in `at`, which the globe uses to draw how the debate travelled.
 
 ## Status
 
-Dates come from general reference works and still need checking against specialist sources, and references are not yet attached to each entry. Ibadi and Isma’ili scholars, Southeast Asia, Africa beyond Sokoto and more women scholars are still to be added.
+Birth years, teacher links, works and several itineraries and dated events were checked in a November 2026 audit against specialist reference works (TDV İslâm Ansiklopedisi, Encyclopaedia Iranica, the Stanford Encyclopedia of Philosophy and others). References are not yet attached to each entry. Ibadi and Isma’ili scholars, Southeast Asia, Africa beyond Sokoto and more women scholars are still to be added.
 
 ## Credits
 

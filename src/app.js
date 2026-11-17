@@ -22,9 +22,13 @@
     f.mid = (f.b + f.d) / 2;
     f.debates = [];
     f.students = [];
+    f.studentLinks = [];
     f.regions = [...new Set(f.places.map((p) => PLACES[p][3]))];
+    // a teacher link is an id, or { id, rel } when the relation needs a narrower label
+    f.teacherLinks = (f.teachers || []).map((t) => (typeof t === "string" ? { id: t } : t));
+    f.teachers = f.teacherLinks.map((t) => t.id);
   }
-  for (const f of FIGURES) for (const t of f.teachers || []) FIG.get(t).students.push(f.id);
+  for (const f of FIGURES) for (const t of f.teacherLinks) { const T = FIG.get(t.id); T.students.push(f.id); T.studentLinks.push({ id: f.id, rel: t.rel }); }
   for (const d of DEBATES) {
     const ids = new Set([...d.thread.flatMap((t) => t.who), ...d.positions.flatMap((p) => p.who)]);
     d.people = [...ids].map((id) => FIG.get(id)).sort((a, b) => a.mid - b.mid);
@@ -38,7 +42,7 @@
   // ---------------------------------------------------------------- calendars
   const ahFromCE = (y) => Math.floor((y + 0.5 - 622.5356) / 0.970224) + 1;
   const ceOfAH = (a) => 622.5356 + (a - 1) * 0.970224;
-  const lifeCE = (f) => `${f.bc ? "c. " : ""}${f.b}–${f.dc ? "c. " : ""}${f.d} CE`;
+  const lifeCE = (f) => (f.bUnknown ? `d. ${f.dc ? "c. " : ""}${f.d} CE` : `${f.bc ? "c. " : ""}${f.b}–${f.dc ? "c. " : ""}${f.d} CE`);
   const deathAH = (f) => (f.dah ? `died ${f.dah} AH` : `died c. ${ahFromCE(f.d)} AH`);
   const yearLabel = (y, c) => `${c ? "c. " : ""}${y}`;
   const norm = (s) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[’'‘ʿʾ`]/g, "").toLowerCase();
@@ -262,8 +266,8 @@
       const c = spherical_mean(uniq);
       if (uniq.length === 1) return { lon: c[0], lat: c[1], k: 1.2 };
       const f = frame.free;
-      const below = isNarrow() && !$("#panel").hidden ? 0 : Math.min(70, (window.innerHeight - f.y1) * 0.25);
-      const box = [f.x0 + 50, f.y0 + 24, f.x1 - 70, f.y1 + below];
+      // keep every stop above the timeline, where its marker and label can be read
+      const box = [f.x0 + 50, f.y0 + 24, f.x1 - 70, f.y1 - 16];
       for (let k = 1.25; k > 0.3; k *= 0.92) {
         const g = aim(c[0], c[1], k);
         let ok = true;
@@ -721,7 +725,7 @@
       const [, cy] = figPos.get(f.id);
       const y = cy + 12;
       const a = x(f.b), b = x(f.d);
-      const ca = f.bc ? Math.min(b, a + 10 * ppy) : a, cb = f.dc ? Math.max(ca, b - 10 * ppy) : b;
+      const ca = f.bc ? Math.min(b, a + (f.bUnknown ? 25 : 10) * ppy) : a, cb = f.dc ? Math.max(ca, b - 10 * ppy) : b;
       if (f.bc) layer.append("line").attr("class", "life-circa").attr("x1", a).attr("x2", ca).attr("y1", y).attr("y2", y);
       layer.append("line").attr("class", "life").attr("x1", ca).attr("x2", cb).attr("y1", y).attr("y2", y);
       if (f.dc) layer.append("line").attr("class", "life-circa").attr("x1", cb).attr("x2", b).attr("y1", y).attr("y2", y);
@@ -939,16 +943,23 @@
       const dates = el("p", "dates");
       dates.appendChild(el("strong", null, lifeCE(f)));
       dates.appendChild(el("span", null, deathAH(f)));
-      header(chips, f.name, f.ar, [dates]);
+      const extra = [dates];
+      if (f.bNote || f.bUnknown) {
+        let note = f.bNote || "Birth year unknown.";
+        if (f.bUnknown) note += ` The timeline starts the life line at about ${f.b} only as an estimate.`;
+        extra.push(el("p", "bnote", note));
+      }
+      header(chips, f.name, f.ar, extra);
       body.appendChild(el("p", "body", f.text));
       // places, numbered to match the map
-      section("Places, in order of the life");
+      section("Selected places, in order of the life");
       const ol = el("ol", "plist");
-      route(f).stops.forEach((s) => {
+      route(f).visits.forEach((s) => {
         const li = el("li");
         li.appendChild(el("span", "num", s.num));
         const b = link("place", s.id, s.label);
         li.appendChild(b);
+        if (s.ret) li.appendChild(el("span", "ret", "returns"));
         ol.appendChild(li);
       });
       body.appendChild(ol);
@@ -958,8 +969,20 @@
         for (const [t, en] of f.works) { const li = el("li"); li.appendChild(el("i", null, t)); li.appendChild(el("span", null, en)); ul.appendChild(li); }
         body.appendChild(ul);
       }
-      if ((f.teachers || []).length) { section("Teachers"); const d = el("div", "links"); for (const t of f.teachers) d.appendChild(link("fig", t, FIG.get(t).name)); body.appendChild(d); }
-      if (f.students.length) { section("Students"); const d = el("div", "links"); for (const t of f.students) d.appendChild(link("fig", t, FIG.get(t).name)); body.appendChild(d); }
+      const people = (title, list) => {
+        if (!list.length) return;
+        section(title);
+        const d = el("div", "links");
+        for (const t of list) {
+          const s = el("span", "rel-link");
+          s.appendChild(link("fig", t.id, FIG.get(t.id).name));
+          if (t.rel) s.appendChild(el("span", "rel", t.rel));
+          d.appendChild(s);
+        }
+        body.appendChild(d);
+      };
+      people("Teachers and mentors", f.teacherLinks);
+      people("Students", f.studentLinks);
       if (f.debates.length) {
         section("Debates");
         const d = el("div", "plist");
@@ -998,8 +1021,8 @@
         box.appendChild(el("h4", null, p.name));
         box.appendChild(el("p", null, p.text));
         const who = el("div", "who");
-        if (p.who.length) { who.appendChild(document.createTextNode("Held by ")); p.who.forEach((id, i) => { if (i) who.appendChild(document.createTextNode(", ")); who.appendChild(link("fig", id, FIG.get(id).short)); }); }
-        else who.textContent = "No holder of this position is in the dataset yet.";
+        if (p.who.length) { who.appendChild(document.createTextNode("Associated with ")); p.who.forEach((id, i) => { if (i) who.appendChild(document.createTextNode(", ")); who.appendChild(link("fig", id, FIG.get(id).short)); }); }
+        else who.textContent = "No scholar associated with this position is in the dataset yet.";
         box.appendChild(who);
         body.appendChild(box);
       }
@@ -1056,16 +1079,18 @@
 
   // ---------------------------------------------------------------- routes for the map
   function route(f) {
-    const stops = [], arcs = [], seen = new Map();
+    const stops = [], arcs = [], visits = [], seen = new Map();
     let prev = null, n = 0;
     for (const id of f.places) {
       if (id === prev) continue;
       const p = PLACES[id];
-      if (!seen.has(id)) { n++; const s = { id, num: String(n), label: p[0], lon: p[2], lat: p[1] }; seen.set(id, s); stops.push(s); }
+      const ret = seen.has(id);
+      if (!ret) { n++; const s = { id, num: String(n), label: p[0], lon: p[2], lat: p[1] }; seen.set(id, s); stops.push(s); }
+      visits.push({ id, num: seen.get(id).num, label: p[0], ret });
       if (prev) arcs.push([[PLACES[prev][2], PLACES[prev][1]], [p[2], p[1]]]);
       prev = id;
     }
-    return { stops, arcs };
+    return { stops, arcs, visits };
   }
   function debateRoute(d) {
     const byPlace = new Map(), arcs = [];
@@ -1205,7 +1230,7 @@
       const figs = FIGURES.filter((f) => f.mid >= era.start && f.mid < era.end).sort((a, b) => a.mid - b.mid);
       if (!figs.length) continue;
       const box = el("div", "browse-era");
-      box.appendChild(el("h4", null, `${era.name}, ${era.start}–${era.end === 1990 ? "present" : era.end}`));
+      box.appendChild(el("h4", null, era.end === 1990 ? `${era.name}, from ${era.start}` : `${era.name}, ${era.start}–${era.end}`));
       const links = el("div", "links");
       for (const f of figs) { const b = el("button", "link", f.short); b.type = "button"; b.dataset.kind = "fig"; b.dataset.id = f.id; links.appendChild(b); }
       box.appendChild(links);

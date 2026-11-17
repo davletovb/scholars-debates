@@ -36,7 +36,7 @@ const DEBATES = [
     thread: [
       { y: 657, text: "After the arbitration at Siffin, a group breaks from Ali and becomes the Kharijis.", who: ["ali"], at: ["siffin"] },
       { y: 700, c: true, text: "Al-Hasan al-Basri calls the grave sinner a hypocrite.", who: ["hasan-basri"], at: ["basra"] },
-      { y: 728, c: true, text: "Wasil ibn Ata leaves al-Hasan’s circle over the question, and the Mu’tazila begin.", who: ["wasil", "hasan-basri"], at: ["basra"] },
+      { y: 728, c: true, text: "By tradition, Wasil ibn Ata leaves al-Hasan’s circle over the question; the Mu’tazila trace their beginning to him.", who: ["wasil", "hasan-basri"], at: ["basra"] },
       { y: 750, c: true, text: "Abu Hanifa defines faith as assent and affirmation.", who: ["abu-hanifa"], at: ["kufa"] },
       { y: 846, c: true, text: "Al-Bukhari opens the Book of Faith in his Sahih: faith is word and deed, and it increases and decreases.", who: ["bukhari"], at: ["bukhara"] }
     ],
@@ -76,7 +76,7 @@ const DEBATES = [
       { y: 670, c: true, text: "Aisha teaches and corrects reports in Medina.", who: ["aisha"], at: ["medina"] },
       { y: 770, c: true, text: "Malik compiles the Muwatta’, joining hadith to Medinan practice.", who: ["malik"], at: ["medina"] },
       { y: 830, c: true, text: "Ibn Hanbal assembles his Musnad in Baghdad.", who: ["ibn-hanbal"], at: ["baghdad"] },
-      { y: 846, c: true, text: "Al-Bukhari completes his Sahih after sixteen years of travel.", who: ["bukhari"], at: ["bukhara", "nishapur"] },
+      { y: 846, c: true, text: "Al-Bukhari completes his Sahih, which he said took sixteen years. Reports place its writing in Mecca, Medina and Bukhara.", who: ["bukhari"], at: ["mecca", "medina", "bukhara"] },
       { y: 860, c: true, text: "Muslim compiles his Sahih in Nishapur.", who: ["muslim"], at: ["nishapur"] },
       { y: 875, c: true, text: "Abu Dawud and al-Tirmidhi compile collections arranged for law.", who: ["abu-dawud", "tirmidhi"], at: ["basra", "termez"] },
       { y: 930, c: true, text: "Al-Kulayni compiles al-Kafi.", who: ["kulayni"], at: ["baghdad"] },
@@ -100,7 +100,7 @@ const DEBATES = [
     thread: [
       { y: 740, c: true, text: "Abu Hanifa teaches in Kufa, using reasoned opinion and analogy.", who: ["abu-hanifa"], at: ["kufa"] },
       { y: 770, c: true, text: "Malik compiles the Muwatta’ in Medina.", who: ["malik"], at: ["medina"] },
-      { y: 815, c: true, text: "Al-Shafi’i revises the Risala in Egypt.", who: ["shafii"], at: ["cairo"] },
+      { y: 815, c: true, text: "Al-Shafi’i revises the Risala in Egypt.", who: ["shafii"], at: ["fustat"] },
       { y: 840, c: true, text: "Ibn Hanbal’s circle in Baghdad gives priority to reports.", who: ["ibn-hanbal"], at: ["baghdad"] },
       { y: 1050, c: true, text: "Ibn Hazm defends the Zahiri rejection of analogy in Cordoba.", who: ["ibn-hazm"], at: ["cordoba"] }
     ],
@@ -109,7 +109,7 @@ const DEBATES = [
   { id: "attributes", title: "The divine attributes", term: "al-sifat", ar: "الصفات",
     phases: [[745, 1100], [1290, 1330]], lanes: ["theology"],
     question: "How should scripture’s descriptions of God be understood?",
-    text: "Scripture speaks of God’s hand, face, hearing and sitting on the throne. Some read such words as attributes to be affirmed, some interpreted them figuratively, and some denied that attributes are distinct from God’s essence. The question shaped every theological school and returned sharply in Mamluk Damascus and Cairo.",
+    text: "Scripture speaks of God’s hand, face and hearing, and says that He istawa ’ala al-’arsh (Q. 20:5), rendered “rose over”, “settled on” or “established Himself on” the throne. Some read such words as attributes to be affirmed, some interpreted them figuratively, and some denied that attributes are distinct from God’s essence. The question shaped every theological school and returned sharply in Mamluk Damascus and Cairo.",
     positions: [
       { name: "No attributes distinct from the essence", text: "To protect God’s unity, His knowledge and power are not things added to His essence.", who: ["wasil", "abd-al-jabbar"] },
       { name: "Affirm without asking how", text: "Accept the texts as they come, without likening God to creatures and without explaining them away.", who: ["ibn-hanbal", "ibn-taymiyya"] },
@@ -132,7 +132,7 @@ const DEBATES = [
     positions: [
       { name: "Reason knows good and evil", text: "Justice and gratitude are good and lying is bad in themselves, and reason can know this without revelation.", who: ["abd-al-jabbar", "jahiz", "mufid"] },
       { name: "Good is what God commands", text: "Acts have no moral value in themselves; revelation alone makes them obligatory or forbidden.", who: ["ashari", "juwayni", "ghazali"] },
-      { name: "Reason perceives, revelation obliges", text: "Reason can perceive good and evil, but obligation and reward come from revelation.", who: ["maturidi"] }
+      { name: "Reason knows, revelation completes", text: "Reason can know good and evil and some duties, such as the duty to know God, even without revelation; revelation settles what reason cannot.", who: ["maturidi"] }
     ],
     thread: [
       { y: 800, c: true, text: "The Basran Mu’tazila make God’s justice and rational ethics central.", who: ["jahiz"], at: ["basra"] },
@@ -188,12 +188,12 @@ const DEBATES = [
     text: "The translation of Greek works raised the question of whether philosophy and revelation agree. Al-Kindi and al-Farabi argued that they reach the same truth by different paths; Ibn Sina built a complete system. Al-Ghazali judged three of its doctrines to be unbelief. Ibn Rushd replied that the Law commands philosophical study and that al-Ghazali misread the philosophers.",
     positions: [
       { name: "One truth, two paths", text: "Philosophy and revelation express the same truth, one by demonstration and the other by images for all people.", who: ["kindi", "farabi", "ibn-sina", "ibn-tufayl"] },
-      { name: "Philosophy errs on key points", text: "Logic and mathematics are sound, but the eternity of the world, God’s knowing only universals and the denial of bodily resurrection contradict revelation.", who: ["ghazali"] },
+      { name: "Philosophy errs on key points", text: "Logic and mathematics are sound, but three of the philosophers’ teachings contradict revelation, as al-Ghazali reads them: the eternity of the world, that God knows particulars only in a universal way, and the denial of bodily resurrection.", who: ["ghazali"] },
       { name: "The Law commands philosophy", text: "Scripture calls for reflection; where demonstration and the text seem to clash, the text is to be interpreted.", who: ["ibn-rushd"] },
       { name: "Wisdom by illumination", text: "True philosophy joins reasoning with direct experience of light.", who: ["suhrawardi"] }
     ],
     thread: [
-      { y: 830, c: true, text: "Al-Kindi writes On First Philosophy in Baghdad.", who: ["kindi"], at: ["baghdad"] },
+      { y: 838, c: true, text: "Al-Kindi dedicates On First Philosophy to the caliph al-Mu’tasim (r. 833–842).", who: ["kindi"], at: ["baghdad"] },
       { y: 940, c: true, text: "Al-Farabi writes on the virtuous city.", who: ["farabi"], at: ["baghdad", "aleppo"] },
       { y: 1020, c: true, text: "Ibn Sina writes The Book of Healing.", who: ["ibn-sina"], at: ["hamadan", "isfahan"] },
       { y: 1095, text: "Al-Ghazali writes The Incoherence of the Philosophers.", who: ["ghazali"], at: ["baghdad"] },
@@ -276,7 +276,7 @@ const DEBATES = [
   { id: "maqasid", title: "The objectives of the Law", term: "maqasid al-shari’a", ar: "مقاصد الشريعة",
     phases: [[1060, 1390], [1900, 1975]], lanes: ["law"],
     question: "What purposes does the Law serve, and may they guide new rulings?",
-    text: "Jurists asked what the Law is for. Al-Juwayni and al-Ghazali named five necessities it protects: religion, life, intellect, lineage and property. Ibn Qayyim argued that the Law is justice and mercy throughout. Al-Shatibi made the objectives the frame of legal theory, and modern scholars revived them to guide new questions.",
+    text: "Jurists asked what the Law is for. Al-Juwayni sketched the purposes it serves, and al-Ghazali named five necessities it protects: religion, life, intellect, lineage and property. Ibn Qayyim argued that the Law is justice and mercy throughout. Al-Shatibi made the objectives the frame of legal theory, and modern scholars revived them to guide new questions.",
     positions: [
       { name: "Objectives as a test of public interest", text: "A public interest counts when it serves one of the five necessities the Law protects.", who: ["juwayni", "ghazali"] },
       { name: "The Law is justice", text: "Any ruling that leads away from justice and mercy is not part of the Law.", who: ["ibn-qayyim"] },
@@ -295,7 +295,7 @@ const DEBATES = [
   { id: "unity-being", title: "The unity of being and its critics", term: "wahdat al-wujud", ar: "وحدة الوجود",
     phases: [[1230, 1500], [1600, 1765]], lanes: ["sufism", "theology", "philosophy"],
     question: "If God alone truly exists, what is the reality of the world?",
-    text: "Ibn Arabi taught that God alone has true existence and that all things are His self-manifestations; his followers called this the unity of being. Critics such as Ibn Taymiyya held that it erased the line between Creator and creation. Jami and others defended it; in Mughal India Ahmad Sirhindi proposed a “unity of witnessing”, and Shah Wali Allah tried to reconcile the two.",
+    text: "Ibn Arabi taught that God alone has true existence and that all things are His self-manifestations. Later followers and critics called this teaching the unity of being, a phrase he did not use as its name. Critics such as Ibn Taymiyya held that it erased the line between Creator and creation. Jami and others defended it; in Mughal India Ahmad Sirhindi proposed a “unity of witnessing”, and Shah Wali Allah tried to reconcile the two.",
     positions: [
       { name: "Unity of being", text: "God alone truly exists; the world is His self-manifestation.", who: ["ibn-arabi", "jami"] },
       { name: "Creator and creation must stay distinct", text: "The doctrine confuses God with the world and contradicts scripture.", who: ["ibn-taymiyya"] },
@@ -348,13 +348,13 @@ const DEBATES = [
     thread: [
       { y: 1834, text: "Al-Tahtawi’s account of Paris is published in Cairo.", who: ["tahtawi"], at: ["cairo"] },
       { y: 1870, c: true, text: "Marjani criticises blind imitation in Kazan.", who: ["marjani"], at: ["kazan"] },
-      { y: 1875, text: "Sayyid Ahmad Khan founds the college at Aligarh.", who: ["sayyid-ahmad-khan"], at: ["aligarh"] },
+      { y: 1875, text: "Sayyid Ahmad Khan opens a school at Aligarh; it becomes the Muhammadan Anglo-Oriental College in 1877.", who: ["sayyid-ahmad-khan"], at: ["aligarh"] },
       { y: 1883, text: "Gasprinski founds the newspaper Terjüman.", who: ["gasprinski"], at: ["bakhchysarai"] },
       { y: 1884, text: "Al-Afghani and Abduh publish al-Urwa al-wuthqa in Paris.", who: ["afghani", "abduh"], at: ["paris"] },
       { y: 1898, text: "Rashid Rida founds al-Manar in Cairo.", who: ["rida"], at: ["cairo"] },
-      { y: 1911, text: "Behbudi writes The Patricide in Samarkand.", who: ["behbudi"], at: ["samarkand"] },
+      { y: 1911, text: "Behbudi writes The Patricide in Samarkand, the first Uzbek play.", who: ["behbudi"], at: ["samarkand"] },
       { y: 1926, text: "Exiled to Barla, Said Nursi begins writing most of the Risale-i Nur.", who: ["nursi"], at: ["barla"] },
-      { y: 1930, text: "Iqbal publishes The Reconstruction of Religious Thought in Islam.", who: ["iqbal"], at: ["lahore"] }
+      { y: 1930, text: "Iqbal publishes his Six Lectures on the Reconstruction of Religious Thought in Islam.", who: ["iqbal"], at: ["lahore"] }
     ],
     related: ["renewal", "caliphate-modern", "tafsir"] },
 
@@ -369,7 +369,7 @@ const DEBATES = [
       { name: "An Islamic state with modern institutions", text: "Islamic government can take constitutional form, under the guidance of jurists.", who: ["baqir-sadr"] }
     ],
     thread: [
-      { y: 1922, text: "Rashid Rida publishes his treatise on the caliphate.", who: ["rida"], at: ["cairo"] },
+      { y: 1922, text: "Rashid Rida’s treatise on the caliphate begins appearing in al-Manar; it is published as a book in 1923.", who: ["rida"], at: ["cairo"] },
       { y: 1924, text: "The Turkish Grand National Assembly abolishes the caliphate.", who: [], at: ["ankara"] },
       { y: 1925, text: "Ali Abd al-Raziq publishes Islam and the Foundations of Governance; al-Azhar strips him of his title.", who: ["abd-al-raziq"], at: ["cairo"] },
       { y: 1930, text: "Iqbal endorses the transfer of the caliphate’s authority to an assembly.", who: ["iqbal"], at: ["lahore"] },
