@@ -8,8 +8,8 @@ const DEBATES = [
     question: "Who should lead the community after the Prophet, and on what basis?",
     text: "When the Prophet died in 632, Muslims disagreed over who should lead them and why. The dispute ran through the civil wars of the first century and divided the Sunni, Shi’i and Khariji traditions. In the eleventh century jurists wrote theories of the caliphate at a time when real power had passed to Buyid and Seljuq rulers.",
     positions: [
-      { name: "Leadership by the community’s choice", text: "The leader is chosen or acknowledged by the community’s leading men and must meet conditions of knowledge, justice and descent from Quraysh.", who: ["mawardi", "ghazali"] },
-      { name: "Leadership by designation", text: "The Prophet designated Ali, and leadership passes to Imams of his line, chosen by God and protected from error.", who: ["jafar", "mufid"] },
+      { name: "Leadership by the community’s choice", text: "The leader is chosen by the community’s qualified electors or nominated by his predecessor, and must meet conditions of knowledge, justice and descent from Quraysh.", who: ["mawardi", "ghazali"] },
+      { name: "Leadership by designation", text: "In Imami doctrine, the Prophet designated Ali, and leadership passes to Imams of his line, chosen by God and protected from error.", who: ["jafar", "mufid"] },
       { name: "Leadership by merit alone", text: "Any upright Muslim may lead, and a ruler who sins gravely may be removed. This was the Khariji view; no Khariji scholar is yet in the dataset.", who: [] }
     ],
     thread: [
@@ -28,13 +28,13 @@ const DEBATES = [
     question: "Is a Muslim who commits a grave sin still a believer?",
     text: "The first civil war pushed Muslims to ask whether those who sinned gravely, rulers included, remained believers. The answers defined the earliest theological groups and, later, how each school understood faith itself.",
     positions: [
-      { name: "The sinner has left Islam", text: "A grave sinner is an unbeliever. This was the Khariji view.", who: [] },
+      { name: "The sinner has left Islam", text: "A grave sinner is an unbeliever. This was the view of radical Khariji groups such as the Azariqa; the Ibadis called the sinner ungrateful to God (kafir ni’ma) but not an apostate, and lived alongside other Muslims.", who: [] },
       { name: "Faith is belief and affirmation", text: "Faith is assent of the heart and affirmation of the tongue; deeds do not enter its definition, and the sinner’s fate is left to God.", who: ["abu-hanifa", "maturidi"] },
       { name: "The intermediate position", text: "The grave sinner is neither believer nor unbeliever but in a position between the two.", who: ["wasil", "abd-al-jabbar"] },
       { name: "Faith is belief, word and deed", text: "Faith includes deeds and rises and falls with them; the sinner remains a believer with deficient faith.", who: ["ibn-hanbal", "bukhari", "ashari"] }
     ],
     thread: [
-      { y: 657, text: "After the arbitration at Siffin, a group breaks from Ali and becomes the Kharijis.", who: ["ali"], at: ["siffin"] },
+      { y: 657, text: "After Ali accepts arbitration at Siffin, a group breaks from him; they become known as the Kharijis.", who: ["ali"], at: ["siffin"] },
       { y: 700, c: true, text: "Al-Hasan al-Basri calls the grave sinner a hypocrite.", who: ["hasan-basri"], at: ["basra"] },
       { y: 728, c: true, text: "By tradition, Wasil ibn Ata leaves al-Hasan’s circle over the question; the Mu’tazila trace their beginning to him.", who: ["wasil", "hasan-basri"], at: ["basra"] },
       { y: 750, c: true, text: "Abu Hanifa defines faith as assent and affirmation.", who: ["abu-hanifa"], at: ["kufa"] },
@@ -49,8 +49,8 @@ const DEBATES = [
     positions: [
       { name: "Humans create their own acts", text: "God’s justice requires that people be the authors of their deeds, or reward and punishment would be unjust.", who: ["wasil", "abd-al-jabbar"] },
       { name: "God compels all acts", text: "People have no real power over their acts. This was the view of the Jabriyya.", who: [] },
-      { name: "God creates, humans acquire", text: "God creates every act, and the human being “acquires” it, which grounds responsibility.", who: ["ashari", "juwayni", "ghazali"] },
-      { name: "God creates, humans choose", text: "God creates acts, but the human power of choice is real and is what responsibility rests on.", who: ["maturidi", "abu-hafs-nasafi"] }
+      { name: "God creates, humans acquire", text: "God creates every act, and the human being “acquires” it, which grounds responsibility. This is al-Ash’ari’s doctrine and that of al-Juwayni’s al-Irshad; in his later al-Aqida al-Nizamiyya al-Juwayni gives human power a real effect on acts.", who: ["ashari", "juwayni", "ghazali"] },
+      { name: "God creates, humans choose", text: "God creates acts, but the human power of choice is real and is what responsibility rests on. Maturidi authors also speak of acquisition, but tie it to this power of choice.", who: ["maturidi", "abu-hafs-nasafi"] }
     ],
     thread: [
       { y: 690, c: true, text: "Ma’bad al-Juhani teaches in Basra that people determine their own acts.", who: [], at: ["basra"] },
@@ -58,7 +58,7 @@ const DEBATES = [
       { y: 740, c: true, text: "Wasil ibn Ata and the early Mu’tazila make God’s justice a founding principle.", who: ["wasil"], at: ["basra"] },
       { y: 915, c: true, text: "Al-Ash’ari leaves the Mu’tazila and develops the doctrine of acquisition.", who: ["ashari"], at: ["basra", "baghdad"] },
       { y: 930, c: true, text: "Al-Maturidi in Samarkand gives the human power of choice a larger role.", who: ["maturidi"], at: ["samarkand"] },
-      { y: 1000, c: true, text: "Qadi Abd al-Jabbar sets out the Mu’tazili case in al-Mughni.", who: ["abd-al-jabbar"], at: ["rayy"] }
+      { y: 980, c: true, text: "Qadi Abd al-Jabbar dictates al-Mughni (c. 970–990), the fullest statement of the Mu’tazili case.", who: ["abd-al-jabbar"], at: ["rayy"] }
     ],
     related: ["faith", "good-evil"] },
 
@@ -69,7 +69,7 @@ const DEBATES = [
     positions: [
       { name: "Collect broadly, arranged by narrator", text: "Gather what is transmitted, arranged by Companion, with weaker reports kept and judged.", who: ["ibn-hanbal"] },
       { name: "Only the sound", text: "Include only reports whose chains meet strict conditions of reliability and contact.", who: ["bukhari", "muslim"] },
-      { name: "Reports for law, with grades", text: "Arrange reports by legal topic and state the strength of each.", who: ["abu-dawud", "tirmidhi"] },
+      { name: "Reports arranged for law", text: "Arrange reports by legal topic. Abu Dawud says he flags reports with serious weakness and leaves the rest without comment; al-Tirmidhi often comments on a report’s reliability and on how jurists used it.", who: ["abu-dawud", "tirmidhi"] },
       { name: "Reports from the Imams", text: "The sayings of the Imams are authoritative alongside the Prophet’s, transmitted through Shi’i chains.", who: ["kulayni", "shaykh-tusi"] }
     ],
     thread: [
@@ -113,7 +113,8 @@ const DEBATES = [
     positions: [
       { name: "No attributes distinct from the essence", text: "To protect God’s unity, His knowledge and power are not things added to His essence.", who: ["wasil", "abd-al-jabbar"] },
       { name: "Affirm without asking how", text: "Accept the texts as they come, without likening God to creatures and without explaining them away.", who: ["ibn-hanbal", "ibn-taymiyya"] },
-      { name: "Eternal attributes, some interpreted", text: "God has eternal attributes such as knowledge and speech; texts that suggest a body may be interpreted figuratively.", who: ["ashari", "maturidi", "juwayni", "fakhr-razi"] }
+      { name: "Eternal attributes affirmed by argument", text: "God has eternal attributes such as knowledge, power and speech, and reason can argue for them.", who: ["ashari", "maturidi"] },
+      { name: "Figurative reading of bodily terms", text: "Texts that seem to give God a body or a place may be read figuratively, by their sense in Arabic and the demands of reason.", who: ["juwayni", "fakhr-razi"] }
     ],
     thread: [
       { y: 745, c: true, text: "The early Mu’tazila deny that God’s attributes are distinct from His essence.", who: ["wasil"], at: ["basra"] },
@@ -128,7 +129,7 @@ const DEBATES = [
   { id: "good-evil", title: "Reason and the knowledge of good and evil", term: "al-tahsin wa’l-taqbih", ar: "التحسين والتقبيح",
     phases: [[780, 1110]], lanes: ["theology", "law"],
     question: "Is an act good because God commands it, or commanded because it is good?",
-    text: "The Mu’tazila held that reason knows justice and lying to be good and bad in themselves, and that God acts by these standards. The Ash’aris held that good is what God commands, and that nothing is obligatory before revelation. The Maturidis took a middle position. The answer shaped how jurists reasoned about cases the texts do not cover.",
+    text: "The Mu’tazila held that reason knows justice and lying to be good and bad in themselves, and that God acts by these standards. The Ash’aris held that good is what God commands, and that nothing is obligatory before revelation. The Maturidis held that reason can know good and evil and some duties, such as the duty to know God, while revelation settles the rest. The answer shaped how jurists reasoned about cases the texts do not cover.",
     positions: [
       { name: "Reason knows good and evil", text: "Justice and gratitude are good and lying is bad in themselves, and reason can know this without revelation.", who: ["abd-al-jabbar", "jahiz", "mufid"] },
       { name: "Good is what God commands", text: "Acts have no moral value in themselves; revelation alone makes them obligatory or forbidden.", who: ["ashari", "juwayni", "ghazali"] },
@@ -137,7 +138,7 @@ const DEBATES = [
     thread: [
       { y: 800, c: true, text: "The Basran Mu’tazila make God’s justice and rational ethics central.", who: ["jahiz"], at: ["basra"] },
       { y: 925, c: true, text: "Al-Ash’ari argues that God’s command defines the good.", who: ["ashari"], at: ["baghdad"] },
-      { y: 935, c: true, text: "Al-Maturidi takes a middle position in Samarkand.", who: ["maturidi"], at: ["samarkand"] },
+      { y: 935, c: true, text: "Al-Maturidi in Samarkand holds that reason can know good and evil, and the duty to know God, before revelation.", who: ["maturidi"], at: ["samarkand"] },
       { y: 1000, c: true, text: "Al-Mufid and Qadi Abd al-Jabbar defend rational ethics.", who: ["mufid", "abd-al-jabbar"], at: ["baghdad", "rayy"] },
       { y: 1080, c: true, text: "Al-Juwayni restates the Ash’ari view.", who: ["juwayni"], at: ["nishapur"] },
       { y: 1109, text: "Al-Ghazali’s al-Mustasfa treats the question at the start of legal theory.", who: ["ghazali"], at: ["tus"] }
@@ -151,7 +152,7 @@ const DEBATES = [
     positions: [
       { name: "Love beyond reward", text: "God is to be loved for Himself, not for paradise or out of fear of hell.", who: ["rabia"] },
       { name: "The path within the Law", text: "Mystical experience is valid only within the bounds of the Law; sobriety is higher than ecstasy.", who: ["junayd", "qushayri", "ghazali"] },
-      { name: "Ecstatic union", text: "In the state of union the mystic may speak as if with God’s voice.", who: ["hallaj"] },
+      { name: "Speech from the state of union", text: "Ecstatic sayings attributed to al-Hallaj, such as “I am the Truth”, were read as the mystic speaking from union with God; their meaning and his intent remain disputed.", who: ["hallaj"] },
       { name: "Suspicion of new practices", text: "Some jurists and hadith scholars opposed Sufi claims to special knowledge and practices such as listening to music.", who: [] }
     ],
     thread: [
@@ -169,14 +170,14 @@ const DEBATES = [
     text: "The Mu’tazila held that the Qur’an was created in time, since only God is eternal. In 833 Caliph al-Ma’mun required judges and scholars to affirm this, an inquisition known as the Mihna. Ahmad ibn Hanbal refused and was flogged. The Mihna ended under al-Mutawakkil, and the uncreated Qur’an became the Sunni position.",
     positions: [
       { name: "Created", text: "Only God is eternal, so His speech as revealed and recited is created.", who: ["jahiz", "abd-al-jabbar"] },
-      { name: "Uncreated", text: "The Qur’an is God’s speech and is not created.", who: ["ibn-hanbal", "bukhari"] },
-      { name: "Eternal speech, created recitation", text: "God’s speech is an eternal attribute; the letters, sounds and copies are created.", who: ["ashari", "maturidi", "tahawi"] }
+      { name: "Uncreated", text: "The Qur’an is God’s speech and is not created.", who: ["ibn-hanbal", "bukhari", "tahawi"] },
+      { name: "Eternal speech, created recitation", text: "God’s speech is an eternal attribute; the letters, sounds and copies are created.", who: ["ashari", "maturidi"] }
     ],
     thread: [
       { y: 827, text: "Al-Ma’mun proclaims that the Qur’an is created.", who: [], at: ["baghdad"] },
       { y: 833, text: "The Mihna begins: judges and scholars must affirm the doctrine.", who: [], at: ["baghdad"] },
       { y: 834, c: true, text: "Ibn Hanbal refuses, and is imprisoned and flogged under al-Mu’tasim.", who: ["ibn-hanbal"], at: ["baghdad"] },
-      { y: 848, c: true, text: "Al-Mutawakkil ends the Mihna.", who: [], at: ["samarra"] },
+      { y: 848, c: true, text: "Al-Mutawakkil abandons the Mihna in 234 AH (848–849) and forbids debate over whether the Qur’an is created; some historians date its full end to 851–852.", who: [], at: ["samarra"] },
       { y: 864, c: true, text: "In Nishapur al-Bukhari is accused over whether the recitation of the Qur’an is created.", who: ["bukhari"], at: ["nishapur"] },
       { y: 915, c: true, text: "Al-Ash’ari separates God’s eternal speech from its created expression.", who: ["ashari"], at: ["baghdad"] }
     ],
@@ -185,11 +186,11 @@ const DEBATES = [
   { id: "philosophy", title: "Philosophy and revelation", term: "al-falsafa wa’l-shar’", ar: "الفلسفة والشرع",
     phases: [[830, 1040], [1090, 1200]], lanes: ["philosophy", "theology"],
     question: "Can Greek philosophy and revelation both be true, and who decides when they seem to clash?",
-    text: "The translation of Greek works raised the question of whether philosophy and revelation agree. Al-Kindi and al-Farabi argued that they reach the same truth by different paths; Ibn Sina built a complete system. Al-Ghazali judged three of its doctrines to be unbelief. Ibn Rushd replied that the Law commands philosophical study and that al-Ghazali misread the philosophers.",
+    text: "The translation of Greek works raised the question of whether philosophy and revelation agree. Al-Kindi and al-Farabi argued that they reach the same truth by different paths; Ibn Sina built a complete system. Al-Ghazali judged three of its doctrines to be unbelief. Ibn Rushd replied that the Law commands philosophical study of those capable of demonstration, and that al-Ghazali misread the philosophers.",
     positions: [
       { name: "One truth, two paths", text: "Philosophy and revelation express the same truth, one by demonstration and the other by images for all people.", who: ["kindi", "farabi", "ibn-sina", "ibn-tufayl"] },
       { name: "Philosophy errs on key points", text: "Logic and mathematics are sound, but three of the philosophers’ teachings contradict revelation, as al-Ghazali reads them: the eternity of the world, that God knows particulars only in a universal way, and the denial of bodily resurrection.", who: ["ghazali"] },
-      { name: "The Law commands philosophy", text: "Scripture calls for reflection; where demonstration and the text seem to clash, the text is to be interpreted.", who: ["ibn-rushd"] },
+      { name: "The Law commands philosophy", text: "In the Decisive Treatise, scripture obliges those able to reason by demonstration to study philosophy, and where demonstration and the text seem to clash, the text is to be interpreted. The Incoherence of the Incoherence answers al-Ghazali point by point.", who: ["ibn-rushd"] },
       { name: "Wisdom by illumination", text: "True philosophy joins reasoning with direct experience of light.", who: ["suhrawardi"] }
     ],
     thread: [
@@ -220,9 +221,9 @@ const DEBATES = [
       { y: 1134, text: "Al-Zamakhshari completes al-Kashshaf in Mecca.", who: ["zamakhshari"], at: ["mecca"] },
       { y: 1205, c: true, text: "Fakhr al-Din al-Razi writes The Keys to the Unseen.", who: ["fakhr-razi"], at: ["herat"] },
       { y: 1360, c: true, text: "Ibn Kathir writes his commentary in Damascus.", who: ["ibn-kathir"], at: ["damascus"] },
-      { y: 1465, c: true, text: "Al-Suyuti completes the Tafsir al-Jalalayn.", who: ["suyuti"], at: ["cairo"] },
+      { y: 1466, text: "Al-Suyuti completes his part of the Tafsir al-Jalalayn, begun by al-Mahalli, on 10 Shawwal 870 AH.", who: ["suyuti"], at: ["cairo"] },
       { y: 1900, c: true, text: "Abduh lectures on the Qur’an at al-Azhar; Rida publishes the lectures in al-Manar.", who: ["abduh", "rida"], at: ["cairo"] },
-      { y: 1970, c: true, text: "Ibn Ashur completes al-Tahrir wa’l-tanwir.", who: ["ibn-ashur"], at: ["tunis"] },
+      { y: 1960, c: true, text: "Ibn Ashur completes al-Tahrir wa’l-tanwir in 1380 AH, some thirty-nine years after he began it; the complete work is first printed in 1984.", who: ["ibn-ashur"], at: ["tunis"] },
       { y: 1972, c: true, text: "Tabataba’i completes al-Mizan in Qom.", who: ["tabatabai"], at: ["qom"] },
       { y: 1980, text: "Fazlur Rahman publishes Major Themes of the Qur’an.", who: ["fazlur-rahman"], at: ["chicago"] }
     ],
@@ -241,7 +242,7 @@ const DEBATES = [
     thread: [
       { y: 1025, c: true, text: "Ibn al-Haytham writes Doubts on Ptolemy in Cairo.", who: ["ibn-haytham"], at: ["cairo"] },
       { y: 1031, c: true, text: "Al-Biruni writes The Mas’udic Canon in Ghazna.", who: ["biruni"], at: ["ghazna"] },
-      { y: 1259, text: "The Maragha observatory is founded for al-Tusi.", who: ["nasir-tusi"], at: ["maragha"] },
+      { y: 1259, text: "The Maragha observatory is founded under al-Tusi’s direction, with Hulagu’s patronage.", who: ["nasir-tusi"], at: ["maragha"] },
       { y: 1261, text: "Al-Tusi presents his new planetary models in al-Tadhkira.", who: ["nasir-tusi"], at: ["maragha"] },
       { y: 1424, c: true, text: "Ulugh Beg’s observatory begins work in Samarkand.", who: ["ulugh-beg"], at: ["samarkand"] },
       { y: 1437, c: true, text: "The Zij-i Sultani star tables are completed.", who: ["ulugh-beg", "qushji"], at: ["samarkand"] },
@@ -261,7 +262,7 @@ const DEBATES = [
     ],
     thread: [
       { y: 1050, c: true, text: "Ibn Hazm condemns imitation in law.", who: ["ibn-hazm"], at: ["cordoba"] },
-      { y: 1190, c: true, text: "Al-Marghinani’s al-Hidaya fixes Hanafi doctrine for later centuries.", who: ["marghinani"], at: ["samarkand"] },
+      { y: 1190, c: true, text: "Al-Marghinani writes al-Hidaya, which becomes one of the most influential statements of Hanafi doctrine.", who: ["marghinani"], at: ["samarkand"] },
       { y: 1275, c: true, text: "Al-Nawawi sets out the Shafi’i school’s settled positions.", who: ["nawawi"], at: ["damascus"] },
       { y: 1300, c: true, text: "Ibn Taymiyya claims the right to independent judgment.", who: ["ibn-taymiyya"], at: ["damascus"] },
       { y: 1310, c: true, text: "Al-Hilli formalises ijtihad in Twelver law.", who: ["hilli"], at: ["hilla"] },
@@ -278,7 +279,8 @@ const DEBATES = [
     question: "What purposes does the Law serve, and may they guide new rulings?",
     text: "Jurists asked what the Law is for. Al-Juwayni sketched the purposes it serves, and al-Ghazali named five necessities it protects: religion, life, intellect, lineage and property. Ibn Qayyim argued that the Law is justice and mercy throughout. Al-Shatibi made the objectives the frame of legal theory, and modern scholars revived them to guide new questions.",
     positions: [
-      { name: "Objectives as a test of public interest", text: "A public interest counts when it serves one of the five necessities the Law protects.", who: ["juwayni", "ghazali"] },
+      { name: "Purposes ranked by necessity", text: "The purposes behind rulings can be ranked, from necessities to general needs and refinements, and public interest counts within them.", who: ["juwayni"] },
+      { name: "Objectives as a test of public interest", text: "A public interest counts when it serves one of the five necessities the Law protects: religion, life, intellect, lineage and property.", who: ["ghazali"] },
       { name: "The Law is justice", text: "Any ruling that leads away from justice and mercy is not part of the Law.", who: ["ibn-qayyim"] },
       { name: "Objectives as the structure of the Law", text: "The purposes of the Law are certain and organise all of its rulings.", who: ["shatibi"] },
       { name: "Objectives for modern rulings", text: "The objectives can guide rulings on questions the classical texts did not foresee.", who: ["ibn-ashur"] }
@@ -320,17 +322,18 @@ const DEBATES = [
     positions: [
       { name: "Renewal through synthesis", text: "Join hadith, law, theology and Sufism into a coherent whole.", who: ["shah-wali-allah"] },
       { name: "Purify worship", text: "Strict monotheism forbids seeking the intercession of saints and venerating tombs.", who: ["ibn-abd-al-wahhab"] },
-      { name: "Reform of state and society", text: "Rulers who govern unjustly must be resisted and a just order built.", who: ["dan-fodio", "nana-asmau"] },
+      { name: "Reform of state and society", text: "Rulers who govern unjustly must be resisted and a just order built.", who: ["dan-fodio"] },
+      { name: "Renewal through teaching", text: "Renewal spreads through teaching: women as well as men are to learn and teach the faith, in their own languages as well as in Arabic.", who: ["nana-asmau"] },
       { name: "Back to the sources", text: "Rulings should come from the Qur’an and hadith, not from one school.", who: ["shawkani"] },
       { name: "Defence of inherited practice", text: "Established Sufi and school practice rests on scholarly authority. No such scholar is yet in the dataset.", who: [] }
     ],
     thread: [
       { y: 1732, text: "Shah Wali Allah returns to Delhi from the Hijaz.", who: ["shah-wali-allah"], at: ["mecca", "delhi"] },
-      { y: 1744, text: "Ibn Abd al-Wahhab allies with Muhammad ibn Saud at Diriyah.", who: ["ibn-abd-al-wahhab"], at: ["diriyah"] },
+      { y: 1744, text: "Ibn Abd al-Wahhab allies with Muhammad ibn Saud at Diriyah; 1744 is the conventional date.", who: ["ibn-abd-al-wahhab"], at: ["diriyah"] },
       { y: 1804, text: "Usman dan Fodio’s emigration and the start of the jihad in Hausaland.", who: ["dan-fodio"], at: ["degel"] },
       { y: 1809, text: "Sokoto becomes the capital of the new caliphate.", who: ["dan-fodio"], at: ["sokoto"] },
       { y: 1815, c: true, text: "Al-Shawkani writes against fixed adherence to a school.", who: ["shawkani"], at: ["sanaa"] },
-      { y: 1830, c: true, text: "Nana Asma’u organises women’s education in Sokoto.", who: ["nana-asmau"], at: ["sokoto"] }
+      { y: 1840, c: true, text: "By the 1840s Nana Asma’u’s ’Yan Taru network of women teachers is carrying education from Sokoto across the caliphate.", who: ["nana-asmau"], at: ["sokoto"] }
     ],
     related: ["ijtihad", "reform"] },
 
@@ -341,7 +344,8 @@ const DEBATES = [
     positions: [
       { name: "Learn from Europe", text: "Adopt modern sciences and institutions while keeping the faith.", who: ["tahtawi", "sayyid-ahmad-khan"] },
       { name: "Revive reason within Islam", text: "Islam and reason agree; decline came from imitation and despotism.", who: ["afghani", "abduh", "iqbal"] },
-      { name: "New method schools", text: "Reform begins with the schoolroom: phonetic reading, modern subjects, printed books.", who: ["gasprinski", "behbudi", "marjani"] },
+      { name: "Against imitation", text: "Scholars should return to the sources and the early authorities instead of repeating later commentaries. Marjani is counted a forerunner of the Jadid reformers.", who: ["marjani"] },
+      { name: "New method schools", text: "Reform begins with the schoolroom: phonetic reading, modern subjects, printed books.", who: ["gasprinski", "behbudi"] },
       { name: "Return to the early generations", text: "Renewal means following the first generations of Muslims directly.", who: ["rida"] },
       { name: "Faith for modern readers", text: "Explain the truths of faith in terms a modern reader can accept.", who: ["nursi"] }
     ],
@@ -359,9 +363,9 @@ const DEBATES = [
     related: ["renewal", "caliphate-modern", "tafsir"] },
 
   { id: "caliphate-modern", title: "The caliphate and the modern state", term: "al-khilafa wa usul al-hukm", ar: "الخلافة وأصول الحكم",
-    phases: [[1920, 1950]], lanes: ["law", "letters"],
+    phases: [[1920, 1950], [1978, 1980]], lanes: ["law", "letters"],
     question: "Does Islam require a particular form of government?",
-    text: "The Turkish Grand National Assembly abolished the Ottoman caliphate in March 1924. Scholars debated whether a caliphate is a religious obligation. Rashid Rida argued for restoring it; Ali Abd al-Raziq argued that Islam prescribes no form of government; Iqbal suggested that authority could pass to an elected assembly.",
+    text: "The Turkish Grand National Assembly abolished the Ottoman caliphate in March 1924. Scholars debated whether a caliphate is a religious obligation. Rashid Rida argued for restoring it; Ali Abd al-Raziq argued that Islam prescribes no form of government; Iqbal suggested that authority could pass to an elected assembly. In 1979, as Iran wrote a new constitution, Baqir al-Sadr took up the question again.",
     positions: [
       { name: "Restore the caliphate", text: "The caliphate is a religious duty and should be rebuilt on reformed lines.", who: ["rida"] },
       { name: "No prescribed form of government", text: "The Prophet’s mission was religious, not the founding of a state; government is left to human reason.", who: ["abd-al-raziq"] },
@@ -371,9 +375,9 @@ const DEBATES = [
     thread: [
       { y: 1922, text: "Rashid Rida’s treatise on the caliphate begins appearing in al-Manar; it is published as a book in 1923.", who: ["rida"], at: ["cairo"] },
       { y: 1924, text: "The Turkish Grand National Assembly abolishes the caliphate.", who: [], at: ["ankara"] },
-      { y: 1925, text: "Ali Abd al-Raziq publishes Islam and the Foundations of Governance; al-Azhar strips him of his title.", who: ["abd-al-raziq"], at: ["cairo"] },
+      { y: 1925, text: "Ali Abd al-Raziq publishes Islam and the Foundations of Governance; al-Azhar’s Council of Senior Scholars expels him from the ranks of the ulama, and he loses his judgeship.", who: ["abd-al-raziq"], at: ["cairo"] },
       { y: 1930, text: "Iqbal endorses the transfer of the caliphate’s authority to an assembly.", who: ["iqbal"], at: ["lahore"] },
-      { y: 1979, text: "Baqir al-Sadr writes on the constitution of an Islamic state.", who: ["baqir-sadr"], at: ["najaf"] }
+      { y: 1979, text: "Baqir al-Sadr writes treatises on the constitution of an Islamic state, as Iran drafts its new constitution.", who: ["baqir-sadr"], at: ["najaf"] }
     ],
     related: ["imamate", "reform"] }
 ];

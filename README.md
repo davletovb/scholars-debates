@@ -62,6 +62,7 @@ Add an entry to `FIGURES` in `src/data-figures.js`, then run `npm run check` and
 - `id` is permanent and used in addresses: lowercase letters, digits and hyphens.
 - `b` and `d` are years CE. Add `bc: true` or `dc: true` when a year is approximate.
 - `bNote` explains a disputed or uncertain birth year in one sentence; the panel shows it under the dates.
+- `dNote` does the same for a disputed or uncertain death date, such as a year given differently by different sources.
 - `bUnknown: true` (with `bc: true`) marks a birth year the sources do not give. `b` is then only where the life line starts: the page shows "d. 1102 CE" instead of a birth year and says the start is an estimate.
 - `dah` is the death year AH where sources give it; otherwise the page works one out and marks it approximate.
 - `lane` is one of `quran`, `hadith`, `law`, `theology`, `sufism`, `philosophy`, `sciences`, `letters`.
@@ -91,7 +92,7 @@ Add an entry to `DEBATES` in `src/data-debates.js` with `phases` (spans of years
 
 ## Status
 
-Birth years, teacher links, works and several itineraries and dated events were checked in a November 2026 audit against specialist reference works (TDV İslâm Ansiklopedisi, Encyclopaedia Iranica, the Stanford Encyclopedia of Philosophy and others). Every scholar, debate and event now lists its sources (`src/data-sources.js`), shown at the end of its panel. Ibadi and Isma’ili scholars, Southeast Asia, Africa beyond Sokoto and more women scholars are still to be added.
+Birth years, teacher links, works and several itineraries and dated events were checked in a November 2026 audit against specialist reference works (TDV İslâm Ansiklopedisi, Encyclopaedia Iranica, the Stanford Encyclopedia of Philosophy and others). Every scholar, debate and event now lists its sources (`src/data-sources.js`), shown at the end of its panel. A full-content review later that month narrowed several position cards and biographies, added death-date notes where sources disagree, and corrected a few map sites and routes (Siffin, Ulugh Beg, Ali Qushji, al-Nawawi). Ibadi and Isma’ili scholars, Southeast Asia, Africa beyond Sokoto and more women scholars are still to be added.
 
 ## Credits
 

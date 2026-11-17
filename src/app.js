@@ -964,6 +964,7 @@
         if (f.bUnknown) note += ` The timeline starts the life line at about ${f.b} only as an estimate.`;
         extra.push(el("p", "bnote", note));
       }
+      if (f.dNote) extra.push(el("p", "bnote", f.dNote));
       header(chips, f.name, f.ar, extra);
       body.appendChild(el("p", "body", f.text));
       // places, numbered to match the map

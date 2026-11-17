@@ -5,10 +5,12 @@
 const SOURCES = {
   "abd-al-jabbar": [
     ["Encyclopaedia Iranica: ʿAbd-al-Jabbār b. Aḥmad", "https://www.iranicaonline.org/articles/abd-al-jabbar-b-ahmad/"],
-    ["Stanford Encyclopedia of Philosophy: Arabic and Islamic philosophy of religion", "https://plato.stanford.edu/entries/arabic-islamic-religion/index.html", "al-Mughni fi abwab al-tawhid wa’l-adl"]
+    ["Stanford Encyclopedia of Philosophy: Arabic and Islamic philosophy of religion", "https://plato.stanford.edu/entries/arabic-islamic-religion/index.html", "al-Mughni fi abwab al-tawhid wa’l-adl"],
+    ["Core (thesis): The Epistemological Foundation of Knowing God", "https://files.core.ac.uk/download/429701525.pdf", "dating al-Mughni to about 970–990"]
   ],
   "abd-al-raziq": [
     ["Britannica: ʿAlī ʿAbd al-Rāziq", "https://www.britannica.com/biography/Abd-al-Raziq-Ali"],
+    ["Encyclopedia of the Modern Middle East: ʿAbd al-Raziq, Ali", "https://www.encyclopedia.com/environment/encyclopedias-almanacs-transcripts-and-maps/abd-al-raziq"],
     ["TDV İslâm Ansiklopedisi: Ali Abdürrâzık", "https://islamansiklopedisi.org.tr/ali-abdurrazik"]
   ],
   "abduh": [
@@ -17,10 +19,12 @@ const SOURCES = {
   ],
   "abu-bakr-razi": [
     ["Library of Congress: al-Razi, The Comprehensive Book on Medicine, part 2 (World Digital Library)", "https://www.loc.gov/resource/gdcwdl.wdl_07458/?st=gallery"],
+    ["Cambridge: Al-Rāzī (Religion, Learning and Science in the ʿAbbasid Period)", "https://www.cambridge.org/core/books/abs/religion-learning-and-science-in-the-abbasid-period/alrazi/762B6225FF0F3508D6B7CD7CB494218C"],
     ["Encyclopaedia Iranica: al-Ḥāwi", "https://www.iranicaonline.org/articles/hawi-medical-book/", "al-Hawi"]
   ],
   "abu-dawud": [
     ["Britannica: Abū Dāʾūd", "https://www.britannica.com/biography/Abu-Daud"],
+    ["Islam Museum: Abu Dawud al-Sijistani", "https://www.islam.museum/en/person/abu-dawud-al-sijistani/"],
     ["TDV İslâm Ansiklopedisi: Ebû Dâvûd es-Sicistânî", "https://islamansiklopedisi.org.tr/ebu-davud-es-sicistani"]
   ],
   "abu-hafs-nasafi": [
@@ -38,10 +42,12 @@ const SOURCES = {
   ],
   "aisha": [
     ["Britannica: ʿĀʾishah", "https://www.britannica.com/biography/Aishah"],
+    ["Islam Museum: Battle of the Camel", "https://islam.museum/en/event/battle-of-the-camel/"],
     ["TDV İslâm Ansiklopedisi: Âişe", "https://islamansiklopedisi.org.tr/aise"]
   ],
   "aisha-bauniyya": [
-    ["Mamluk Studies Review 17 (2013): Th. Emil Homerin on Aisha al-Baʿuniyya (PDF)", "https://knowledge.uchicago.edu/record/1216/files/MSR_XVII_2013_Homerin_pp130-154.pdf"],
+    ["Mamluk Studies Review 17 (2013): Th. Emil Homerin on Aisha al-Baʿuniyya and dhikr", "https://knowledge.uchicago.edu/records/n0ry7-52x72"],
+    ["NYU Press: ʿĀʾishah al-Bāʿūniyyah", "https://nyupress.org/author/aishah-al-bauniyyah/"],
     ["NYU Press: The Principles of Sufism (trans. Th. Emil Homerin)", "https://nyupress.org/9781479864683/the-principles-of-sufism/", "her treatise on the Sufi path"]
   ],
   "ali": [
@@ -55,6 +61,7 @@ const SOURCES = {
   "baqir-sadr": [
     ["Encyclopaedia Iranica: Iraq x. Shiʿites of Iraq", "https://www.iranicaonline.org/articles/iraq-x-shiites-of-iraq/"],
     ["Encyclopaedia Iranica: Iraq xi. Shiʿite seminaries", "https://www.iranicaonline.org/articles/iraq-xi-shiite-seminaries/"],
+    ["Cambridge: On the origins of the Iranian constitution: Muhammad Baqer as-Sadr’s 1979 treatises", "https://www.cambridge.org/core/books/abs/renewal-of-islamic-law/on-the-origins-of-the-iranian-constitution-muhammad-baqer-assadrs-1979-treatises/14AAE2F71556206A90354B9AAC09A5A4"],
     ["TDV İslâm Ansiklopedisi: Sadr, Muhammed Bâkır", "https://islamansiklopedisi.org.tr/sadr-muhammed-bakir"]
   ],
   "behbudi": [
@@ -62,6 +69,7 @@ const SOURCES = {
   ],
   "biruni": [
     ["Britannica: al-Bīrūnī (summary)", "https://www.britannica.com/summary/al-Biruni"],
+    ["Encyclopaedia Iranica: Bīrūnī, Abū Rayḥān i. Life", "https://www.iranicaonline.org/articles/biruni-abu-rayhan-index/biruni-abu-rayhan-i-life/"],
     ["ISMI (Max Planck Institute): Kitāb fī taḥqīq mā li’l-Hind", "https://ismi.mpiwg-berlin.mpg.de/bibcite/reference/15909", "Tahqiq ma li’l-Hind"]
   ],
   "bukhari": [
@@ -70,7 +78,8 @@ const SOURCES = {
     ["TDV İslâm Ansiklopedisi: el-Câmiu’s-sahîh", "https://islamansiklopedisi.org.tr/el-camius-sahih--buhari", "the sixteen years of composition"]
   ],
   "dan-fodio": [
-    ["Britannica: Usman dan Fodio", "https://www.britannica.com/biography/Usman-dan-Fodio"]
+    ["Britannica: Usman dan Fodio", "https://www.britannica.com/biography/Usman-dan-Fodio"],
+    ["Islam Museum: Usman dan Fodio", "https://www.islam.museum/en/person/usman-dan-fodio/"]
   ],
   "ebussuud": [
     ["Oxford Reference: Ebussuud Efendi (Biographical Encyclopaedia of Islamic Philosophy)", "https://oxfordreference.com/view/10.1093/oi/authority.20110810104817111"],
@@ -120,10 +129,13 @@ const SOURCES = {
   ],
   "ibn-ashur": [
     ["IIIT: Ibn Ashur, Treatise on Maqasid al-Shariah, with a biographical introduction (sample PDF)", "https://iiit.org/wp-content/uploads/Ibn-Ashur-Treatise-on-Maqasid-Al-Shariah-Sample.pdf"],
-    ["TDV İslâm Ansiklopedisi: İbn Âşûr, Muhammed Tâhir", "https://islamansiklopedisi.org.tr/ibn-asur-muhammed-tahir--1973"]
+    ["TDV İslâm Ansiklopedisi: İbn Âşûr, Muhammed Tâhir", "https://islamansiklopedisi.org.tr/ibn-asur-muhammed-tahir--1973"],
+    ["TDV İslâm Ansiklopedisi: et-Tahrîr ve’t-Tenvîr", "https://islamansiklopedisi.org.tr/et-tahrir-vet-tenvir"],
+    ["Tafsir Al-Qur’an (Indonesian): Mengenal Tafsir at-Tahrir wa at-Tanwir", "https://tafsiralquran.id/mengenal-tafsir-at-tahrir-wa-at-tanwir-karya-%e1%b9%adahir-ibn-ashur/", "the years 1341–1380 AH, citing al-Hamid"]
   ],
   "ibn-hajar": [
     ["Oxford Reference: Ahmad ibn Hajar al-Asqalani", "https://www.oxfordreference.com/view/10.1093/oi/authority.20110803095429356"],
+    ["Islam Museum: Completion of Fath al-Bari, 842/1438", "https://www.islam.museum/en/event/fath-al-bari-complete-842/"],
     ["TDV İslâm Ansiklopedisi: İbn Hacer el-Askalânî", "https://islamansiklopedisi.org.tr/ibn-hacer-el-askalani"]
   ],
   "ibn-hanbal": [
@@ -154,6 +166,8 @@ const SOURCES = {
   ],
   "ibn-nafis": [
     ["Britannica: Ibn an-Nafīs", "https://www.britannica.com/biography/Ibn-an-Nafis"],
+    ["Islam Museum: Pulmonary circulation", "https://www.islam.museum/en/invention/pulmonary-circulation/"],
+    ["PubMed: Ibn al-Nafis, the pulmonary circulation, and the Islamic Golden Age", "https://pubmed.ncbi.nlm.nih.gov/18845773/"],
     ["Library of Congress: Ibn al-Nafis, Compendium of the Canon of Medicine (World Digital Library)", "https://www.loc.gov/resource/gdcwdl.wdl_16193/?sp=96", "the birth year"]
   ],
   "ibn-qayyim": [
@@ -180,6 +194,7 @@ const SOURCES = {
   ],
   "iqbal": [
     ["Britannica: Muhammad Iqbal", "https://www.britannica.com/biography/Muhammad-Iqbal"],
+    ["International Iqbal Society: 1930 Presidential Address, Allahabad", "https://www.iqbal.com.pk/allama-iqbal-prose-works/stray-reflections-the-private-notebook-of-muham/991-prose-works/speeches-writings-and-statements-of-allama-iqba/1680-1930-presidential-address-allahabad-allama-iqbal"],
     ["Iqbal Cyber Library: Six Lectures on the Reconstruction of Religious Thought in Islam (Lahore, 1930)", "https://iqbalcyberlibrary.net/files/023/Iqbal-Six-Lectures-1930.pdf", "the 1930 title"]
   ],
   "jafar": [
@@ -190,7 +205,8 @@ const SOURCES = {
     ["Encyclopaedia Iranica: Ismailism xvii. The imamate in Ismailism", "https://www.iranicaonline.org/articles/ismailism-xvii-the-imamate-in-ismailism/", "his descent"]
   ],
   "jahiz": [
-    ["Oxford Academic: al-Jāḥiẓ", "https://academic.oup.com/reference/62361/reference-article-abstract/554570021"]
+    ["Oxford Academic: al-Jāḥiẓ", "https://academic.oup.com/reference/62361/reference-article-abstract/554570021"],
+    ["Encyclopaedia Iranica: Jāḥeẓ", "https://www.iranicaonline.org/articles/jahez/"]
   ],
   "jami": [
     ["Encyclopaedia Iranica: Jāmi i. Life and works", "https://www.iranicaonline.org/articles/jami-i/"],
@@ -211,7 +227,8 @@ const SOURCES = {
   ],
   "juwayni": [
     ["TDV İslâm Ansiklopedisi: Cüveynî, İmâmü’l-Haremeyn", "https://islamansiklopedisi.org.tr/cuveyni-imamul-haremeyn"],
-    ["Library of Congress: Kitāb al-Burhān fī uṣūl al-fiqh", "https://www.loc.gov/item/2017481502/", "al-Burhan fi usul al-fiqh"]
+    ["Library of Congress: Kitāb al-Burhān fī uṣūl al-fiqh", "https://www.loc.gov/item/2017481502/", "al-Burhan fi usul al-fiqh"],
+    ["Oxford Academic: Coercion and Moral Agency in Ashʿarism", "https://academic.oup.com/book/10075/chapter-abstract/157534748", "his later view of human power"]
   ],
   "karima": [
     ["Cambridge University Press: Karīma al-Marwaziyya and the transmission of al-Bukhārī’s Ṣaḥīḥ", "https://www.cambridge.org/core/books/abs/oriental-languages-and-civilizations/karima-bint-ahmad-almarwaziyya-and-thetransmission-of-muhammad-b-ismail-albukharisaljami-alsahih/6C1A98CD93F80E957B40ACFD6C427178"],
@@ -220,7 +237,8 @@ const SOURCES = {
   "kashgari": [
     ["Britannica: Dīwān lughat al-Turk", "https://www.britannica.com/topic/Diwan-lughat-at-Turk"],
     ["Britannica: history of Central Asia: the Khitans", "https://www.britannica.com/place/history-of-Central-Asia-102306/The-Khitans"],
-    ["TDV İslâm Ansiklopedisi: Kâşgarlı Mahmud", "https://islamansiklopedisi.org.tr/kasgarli-mahmud"]
+    ["TDV İslâm Ansiklopedisi: Kâşgarlı Mahmud", "https://islamansiklopedisi.org.tr/kasgarli-mahmud"],
+    ["DergiPark (2025): Kâşgarlı Mahmud, Dîvânu Lugâti’t-Türk and its world map", "https://dergipark.org.tr/tr/download/article-file/4618227", "the uncertain birth and death years"]
   ],
   "katib-celebi": [
     ["Britannica: Kâtip Çelebi", "https://www.britannica.com/biography/Katip-Celebi"],
@@ -285,7 +303,9 @@ const SOURCES = {
     ["TDV İslâm Ansiklopedisi: Müslim b. Haccâc", "https://islamansiklopedisi.org.tr/muslim-b-haccac"]
   ],
   "nana-asmau": [
-    ["African Studies Centre Leiden: Nana Asmaʾu", "https://www.ascleiden.nl/content/library-weekly/nana-asmau"]
+    ["African Studies Centre Leiden: Nana Asmaʾu", "https://www.ascleiden.nl/content/library-weekly/nana-asmau"],
+    ["Oxford Academic: Asmaʾu, Nana", "https://academic.oup.com/edited-volume/61663/chapter-abstract/553437989"],
+    ["Revue de la FM6OA: The life and contribution of Nana Asmaʾu", "https://www.fm6oa.org/revue/article/the-life-and-contribution-of-nana-asmau/"]
   ],
   "naqshband": [
     ["Encyclopaedia Iranica: Bahāʾ-al-Dīn Naqšband", "https://www.iranicaonline.org/articles/baha-al-din-naqsband-kaja-mohammad-b/"]
@@ -300,6 +320,7 @@ const SOURCES = {
     ["Library of Congress: The life and work of Navoi", "https://loc.gov/loc/lcib/0705/navoi.html", "the link with Jami"]
   ],
   "nawawi": [
+    ["Islam Museum: Imam al-Nawawi", "https://www.islam.museum/en/person/al-nawawi/"],
     ["TDV İslâm Ansiklopedisi: Nevevî", "https://islamansiklopedisi.org.tr/nevevi"],
     ["Britannica: Hadith", "https://www.britannica.com/topic/Hadith", "Riyad al-salihin"]
   ],
@@ -309,13 +330,16 @@ const SOURCES = {
   ],
   "omar-khayyam": [
     ["Encyclopaedia Iranica: Khayyam, Omar", "https://www.iranicaonline.org/articles/khayyam-omar/"],
-    ["ISMI (Max Planck Institute): Risāla fī al-barāhīn ʿalā masāʾil al-jabr wa-al-muqābala", "https://ismi.mpiwg-berlin.mpg.de/index.php/node/3903823", "Risala fi’l-barahin ala masa’il al-jabr wa’l-muqabala"]
+    ["ISMI (Max Planck Institute): Risāla fī al-barāhīn ʿalā masāʾil al-jabr wa-al-muqābala", "https://ismi.mpiwg-berlin.mpg.de/index.php/node/3903823", "Risala fi’l-barahin ala masa’il al-jabr wa’l-muqabala"],
+    ["MacTutor History of Mathematics: Omar Khayyam", "https://mathshistory.st-andrews.ac.uk/Biographies/Khayyam/", "death in 1131"],
+    ["Biographical Encyclopedia of Astronomers: Khayyām (PDF)", "https://islamsci.mcgill.ca/RASI/BEA/Khayyam_BEA.pdf", "death c. 1123"]
   ],
   "qushayri": [
     ["TDV İslâm Ansiklopedisi: Kuşeyrî, Abdülkerîm b. Hevâzin", "https://islamansiklopedisi.org.tr/kuseyri-abdulkerim-b-hevazin"],
     ["Library of Congress: al-Qushayri’s Epistle on Sufism", "https://www.loc.gov/item/2021667378/", "al-Risala al-Qushayriyya"]
   ],
   "qushji": [
+    ["TDV İslâm Ansiklopedisi: Ali Kuşçu", "https://www.nazariyat.org/en/issues/cilt-10-sayi-2/jamil-ragep-ali-kuscu"],
     ["TDV İslâm Ansiklopedisi: Ali Kuşçu", "https://islamansiklopedisi.org.tr/ali-kuscu"],
     ["Encyclopaedia Iranica: ʿAli Qušji", "https://www.iranicaonline.org/articles/ali-qusji-qusju-ala-al-din-ali-mohammad-theologian-and-scientist-d/", "the teacher link"],
     ["Biographical Encyclopedia of Astronomers (ISMI): Qūshjī", "https://ismi.mpiwg-berlin.mpg.de/biography/Qushji_BEA.htm", "the teacher link"]
@@ -340,7 +364,8 @@ const SOURCES = {
   "shafii": [
     ["Britannica: Shāfiʿī (school of law)", "https://www.britannica.com/topic/Shafiiyah"],
     ["Britannica: Islamic world: Sharīʿah, al-Shāfiʿī", "https://www.britannica.com/topic/Islamic-world/Sunnis-and-Shiites"],
-    ["TDV İslâm Ansiklopedisi: Şâfiî", "https://islamansiklopedisi.org.tr/safii"]
+    ["TDV İslâm Ansiklopedisi: Şâfiî", "https://islamansiklopedisi.org.tr/safii"],
+    ["IJMES: Wael Hallaq, Was al-Shafiʿi the Master Architect of Islamic Jurisprudence?", "https://www.cambridge.org/core/journals/international-journal-of-middle-east-studies/article/was-alshafii-the-master-architect-of-islamic-jurisprudence/71A7752678E37309173ABA27AB12710E", "the debate over his role in legal theory"]
   ],
   "shah-wali-allah": [
     ["Encyclopaedia Iranica: Dehlavī, Šāh Walī-Allāh", "https://www.iranicaonline.org/articles/dehlavi/"],
@@ -361,7 +386,8 @@ const SOURCES = {
   ],
   "sibawayh": [
     ["TDV İslâm Ansiklopedisi: Sîbeveyhi (PDF)", "https://cdn2.islamansiklopedisi.org.tr/dosya/37/C37012166.pdf"],
-    ["Cambridge University Press: Sibawayh on ʾimālah (inclination), introduction", "https://www.cambridge.org/core/books/abs/sibawayh-on-imalah-inclination/introduction/E4F1EEBAD490F2F81F178123E111A2AF", "the birth year"]
+    ["Cambridge University Press: Sibawayh on ʾimālah (inclination), introduction", "https://www.cambridge.org/core/books/abs/sibawayh-on-imalah-inclination/introduction/E4F1EEBAD490F2F81F178123E111A2AF", "the birth year"],
+    ["Bulletin of SOAS: The Greek Death of Sībawayhi and the Origins of Arabic Grammar", "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/C8835A0E868FCC1CC496978766678CF2/S0041977X22000593a.pdf/the-greek-death-of-sibawayhi-and-the-origins-of-arabic-grammar.pdf", "the reports of his Baghdad debate and death in Persia"]
   ],
   "sirhindi": [
     ["Britannica: Shaykh Aḥmad Sirhindī", "https://www.britannica.com/biography/Shaykh-Ahmad-Sirhindi"]
@@ -388,6 +414,7 @@ const SOURCES = {
   ],
   "tahawi": [
     ["Oxford Reference: al-Tahawi (Biographical Encyclopaedia of Islamic Philosophy)", "https://oxfordreference.com/view/10.1093/oi/authority.20110803095405786"],
+    ["Islam Museum: The Qur’an as the speech of God (in the Tahawi creed)", "https://www.islam.museum/en/concept/kalam-allah/"],
     ["TDV İslâm Ansiklopedisi: Tahâvî", "https://islamansiklopedisi.org.tr/tahavi"]
   ],
   "tahtawi": [
@@ -422,19 +449,24 @@ const SOURCES = {
   ],
   "debate:caliphate-modern": [
     ["Britannica: Islamic world: reform and revival in the colonial period", "https://www.britannica.com/topic/Islamic-world/The-rise-of-British-colonialism-to-the-end-of-the-Ottoman-Empire"],
-    ["Britannica: Caliphate: the caliphate in the modern era", "https://www.britannica.com/place/Caliphate/The-Abbasid-caliphate"]
+    ["Britannica: Caliphate: the caliphate in the modern era", "https://www.britannica.com/place/Caliphate/The-Abbasid-caliphate"],
+    ["Cambridge: On the origins of the Iranian constitution: Muhammad Baqer as-Sadr’s 1979 treatises", "https://www.cambridge.org/core/books/abs/renewal-of-islamic-law/on-the-origins-of-the-iranian-constitution-muhammad-baqer-assadrs-1979-treatises/14AAE2F71556206A90354B9AAC09A5A4"]
   ],
   "debate:created-quran": [
-    ["Britannica: miḥnah", "https://www.britannica.com/topic/mihnah"]
+    ["Britannica: miḥnah", "https://www.britannica.com/topic/mihnah"],
+    ["Islam Museum: The Qur’an as the speech of God (in the Tahawi creed)", "https://www.islam.museum/en/concept/kalam-allah/"],
+    ["Oxford Academic: Mihna (John Nawas)", "https://academic.oup.com/reference/62361/reference-article-abstract/554577879"]
   ],
   "debate:faith": [
     ["Britannica: Khārijite", "https://www.britannica.com/topic/Kharijite"],
-    ["Britannica: Islam: the Muʿtazilah (faith and works)", "https://www.britannica.com/topic/Islam/Theology-and-sectarianism"]
+    ["Britannica: Islam: the Muʿtazilah (faith and works)", "https://www.britannica.com/topic/Islam/Theology-and-sectarianism"],
+    ["Oxford Academic: The Kharijites and Contemporary Scholarship", "https://academic.oup.com/reference/62361/reference-article-abstract/554573165"]
   ],
   "debate:free-will": [
     ["Britannica: Qadariyyah", "https://www.britannica.com/topic/Qadariyyah"],
     ["Britannica: Muʿtazilah", "https://www.britannica.com/topic/Mutazilah"],
-    ["Britannica: Māturīdiyyah", "https://www.britannica.com/topic/Maturidiyah"]
+    ["Britannica: Māturīdiyyah", "https://www.britannica.com/topic/Maturidiyah"],
+    ["Oxford Academic: Coercion and Moral Agency in Ashʿarism", "https://academic.oup.com/book/10075/chapter-abstract/157534748"]
   ],
   "debate:good-evil": [
     ["Britannica: Muʿtazilah", "https://www.britannica.com/topic/Mutazilah"],
@@ -443,7 +475,8 @@ const SOURCES = {
   ],
   "debate:hadith-criticism": [
     ["Britannica: ʿilm al-ḥadīth", "https://www.britannica.com/topic/ilm-al-hadith"],
-    ["Britannica: isnād", "https://www.britannica.com/topic/isnad"]
+    ["Britannica: isnād", "https://www.britannica.com/topic/isnad"],
+    ["Islam Museum: Abu Dawud al-Sijistani", "https://www.islam.museum/en/person/abu-dawud-al-sijistani/"]
   ],
   "debate:heavens": [
     ["Stanford Encyclopedia of Philosophy: Arabic and Islamic natural philosophy and natural science", "https://plato.stanford.edu/entries/arabic-islamic-natural/"]
@@ -463,7 +496,8 @@ const SOURCES = {
   ],
   "debate:philosophy": [
     ["Stanford Encyclopedia of Philosophy: Arabic and Islamic philosophy of religion", "https://plato.stanford.edu/entries/arabic-islamic-religion/"],
-    ["Stanford Encyclopedia of Philosophy: al-Ghazali", "https://plato.stanford.edu/entries/al-ghazali/"]
+    ["Stanford Encyclopedia of Philosophy: al-Ghazali", "https://plato.stanford.edu/entries/al-ghazali/"],
+    ["Stanford Encyclopedia of Philosophy: Ibn Rushd", "https://plato.stanford.edu/entries/ibn-rushd/"]
   ],
   "debate:reason-law": [
     ["Britannica: qiyas", "https://www.britannica.com/topic/qiyas"],
@@ -475,10 +509,12 @@ const SOURCES = {
   ],
   "debate:renewal": [
     ["Britannica: Islamic world: reform from 1683", "https://www.britannica.com/topic/Islamic-world/Islamic-history-from-1683-to-the-present-reform-dependency-and-recovery"],
-    ["Britannica: Wahhābī", "https://www.britannica.com/topic/Wahhabi"]
+    ["Britannica: Wahhābī", "https://www.britannica.com/topic/Wahhabi"],
+    ["Oxford Academic: Asmaʾu, Nana", "https://academic.oup.com/edited-volume/61663/chapter-abstract/553437989"]
   ],
   "debate:sufism-law": [
-    ["Britannica: Sufism: history", "https://www.britannica.com/topic/Sufism/History"]
+    ["Britannica: Sufism: history", "https://www.britannica.com/topic/Sufism/History"],
+    ["Encyclopaedia Iranica: Ḥallāj, Abu’l-Moḡiṯ Ḥosayn", "https://www.iranicaonline.org/articles/hallaj/"]
   ],
   "debate:tafsir": [
     ["Britannica: tafsīr", "https://www.britannica.com/topic/tafsir"],
@@ -515,7 +551,8 @@ const SOURCES = {
     ["Nicolai Sinai, Bulletin of SOAS: When did the consonantal skeleton of the Quran reach closure? Part II", "https://www.cambridge.org/core/journals/bulletin-of-the-school-of-oriental-and-african-studies/article/abs/when-did-the-consonantal-skeleton-of-the-quran-reach-closure-part-ii1/022A637F114CD329041BA679B28CABDE"]
   ],
   "event:constantinople": [
-    ["Britannica: Fall of Constantinople", "https://www.britannica.com/event/Fall-of-Constantinople-1453"]
+    ["Britannica: Fall of Constantinople", "https://www.britannica.com/event/Fall-of-Constantinople-1453"],
+    ["V&A: Constantinople to Istanbul, One City, Two Empires (large print guide)", "https://www.vam.ac.uk/info/constantinople-to-istanbul-one-city-two-empires-large-print-guide"]
   ],
   "event:death-prophet": [
     ["Britannica: Muhammad: biography according to the Islamic tradition", "https://www.britannica.com/biography/Muhammad/Biography-according-to-the-Islamic-tradition"],
@@ -531,7 +568,9 @@ const SOURCES = {
   ],
   "event:fitna": [
     ["Britannica: Khārijite", "https://www.britannica.com/topic/Kharijite"],
-    ["Britannica: ʿAlī", "https://www.britannica.com/biography/Ali-Muslim-caliph"]
+    ["Britannica: ʿAlī", "https://www.britannica.com/biography/Ali-Muslim-caliph"],
+    ["Islam Museum: Battle of the Camel", "https://islam.museum/en/event/battle-of-the-camel/"],
+    ["Stefan Heidemann, Raqqa II (2003): Die Geschichte von ar-Raqqa/ar-Rafiqa (PDF)", "https://www.aai.uni-hamburg.de/voror/personen/heidemann/medien/heidemann-raqqa-ii-2003-geschichte-von-al-raqqa.pdf", "the site of Siffin"]
   ],
   "event:granada": [
     ["Britannica: Crusades: the later Crusades (surrender of Granada, 1492)", "https://www.britannica.com/event/Crusades/The-later-Crusades"]
@@ -564,7 +603,8 @@ const SOURCES = {
   ],
   "event:nizamiyya": [
     ["Britannica: Niẓāmiyyah", "https://www.britannica.com/place/Nizamiyyah"],
-    ["Britannica: Niẓām al-Mulk (summary)", "https://www.britannica.com/summary/Nizam-al-Mulk-Seljuq-vizier"]
+    ["Britannica: Niẓām al-Mulk (summary)", "https://www.britannica.com/summary/Nizam-al-Mulk-Seljuq-vizier"],
+    ["Bulletin of SOAS: Muslim institutions of learning in eleventh-century Baghdad", "https://www.cambridge.org/core/journals/bulletin-of-the-school-of-oriental-and-african-studies/article/abs/muslim-institutions-of-learning-in-eleventhcentury-baghdad/829B6875FD50B18C745D989D976E7365"]
   ],
   "event:printing": [
     ["University of Reading: thesis on the Ottoman-Muslim printing venture (PDF)", "https://centaur.reading.ac.uk/80437/1/16021166_Conidi_redacted.pdf"],
@@ -572,6 +612,7 @@ const SOURCES = {
   ],
   "event:revelation": [
     ["Britannica: Muhammad", "https://www.britannica.com/biography/Muhammad"],
+    ["Islam Museum: The first revelation", "https://www.islam.museum/en/event/first-revelation/"],
     ["TDV İslâm Ansiklopedisi: Muhammed", "https://islamansiklopedisi.org.tr/muhammed"]
   ],
   "event:safavids": [
@@ -590,7 +631,8 @@ const SOURCES = {
   ],
   "event:translation": [
     ["Britannica: al-Maʾmūn", "https://www.britannica.com/biography/al-Mamun"],
-    ["Stanford Encyclopedia of Philosophy: Arabic and Islamic natural philosophy", "https://plato.stanford.edu/entries/arabic-islamic-natural/"]
+    ["Stanford Encyclopedia of Philosophy: Arabic and Islamic natural philosophy", "https://plato.stanford.edu/entries/arabic-islamic-natural/"],
+    ["Stemma: The Graeco-Arabic translation movement in Baghdad", "https://stemmascience.org/en/node/house_of_wisdom/"]
   ],
   "event:uprising-1857": [
     ["Britannica: Indian Rebellion of 1857", "https://www.britannica.com/event/Indian-Rebellion-of-1857"],
@@ -603,21 +645,52 @@ const SOURCES = {
     ["Britannica: Abdülmecid II", "https://www.britannica.com/biography/Abdulmecid-II"]
   ],
   "thread:caliphate-modern:1925": [
-    ["Britannica: Islamic world, reform and revival in the colonial period", "https://www.britannica.com/topic/Islamic-world/The-rise-of-British-colonialism-to-the-end-of-the-Ottoman-Empire"]
+    ["Britannica: Islamic world, reform and revival in the colonial period", "https://www.britannica.com/topic/Islamic-world/The-rise-of-British-colonialism-to-the-end-of-the-Ottoman-Empire"],
+    ["Encyclopedia of the Modern Middle East: ʿAbd al-Raziq, Ali", "https://www.encyclopedia.com/environment/encyclopedias-almanacs-transcripts-and-maps/abd-al-raziq", "the condemnation and dismissal"]
   ],
   "thread:caliphate-modern:1930": [
     ["Iqbal, Reconstruction: Lecture VI (1934 edition, PDF at archipress.org)", "https://archipress.org/docs/pdf/iqbalreconstruction.pdf"]
   ],
+  "thread:caliphate-modern:1979": [
+    ["Cambridge: On the origins of the Iranian constitution: Muhammad Baqer as-Sadr’s 1979 treatises", "https://www.cambridge.org/core/books/abs/renewal-of-islamic-law/on-the-origins-of-the-iranian-constitution-muhammad-baqer-assadrs-1979-treatises/14AAE2F71556206A90354B9AAC09A5A4"]
+  ],
+  "thread:created-quran:827": [
+    ["IJMES: A Reexamination of Three Current Explanations for al-Maʾmun’s Introduction of the Miḥna", "https://www.cambridge.org/core/journals/international-journal-of-middle-east-studies/article/abs/reexamination-of-three-current-explanations-for-almamuns-introduction-of-the-mihna/7DC51FB0E209B4FBEB7F5EF16B4CA230", "the declaration of 827"]
+  ],
   "thread:created-quran:833": [
     ["Britannica: miḥnah", "https://www.britannica.com/topic/mihnah"]
+  ],
+  "thread:created-quran:848": [
+    ["Britannica: miḥnah", "https://www.britannica.com/topic/mihnah"],
+    ["Encyclopedia of Islam and the Muslim World: Mihna", "https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/mihna", "al-Mutawakkil’s ban of 849"],
+    ["Oxford Academic: Mihna (John Nawas)", "https://academic.oup.com/reference/62361/reference-article-abstract/554577879", "the end dates of 849 and 851–852"]
   ],
   "thread:faith:728": [
     ["Britannica: Muʿtazilah", "https://www.britannica.com/topic/Mutazilah"],
     ["TDV İslâm Ansiklopedisi: Vâsıl b. Atâ", "https://islamansiklopedisi.org.tr/vasil-b-ata"]
   ],
+  "thread:faith:846": [
+    ["Library of Congress: The Fourth Volume of al-Bukhari’s Collection of Authentic Hadiths", "https://www.loc.gov/item/2021667384/", "the date 846"]
+  ],
+  "thread:free-will:690": [
+    ["Encyclopedia of Religion: Free Will and Predestination, Islamic Concepts", "https://www.encyclopedia.com/environment/encyclopedias-almanacs-transcripts-and-maps/free-will-and-predestination-islamic-concepts", "Maʿbad al-Juhani as the first Qadari"]
+  ],
+  "thread:free-will:980": [
+    ["Core (thesis): The Epistemological Foundation of Knowing God", "https://files.core.ac.uk/download/429701525.pdf", "dating al-Mughni to about 970–990"]
+  ],
+  "thread:hadith-criticism:1438": [
+    ["Islam Museum: Completion of Fath al-Bari, 842/1438", "https://www.islam.museum/en/event/fath-al-bari-complete-842/"]
+  ],
   "thread:hadith-criticism:846": [
     ["Britannica: al-Bukhārī", "https://www.britannica.com/biography/al-Bukhari"],
-    ["TDV İslâm Ansiklopedisi: el-Câmiu’s-sahîh", "https://islamansiklopedisi.org.tr/el-camius-sahih--buhari"]
+    ["TDV İslâm Ansiklopedisi: el-Câmiu’s-sahîh", "https://islamansiklopedisi.org.tr/el-camius-sahih--buhari"],
+    ["Library of Congress: The Fourth Volume of al-Bukhari’s Collection of Authentic Hadiths", "https://www.loc.gov/item/2021667384/", "the date 846"]
+  ],
+  "thread:imamate:632": [
+    ["Britannica: Abū Bakr", "https://www.britannica.com/biography/Abu-Bakr"]
+  ],
+  "thread:imamate:680": [
+    ["Britannica: Battle of Karbala", "https://www.britannica.com/event/Battle-of-Karbala"]
   ],
   "thread:maqasid:1078": [
     ["TDV İslâm Ansiklopedisi: Cüveynî, İmâmü’l-Haremeyn", "https://islamansiklopedisi.org.tr/cuveyni-imamul-haremeyn"]
@@ -646,6 +719,23 @@ const SOURCES = {
   ],
   "thread:reform:1930": [
     ["Iqbal Cyber Library: Six Lectures on the Reconstruction of Religious Thought in Islam (Lahore, 1930)", "https://iqbalcyberlibrary.net/files/023/Iqbal-Six-Lectures-1930.pdf"]
+  ],
+  "thread:renewal:1840": [
+    ["Revue de la FM6OA: The life and contribution of Nana Asmaʾu", "https://www.fm6oa.org/revue/article/the-life-and-contribution-of-nana-asmau/"],
+    ["Brill: Sufi Feminism, Women Leaders in African Sufi Movements", "https://doi.org/10.1163/15700666-12340258"]
+  ],
+  "thread:tafsir:1134": [
+    ["Brill: Andrew Lane, A Traditional Muʿtazilite Qurʾān Commentary", "https://brill.com/display/book/9789047417767/front-4.pdf", "the completion date, 23 Rabiʿ II 528 (20 February 1134) at Mecca"]
+  ],
+  "thread:tafsir:1466": [
+    ["Islam Museum: Al-Suyuti completes Tafsir al-Jalalayn, 870/1466", "https://www.islam.museum/en/event/al-suyuti-completes-tafsir-al-jalalayn-870/"]
+  ],
+  "thread:tafsir:1960": [
+    ["Tafsir Al-Qur’an (Indonesian): Mengenal Tafsir at-Tahrir wa at-Tanwir", "https://tafsiralquran.id/mengenal-tafsir-at-tahrir-wa-at-tanwir-karya-%e1%b9%adahir-ibn-ashur/", "the years 1341–1380 AH, citing al-Hamid"],
+    ["TDV İslâm Ansiklopedisi: et-Tahrîr ve’t-Tenvîr", "https://islamansiklopedisi.org.tr/et-tahrir-vet-tenvir", "the first complete printing in 1984"]
+  ],
+  "thread:tafsir:1972": [
+    ["Encyclopaedia Iranica: Ṭabāṭabāʾi, Moḥammad-Ḥosayn", "https://www.iranicaonline.org/articles/tabatabai-mohammad-hosayn/", "its writing between 1955 and 1972"]
   ],
   "thread:unity-being:1229": [
     ["Stanford Encyclopedia of Philosophy: Ibn Arabi", "https://plato.stanford.edu/entries/ibn-arabi/"]

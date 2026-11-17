@@ -17,6 +17,7 @@ for (const f of FIGURES) {
   for (const tl of f.teachers || []) { const t = typeof tl === "string" ? tl : tl.id; if (typeof tl !== "string" && (!tl.id || typeof tl.rel !== "string")) errs.push(f.id + " teacher link needs id and rel"); if (!fig.has(t)) errs.push(f.id + " teacher " + t); else { const T = fig.get(t); if (T.d < f.b - 2) errs.push(`${f.id} teacher ${t} died ${T.d} before birth ${f.b}`); if (T.b > f.d) errs.push(`${f.id} teacher born after`); } }
   if (!(f.b < f.d)) errs.push(f.id + " dates");
   if (f.bNote !== undefined && typeof f.bNote !== "string") errs.push(f.id + " bNote");
+  if (f.dNote !== undefined && typeof f.dNote !== "string") errs.push(f.id + " dNote");
   if (f.bUnknown && !f.bc) errs.push(f.id + " bUnknown needs bc: the plotted birth year is an estimate");
   if (f.dah) { const est = (f.d - 622.5356) / 0.970224 + 1; if (Math.abs(est - f.dah) > 1.6) warn.push(`${f.id}: d ${f.d} -> AH≈${est.toFixed(1)} vs dah ${f.dah}`); }
   if (!f.text) errs.push(f.id + " text");
