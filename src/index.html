@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Islamic Scholars Timeline</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Alegreya+Sans:wght@400;500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/*CSS*/
+</style>
+</head>
+<body>
+<canvas id="globe" aria-hidden="true"></canvas>
+
+<header class="top">
+  <div class="brand">
+    <h1>Scholars and debates</h1>
+    <p class="brand-ar" lang="ar" dir="rtl">العلماء والمناظرات</p>
+    <p class="brand-sub">Fourteen centuries of Islamic thought, 610 to 1980</p>
+    <p id="mapcap" class="mapcap" aria-live="polite"></p>
+  </div>
+  <div class="tools">
+    <div class="search">
+      <label class="sr-only" for="q">Search scholars, debates and places</label>
+      <input id="q" type="search" placeholder="Search scholars, debates, places" autocomplete="off" spellcheck="false" aria-controls="results" aria-expanded="false">
+      <ul id="results" class="results" role="listbox" hidden></ul>
+    </div>
+    <label class="sr-only" for="region">Filter by region</label>
+    <select id="region"></select>
+    <button id="browseBtn" type="button" class="btn">Browse</button>
+    <button id="aboutBtn" type="button" class="btn">About</button>
+  </div>
+</header>
+
+<p id="maphint" class="maphint">Select a scholar or a debate to see where it happened. With nothing selected, the map follows the centuries in view.</p>
+
+<section id="band" class="band" aria-label="Timeline">
+  <div class="band-top">
+    <svg id="overview" class="overview" role="img" aria-label="Overview of all eras. Drag the window to move through time."></svg>
+    <div class="zoom" role="group" aria-label="Zoom">
+      <button id="zoomOut" type="button" class="btn icon" aria-label="Zoom out">−</button>
+      <button id="zoomIn" type="button" class="btn icon" aria-label="Zoom in">+</button>
+    </div>
+  </div>
+  <div class="axis-wrap"><svg id="axis" aria-hidden="true"></svg></div>
+  <div class="tl-wrap">
+    <div id="scroller" class="scroller" tabindex="0" aria-label="Scholars by discipline and debates, arranged by date. Use arrow keys to move through time.">
+      <svg id="tl"></svg>
+    </div>
+    <div id="lanelabels" class="lanelabels"></div>
+  </div>
+</section>
+
+<aside id="panel" class="panel" hidden aria-labelledby="panelTitle">
+  <button id="panelClose" type="button" class="btn icon close" aria-label="Close details">×</button>
+  <div id="panelBody" class="panel-body"></div>
+</aside>
+
+<div id="tip" class="tip" role="tooltip" hidden></div>
+
+<div id="browse" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="browseTitle">
+  <div class="modal-card">
+    <button type="button" class="btn icon close" data-close aria-label="Close">×</button>
+    <h2 id="browseTitle">Browse everything</h2>
+    <div class="browse-cols">
+      <div><h3>Scholars by era</h3><div id="browseFigs"></div></div>
+      <div><h3>Debates</h3><div id="browseDebs"></div></div>
+    </div>
+  </div>
+</div>
+
+<div id="about" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="aboutTitle">
+  <div class="modal-card about">
+    <button type="button" class="btn icon close" data-close aria-label="Close">×</button>
+    <h2 id="aboutTitle">About this timeline</h2>
+    <p>Each star is a scholar, placed in the lane of their main discipline at the middle of their life. The bars at the top are the debates they argued over, spanning the years each debate was most active. Faint threads join each debate to the scholars who took part in it.</p>
+    <p>Select a scholar to see the places of their life on the globe, in order. Select a debate to follow where it was argued, year by year. With nothing selected, the globe shows where the scholars in view lived, and turns as you move through the centuries.</p>
+    <p>Positions in each debate are stated as their holders stated them. Dates are shown in both the Common Era and the Hijri calendar; a “c.” marks an approximate year, and Hijri years worked out from Common Era dates are marked the same way.</p>
+    <h3>What still needs work</h3>
+    <p>This is a first version with 99 scholars and 18 debates. The dates come from general reference works and still need checking against specialist sources, and references are not yet attached to each entry. Ibadi and Isma’ili scholars, Southeast Asia, Africa beyond Sokoto and more women scholars are still to be added.</p>
+    <h3>The map</h3>
+    <p>Region names on the globe are historical: Mawara’ al-nahr, Khurasan, al-Andalus. Coastlines, rivers and lakes are modern, from Natural Earth (public domain), except the Aral Sea, which is drawn at its historical extent. City positions are approximate.</p>
+    <h3>Keyboard</h3>
+    <p>Tab to any star or debate and press Enter to open it. Use the arrow keys in the timeline to move through time, and Escape to close a panel.</p>
+  </div>
+</div>
+
+<noscript><p class="noscript">This timeline needs JavaScript.</p></noscript>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+<script>
+/*WORLD*/
+</script>
+<script>
+/*DATA*/
+</script>
+<script>
+/*APP*/
+</script>
+</body>
+</html>
