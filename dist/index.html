@@ -183,6 +183,8 @@ body.panel-open .top { right: var(--panel-w); }
 .deb-item > .link:first-child { font-weight: 700; }
 .deb-pos { display: block; color: var(--gold-2); font-size: 14px; margin-top: 6px; }
 .deb-arg { font-family: var(--font-d); font-size: 16.5px; line-height: 1.45; margin: 2px 0 0; }
+.deb-note { font-family: var(--font-d); font-size: 15.5px; line-height: 1.45; color: var(--ink-2); margin: 8px 0 0; padding-left: 11px; border-left: 2px solid var(--gold); }
+.pos .pos-note { font-size: 15.5px; line-height: 1.45; margin: 8px 0 0; padding-left: 11px; border-left: 2px solid var(--gold); }
 .deb-thread { margin-top: 8px; gap: 8px; }
 .deb-thread li { grid-template-columns: 54px 1fr; }
 .deb-thread .tx { font-size: 15.5px; color: var(--ink-2); }
@@ -854,9 +856,9 @@ const DEBATES = [
     text: "The first civil war pushed Muslims to ask whether those who sinned gravely, rulers included, remained believers. The answers defined the earliest theological groups and, later, how each school understood faith itself.",
     positions: [
       { name: "The sinner has left Islam", text: "A grave sinner is an unbeliever. This was the view of radical Khariji groups such as the Azariqa; the Ibadis called the sinner ungrateful to God (kafir ni’ma) but not an apostate, and lived alongside other Muslims.", who: [] },
-      { name: "Faith is belief and affirmation", text: "Faith is assent of the heart and affirmation of the tongue; deeds do not enter its definition, and the sinner’s fate is left to God.", who: ["abu-hanifa", "maturidi"] },
-      { name: "The intermediate position", text: "The grave sinner is neither believer nor unbeliever but in a position between the two.", who: ["wasil", "abd-al-jabbar"] },
-      { name: "Faith is belief, word and deed", text: "Faith includes deeds and rises and falls with them; the sinner remains a believer with deficient faith.", who: ["ibn-hanbal", "bukhari", "ashari"] }
+      { name: "Faith is belief and affirmation", text: "Faith is assent of the heart and affirmation of the tongue; deeds do not enter its definition, and the sinner’s fate is left to God.", who: ["abu-hanifa", "maturidi"], notes: { maturidi: "Against al-Ash’ari, al-Maturidi held that faith is assent (tasdiq) and so can neither grow nor shrink; confession with the tongue is only a sign of it, which the community needs in order to treat a person as Muslim." } },
+      { name: "The intermediate position", text: "The grave sinner is neither believer nor unbeliever but in a position between the two.", who: ["wasil", "abd-al-jabbar"], notes: { "abd-al-jabbar": "For Abd al-Jabbar faith is knowing God, confessing Him and doing what religion commands while avoiding what it forbids. The grave sinner is therefore called a fasiq, and if he dies unrepentant he stays in Hell forever, though punished less than an unbeliever." } },
+      { name: "Faith is belief, word and deed", text: "Faith includes deeds and rises and falls with them; the sinner remains a believer with deficient faith.", who: ["ibn-hanbal", "bukhari", "ashari"], notes: { "ibn-hanbal": "The creeds transmitted under Ibn Hanbal’s name call faith word and deed, increasing and decreasing, and one of them adds that whoever omits the prayer has committed unbelief. A modern study reassigns several of these creeds to his contemporaries, so their exact wording may not be his.", ashari: "Al-Ash’ari’s short creed says faith is word and deed and increases and decreases; elsewhere he defines faith as the heart’s assent (tasdiq), with confession and deeds following from it." } }
     ],
     thread: [
       { y: 657, text: "After Ali accepts arbitration at Siffin, a group breaks from him; they become known as the Kharijis.", who: ["ali"], at: ["siffin"] },
@@ -874,8 +876,8 @@ const DEBATES = [
     positions: [
       { name: "Humans create their own acts", text: "God’s justice requires that people be the authors of their deeds, or reward and punishment would be unjust.", who: ["wasil", "abd-al-jabbar"] },
       { name: "God compels all acts", text: "People have no real power over their acts. This was the view of the Jabriyya.", who: [] },
-      { name: "God creates, humans acquire", text: "God creates every act, and the human being “acquires” it, which grounds responsibility. This is al-Ash’ari’s doctrine and that of al-Juwayni’s al-Irshad; in his later al-Aqida al-Nizamiyya al-Juwayni gives human power a real effect on acts.", who: ["ashari", "juwayni", "ghazali"] },
-      { name: "God creates, humans choose", text: "God creates acts, but the human power of choice is real and is what responsibility rests on. Maturidi authors also speak of acquisition, but tie it to this power of choice.", who: ["maturidi", "abu-hafs-nasafi"] }
+      { name: "God creates, humans acquire", text: "God creates every act, and the human being “acquires” it, which grounds responsibility. This is al-Ash’ari’s doctrine.", who: ["ashari", "juwayni", "ghazali"], notes: { juwayni: "Al-Juwayni’s al-Irshad teaches this doctrine of acquisition; in his later al-Aqida al-Nizamiyya he gives the power God creates in a person a real effect on the act.", ghazali: "In the Revival’s book on divine unity and trust in God, al-Ghazali argues that God creates every event, human acts included; his Persian Alchemy of Happiness says a person is compelled even in the act of choosing." } },
+      { name: "God creates, humans choose", text: "God creates acts, but the human power of choice is real and is what responsibility rests on. Maturidi authors also speak of acquisition, but tie it to this power of choice.", who: ["maturidi", "abu-hafs-nasafi"], notes: { "abu-hafs-nasafi": "Abu Hafs al-Nasafi’s creed says humans have acts of choice for which they are rewarded and punished; the good among them happens with God’s good pleasure, the bad does not." } }
     ],
     thread: [
       { y: 690, c: true, text: "Ma’bad al-Juhani teaches in Basra that people determine their own acts.", who: [], at: ["basra"] },
@@ -895,7 +897,7 @@ const DEBATES = [
       { name: "Collect broadly, arranged by narrator", text: "Gather what is transmitted, arranged by Companion, with weaker reports kept and judged.", who: ["ibn-hanbal"] },
       { name: "Only the sound", text: "Include only reports whose chains meet strict conditions of reliability and contact.", who: ["bukhari", "muslim"] },
       { name: "Reports arranged for law", text: "Arrange reports by legal topic. Abu Dawud says he flags reports with serious weakness and leaves the rest without comment; al-Tirmidhi often comments on a report’s reliability and on how jurists used it.", who: ["abu-dawud", "tirmidhi"] },
-      { name: "Reports from the Imams", text: "The sayings of the Imams are authoritative alongside the Prophet’s, transmitted through Shi’i chains.", who: ["kulayni", "shaykh-tusi"] }
+      { name: "Reports from the Imams", text: "The sayings of the Imams are authoritative alongside the Prophet’s, transmitted through Shi’i chains.", who: ["kulayni", "shaykh-tusi"], notes: { "shaykh-tusi": "In al-Udda fi usul al-fiqh, al-Shaykh al-Tusi held that the community may act on reports from single transmitters (akhbar al-ahad) and claimed consensus for this, against his teacher al-Sharif al-Murtada, who had claimed consensus that such reports could not be acted on." } }
     ],
     thread: [
       { y: 670, c: true, text: "Aisha teaches and corrects reports in Medina.", who: ["aisha"], at: ["medina"] },
@@ -937,9 +939,9 @@ const DEBATES = [
     question: "How should scripture’s descriptions of God be understood?",
     text: "Scripture speaks of God’s hand, face and hearing, and says that He istawa ’ala al-’arsh (Q. 20:5), rendered “rose over”, “settled on” or “established Himself on” the throne. Some read such words as attributes to be affirmed, some interpreted them figuratively, and some denied that attributes are distinct from God’s essence. The question shaped every theological school and returned sharply in Mamluk Damascus and Cairo.",
     positions: [
-      { name: "No attributes distinct from the essence", text: "To protect God’s unity, His knowledge and power are not things added to His essence.", who: ["wasil", "abd-al-jabbar"] },
+      { name: "No attributes distinct from the essence", text: "To protect God’s unity, His knowledge and power are not things added to His essence.", who: ["wasil", "abd-al-jabbar"], notes: { "abd-al-jabbar": "Following Abu Hashim, Abd al-Jabbar explained God’s being knowing and powerful as states (ahwal) He has by virtue of His essence, not as attributes added to it." } },
       { name: "Affirm without asking how", text: "Accept the texts as they come, without likening God to creatures and without explaining them away.", who: ["ibn-hanbal", "ibn-taymiyya"] },
-      { name: "Eternal attributes affirmed by argument", text: "God has eternal attributes such as knowledge, power and speech, and reason can argue for them. Maturidis add that God’s act of bringing things into being (takwin) is itself an eternal attribute; al-Taftazani accepted this in his commentary on al-Nasafi’s creed (1367), though his later works side with the Ash’aris.", who: ["ashari", "maturidi", "taftazani"] },
+      { name: "Eternal attributes affirmed by argument", text: "God has eternal attributes such as knowledge, power and speech, and reason can argue for them. Maturidis add that God’s act of bringing things into being (takwin) is itself an eternal attribute.", who: ["ashari", "maturidi", "taftazani"], notes: { maturidi: "In Kitab al-Tawhid al-Maturidi argues that God’s creating is as eternal as His knowledge and power and distinct from the things created, and reads God’s “rising over the Throne” as neither sitting nor direction, since the Throne is itself created.", taftazani: "In his commentary on al-Nasafi’s creed (1367), al-Taftazani accepted the Maturidi view that takwin is an eternal attribute; his later works side with the Ash’aris." } },
       { name: "Figurative reading of bodily terms", text: "Texts that seem to give God a body or a place may be read figuratively, by their sense in Arabic and the demands of reason.", who: ["juwayni", "fakhr-razi"] }
     ],
     thread: [
@@ -996,9 +998,9 @@ const DEBATES = [
     question: "Is the Qur’an, as God’s speech, created or eternal?",
     text: "The Mu’tazila held that the Qur’an was created in time, since only God is eternal. In 833 Caliph al-Ma’mun required judges and scholars to affirm this, an inquisition known as the Mihna. Ahmad ibn Hanbal refused and was flogged. The Mihna ended under al-Mutawakkil, and the uncreated Qur’an became the Sunni position.",
     positions: [
-      { name: "Created", text: "Only God is eternal, so His speech as revealed and recited is created.", who: ["jahiz", "abd-al-jabbar"] },
-      { name: "Uncreated", text: "The Qur’an is God’s speech and is not created.", who: ["ibn-hanbal", "bukhari", "tahawi"] },
-      { name: "Eternal speech, created recitation", text: "God’s speech is an eternal attribute; the letters, sounds and copies are created.", who: ["ashari", "maturidi"] }
+      { name: "Created", text: "Only God is eternal, so His speech as revealed and recited is created.", who: ["jahiz", "abd-al-jabbar"], notes: { jahiz: "Al-Jahiz, who enjoyed the patronage of the judge Ibn Abi Du’ad, wrote tracts against the hadith scholars as anthropomorphists. In his epistle Khalq al-Qur’an he gave his own account of the inquisition: Ahmad ibn Hanbal gave way repeatedly, received only thirty lashes, and Ibn Abi Du’ad never urged his execution.", "abd-al-jabbar": "In the seventh part of al-Mughni, Abd al-Jabbar argues that speech is ordered letters and sounds, which can exist only in time, so God’s speech is created; God is called speaking because He makes speech." } },
+      { name: "Uncreated", text: "The Qur’an is God’s speech and is not created.", who: ["ibn-hanbal", "bukhari", "tahawi"], notes: { tahawi: "Al-Tahawi’s creed says the Qur’an came from God as speech “without how”, sent down as revelation, and is not created like human speech; whoever hears it and calls it human speech has disbelieved." } },
+      { name: "Eternal speech, created recitation", text: "God’s speech is an eternal attribute; the letters, sounds and copies are created.", who: ["ashari", "maturidi"], notes: { maturidi: "Against al-Ash’ari, who held that God’s speech can be heard, al-Maturidi taught that the eternal speech cannot itself be heard: what reaches the ear is created sound and letters that express it." } }
     ],
     thread: [
       { y: 827, text: "Al-Ma’mun proclaims that the Qur’an is created.", who: [], at: ["baghdad"] },
@@ -1043,7 +1045,7 @@ const DEBATES = [
     positions: [
       { name: "God turned them away (sarfa)", text: "The Qur’an’s language was not beyond the Arabs in itself, but God prevented them from matching it; that prevention is the miracle.", who: ["nazzam"] },
       { name: "Eloquence beyond human reach", text: "The miracle lies in the Qur’an’s eloquence, which reaches a degree no human speaker can attain.", who: ["jahiz", "abd-al-jabbar"] },
-      { name: "The arrangement of words (nazm)", text: "The miracle lies in nazm: the way words are joined through the meanings of grammar to say exactly what is meant. Sarfa would make the miracle the silencing of the Arabs rather than the text itself.", who: ["jurjani", "zamakhshari", "fakhr-razi"] }
+      { name: "The arrangement of words (nazm)", text: "The miracle lies in nazm: the way words are joined through the meanings of grammar to say exactly what is meant. Sarfa would make the miracle the silencing of the Arabs rather than the text itself.", who: ["jurjani", "zamakhshari", "fakhr-razi"], notes: { "fakhr-razi": "In Nihayat al-i’jaz, a reworking of al-Jurjani’s two books, Fakhr al-Din al-Razi rejects sarfa with three arguments; his later Qur’an commentary, while stressing eloquence, implicitly allows it." } }
     ],
     thread: [
       { y: 830, c: true, text: "Al-Nazzam teaches that God turned the Arabs away from matching the Qur’an.", who: ["nazzam"], at: ["baghdad"] },
@@ -1104,7 +1106,7 @@ const DEBATES = [
     question: "May Sufis use music, dance and chanting aloud to draw near to God, or should remembrance be silent?",
     text: "Sufis gathered to listen to poetry and music (sama’) and to repeat the names of God (dhikr), sometimes with movement and dance. Al-Ghazali devoted a book of The Revival of the Religious Sciences to listening and set conditions for it; Hanbali critics such as Ibn al-Jawzi and Ibn Taymiyya called such gatherings an innovation. The orders differed as well: Rumi’s followers made music and turning their central ritual, while in fourteenth-century Central Asia the circles of Baha’ al-Din Naqshband and Sayyid Ali Hamadani came to stand for silent and vocal remembrance.",
     positions: [
-      { name: "Listening is lawful under conditions", text: "Listening to music and poetry is lawful and can stir the love of God when the time, the place and the company are right; it is forbidden where it stirs base desire.", who: ["ghazali", "qushayri"] },
+      { name: "Listening is lawful under conditions", text: "Listening to music and poetry is lawful and can stir the love of God when the time, the place and the company are right; it is forbidden where it stirs base desire.", who: ["ghazali", "qushayri"], notes: { qushayri: "Al-Qushayri’s Risala holds that listening to poetry sung to fine melodies is permitted in general if the listener believes nothing forbidden, hears nothing the Law condemns and is not led by desire: poems were recited before the Prophet, and a melody does not change the ruling. Listening that makes one keener to obey God is recommended." } },
       { name: "Music and turning as worship", text: "Listening to music with turning movement belongs to the path itself; it became the central ritual of Rumi’s followers.", who: ["rumi"] },
       { name: "Remembrance aloud", text: "God’s names are repeated aloud and in company, often with set movements of the body.", who: ["yasawi", "hamadani"] },
       { name: "Remembrance in silence", text: "The heart repeats the remembrance without moving the tongue or body, which avoids display; vocal dhikr and music gatherings are not needed and may be unlawful.", who: ["naqshband"] },
@@ -1129,7 +1131,7 @@ const DEBATES = [
       { name: "Follow the school’s settled doctrine", text: "Later jurists rule within their school, refining its established positions.", who: ["marghinani", "nawawi"] },
       { name: "Ijtihad remains open", text: "Qualified scholars must reason from the Qur’an and hadith, and blind imitation is not allowed to them.", who: ["ibn-hazm", "ibn-taymiyya", "suyuti", "shah-wali-allah", "shawkani"] },
       { name: "Ijtihad by qualified jurists", text: "Believers follow a living qualified jurist, who reasons from the sources.", who: ["hilli"] },
-      { name: "Ijtihad for a new age", text: "Reform requires fresh reasoning on questions of law and society.", who: ["abduh", "rida", "iqbal"] }
+      { name: "Ijtihad for a new age", text: "Reform requires fresh reasoning on questions of law and society.", who: ["abduh", "rida", "iqbal"], notes: { rida: "In Muhawarat al-muslih wa’l-muqallid, dialogues between a reformer and an imitator (muqallid) first printed in al-Manar and issued as a book in 1906–07, Rashid Rida argues against taqlid and for ijtihad as the way to Muslim unity." } }
     ],
     thread: [
       { y: 1050, c: true, text: "Ibn Hazm condemns imitation in law.", who: ["ibn-hazm"], at: ["cordoba"] },
@@ -1254,7 +1256,7 @@ const DEBATES = [
 ];
 
 // Sources for each scholar, debate, debate entry and event, shown in their panels.
-// Keys: a scholar id; "debate:<id>"; "thread:<debate>:<year>"; "event:<id>".
+// Keys: a scholar id; "debate:<id>"; "thread:<debate>:<year>"; "note:<debate>:<scholar>"; "event:<id>".
 // Each source is [label, url] or [label, url, what it supports].
 
 const SOURCES = {
@@ -1902,6 +1904,69 @@ const SOURCES = {
   "event:uprising-1857": [
     ["Britannica: Indian Rebellion of 1857", "https://www.britannica.com/event/Indian-Rebellion-of-1857"],
     ["Britannica: Indian Independence Movement (the end of the Mughal dynasty)", "https://www.britannica.com/topic/Indian-Independence-Movement"]
+  ],
+  "note:attributes:abd-al-jabbar": [
+    ["CORE (PDF): J. R. T. M. Peters, God’s Created Speech", "https://core.ac.uk/download/43595204.pdf"]
+  ],
+  "note:attributes:maturidi": [
+    ["Wikipedia: Kitab al-Tawhid (al-Maturidi)", "https://en.wikipedia.org/wiki/Kitab_al-Tawhid_(Al-Maturidi)"]
+  ],
+  "note:attributes:taftazani": [
+    ["Encyclopedia of Religion: Taftāzānī, al-", "https://encyclopedia.com/environment/encyclopedias-almanacs-transcripts-and-maps/taftazani-al"]
+  ],
+  "note:created-quran:abd-al-jabbar": [
+    ["CORE (PDF): J. R. T. M. Peters, God’s Created Speech", "https://core.ac.uk/download/43595204.pdf"],
+    ["Ulumuna: Ibnu Rusydi, al-Qāḍī ʿAbd al-Jabbār’s View on Khalq al-Qurʾān (2015)", "https://doi.org/10.20414/ujis.v19i2.347"]
+  ],
+  "note:created-quran:jahiz": [
+    ["Encyclopaedia Iranica: Jāḥeẓ", "https://www.iranicaonline.org/articles/jahez/"],
+    ["al-Majalla (Arabic): the createdness-of-the-Qur’an ordeal as told by al-Jahiz", "https://www.majalla.com/node/295361"]
+  ],
+  "note:created-quran:maturidi": [
+    ["nasafi.org: al-ʿAqīda al-Nasafiyya, paragraph 14 with commentary", "https://nasafi.org/paragraph-014/"],
+    ["DergiPark (PDF): Harun Kılıçaslan, The Transmission of the Divine Speech to the Prophet according to the Māturīdīs (2025)", "https://dergipark.org.tr/tr/download/article-file/5223695"]
+  ],
+  "note:created-quran:tahawi": [
+    ["Islam Museum: The Qur’an as the speech of God (in the Tahawi creed)", "https://www.islam.museum/en/concept/kalam-allah/"],
+    ["Masud.co.uk: al-Tahawi’s creed in English", "https://masud.co.uk/?p=719"]
+  ],
+  "note:faith:abd-al-jabbar": [
+    ["DergiPark (PDF): Selim Gülverdi, Kādî Abdülcebbâr ve Ebü’l-Muîn en-Nesefî’nin büyük günah hakkındaki görüşleri (2021)", "https://dergipark.org.tr/en/download/article-file/1527456"]
+  ],
+  "note:faith:ashari": [
+    ["Sacred Texts: D. B. Macdonald, Development of Muslim Theology (1903), al-Ashʿarī’s creed", "https://sacred-texts.com/isl/dmt/dmt20.htm"],
+    ["DOAJ: Baghbanzade, Abu-l-Hassan al-Ashʿarī on Faith", "https://doaj.org/article/263a1a8049644584a2dd21b27d5e2ee2"]
+  ],
+  "note:faith:ibn-hanbal": [
+    ["Oxford University Research Archive: Christopher Melchert, Early Ḥanbalī Creeds (translation, PDF)", "https://ora.ox.ac.uk/objects/uuid:3f641916-8c75-4114-8e90-db25de3fa7be/files/m0192642159d0745d1d6a247c249d9a88"]
+  ],
+  "note:faith:maturidi": [
+    ["Encyclopedia of Religion: Māturīdī, al-", "https://www.encyclopedia.com/environment/encyclopedias-almanacs-transcripts-and-maps/maturidi-al"],
+    ["al-islam.org: A History of Muslim Philosophy (ed. M. M. Sharif), chapter on Tahawism by A. K. M. Ayyub Ali", "https://al-islam.org/id/node/39527"]
+  ],
+  "note:free-will:abu-hafs-nasafi": [
+    ["nasafi.org: al-ʿAqīda al-Nasafiyya, paragraph 20", "https://nasafi.org/?p=262"]
+  ],
+  "note:free-will:ghazali": [
+    ["Stanford Encyclopedia of Philosophy: al-Ghazali", "https://plato.stanford.edu/entries/al-ghazali/"],
+    ["Ganjoor: al-Ghazālī, Kīmiyā-yi saʿādat, on man being compelled in his very choice (Persian text)", "https://ganjoor.net/ghazzali/kimia/arkan/a4/sh80"]
+  ],
+  "note:free-will:juwayni": [
+    ["Oxford Academic: Coercion and Moral Agency in Ashʿarism", "https://academic.oup.com/book/10075/chapter-abstract/157534748"]
+  ],
+  "note:hadith-criticism:shaykh-tusi": [
+    ["Magiran: How Shaykh Ṭūsī Encountered the Discourse of Mufīd and Murtaḍā on the Validity of an Isolated Tradition", "https://www.magiran.com/paper/1805418/?lang=en"],
+    ["American Journal of Islam and Society (PDF): Liyakat Takim on the evaluation of hadith transmitters in Shiʿi biographical works", "https://ajis.org/index.php/ajiss/article/download/428/2159/4888"]
+  ],
+  "note:ijaz:fakhr-razi": [
+    ["Journal of Critical Studies on the Quranic Exegesis (2024): Fakhr al-Dīn al-Rāzī and the Concept of Ṣarfa (PDF)", "https://www.ensani.ir/fa/article/download/592643"]
+  ],
+  "note:ijtihad:rida": [
+    ["NYU Arabic Collections Online: Rashid Rida, Muḥāwarāt al-muṣliḥ wa’l-muqallid (Cairo, 1906–07)", "https://sites.dlib.nyu.edu/viewer/node/24960"]
+  ],
+  "note:sama:qushayri": [
+    ["Arabic Wikisource: Ibn Taymiyya, al-Istiqama, quoting al-Qushayri’s chapter on samaʿ", "https://ar.wikisource.org/wiki/%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%82%D8%A7%D9%85%D8%A9/6"],
+    ["Ganjoor: Persian translation of al-Qushayri’s Risala, chapter 52, on samaʿ", "https://ganjoor.net/osmani/qushayriyya/bab452/sh49"]
   ],
   "thread:caliphate-modern:1922": [
     ["Yale University Press: The Caliphate or Supreme Imamate", "https://yalebooks.yale.edu/book/9780300190274/the-caliphate-or-supreme-imamate/"]
@@ -2978,6 +3043,13 @@ const SOURCES = {
     const link = (kind, id, text) => { const b = el("button", "link", text); b.type = "button"; b.dataset.kind = kind; b.dataset.id = id; return b; };
     const section = (title) => { const h = el("h3", null, title); body.appendChild(h); return h; };
     const extLink = (text, url, title) => { const a = el("a", "ext", text); a.href = url; a.target = "_blank"; a.rel = "noopener noreferrer"; if (title) a.title = title; return a; };
+    // inline sources under a dated entry or a scholar's note: the publisher part of each label, full label on hover
+    const tsrc = (list) => {
+      if (!list || !list.length) return null;
+      const s = el("span", "tsrc", list.length > 1 ? "Sources: " : "Source: ");
+      list.forEach((r, i) => { if (i) s.appendChild(document.createTextNode("; ")); s.appendChild(extLink(r[0].split(": ")[0], r[1], r[0])); });
+      return s;
+    };
     // a source list: [label, url, what it supports]
     const sources = (list, after) => {
       if (!list || !list.length) return;
@@ -3040,6 +3112,13 @@ const SOURCES = {
           for (const pos of deb.positions.filter((p) => p.who.includes(f.id))) {
             item.appendChild(el("span", "deb-pos", pos.name));
             item.appendChild(el("p", "deb-arg", pos.text));
+            const note = pos.notes && pos.notes[f.id];
+            if (note) {
+              const n = el("p", "deb-note", note);
+              const s = tsrc(SOURCES[`note:${deb.id}:${f.id}`]);
+              if (s) n.appendChild(s);
+              item.appendChild(n);
+            }
           }
           const own = deb.thread.filter((t) => t.who.includes(f.id));
           if (own.length) {
@@ -3048,12 +3127,8 @@ const SOURCES = {
               const li = el("li");
               li.appendChild(el("span", "yr", yearLabel(t.y, t.c)));
               const tx = el("div", "tx", t.text);
-              const src = SOURCES[`thread:${deb.id}:${t.y}`];
-              if (src) {
-                const s = el("span", "tsrc", src.length > 1 ? "Sources: " : "Source: ");
-                src.forEach((r, i) => { if (i) s.appendChild(document.createTextNode("; ")); s.appendChild(extLink(r[0].split(": ")[0], r[1], r[0])); });
-                tx.appendChild(s);
-              }
+              const s = tsrc(SOURCES[`thread:${deb.id}:${t.y}`]);
+              if (s) tx.appendChild(s);
               li.appendChild(tx);
               ol.appendChild(li);
             }
@@ -3124,6 +3199,15 @@ const SOURCES = {
         if (p.who.length) { who.appendChild(document.createTextNode("Associated with ")); p.who.forEach((id, i) => { if (i) who.appendChild(document.createTextNode(", ")); who.appendChild(link("fig", id, FIG.get(id).short)); }); }
         else who.textContent = "No scholar associated with this position is in the dataset yet.";
         box.appendChild(who);
+        // what individual scholars argued within this position
+        for (const id of p.who) {
+          const note = p.notes && p.notes[id];
+          if (!note) continue;
+          const n = el("p", "pos-note", note);
+          const s = tsrc(SOURCES[`note:${d.id}:${id}`]);
+          if (s) n.appendChild(s);
+          box.appendChild(n);
+        }
         body.appendChild(box);
       }
       section("How the debate unfolded");
@@ -3136,12 +3220,8 @@ const SOURCES = {
         t.at.forEach((p, i) => { if (i) meta.appendChild(document.createTextNode(", ")); meta.appendChild(link("place", p, placeName(p))); });
         if (t.who.length) { meta.appendChild(document.createTextNode(t.at.length ? ". " : "")); t.who.forEach((id, i) => { if (i) meta.appendChild(document.createTextNode(", ")); meta.appendChild(link("fig", id, FIG.get(id).short)); }); }
         tx.appendChild(meta);
-        const own = SOURCES[`thread:${d.id}:${t.y}`];
-        if (own) {
-          const s = el("span", "tsrc", own.length > 1 ? "Sources: " : "Source: ");
-          own.forEach((r, i) => { if (i) s.appendChild(document.createTextNode("; ")); s.appendChild(extLink(r[0].split(": ")[0], r[1], r[0])); });
-          tx.appendChild(s);
-        }
+        const own = tsrc(SOURCES[`thread:${d.id}:${t.y}`]);
+        if (own) tx.appendChild(own);
         li.appendChild(tx);
         ol.appendChild(li);
       }

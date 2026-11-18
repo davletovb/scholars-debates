@@ -29,9 +29,9 @@ const DEBATES = [
     text: "The first civil war pushed Muslims to ask whether those who sinned gravely, rulers included, remained believers. The answers defined the earliest theological groups and, later, how each school understood faith itself.",
     positions: [
       { name: "The sinner has left Islam", text: "A grave sinner is an unbeliever. This was the view of radical Khariji groups such as the Azariqa; the Ibadis called the sinner ungrateful to God (kafir ni’ma) but not an apostate, and lived alongside other Muslims.", who: [] },
-      { name: "Faith is belief and affirmation", text: "Faith is assent of the heart and affirmation of the tongue; deeds do not enter its definition, and the sinner’s fate is left to God.", who: ["abu-hanifa", "maturidi"] },
-      { name: "The intermediate position", text: "The grave sinner is neither believer nor unbeliever but in a position between the two.", who: ["wasil", "abd-al-jabbar"] },
-      { name: "Faith is belief, word and deed", text: "Faith includes deeds and rises and falls with them; the sinner remains a believer with deficient faith.", who: ["ibn-hanbal", "bukhari", "ashari"] }
+      { name: "Faith is belief and affirmation", text: "Faith is assent of the heart and affirmation of the tongue; deeds do not enter its definition, and the sinner’s fate is left to God.", who: ["abu-hanifa", "maturidi"], notes: { maturidi: "Against al-Ash’ari, al-Maturidi held that faith is assent (tasdiq) and so can neither grow nor shrink; confession with the tongue is only a sign of it, which the community needs in order to treat a person as Muslim." } },
+      { name: "The intermediate position", text: "The grave sinner is neither believer nor unbeliever but in a position between the two.", who: ["wasil", "abd-al-jabbar"], notes: { "abd-al-jabbar": "For Abd al-Jabbar faith is knowing God, confessing Him and doing what religion commands while avoiding what it forbids. The grave sinner is therefore called a fasiq, and if he dies unrepentant he stays in Hell forever, though punished less than an unbeliever." } },
+      { name: "Faith is belief, word and deed", text: "Faith includes deeds and rises and falls with them; the sinner remains a believer with deficient faith.", who: ["ibn-hanbal", "bukhari", "ashari"], notes: { "ibn-hanbal": "The creeds transmitted under Ibn Hanbal’s name call faith word and deed, increasing and decreasing, and one of them adds that whoever omits the prayer has committed unbelief. A modern study reassigns several of these creeds to his contemporaries, so their exact wording may not be his.", ashari: "Al-Ash’ari’s short creed says faith is word and deed and increases and decreases; elsewhere he defines faith as the heart’s assent (tasdiq), with confession and deeds following from it." } }
     ],
     thread: [
       { y: 657, text: "After Ali accepts arbitration at Siffin, a group breaks from him; they become known as the Kharijis.", who: ["ali"], at: ["siffin"] },
@@ -49,8 +49,8 @@ const DEBATES = [
     positions: [
       { name: "Humans create their own acts", text: "God’s justice requires that people be the authors of their deeds, or reward and punishment would be unjust.", who: ["wasil", "abd-al-jabbar"] },
       { name: "God compels all acts", text: "People have no real power over their acts. This was the view of the Jabriyya.", who: [] },
-      { name: "God creates, humans acquire", text: "God creates every act, and the human being “acquires” it, which grounds responsibility. This is al-Ash’ari’s doctrine and that of al-Juwayni’s al-Irshad; in his later al-Aqida al-Nizamiyya al-Juwayni gives human power a real effect on acts.", who: ["ashari", "juwayni", "ghazali"] },
-      { name: "God creates, humans choose", text: "God creates acts, but the human power of choice is real and is what responsibility rests on. Maturidi authors also speak of acquisition, but tie it to this power of choice.", who: ["maturidi", "abu-hafs-nasafi"] }
+      { name: "God creates, humans acquire", text: "God creates every act, and the human being “acquires” it, which grounds responsibility. This is al-Ash’ari’s doctrine.", who: ["ashari", "juwayni", "ghazali"], notes: { juwayni: "Al-Juwayni’s al-Irshad teaches this doctrine of acquisition; in his later al-Aqida al-Nizamiyya he gives the power God creates in a person a real effect on the act.", ghazali: "In the Revival’s book on divine unity and trust in God, al-Ghazali argues that God creates every event, human acts included; his Persian Alchemy of Happiness says a person is compelled even in the act of choosing." } },
+      { name: "God creates, humans choose", text: "God creates acts, but the human power of choice is real and is what responsibility rests on. Maturidi authors also speak of acquisition, but tie it to this power of choice.", who: ["maturidi", "abu-hafs-nasafi"], notes: { "abu-hafs-nasafi": "Abu Hafs al-Nasafi’s creed says humans have acts of choice for which they are rewarded and punished; the good among them happens with God’s good pleasure, the bad does not." } }
     ],
     thread: [
       { y: 690, c: true, text: "Ma’bad al-Juhani teaches in Basra that people determine their own acts.", who: [], at: ["basra"] },
@@ -70,7 +70,7 @@ const DEBATES = [
       { name: "Collect broadly, arranged by narrator", text: "Gather what is transmitted, arranged by Companion, with weaker reports kept and judged.", who: ["ibn-hanbal"] },
       { name: "Only the sound", text: "Include only reports whose chains meet strict conditions of reliability and contact.", who: ["bukhari", "muslim"] },
       { name: "Reports arranged for law", text: "Arrange reports by legal topic. Abu Dawud says he flags reports with serious weakness and leaves the rest without comment; al-Tirmidhi often comments on a report’s reliability and on how jurists used it.", who: ["abu-dawud", "tirmidhi"] },
-      { name: "Reports from the Imams", text: "The sayings of the Imams are authoritative alongside the Prophet’s, transmitted through Shi’i chains.", who: ["kulayni", "shaykh-tusi"] }
+      { name: "Reports from the Imams", text: "The sayings of the Imams are authoritative alongside the Prophet’s, transmitted through Shi’i chains.", who: ["kulayni", "shaykh-tusi"], notes: { "shaykh-tusi": "In al-Udda fi usul al-fiqh, al-Shaykh al-Tusi held that the community may act on reports from single transmitters (akhbar al-ahad) and claimed consensus for this, against his teacher al-Sharif al-Murtada, who had claimed consensus that such reports could not be acted on." } }
     ],
     thread: [
       { y: 670, c: true, text: "Aisha teaches and corrects reports in Medina.", who: ["aisha"], at: ["medina"] },
@@ -112,9 +112,9 @@ const DEBATES = [
     question: "How should scripture’s descriptions of God be understood?",
     text: "Scripture speaks of God’s hand, face and hearing, and says that He istawa ’ala al-’arsh (Q. 20:5), rendered “rose over”, “settled on” or “established Himself on” the throne. Some read such words as attributes to be affirmed, some interpreted them figuratively, and some denied that attributes are distinct from God’s essence. The question shaped every theological school and returned sharply in Mamluk Damascus and Cairo.",
     positions: [
-      { name: "No attributes distinct from the essence", text: "To protect God’s unity, His knowledge and power are not things added to His essence.", who: ["wasil", "abd-al-jabbar"] },
+      { name: "No attributes distinct from the essence", text: "To protect God’s unity, His knowledge and power are not things added to His essence.", who: ["wasil", "abd-al-jabbar"], notes: { "abd-al-jabbar": "Following Abu Hashim, Abd al-Jabbar explained God’s being knowing and powerful as states (ahwal) He has by virtue of His essence, not as attributes added to it." } },
       { name: "Affirm without asking how", text: "Accept the texts as they come, without likening God to creatures and without explaining them away.", who: ["ibn-hanbal", "ibn-taymiyya"] },
-      { name: "Eternal attributes affirmed by argument", text: "God has eternal attributes such as knowledge, power and speech, and reason can argue for them. Maturidis add that God’s act of bringing things into being (takwin) is itself an eternal attribute; al-Taftazani accepted this in his commentary on al-Nasafi’s creed (1367), though his later works side with the Ash’aris.", who: ["ashari", "maturidi", "taftazani"] },
+      { name: "Eternal attributes affirmed by argument", text: "God has eternal attributes such as knowledge, power and speech, and reason can argue for them. Maturidis add that God’s act of bringing things into being (takwin) is itself an eternal attribute.", who: ["ashari", "maturidi", "taftazani"], notes: { maturidi: "In Kitab al-Tawhid al-Maturidi argues that God’s creating is as eternal as His knowledge and power and distinct from the things created, and reads God’s “rising over the Throne” as neither sitting nor direction, since the Throne is itself created.", taftazani: "In his commentary on al-Nasafi’s creed (1367), al-Taftazani accepted the Maturidi view that takwin is an eternal attribute; his later works side with the Ash’aris." } },
       { name: "Figurative reading of bodily terms", text: "Texts that seem to give God a body or a place may be read figuratively, by their sense in Arabic and the demands of reason.", who: ["juwayni", "fakhr-razi"] }
     ],
     thread: [
@@ -171,9 +171,9 @@ const DEBATES = [
     question: "Is the Qur’an, as God’s speech, created or eternal?",
     text: "The Mu’tazila held that the Qur’an was created in time, since only God is eternal. In 833 Caliph al-Ma’mun required judges and scholars to affirm this, an inquisition known as the Mihna. Ahmad ibn Hanbal refused and was flogged. The Mihna ended under al-Mutawakkil, and the uncreated Qur’an became the Sunni position.",
     positions: [
-      { name: "Created", text: "Only God is eternal, so His speech as revealed and recited is created.", who: ["jahiz", "abd-al-jabbar"] },
-      { name: "Uncreated", text: "The Qur’an is God’s speech and is not created.", who: ["ibn-hanbal", "bukhari", "tahawi"] },
-      { name: "Eternal speech, created recitation", text: "God’s speech is an eternal attribute; the letters, sounds and copies are created.", who: ["ashari", "maturidi"] }
+      { name: "Created", text: "Only God is eternal, so His speech as revealed and recited is created.", who: ["jahiz", "abd-al-jabbar"], notes: { jahiz: "Al-Jahiz, who enjoyed the patronage of the judge Ibn Abi Du’ad, wrote tracts against the hadith scholars as anthropomorphists. In his epistle Khalq al-Qur’an he gave his own account of the inquisition: Ahmad ibn Hanbal gave way repeatedly, received only thirty lashes, and Ibn Abi Du’ad never urged his execution.", "abd-al-jabbar": "In the seventh part of al-Mughni, Abd al-Jabbar argues that speech is ordered letters and sounds, which can exist only in time, so God’s speech is created; God is called speaking because He makes speech." } },
+      { name: "Uncreated", text: "The Qur’an is God’s speech and is not created.", who: ["ibn-hanbal", "bukhari", "tahawi"], notes: { tahawi: "Al-Tahawi’s creed says the Qur’an came from God as speech “without how”, sent down as revelation, and is not created like human speech; whoever hears it and calls it human speech has disbelieved." } },
+      { name: "Eternal speech, created recitation", text: "God’s speech is an eternal attribute; the letters, sounds and copies are created.", who: ["ashari", "maturidi"], notes: { maturidi: "Against al-Ash’ari, who held that God’s speech can be heard, al-Maturidi taught that the eternal speech cannot itself be heard: what reaches the ear is created sound and letters that express it." } }
     ],
     thread: [
       { y: 827, text: "Al-Ma’mun proclaims that the Qur’an is created.", who: [], at: ["baghdad"] },
@@ -218,7 +218,7 @@ const DEBATES = [
     positions: [
       { name: "God turned them away (sarfa)", text: "The Qur’an’s language was not beyond the Arabs in itself, but God prevented them from matching it; that prevention is the miracle.", who: ["nazzam"] },
       { name: "Eloquence beyond human reach", text: "The miracle lies in the Qur’an’s eloquence, which reaches a degree no human speaker can attain.", who: ["jahiz", "abd-al-jabbar"] },
-      { name: "The arrangement of words (nazm)", text: "The miracle lies in nazm: the way words are joined through the meanings of grammar to say exactly what is meant. Sarfa would make the miracle the silencing of the Arabs rather than the text itself.", who: ["jurjani", "zamakhshari", "fakhr-razi"] }
+      { name: "The arrangement of words (nazm)", text: "The miracle lies in nazm: the way words are joined through the meanings of grammar to say exactly what is meant. Sarfa would make the miracle the silencing of the Arabs rather than the text itself.", who: ["jurjani", "zamakhshari", "fakhr-razi"], notes: { "fakhr-razi": "In Nihayat al-i’jaz, a reworking of al-Jurjani’s two books, Fakhr al-Din al-Razi rejects sarfa with three arguments; his later Qur’an commentary, while stressing eloquence, implicitly allows it." } }
     ],
     thread: [
       { y: 830, c: true, text: "Al-Nazzam teaches that God turned the Arabs away from matching the Qur’an.", who: ["nazzam"], at: ["baghdad"] },
@@ -279,7 +279,7 @@ const DEBATES = [
     question: "May Sufis use music, dance and chanting aloud to draw near to God, or should remembrance be silent?",
     text: "Sufis gathered to listen to poetry and music (sama’) and to repeat the names of God (dhikr), sometimes with movement and dance. Al-Ghazali devoted a book of The Revival of the Religious Sciences to listening and set conditions for it; Hanbali critics such as Ibn al-Jawzi and Ibn Taymiyya called such gatherings an innovation. The orders differed as well: Rumi’s followers made music and turning their central ritual, while in fourteenth-century Central Asia the circles of Baha’ al-Din Naqshband and Sayyid Ali Hamadani came to stand for silent and vocal remembrance.",
     positions: [
-      { name: "Listening is lawful under conditions", text: "Listening to music and poetry is lawful and can stir the love of God when the time, the place and the company are right; it is forbidden where it stirs base desire.", who: ["ghazali", "qushayri"] },
+      { name: "Listening is lawful under conditions", text: "Listening to music and poetry is lawful and can stir the love of God when the time, the place and the company are right; it is forbidden where it stirs base desire.", who: ["ghazali", "qushayri"], notes: { qushayri: "Al-Qushayri’s Risala holds that listening to poetry sung to fine melodies is permitted in general if the listener believes nothing forbidden, hears nothing the Law condemns and is not led by desire: poems were recited before the Prophet, and a melody does not change the ruling. Listening that makes one keener to obey God is recommended." } },
       { name: "Music and turning as worship", text: "Listening to music with turning movement belongs to the path itself; it became the central ritual of Rumi’s followers.", who: ["rumi"] },
       { name: "Remembrance aloud", text: "God’s names are repeated aloud and in company, often with set movements of the body.", who: ["yasawi", "hamadani"] },
       { name: "Remembrance in silence", text: "The heart repeats the remembrance without moving the tongue or body, which avoids display; vocal dhikr and music gatherings are not needed and may be unlawful.", who: ["naqshband"] },
@@ -304,7 +304,7 @@ const DEBATES = [
       { name: "Follow the school’s settled doctrine", text: "Later jurists rule within their school, refining its established positions.", who: ["marghinani", "nawawi"] },
       { name: "Ijtihad remains open", text: "Qualified scholars must reason from the Qur’an and hadith, and blind imitation is not allowed to them.", who: ["ibn-hazm", "ibn-taymiyya", "suyuti", "shah-wali-allah", "shawkani"] },
       { name: "Ijtihad by qualified jurists", text: "Believers follow a living qualified jurist, who reasons from the sources.", who: ["hilli"] },
-      { name: "Ijtihad for a new age", text: "Reform requires fresh reasoning on questions of law and society.", who: ["abduh", "rida", "iqbal"] }
+      { name: "Ijtihad for a new age", text: "Reform requires fresh reasoning on questions of law and society.", who: ["abduh", "rida", "iqbal"], notes: { rida: "In Muhawarat al-muslih wa’l-muqallid, dialogues between a reformer and an imitator (muqallid) first printed in al-Manar and issued as a book in 1906–07, Rashid Rida argues against taqlid and for ijtihad as the way to Muslim unity." } }
     ],
     thread: [
       { y: 1050, c: true, text: "Ibn Hazm condemns imitation in law.", who: ["ibn-hazm"], at: ["cordoba"] },

@@ -173,6 +173,8 @@ body.panel-open .top { right: var(--panel-w); }
 .deb-item > .link:first-child { font-weight: 700; }
 .deb-pos { display: block; color: var(--gold-2); font-size: 14px; margin-top: 6px; }
 .deb-arg { font-family: var(--font-d); font-size: 16.5px; line-height: 1.45; margin: 2px 0 0; }
+.deb-note { font-family: var(--font-d); font-size: 15.5px; line-height: 1.45; color: var(--ink-2); margin: 8px 0 0; padding-left: 11px; border-left: 2px solid var(--gold); }
+.pos .pos-note { font-size: 15.5px; line-height: 1.45; margin: 8px 0 0; padding-left: 11px; border-left: 2px solid var(--gold); }
 .deb-thread { margin-top: 8px; gap: 8px; }
 .deb-thread li { grid-template-columns: 54px 1fr; }
 .deb-thread .tx { font-size: 15.5px; color: var(--ink-2); }

@@ -916,6 +916,13 @@
     const link = (kind, id, text) => { const b = el("button", "link", text); b.type = "button"; b.dataset.kind = kind; b.dataset.id = id; return b; };
     const section = (title) => { const h = el("h3", null, title); body.appendChild(h); return h; };
     const extLink = (text, url, title) => { const a = el("a", "ext", text); a.href = url; a.target = "_blank"; a.rel = "noopener noreferrer"; if (title) a.title = title; return a; };
+    // inline sources under a dated entry or a scholar's note: the publisher part of each label, full label on hover
+    const tsrc = (list) => {
+      if (!list || !list.length) return null;
+      const s = el("span", "tsrc", list.length > 1 ? "Sources: " : "Source: ");
+      list.forEach((r, i) => { if (i) s.appendChild(document.createTextNode("; ")); s.appendChild(extLink(r[0].split(": ")[0], r[1], r[0])); });
+      return s;
+    };
     // a source list: [label, url, what it supports]
     const sources = (list, after) => {
       if (!list || !list.length) return;
@@ -978,6 +985,13 @@
           for (const pos of deb.positions.filter((p) => p.who.includes(f.id))) {
             item.appendChild(el("span", "deb-pos", pos.name));
             item.appendChild(el("p", "deb-arg", pos.text));
+            const note = pos.notes && pos.notes[f.id];
+            if (note) {
+              const n = el("p", "deb-note", note);
+              const s = tsrc(SOURCES[`note:${deb.id}:${f.id}`]);
+              if (s) n.appendChild(s);
+              item.appendChild(n);
+            }
           }
           const own = deb.thread.filter((t) => t.who.includes(f.id));
           if (own.length) {
@@ -986,12 +1000,8 @@
               const li = el("li");
               li.appendChild(el("span", "yr", yearLabel(t.y, t.c)));
               const tx = el("div", "tx", t.text);
-              const src = SOURCES[`thread:${deb.id}:${t.y}`];
-              if (src) {
-                const s = el("span", "tsrc", src.length > 1 ? "Sources: " : "Source: ");
-                src.forEach((r, i) => { if (i) s.appendChild(document.createTextNode("; ")); s.appendChild(extLink(r[0].split(": ")[0], r[1], r[0])); });
-                tx.appendChild(s);
-              }
+              const s = tsrc(SOURCES[`thread:${deb.id}:${t.y}`]);
+              if (s) tx.appendChild(s);
               li.appendChild(tx);
               ol.appendChild(li);
             }
@@ -1062,6 +1072,15 @@
         if (p.who.length) { who.appendChild(document.createTextNode("Associated with ")); p.who.forEach((id, i) => { if (i) who.appendChild(document.createTextNode(", ")); who.appendChild(link("fig", id, FIG.get(id).short)); }); }
         else who.textContent = "No scholar associated with this position is in the dataset yet.";
         box.appendChild(who);
+        // what individual scholars argued within this position
+        for (const id of p.who) {
+          const note = p.notes && p.notes[id];
+          if (!note) continue;
+          const n = el("p", "pos-note", note);
+          const s = tsrc(SOURCES[`note:${d.id}:${id}`]);
+          if (s) n.appendChild(s);
+          box.appendChild(n);
+        }
         body.appendChild(box);
       }
       section("How the debate unfolded");
@@ -1074,12 +1093,8 @@
         t.at.forEach((p, i) => { if (i) meta.appendChild(document.createTextNode(", ")); meta.appendChild(link("place", p, placeName(p))); });
         if (t.who.length) { meta.appendChild(document.createTextNode(t.at.length ? ". " : "")); t.who.forEach((id, i) => { if (i) meta.appendChild(document.createTextNode(", ")); meta.appendChild(link("fig", id, FIG.get(id).short)); }); }
         tx.appendChild(meta);
-        const own = SOURCES[`thread:${d.id}:${t.y}`];
-        if (own) {
-          const s = el("span", "tsrc", own.length > 1 ? "Sources: " : "Source: ");
-          own.forEach((r, i) => { if (i) s.appendChild(document.createTextNode("; ")); s.appendChild(extLink(r[0].split(": ")[0], r[1], r[0])); });
-          tx.appendChild(s);
-        }
+        const own = tsrc(SOURCES[`thread:${d.id}:${t.y}`]);
+        if (own) tx.appendChild(own);
         li.appendChild(tx);
         ol.appendChild(li);
       }

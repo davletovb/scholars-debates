@@ -1,5 +1,5 @@
 // Sources for each scholar, debate, debate entry and event, shown in their panels.
-// Keys: a scholar id; "debate:<id>"; "thread:<debate>:<year>"; "event:<id>".
+// Keys: a scholar id; "debate:<id>"; "thread:<debate>:<year>"; "note:<debate>:<scholar>"; "event:<id>".
 // Each source is [label, url] or [label, url, what it supports].
 
 const SOURCES = {
@@ -647,6 +647,69 @@ const SOURCES = {
   "event:uprising-1857": [
     ["Britannica: Indian Rebellion of 1857", "https://www.britannica.com/event/Indian-Rebellion-of-1857"],
     ["Britannica: Indian Independence Movement (the end of the Mughal dynasty)", "https://www.britannica.com/topic/Indian-Independence-Movement"]
+  ],
+  "note:attributes:abd-al-jabbar": [
+    ["CORE (PDF): J. R. T. M. Peters, God’s Created Speech", "https://core.ac.uk/download/43595204.pdf"]
+  ],
+  "note:attributes:maturidi": [
+    ["Wikipedia: Kitab al-Tawhid (al-Maturidi)", "https://en.wikipedia.org/wiki/Kitab_al-Tawhid_(Al-Maturidi)"]
+  ],
+  "note:attributes:taftazani": [
+    ["Encyclopedia of Religion: Taftāzānī, al-", "https://encyclopedia.com/environment/encyclopedias-almanacs-transcripts-and-maps/taftazani-al"]
+  ],
+  "note:created-quran:abd-al-jabbar": [
+    ["CORE (PDF): J. R. T. M. Peters, God’s Created Speech", "https://core.ac.uk/download/43595204.pdf"],
+    ["Ulumuna: Ibnu Rusydi, al-Qāḍī ʿAbd al-Jabbār’s View on Khalq al-Qurʾān (2015)", "https://doi.org/10.20414/ujis.v19i2.347"]
+  ],
+  "note:created-quran:jahiz": [
+    ["Encyclopaedia Iranica: Jāḥeẓ", "https://www.iranicaonline.org/articles/jahez/"],
+    ["al-Majalla (Arabic): the createdness-of-the-Qur’an ordeal as told by al-Jahiz", "https://www.majalla.com/node/295361"]
+  ],
+  "note:created-quran:maturidi": [
+    ["nasafi.org: al-ʿAqīda al-Nasafiyya, paragraph 14 with commentary", "https://nasafi.org/paragraph-014/"],
+    ["DergiPark (PDF): Harun Kılıçaslan, The Transmission of the Divine Speech to the Prophet according to the Māturīdīs (2025)", "https://dergipark.org.tr/tr/download/article-file/5223695"]
+  ],
+  "note:created-quran:tahawi": [
+    ["Islam Museum: The Qur’an as the speech of God (in the Tahawi creed)", "https://www.islam.museum/en/concept/kalam-allah/"],
+    ["Masud.co.uk: al-Tahawi’s creed in English", "https://masud.co.uk/?p=719"]
+  ],
+  "note:faith:abd-al-jabbar": [
+    ["DergiPark (PDF): Selim Gülverdi, Kādî Abdülcebbâr ve Ebü’l-Muîn en-Nesefî’nin büyük günah hakkındaki görüşleri (2021)", "https://dergipark.org.tr/en/download/article-file/1527456"]
+  ],
+  "note:faith:ashari": [
+    ["Sacred Texts: D. B. Macdonald, Development of Muslim Theology (1903), al-Ashʿarī’s creed", "https://sacred-texts.com/isl/dmt/dmt20.htm"],
+    ["DOAJ: Baghbanzade, Abu-l-Hassan al-Ashʿarī on Faith", "https://doaj.org/article/263a1a8049644584a2dd21b27d5e2ee2"]
+  ],
+  "note:faith:ibn-hanbal": [
+    ["Oxford University Research Archive: Christopher Melchert, Early Ḥanbalī Creeds (translation, PDF)", "https://ora.ox.ac.uk/objects/uuid:3f641916-8c75-4114-8e90-db25de3fa7be/files/m0192642159d0745d1d6a247c249d9a88"]
+  ],
+  "note:faith:maturidi": [
+    ["Encyclopedia of Religion: Māturīdī, al-", "https://www.encyclopedia.com/environment/encyclopedias-almanacs-transcripts-and-maps/maturidi-al"],
+    ["al-islam.org: A History of Muslim Philosophy (ed. M. M. Sharif), chapter on Tahawism by A. K. M. Ayyub Ali", "https://al-islam.org/id/node/39527"]
+  ],
+  "note:free-will:abu-hafs-nasafi": [
+    ["nasafi.org: al-ʿAqīda al-Nasafiyya, paragraph 20", "https://nasafi.org/?p=262"]
+  ],
+  "note:free-will:ghazali": [
+    ["Stanford Encyclopedia of Philosophy: al-Ghazali", "https://plato.stanford.edu/entries/al-ghazali/"],
+    ["Ganjoor: al-Ghazālī, Kīmiyā-yi saʿādat, on man being compelled in his very choice (Persian text)", "https://ganjoor.net/ghazzali/kimia/arkan/a4/sh80"]
+  ],
+  "note:free-will:juwayni": [
+    ["Oxford Academic: Coercion and Moral Agency in Ashʿarism", "https://academic.oup.com/book/10075/chapter-abstract/157534748"]
+  ],
+  "note:hadith-criticism:shaykh-tusi": [
+    ["Magiran: How Shaykh Ṭūsī Encountered the Discourse of Mufīd and Murtaḍā on the Validity of an Isolated Tradition", "https://www.magiran.com/paper/1805418/?lang=en"],
+    ["American Journal of Islam and Society (PDF): Liyakat Takim on the evaluation of hadith transmitters in Shiʿi biographical works", "https://ajis.org/index.php/ajiss/article/download/428/2159/4888"]
+  ],
+  "note:ijaz:fakhr-razi": [
+    ["Journal of Critical Studies on the Quranic Exegesis (2024): Fakhr al-Dīn al-Rāzī and the Concept of Ṣarfa (PDF)", "https://www.ensani.ir/fa/article/download/592643"]
+  ],
+  "note:ijtihad:rida": [
+    ["NYU Arabic Collections Online: Rashid Rida, Muḥāwarāt al-muṣliḥ wa’l-muqallid (Cairo, 1906–07)", "https://sites.dlib.nyu.edu/viewer/node/24960"]
+  ],
+  "note:sama:qushayri": [
+    ["Arabic Wikisource: Ibn Taymiyya, al-Istiqama, quoting al-Qushayri’s chapter on samaʿ", "https://ar.wikisource.org/wiki/%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%82%D8%A7%D9%85%D8%A9/6"],
+    ["Ganjoor: Persian translation of al-Qushayri’s Risala, chapter 52, on samaʿ", "https://ganjoor.net/osmani/qushayriyya/bab452/sh49"]
   ],
   "thread:caliphate-modern:1922": [
     ["Yale University Press: The Caliphate or Supreme Imamate", "https://yalebooks.yale.edu/book/9780300190274/the-caliphate-or-supreme-imamate/"]

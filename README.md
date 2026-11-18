@@ -71,9 +71,18 @@ Add an entry to `FIGURES` in `src/data-figures.js`, then run `npm run check` and
 
 A scholar joins a debate by appearing in that debate's `positions[].who` or `thread[].who`, so nothing is entered twice.
 
+A position card summarises what a group held. Where one scholar argued it in his own way, add a note for him to the position, keyed by his id:
+
+```js
+{ name: "Created", text: "…", who: ["jahiz", "abd-al-jabbar"],
+  notes: { "abd-al-jabbar": "In the seventh part of al-Mughni, Abd al-Jabbar argues that …" } }
+```
+
+The note shows under the card on the scholar's panel and under "Associated with" on the debate's panel. Write it so it reads on its own, naming the scholar, and give it a source under `note:<debate>:<scholar>`.
+
 ## Sources
 
-`src/data-sources.js` holds the sources, keyed by a scholar id, `debate:<id>`, `event:<id>`, or `thread:<debate>:<year>` for a single dated debate entry. Each source is `[label, url]`, or `[label, url, what it supports]` when it backs one claim such as a birth year:
+`src/data-sources.js` holds the sources, keyed by a scholar id, `debate:<id>`, `event:<id>`, `thread:<debate>:<year>` for a single dated debate entry, or `note:<debate>:<scholar>` for a scholar's note on a position. Each source is `[label, url]`, or `[label, url, what it supports]` when it backs one claim such as a birth year:
 
 ```js
 "ghazali": [
@@ -84,7 +93,7 @@ A scholar joins a debate by appearing in that debate's `positions[].who` or `thr
 ]
 ```
 
-`npm run check` fails if a scholar, debate or event has no source, or if a key points at nothing.
+`npm run check` fails if a scholar, debate, event or note has no source, or if a key points at nothing.
 
 ## Adding a debate
 

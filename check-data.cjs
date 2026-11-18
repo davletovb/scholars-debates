@@ -25,7 +25,15 @@ for (const f of FIGURES) {
 for (const d of DEBATES) {
   for (const l of d.lanes) if (!lane.has(l)) errs.push(d.id + " lane " + l);
   for (const r of d.related || []) if (!deb.has(r)) errs.push(d.id + " related " + r);
-  for (const p of d.positions) for (const w of p.who) if (!fig.has(w)) errs.push(d.id + " pos who " + w);
+  for (const p of d.positions) {
+    for (const w of p.who) if (!fig.has(w)) errs.push(d.id + " pos who " + w);
+    // notes: { figureId: "what this scholar argued" }; each must belong to someone in who and carry its own source
+    for (const [w, n] of Object.entries(p.notes || {})) {
+      if (!p.who.includes(w)) errs.push(`${d.id} note for ${w}, who is not in this position`);
+      if (typeof n !== "string" || !n.trim()) errs.push(`${d.id} empty note for ${w}`);
+      if (!ctx.__s[`note:${d.id}:${w}`]) errs.push(`no sources for note:${d.id}:${w}`);
+    }
+  }
   for (const t of d.thread) {
     for (const w of t.who) { if (!fig.has(w)) errs.push(d.id + " thread who " + w); else { const F = fig.get(w); if (t.y < F.b + 8 || t.y > F.d + 1) warn.push(`${d.id}: ${w} (${F.b}-${F.d}) at ${t.y}`); } }
     for (const a of t.at) if (!PLACES[a]) errs.push(d.id + " thread place " + a);
@@ -40,6 +48,7 @@ for (const e of EVENTS) for (const p of e.places) if (!PLACES[p]) errs.push(e.id
   for (const k of need) if (!S[k] || !S[k].length) errs.push("no sources for " + k);
   const valid = new Set(need);
   for (const d of DEBATES) for (const t of d.thread) valid.add(`thread:${d.id}:${t.y}`);
+  for (const d of DEBATES) for (const p of d.positions) for (const w of Object.keys(p.notes || {})) valid.add(`note:${d.id}:${w}`);
   for (const [k, list] of Object.entries(S)) {
     if (!valid.has(k)) errs.push("sources key matches nothing: " + k);
     for (const r of list) if (!Array.isArray(r) || r.length < 2 || r.length > 3 || !r[0] || !/^https:\/\//.test(r[1])) errs.push("bad source under " + k + ": " + JSON.stringify(r));
