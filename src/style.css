@@ -169,7 +169,13 @@ body.panel-open .top { right: var(--panel-w); }
 .thread .yr { font-weight: 700; color: var(--gold-2); font-variant-numeric: tabular-nums; font-size: 15px; }
 .thread .tx { font-family: var(--font-d); font-size: 16.5px; line-height: 1.45; }
 .thread .meta { display: block; font-family: var(--font-u); font-size: 14px; color: var(--ink-3); margin-top: 2px; }
-.deb-pos { display: block; color: var(--ink-3); font-size: 14px; }
+.deb-list { display: grid; gap: 18px; }
+.deb-item > .link:first-child { font-weight: 700; }
+.deb-pos { display: block; color: var(--gold-2); font-size: 14px; margin-top: 6px; }
+.deb-arg { font-family: var(--font-d); font-size: 16.5px; line-height: 1.45; margin: 2px 0 0; }
+.deb-thread { margin-top: 8px; gap: 8px; }
+.deb-thread li { grid-template-columns: 54px 1fr; }
+.deb-thread .tx { font-size: 15.5px; color: var(--ink-2); }
 .nav-row { display: flex; justify-content: space-between; gap: 12px; margin-top: 28px; padding-top: 14px; border-top: 1px solid var(--rule); font-size: 14.5px; color: var(--ink-3); }
 .nav-row .link { font-size: 15px; }
 

@@ -967,6 +967,40 @@
       if (f.dNote) extra.push(el("p", "bnote", f.dNote));
       header(chips, f.name, f.ar, extra);
       body.appendChild(el("p", "body", f.text));
+      // what this scholar argued in each debate: the position card(s) and the dated entries naming them
+      if (f.debates.length) {
+        section("Positions in debates");
+        const list = el("div", "deb-list");
+        for (const id of f.debates) {
+          const deb = DEB.get(id);
+          const item = el("div", "deb-item");
+          item.appendChild(link("deb", id, deb.title));
+          for (const pos of deb.positions.filter((p) => p.who.includes(f.id))) {
+            item.appendChild(el("span", "deb-pos", pos.name));
+            item.appendChild(el("p", "deb-arg", pos.text));
+          }
+          const own = deb.thread.filter((t) => t.who.includes(f.id));
+          if (own.length) {
+            const ol = el("ol", "thread deb-thread");
+            for (const t of own) {
+              const li = el("li");
+              li.appendChild(el("span", "yr", yearLabel(t.y, t.c)));
+              const tx = el("div", "tx", t.text);
+              const src = SOURCES[`thread:${deb.id}:${t.y}`];
+              if (src) {
+                const s = el("span", "tsrc", src.length > 1 ? "Sources: " : "Source: ");
+                src.forEach((r, i) => { if (i) s.appendChild(document.createTextNode("; ")); s.appendChild(extLink(r[0].split(": ")[0], r[1], r[0])); });
+                tx.appendChild(s);
+              }
+              li.appendChild(tx);
+              ol.appendChild(li);
+            }
+            item.appendChild(ol);
+          }
+          list.appendChild(item);
+        }
+        body.appendChild(list);
+      }
       // places, numbered to match the map
       section("Selected places, in order of the life");
       const ol = el("ol", "plist");
@@ -999,19 +1033,6 @@
       };
       people("Teachers and mentors", f.teacherLinks);
       people("Students", f.studentLinks);
-      if (f.debates.length) {
-        section("Debates");
-        const d = el("div", "plist");
-        for (const id of f.debates) {
-          const deb = DEB.get(id);
-          const row = el("div");
-          row.appendChild(link("deb", id, deb.title));
-          const pos = deb.positions.find((p) => p.who.includes(f.id));
-          if (pos) row.appendChild(el("span", "deb-pos", `Position: ${pos.name}`));
-          d.appendChild(row);
-        }
-        body.appendChild(d);
-      }
       const cont = FIGURES.filter((g) => g.id !== f.id).map((g) => ({ g, o: Math.min(g.d, f.d) - Math.max(g.b, f.b) })).filter((x) => x.o >= 15).sort((a, b) => b.o - a.o).slice(0, 8);
       if (cont.length) { section("Contemporaries"); const d = el("div", "links"); for (const { g } of cont) d.appendChild(link("fig", g.id, g.short)); body.appendChild(d); }
       sources(SOURCES[f.id]);
