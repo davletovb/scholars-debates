@@ -74,6 +74,8 @@ const PLACES = {
   sultaniyya: ["Sultaniyya", 36.43, 48.80, "iran"],
   alamut: ["Alamut", 36.44, 50.59, "iran"],
   jurjan: ["Jurjan", 37.26, 55.17, "iran"],
+  astarabad: ["Astarabad (Gorgan)", 36.84, 54.44, "iran"],
+  behbahan: ["Behbahan", 30.60, 50.24, "iran"],
   kerman: ["Kerman", 30.28, 57.08, "iran"],
   khartank: ["Khartank", 39.81, 66.94, "transoxiana"],
   gilan: ["Gilan", 37.28, 49.58, "iran"],

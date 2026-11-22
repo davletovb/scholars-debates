@@ -59,6 +59,11 @@ const SOURCES = {
     ["Encyclopaedia Iranica: Ašʿarī, Abu’l-Ḥasan", "https://www.iranicaonline.org/articles/asari-abul-hasan-ali-b/"],
     ["Britannica: Abū al-Ḥasan al-Ashʿarī", "https://www.britannica.com/biography/Abu-al-Hasan-al-Ashari"]
   ],
+  "astarabadi": [
+    ["Encyclopaedia Iranica: Astarābādī, Moḥammad Amīn", "https://www.iranicaonline.org/articles/astarabadi-molla-mohammad-amin-b/"],
+    ["Encyclopaedia Iranica: Aḵbārīya", "https://www.iranicaonline.org/articles/akbariya/"],
+    ["TDV İslâm Ansiklopedisi: Ahbâriyye", "https://islamansiklopedisi.org.tr/ahbariyye"]
+  ],
   "baqir-sadr": [
     ["Encyclopaedia Iranica: Iraq x. Shiʿites of Iraq", "https://www.iranicaonline.org/articles/iraq-x-shiites-of-iraq/"],
     ["Encyclopaedia Iranica: Iraq xi. Shiʿite seminaries", "https://www.iranicaonline.org/articles/iraq-xi-shiite-seminaries/"],
@@ -67,6 +72,11 @@ const SOURCES = {
   ],
   "behbudi": [
     ["Encyclopaedia Iranica: Behbudi", "https://www.iranicaonline.org/articles/behbudi-molla-mahmud-kaja/"]
+  ],
+  "bihbahani": [
+    ["Encyclopaedia Iranica: Behbahānī, Moḥammad-Bāqer", "https://www.iranicaonline.org/articles/behbahani-aqa-sayyed-mohmmad-baqer/"],
+    ["Encyclopaedia Iranica: Ejtehād", "https://www.iranicaonline.org/articles/ejtehad/", "Risalat al-ijtihad wa’l-akhbar"],
+    ["TDV İslâm Ansiklopedisi: Bihbehânî, Muhammed Bâkır", "https://islamansiklopedisi.org.tr/bihbehani-muhammed-bakir"]
   ],
   "biruni": [
     ["Britannica: al-Bīrūnī (summary)", "https://www.britannica.com/summary/al-Biruni"],
@@ -334,7 +344,8 @@ const SOURCES = {
   ],
   "qushayri": [
     ["TDV İslâm Ansiklopedisi: Kuşeyrî, Abdülkerîm b. Hevâzin", "https://islamansiklopedisi.org.tr/kuseyri-abdulkerim-b-hevazin"],
-    ["Library of Congress: al-Qushayri’s Epistle on Sufism", "https://www.loc.gov/item/2021667378/", "al-Risala al-Qushayriyya"]
+    ["Library of Congress: al-Qushayri’s Epistle on Sufism", "https://www.loc.gov/item/2021667378/", "al-Risala al-Qushayriyya"],
+    ["Oxford University Press: Martin Nguyen, Sufi Master and Qur’an Scholar (Abū’l-Qāsim al-Qushayrī and the Laṭāʾif al-ishārāt)", "https://global.oup.com/academic/product/sufi-master-and-quran-scholar-9780197265130", "Lata’if al-isharat"]
   ],
   "qushji": [
     ["Nazariyat (2024): F. Jamil Ragep, ʿAlī Qūshjī on the Earth’s Motion and Bīrjandī’s Critique", "https://www.nazariyat.org/en/issues/cilt-10-sayi-2/jamil-ragep-ali-kuscu"],
@@ -494,7 +505,10 @@ const SOURCES = {
   ],
   "debate:ijtihad": [
     ["Britannica: ijtihād", "https://www.britannica.com/topic/ijtihad"],
-    ["Britannica: taqlīd", "https://www.britannica.com/topic/taqlid"]
+    ["Britannica: taqlīd", "https://www.britannica.com/topic/taqlid"],
+    ["Encyclopaedia Iranica: Ejtehād", "https://www.iranicaonline.org/articles/ejtehad/", "ijtihad and the Akhbari–Usuli dispute in Twelver Shi’ism"],
+    ["Encyclopaedia Iranica: Aḵbārīya", "https://www.iranicaonline.org/articles/akbariya/", "the Akhbari–Usuli controversy"],
+    ["Oxford Academic: Liyakat Takim, Usul al-Fiqh and Ijtihad in Shi’ism (2021)", "https://academic.oup.com/book/41130/chapter/350641282"]
   ],
   "debate:imamate": [
     ["Britannica: imamate", "https://www.britannica.com/topic/imamate"],
@@ -517,7 +531,10 @@ const SOURCES = {
   ],
   "debate:reform": [
     ["Britannica: Activities of the Jadid reformers", "https://www.britannica.com/topic/Activities-of-the-Jadid-reformers-1707518"],
-    ["Britannica: Salafi movement", "https://www.britannica.com/topic/Salafi-movement"]
+    ["Britannica: Salafi movement", "https://www.britannica.com/topic/Salafi-movement"],
+    ["Encyclopaedia Iranica: Jadidism", "https://www.iranicaonline.org/articles/jadidism/", "Jadid reformers and Qadimist opposition"],
+    ["Britannica: Muḥammad ʿAbduh", "https://www.britannica.com/biography/Muhammad-Abduh", "conservative opposition at al-Azhar"],
+    ["Britannica: Sir Sayyid Ahmad Khan", "https://www.britannica.com/biography/Sayyid-Ahmad-Khan", "conservative opposition in India"]
   ],
   "debate:renewal": [
     ["Britannica: Islamic world: reform from 1683", "https://www.britannica.com/topic/Islamic-world/Islamic-history-from-1683-to-the-present-reform-dependency-and-recovery"],
@@ -536,7 +553,9 @@ const SOURCES = {
   ],
   "debate:tafsir": [
     ["Britannica: tafsīr", "https://www.britannica.com/topic/tafsir"],
-    ["Britannica: Qurʾān: interpretation", "https://www.britannica.com/topic/Quran/Interpretation"]
+    ["Britannica: Qurʾān: interpretation", "https://www.britannica.com/topic/Quran/Interpretation"],
+    ["TDV İslâm Ansiklopedisi: İşârî Tefsir", "https://islamansiklopedisi.org.tr/isari-tefsir", "Sufi (ishari) exegesis"],
+    ["Oxford University Press: Martin Nguyen, Sufi Master and Qur’an Scholar (Abū’l-Qāsim al-Qushayrī and the Laṭāʾif al-ishārāt)", "https://global.oup.com/academic/product/sufi-master-and-quran-scholar-9780197265130", "al-Qushayri’s Sufi commentary"]
   ],
   "debate:unity-being": [
     ["TDV İslâm Ansiklopedisi: Vahdet-i vücûd", "https://islamansiklopedisi.org.tr/vahdet-i-vucud"],
@@ -727,6 +746,15 @@ const SOURCES = {
   "note:ijaz:fakhr-razi": [
     ["Journal of Critical Studies on the Quranic Exegesis (2024): Fakhr al-Dīn al-Rāzī and the Concept of Ṣarfa (PDF)", "https://www.ensani.ir/fa/article/download/592643"]
   ],
+  "note:ijtihad:astarabadi": [
+    ["Encyclopaedia Iranica: Astarābādī, Moḥammad Amīn", "https://www.iranicaonline.org/articles/astarabadi-molla-mohammad-amin-b/"],
+    ["Encyclopaedia Iranica: Aḵbārīya", "https://www.iranicaonline.org/articles/akbariya/"]
+  ],
+  "note:ijtihad:bihbahani": [
+    ["Encyclopaedia Iranica: Behbahānī, Moḥammad-Bāqer", "https://www.iranicaonline.org/articles/behbahani-aqa-sayyed-mohmmad-baqer/"],
+    ["Encyclopaedia Iranica: Ejtehād", "https://www.iranicaonline.org/articles/ejtehad/", "Risalat al-ijtihad wa’l-akhbar"],
+    ["Brill: Robert Gleave, Inevitable Doubt: Two Theories of Shīʿī Jurisprudence (PDF)", "https://brill.com/display/book/9789004491960/back-1.pdf", "probabilistic reasoning and the mujtahid’s authority"]
+  ],
   "note:ijtihad:rida": [
     ["NYU Arabic Collections Online: Rashid Rida, Muḥāwarāt al-muṣliḥ wa’l-muqallid (Cairo, 1906–07)", "https://sites.dlib.nyu.edu/viewer/node/24960"]
   ],
@@ -737,6 +765,11 @@ const SOURCES = {
   "note:sama:qushayri": [
     ["Arabic Wikisource: Ibn Taymiyya, al-Istiqama, quoting al-Qushayri’s chapter on samaʿ", "https://ar.wikisource.org/wiki/%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%82%D8%A7%D9%85%D8%A9/6"],
     ["Ganjoor: Persian translation of al-Qushayri’s Risala, chapter 52, on samaʿ", "https://ganjoor.net/osmani/qushayriyya/bab452/sh49"]
+  ],
+  "note:tafsir:qushayri": [
+    ["TDV İslâm Ansiklopedisi: Kuşeyrî, Abdülkerîm b. Hevâzin", "https://islamansiklopedisi.org.tr/kuseyri-abdulkerim-b-hevazin"],
+    ["TDV İslâm Ansiklopedisi: İşârî Tefsir", "https://islamansiklopedisi.org.tr/isari-tefsir"],
+    ["Oxford University Press: Martin Nguyen, Sufi Master and Qur’an Scholar (Abū’l-Qāsim al-Qushayrī and the Laṭāʾif al-ishārāt)", "https://global.oup.com/academic/product/sufi-master-and-quran-scholar-9780197265130"]
   ],
   "thread:caliphate-modern:1922": [
     ["Yale University Press: The Caliphate or Supreme Imamate", "https://yalebooks.yale.edu/book/9780300190274/the-caliphate-or-supreme-imamate/"]
@@ -810,6 +843,14 @@ const SOURCES = {
     ["McGill (MA thesis): Yusuf Rahman, The Miraculous Nature of Muslim Scripture, a Study of ʿAbd al-Jabbār’s Iʿjāz al-Qurʾān", "https://escholarship.mcgill.ca/downloads/6w924d79j"],
     ["Religions (2025): theories of Qur’anic inimitability after ʿAbd al-Jabbār", "https://www.mdpi.com/2077-1444/16/12/1584", "the volume of al-Mughni on iʿjāz"]
   ],
+  "thread:ijtihad:1622": [
+    ["Encyclopaedia Iranica: Astarābādī, Moḥammad Amīn", "https://www.iranicaonline.org/articles/astarabadi-molla-mohammad-amin-b/", "completion of al-Fawa’id al-madaniyya in Mecca in Rabi’ I 1031 AH (January–February 1622 CE)"]
+  ],
+  "thread:ijtihad:1770": [
+    ["Encyclopaedia Iranica: Behbahānī, Moḥammad-Bāqer", "https://www.iranicaonline.org/articles/behbahani-aqa-sayyed-mohmmad-baqer/"],
+    ["Encyclopaedia Iranica: Aḵbārīya", "https://www.iranicaonline.org/articles/akbariya/"],
+    ["Oxford Academic: Liyakat Takim, Usul al-Fiqh and Ijtihad in Shi’ism (2021)", "https://academic.oup.com/book/41130/chapter/350641282"]
+  ],
   "thread:imamate:632": [
     ["Britannica: Abū Bakr", "https://www.britannica.com/biography/Abu-Bakr"]
   ],
@@ -857,6 +898,10 @@ const SOURCES = {
     ["Revue de la FM6OA: The life and contribution of Nana Asmaʾu", "https://www.fm6oa.org/revue/article/the-life-and-contribution-of-nana-asmau/"],
     ["Brill: Sufi Feminism, Women Leaders in African Sufi Movements", "https://doi.org/10.1163/15700666-12340258"]
   ],
+  "thread:sama:1045": [
+    ["TDV İslâm Ansiklopedisi: Kuşeyrî, Abdülkerîm b. Hevâzin", "https://islamansiklopedisi.org.tr/kuseyri-abdulkerim-b-hevazin"],
+    ["Library of Congress: al-Qushayri’s Epistle on Sufism", "https://www.loc.gov/item/2021667378/"]
+  ],
   "thread:sama:1100": [
     ["Institute of Ismaili Studies: Leonard Lewisohn, The Sacred Music of Islam, Samaʿ in the Persian Sufi Tradition (PDF)", "https://iis.ac.uk/wp-content/uploads/2024/10/the-sacred-music-of-islam_pdf-366408512.pdf", "al-Ghazali’s book on listening and its conditions"]
   ],
@@ -881,6 +926,10 @@ const SOURCES = {
   "thread:sufism-law:1127": [
     ["Encyclopedia of the Modern Middle East: Qadiriyya Order", "https://encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/qadiriyya-order"],
     ["Britannica: ʿAbd al-Qādir al-Jīlānī", "https://www.britannica.com/biography/Abd-al-Qadir-al-Jilani", "first preaching in 1127"]
+  ],
+  "thread:tafsir:1043": [
+    ["TDV İslâm Ansiklopedisi: Kuşeyrî, Abdülkerîm b. Hevâzin", "https://islamansiklopedisi.org.tr/kuseyri-abdulkerim-b-hevazin", "beginning Lata’if al-isharat in 434 AH (1042–1043 CE)"],
+    ["Oxford University Press: Martin Nguyen, Sufi Master and Qur’an Scholar (Abū’l-Qāsim al-Qushayrī and the Laṭāʾif al-ishārāt)", "https://global.oup.com/academic/product/sufi-master-and-quran-scholar-9780197265130"]
   ],
   "thread:tafsir:1134": [
     ["Brill: Andrew Lane, A Traditional Muʿtazilite Qurʾān Commentary", "https://brill.com/display/book/9789047417767/front-4.pdf", "the completion date, 23 Rabiʿ II 528 (20 February 1134) at Mecca"]

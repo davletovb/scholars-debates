@@ -10,7 +10,7 @@ const DEBATES = [
     positions: [
       { name: "Leadership by the community’s choice", text: "The leader is chosen by the community’s qualified electors or nominated by his predecessor, and must meet conditions of knowledge, justice and descent from Quraysh.", who: ["mawardi", "ghazali"] },
       { name: "Leadership by designation", text: "In Imami doctrine, the Prophet designated Ali, and leadership passes to Imams of his line, chosen by God and protected from error.", who: ["jafar", "mufid"] },
-      { name: "Leadership by merit alone", text: "Any upright Muslim may lead, and a ruler who sins gravely may be removed. This was the Khariji view; no Khariji scholar is yet in the dataset.", who: [] }
+      { name: "Leadership by merit alone", text: "Any upright Muslim may lead, and a ruler who sins gravely may be removed. This was the Khariji view.", who: [] }
     ],
     thread: [
       { y: 632, text: "The Prophet dies. Abu Bakr is acknowledged as caliph at the hall of the Banu Sa’ida in Medina.", who: [], at: ["medina"] },
@@ -60,7 +60,7 @@ const DEBATES = [
       { y: 930, c: true, text: "Al-Maturidi in Samarkand gives the human power of choice a larger role.", who: ["maturidi"], at: ["samarkand"] },
       { y: 980, c: true, text: "Qadi Abd al-Jabbar dictates al-Mughni (c. 970–990), the fullest statement of the Mu’tazili case.", who: ["abd-al-jabbar"], at: ["rayy"] }
     ],
-    related: ["faith", "good-evil"] },
+    related: ["faith", "good-evil", "attributes"] },
 
   { id: "hadith-criticism", title: "Collecting and testing hadith", term: "ulum al-hadith", ar: "علوم الحديث",
     phases: [[700, 1070], [1250, 1450]], lanes: ["hadith", "law"],
@@ -236,12 +236,14 @@ const DEBATES = [
     positions: [
       { name: "By transmitted reports", text: "Explain verses by the reports of the Prophet, the Companions and their successors.", who: ["ibn-abbas", "tabari", "ibn-kathir", "suyuti"] },
       { name: "By language and reason", text: "Explain verses through grammar, rhetoric and reasoned argument.", who: ["zamakhshari", "fakhr-razi"] },
+      { name: "By inner allusions (ishari)", text: "Beyond the outward meaning, verses carry subtle inner allusions disclosed to the purified heart, without setting aside the literal text.", who: ["qushayri"], notes: { qushayri: "In Lata’if al-isharat, begun in Nishapur in the 1040s, al-Qushayri reads the entire Qur’an for its spiritual allusions while keeping his commentary within the bounds of Sunni creed and law." } },
       { name: "By the Qur’an itself", text: "Verses are best explained by other verses.", who: ["tabatabai", "ibn-kathir"] },
       { name: "By its purposes for today", text: "Read the Qur’an as moral guidance whose purposes speak to present societies.", who: ["abduh", "rida", "ibn-ashur", "fazlur-rahman"] }
     ],
     thread: [
       { y: 680, c: true, text: "Ibn Abbas explains the Qur’an to students in Mecca.", who: ["ibn-abbas"], at: ["mecca"] },
       { y: 903, c: true, text: "Al-Tabari completes his commentary.", who: ["tabari"], at: ["baghdad"] },
+      { y: 1043, c: true, text: "Al-Qushayri begins Lata’if al-isharat in Nishapur, reading the Qur’an for its Sufi allusions (isharat); sources date its start to 434 AH (1042–1043) or 437 AH (1045–1046).", who: ["qushayri"], at: ["nishapur"] },
       { y: 1134, text: "Al-Zamakhshari completes al-Kashshaf in Mecca.", who: ["zamakhshari"], at: ["mecca"] },
       { y: 1205, c: true, text: "Fakhr al-Din al-Razi writes The Keys to the Unseen.", who: ["fakhr-razi"], at: ["herat"] },
       { y: 1360, c: true, text: "Ibn Kathir writes his commentary in Damascus.", who: ["ibn-kathir"], at: ["damascus"] },
@@ -286,24 +288,26 @@ const DEBATES = [
       { name: "A forbidden innovation", text: "Gatherings for music and dance were unknown to the Prophet’s Companions and are an innovation in worship.", who: ["ibn-taymiyya"] }
     ],
     thread: [
+      { y: 1045, text: "In his Epistle, written in Nishapur, al-Qushayri sets out conditions under which listening to sung poetry is permitted.", who: ["qushayri"], at: ["nishapur"] },
       { y: 1100, c: true, text: "In The Revival of the Religious Sciences, al-Ghazali devotes a book to the proper conduct of listening and ecstasy.", who: ["ghazali"], at: ["damascus", "tus"] },
       { y: 1160, c: true, text: "Ahmad Yasawi teaches at Yasi; the Yasawi order that traces itself to him becomes known for remembrance with voice and movement.", who: ["yasawi"], at: ["turkistan"] },
       { y: 1190, c: true, text: "Ibn al-Jawzi’s Devil’s Deception attacks the Sufis’ listening and chanting as innovations.", who: [], at: ["baghdad"] },
       { y: 1250, c: true, text: "In Konya, Rumi makes listening to music and turning part of his circle’s worship.", who: ["rumi"], at: ["konya"] },
-      { y: 1290, c: true, text: "Rumi’s son Sultan Walad organises his followers into the Mawlawi order, with the turning dance as its main ritual.", who: [], at: ["konya"] },
+      { y: 1290, c: true, text: "Rumi’s son Sultan Walad organises his followers into the Mawlawi (Mevlevi) order, with the turning dance as its main ritual.", who: [], at: ["konya"] },
       { y: 1310, c: true, text: "Ibn Taymiyya and his circle write against Sufi listening as an innovation.", who: ["ibn-taymiyya"], at: ["damascus"] },
       { y: 1380, c: true, text: "In Central Asia, the followers of Naqshband and of Sayyid Ali Hamadani divide over silent and vocal remembrance; later biographies make the two masters the faces of each side.", who: ["naqshband", "hamadani"], at: ["bukhara", "kulob"] }
     ],
     related: ["sufism-law", "unity-being"] },
 
   { id: "ijtihad", title: "Ijtihad and taqlid", term: "al-ijtihad wa’l-taqlid", ar: "الاجتهاد والتقليد",
-    phases: [[1050, 1330], [1700, 1935]], lanes: ["law"],
+    phases: [[1050, 1330], [1620, 1935]], lanes: ["law"],
     question: "Must later Muslims follow the established schools, or may scholars reason afresh from the sources?",
-    text: "By the eleventh century the legal schools had settled their doctrine, and many jurists held that later scholars should follow it. Whether the “gate of ijtihad” was ever closed is itself debated by historians. Others insisted that qualified scholars must still reason from the sources. The question returned with force in the eighteenth and nineteenth centuries.",
+    text: "By the eleventh century the Sunni legal schools had settled their doctrine, and many jurists held that later scholars should follow it, though whether the “gate of ijtihad” was ever closed is itself debated by historians. Others insisted that qualified scholars must still reason from the sources. Among Twelver Shi’is, a seventeenth- and eighteenth-century dispute pitted Akhbaris, who rejected speculative legal theory and relied on the Imams’ reports, against Usulis, who upheld the ijtihad of living jurists. The wider question returned with force in the eighteenth and nineteenth centuries.",
     positions: [
       { name: "Follow the school’s settled doctrine", text: "Later jurists rule within their school, refining its established positions.", who: ["marghinani", "nawawi"] },
       { name: "Ijtihad remains open", text: "Qualified scholars must reason from the Qur’an and hadith, and blind imitation is not allowed to them.", who: ["ibn-hazm", "ibn-taymiyya", "suyuti", "shah-wali-allah", "shawkani"] },
-      { name: "Ijtihad by qualified jurists", text: "Believers follow a living qualified jurist, who reasons from the sources.", who: ["hilli"] },
+      { name: "Rely on the Imams’ reports (Akhbari)", text: "Law rests on the transmitted reports (akhbar) of the Imams; speculative legal theory and fallible juristic ijtihad are rejected, and where reports conflict or are silent, the scholar suspends judgment or exercises caution.", who: ["astarabadi"], notes: { astarabadi: "In al-Fawa’id al-madaniyya (1622), al-Astarabadi rejected consensus and rational legal theory and even argued that the Qur’an can serve as a source of law only through the Imams’ explanations preserved in their reports." } },
+      { name: "Ijtihad by qualified jurists (Usuli)", text: "During the Occultation of the Twelfth Imam, lay believers follow a living qualified jurist (mujtahid), who derives legal rulings from the sources by principled reasoning.", who: ["hilli", "bihbahani"], notes: { bihbahani: "In Karbala, al-Wahid al-Bihbahani answered al-Astarabadi in al-Fawa’id al-usuliyya and Risalat al-ijtihad wa’l-akhbar, arguing that probabilistic juristic reasoning is unavoidable and securing the triumph of the Usuli school." } },
       { name: "Ijtihad for a new age", text: "Reform requires fresh reasoning on questions of law and society.", who: ["abduh", "rida", "iqbal"], notes: { rida: "In Muhawarat al-muslih wa’l-muqallid, dialogues between a reformer and an imitator (muqallid) first printed in al-Manar and issued as a book in 1906–07, Rashid Rida argues against taqlid and for ijtihad as the way to Muslim unity." } }
     ],
     thread: [
@@ -313,7 +317,9 @@ const DEBATES = [
       { y: 1300, c: true, text: "Ibn Taymiyya claims the right to independent judgment.", who: ["ibn-taymiyya"], at: ["damascus"] },
       { y: 1310, c: true, text: "Al-Hilli formalises ijtihad in Twelver law.", who: ["hilli"], at: ["hilla"] },
       { y: 1490, c: true, text: "Al-Suyuti claims the rank of mujtahid.", who: ["suyuti"], at: ["cairo"] },
+      { y: 1622, text: "In Mecca, Muhammad Amin al-Astarabadi completes al-Fawa’id al-madaniyya, attacking Usuli legal theory and launching the Akhbari revival.", who: ["astarabadi"], at: ["mecca"] },
       { y: 1740, c: true, text: "Shah Wali Allah urges wider ijtihad in Delhi.", who: ["shah-wali-allah"], at: ["delhi"] },
+      { y: 1770, c: true, text: "In Karbala, al-Wahid al-Bihbahani leads the Usuli counter-offensive against the Akhbaris, training a generation of mujtahids and securing Usuli dominance in Twelver law.", who: ["bihbahani"], at: ["karbala"] },
       { y: 1810, c: true, text: "Al-Shawkani argues against fixed adherence to a school.", who: ["shawkani"], at: ["sanaa"] },
       { y: 1900, c: true, text: "Muhammad Abduh calls for renewed ijtihad.", who: ["abduh"], at: ["cairo"] },
       { y: 1930, text: "Iqbal calls ijtihad “the principle of movement” in Islam.", who: ["iqbal"], at: ["lahore"] }
@@ -359,19 +365,19 @@ const DEBATES = [
       { y: 1630, c: true, text: "Mulla Sadra completes The Four Journeys.", who: ["mulla-sadra"], at: ["shiraz"] },
       { y: 1745, c: true, text: "Shah Wali Allah seeks to reconcile the two views.", who: ["shah-wali-allah"], at: ["delhi"] }
     ],
-    related: ["sufism-law", "philosophy"] },
+    related: ["sufism-law", "philosophy", "sama"] },
 
-  { id: "renewal", title: "Renewal and reform in the 18th century", term: "al-tajdid wa’l-islah", ar: "التجديد والإصلاح",
-    phases: [[1700, 1830]], lanes: ["theology", "law", "hadith"],
+  { id: "renewal", title: "Renewal and reform in the 18th and 19th centuries", term: "al-tajdid wa’l-islah", ar: "التجديد والإصلاح",
+    phases: [[1700, 1850]], lanes: ["theology", "law", "hadith"],
     question: "How should the faith be renewed, and which inherited practices are corruptions?",
-    text: "In the eighteenth century scholars across the Muslim world called for renewal: a return to the Qur’an and hadith and the correction of practices they judged to be innovations. The movements differed widely in method and aim. Many Sufis and school jurists defended inherited practice against them.",
+    text: "In the eighteenth and nineteenth centuries scholars across the Muslim world called for renewal: a return to the Qur’an and hadith and the correction of practices they judged to be innovations. The movements differed widely in method and aim. Many Sufis and school jurists defended inherited practice against them.",
     positions: [
       { name: "Renewal through synthesis", text: "Join hadith, law, theology and Sufism into a coherent whole.", who: ["shah-wali-allah"] },
       { name: "Purify worship", text: "Strict monotheism forbids seeking the intercession of saints and venerating tombs.", who: ["ibn-abd-al-wahhab"] },
       { name: "Reform of state and society", text: "Rulers who govern unjustly must be resisted and a just order built.", who: ["dan-fodio"] },
       { name: "Renewal through teaching", text: "Renewal spreads through teaching: women as well as men are to learn and teach the faith, in their own languages as well as in Arabic.", who: ["nana-asmau"] },
       { name: "Back to the sources", text: "Rulings should come from the Qur’an and hadith, not from one school.", who: ["shawkani"] },
-      { name: "Defence of inherited practice", text: "Established Sufi and school practice rests on scholarly authority. No such scholar is yet in the dataset.", who: [] }
+      { name: "Defence of inherited practice", text: "Established Sufi and school practice rests on scholarly authority.", who: [] }
     ],
     thread: [
       { y: 1732, text: "Shah Wali Allah returns to Delhi from the Hijaz.", who: ["shah-wali-allah"], at: ["mecca", "delhi"] },
@@ -393,7 +399,8 @@ const DEBATES = [
       { name: "Against imitation", text: "Scholars should return to the sources and the early authorities instead of repeating later commentaries. Marjani is counted a forerunner of the Jadid reformers.", who: ["marjani"] },
       { name: "New method schools", text: "Reform begins with the schoolroom: phonetic reading, modern subjects, printed books.", who: ["gasprinski", "behbudi"] },
       { name: "Return to the early generations", text: "Renewal means following the first generations of Muslims directly.", who: ["rida"] },
-      { name: "Faith for modern readers", text: "Explain the truths of faith in terms a modern reader can accept.", who: ["nursi"] }
+      { name: "Faith for modern readers", text: "Explain the truths of faith in terms a modern reader can accept.", who: ["nursi"] },
+      { name: "Defend traditional learning", text: "Preserve inherited madrasa curricula and scholarly authority against Europeanised schools and modernising reinterpretations, as argued by Qadimists in Central Asia and conservative ulama in Egypt and South Asia.", who: [] }
     ],
     thread: [
       { y: 1834, text: "Al-Tahtawi’s account of Paris is published in Cairo.", who: ["tahtawi"], at: ["cairo"] },
