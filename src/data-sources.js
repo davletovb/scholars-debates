@@ -1457,7 +1457,7 @@ const SOURCES = {
     ["ghazali.org: Itḥāf al-sadāh al-muttaqīn (colophon, 5 Jumada II 1201 AH / 1787 CE)", "https://www.ghazali.org/ithaf/", "completion in Jumada II 1201 AH (1787 CE)"]
   ],
   "thread:tafsir:1045": [
-    ["Journal of Sufi Studies (2013): Martin Nguyen on al-Qushayrī’s commentaries (PDF)", "https://islamicana.com/wp-content/uploads/2013/03/martin-nguyen-al-tafsir-al-kabir-jss.pdf", "manuscript evidence for 437 AH (1045–1046 CE), p. 19 n. 6"],
+    ["Journal of Sufi Studies (2013): Martin Nguyen on al-Qushayrī’s commentaries", "https://doi.org/10.1163/22105956-12341244", "manuscript evidence for 437 AH (1045–1046 CE), p. 19 n. 6"],
     ["Oxford University Press: Martin Nguyen, Sufi Master and Qur’an Scholar (Abū’l-Qāsim al-Qushayrī and the Laṭāʾif al-ishārāt)", "https://global.oup.com/academic/product/sufi-master-and-quran-scholar-9780197265130"]
   ],
   "thread:tafsir:1134": [
