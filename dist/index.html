@@ -324,7 +324,7 @@ body.panel-open .top { right: var(--panel-w); }
     <p>Positions in each debate are short editorial summaries, not quotations. The scholars listed under a position are associated with it: some argued it directly, others developed or defended it later, and some stand for their school. On the globe, a debate’s lines join the places where it was argued in the order of the timeline; they do not trace documented routes of transmission. A scholar’s route shows selected places from the sources, in order, including returns.</p>
     <p>Dates are shown in both the Common Era and the Hijri calendar; a “c.” marks an approximate year, and Hijri years worked out from Common Era dates are marked the same way. Where a birth year is unknown or disputed, the scholar’s panel says so, and any year used only to draw the life line is marked as an estimate. The timeline runs from 610 to 1988, the latest death of a scholar in the dataset; the last dated debate entry is from 1980.</p>
     <h3>What still needs work</h3>
-    <p>This is a first version with 98 scholars and 20 debates. Six scholars are not yet linked to a debate; the debates they took part in, such as the Ottoman disputes of the sixteenth and seventeenth centuries, are still to be added. Each scholar, debate and event lists its sources at the end of its panel, mostly entries in Britannica, Encyclopaedia Iranica, the Stanford Encyclopedia of Philosophy, Oxford Reference and the TDV İslâm Ansiklopedisi (in Turkish), with specialist studies where a date or attribution is disputed. Every scholar has at least one source in English. Dated debate entries that go beyond those sources cite their own. Ibadi and Isma’ili scholars, Southeast Asia, Africa beyond Sokoto and more women scholars are still to be added.</p>
+    <p>This is a first version with 98 scholars and 20 debates. One scholar (Sibawayh) is not yet linked to a debate; a debate on early Arabic grammar is still to be added. Each scholar, debate and event lists its sources at the end of its panel, mostly entries in Britannica, Encyclopaedia Iranica, the Stanford Encyclopedia of Philosophy, Oxford Reference and the TDV İslâm Ansiklopedisi (in Turkish), with specialist studies where a date or attribution is disputed. Every scholar has at least one source in English. Dated debate entries that go beyond those sources cite their own. Ibadi and Isma’ili scholars, Southeast Asia, Africa beyond Sokoto and more women scholars are still to be added.</p>
     <h3>The map</h3>
     <p>Region names on the globe are historical: Mawara’ al-nahr, Khurasan, al-Andalus. Coastlines, rivers and lakes are modern, from Natural Earth (public domain), except the Aral Sea and Lake Chad, which are drawn as fixed outlines of their historical extent. City positions are approximate, and a few places, such as Jami’s birthplace in the district of Jam, are marked at the district rather than the village.</p>
     <h3>Keyboard</h3>
@@ -464,7 +464,7 @@ const PLACES = {
   cambridge: ["Cambridge", 52.20, 0.12, "west"],
   munich: ["Munich", 48.14, 11.58, "west"],
   oxford: ["Oxford", 51.75, -1.26, "west"],
-  kostroma: ["Kostroma", 57.77, 40.93, "west"],
+  kostroma: ["Kostroma", 57.77, 40.93, "volga"],
   chicago: ["Chicago", 41.88, -87.63, "west"]
 };
 
@@ -558,7 +558,7 @@ const FIGURES = [
     text: "Basran theologian regarded as the founder of the Mu’tazila. Tradition says he left al-Hasan al-Basri’s circle over the grave sinner, whom he placed in an “intermediate position”, neither believer nor unbeliever." },
   { id: "jafar", name: "Ja’far al-Sadiq", short: "Ja’far al-Sadiq", ar: "جعفر الصادق", b: 702, bc: true, bNote: "Usually given as 83 AH (702–703 CE); 699 and 705 are also reported.", d: 765, dah: 148, lane: "law", schools: ["Ja’fari"], places: ["medina"],
     text: "Great-great-grandson of Ali, the sixth Imam in Twelver Shi’ism and the fifth in Nizari and Musta’li Isma’ili reckoning. He taught law and hadith in Medina. Twelver jurisprudence is named after him, and Sunni scholars, among them Abu Hanifa and Malik, are reported to have learned from him." },
-  { id: "ibn-ishaq", name: "Muhammad ibn Ishaq", short: "Ibn Ishaq", ar: "محمد بن إسحاق", b: 704, bc: true, bNote: "Reported as 85 AH (c. 704 CE) and as 80 AH (c. 699 CE).", d: 767, dah: 150, lane: "letters", places: ["medina", "baghdad"],
+  { id: "ibn-ishaq", name: "Muhammad ibn Ishaq", short: "Ibn Ishaq", ar: "محمد بن إسحاق", b: 704, bc: true, bNote: "Reported as 85 AH (c. 704 CE) and as 80 AH (c. 699 CE).", d: 767, dc: true, dah: 150, dNote: "Sources place his death in Baghdad in 150 AH (767 CE) or 151 AH (768 CE), with a few giving 153 or 154 AH.", lane: "letters", places: ["medina", "baghdad"],
     text: "Medinan historian whose biography of the Prophet is the earliest substantial one to survive, mainly in the recension of Ibn Hisham (d. 833).",
     works: [["Sirat rasul Allah", "The life of the Messenger of God, surviving mainly in Ibn Hisham’s recension"]] },
 
@@ -566,7 +566,7 @@ const FIGURES = [
   { id: "malik", name: "Malik ibn Anas", short: "Malik", ar: "مالك بن أنس", b: 711, bc: true, bNote: "Usually given as 93 AH (711–712 CE); other years are reported.", d: 795, dah: 179, lane: "law", also: ["hadith"], schools: ["Maliki"], places: ["medina"], teachers: [{ id: "jafar", rel: "hadith transmission" }],
     text: "Jurist and hadith scholar of Medina. His Muwatta’ joins hadith to the practice of the people of Medina. The Maliki school formed around it and came to prevail in North and West Africa and al-Andalus.",
     works: [["al-Muwatta’", "The well-trodden path"]] },
-  { id: "rabia", name: "Rabi’a al-Adawiyya", short: "Rabi’a", ar: "رابعة العدوية", b: 717, bc: true, d: 801, dah: 185, lane: "sufism", places: ["basra"],
+  { id: "rabia", name: "Rabi’a al-Adawiyya", short: "Rabi’a", ar: "رابعة العدوية", b: 717, bc: true, bUnknown: true, bNote: "Birth year unknown; c. 717 is a traditional estimate.", d: 801, dc: true, dah: 185, dNote: "Sources place her death in Basra in 180 AH (796 CE) or 185 AH (801 CE).", lane: "sufism", places: ["basra"],
     text: "Ascetic of Basra remembered for teaching that God should be loved for Himself, not out of fear of hell or hope of paradise. Her sayings survive in later Sufi collections." },
   { id: "sibawayh", name: "Sibawayh", short: "Sibawayh", ar: "سيبويه", b: 755, bc: true, bNote: "Born between 135 and 140 AH (752–757 CE), at al-Bayda near Shiraz.", d: 796, dc: true, dah: 180, dNote: "Most reports have him die in Persia, at al-Bayda or Shiraz, between 177 and 180 AH (793–796 CE); one report has him die in Basra in 161 AH (777–778 CE).", lane: "letters", places: ["shiraz", "basra", "baghdad", "shiraz"],
     text: "Persian-born grammarian of Basra. His book, known simply as “the Book”, is the earliest surviving comprehensive description of Arabic grammar and the base of the whole grammatical tradition. By tradition he lost a public debate with the Kufan grammarian al-Kisa’i in Baghdad and returned to Persia.",
@@ -598,22 +598,24 @@ const FIGURES = [
     text: "Hadith scholar from Termez on the Oxus and a student of al-Bukhari. His Jami’ often comments on a report’s reliability and transmission and records how the legal schools used it, making it a guide to both hadith and law.",
     works: [["al-Jami’", "The compendium"]] },
   { id: "junayd", name: "al-Junayd al-Baghdadi", short: "al-Junayd", ar: "الجنيد البغدادي", b: 830, bc: true, d: 910, dah: 298, dNote: "Sources differ on his death year: TDV favours 297 AH (909–910 CE) and also reports 296 and 298 AH.", lane: "sufism", places: ["baghdad"],
-    text: "Sufi master of Baghdad who taught a “sober” path in which mystical experience stays within the bounds of the Law. Many later Sufi lineages trace their chains of masters through him." },
+    text: "Sufi master of Baghdad who taught a “sober” path in which mystical experience stays within the bounds of the Law. Many later Sufi lineages trace their chains of masters through him.",
+    works: [["Rasa’il al-Junayd", "Epistles and short treatises on sobriety, divine unity and passing away (fana’)"]] },
   { id: "tabari", name: "Muhammad ibn Jarir al-Tabari", short: "al-Tabari", ar: "محمد بن جرير الطبري", b: 839, d: 923, dah: 310, lane: "quran", also: ["letters", "law"], places: ["amol", "rayy", "baghdad"],
     text: "Scholar from Amol in Tabaristan who settled in Baghdad. His Qur’an commentary gathers and weighs the reports of early authorities verse by verse, and his History of Prophets and Kings runs from creation to his own time.",
     works: [["Jami’ al-bayan", "The comprehensive clarification (commentary)"], ["Tarikh al-rusul wa’l-muluk", "History of prophets and kings"]] },
-  { id: "tahawi", name: "Abu Ja’far al-Tahawi", short: "al-Tahawi", ar: "أبو جعفر الطحاوي", b: 853, d: 933, dah: 321, lane: "theology", also: ["law"], schools: ["Hanafi"], places: ["fustat"],
+  { id: "tahawi", name: "Abu Ja’far al-Tahawi", short: "al-Tahawi", ar: "أبو جعفر الطحاوي", b: 853, bc: true, bNote: "Usually dated to 239 AH (853 CE); biographical sources also report 229 AH (843–844) and 238 AH (852–853).", d: 933, dah: 321, lane: "theology", also: ["law"], schools: ["Hanafi"], places: ["fustat"],
     text: "Egyptian jurist who moved from the Shafi’i to the Hanafi school. His short creed is accepted across the Sunni theological schools and is still widely taught.",
     works: [["al-Aqida al-Tahawiyya", "The Tahawi creed"]] },
-  { id: "maturidi", name: "Abu Mansur al-Maturidi", short: "al-Maturidi", ar: "أبو منصور الماتريدي", b: 853, bc: true, bUnknown: true, bNote: "Birth year unknown. c. 853 is a traditional estimate; some modern studies place it nearer 870.", d: 944, dah: 333, lane: "theology", schools: ["Maturidi", "Hanafi"], places: ["samarkand"],
+  { id: "maturidi", name: "Abu Mansur al-Maturidi", short: "al-Maturidi", ar: "أبو منصور الماتريدي", b: 853, bc: true, bUnknown: true, bNote: "Birth year unknown. c. 853 is a traditional estimate; some modern studies place it nearer 870.", d: 944, dah: 333, lane: "theology", also: ["quran"], schools: ["Maturidi", "Hanafi"], places: ["samarkand"],
     text: "Hanafi theologian of Samarkand. He defended the creed with reasoned argument and held that reason can know God’s existence and basic good and evil. The Maturidi school became dominant among Hanafis in Central Asia and the Ottoman lands.",
     works: [["Kitab al-tawhid", "The book of divine unity"], ["Ta’wilat al-Qur’an", "Interpretations of the Qur’an"]] },
   { id: "hallaj", name: "al-Husayn ibn Mansur al-Hallaj", short: "al-Hallaj", ar: "الحسين بن منصور الحلاج", b: 858, bc: true, d: 922, dah: 309, lane: "sufism", places: ["shiraz", "basra", "mecca", "baghdad"], teachers: [{ id: "junayd", rel: "reported meetings; a traditional association" }],
-    text: "Sufi who preached in public and travelled as far as India. After a long trial he was executed in Baghdad. Accounts of why differ: tradition links his fate to the ecstatic saying “I am the Truth” attributed to him, and to political suspicion against him. He became a lasting symbol for later mystics and poets." },
+    text: "Sufi who preached in public and travelled as far as India. After a long trial he was executed in Baghdad. Accounts of why differ: tradition links his fate to the ecstatic saying “I am the Truth” attributed to him, and to political suspicion against him. He became a lasting symbol for later mystics and poets.",
+    works: [["Kitab al-tawasin", "Book of the ta-sin chapters (eleven mystical essays)"]] },
   { id: "kulayni", name: "Muhammad ibn Ya’qub al-Kulayni", short: "al-Kulayni", ar: "محمد بن يعقوب الكليني", b: 864, bc: true, bUnknown: true, bNote: "Birth year unknown; one reference work tentatively suggests 879.", d: 941, dah: 329, lane: "hadith", schools: ["Ja’fari"], places: ["rayy", "baghdad"],
     text: "Twelver Shi’i scholar from near Rayy who compiled al-Kafi, roughly 16,000 reports from the Prophet and the Imams on belief and law (counts vary by edition). It is the earliest of the Four Books of Twelver hadith and is widely regarded as the most important.",
     works: [["al-Kafi", "The sufficient"]] },
-  { id: "abu-bakr-razi", name: "Abu Bakr al-Razi", short: "Abu Bakr al-Razi", ar: "أبو بكر الرازي", b: 865, bc: true, d: 925, dc: true, lane: "sciences", also: ["philosophy"], places: ["rayy", "baghdad"],
+  { id: "abu-bakr-razi", name: "Abu Bakr al-Razi", short: "Abu Bakr al-Razi", ar: "أبو بكر الرازي", b: 865, bc: true, bNote: "Biographical sources place his birth in Rayy around 854 or 865 CE.", d: 925, dc: true, dNote: "Most sources place his death in 313 AH (925 CE); some give 323 AH (935 CE).", lane: "sciences", also: ["philosophy"], places: ["rayy", "baghdad"],
     text: "Physician and philosopher of Rayy who, by the traditional account, directed hospitals in Rayy and Baghdad. His treatise on smallpox and measles is a celebrated early clinical account that tells the two diseases apart, and his vast medical notebook, al-Hawi, was translated into Latin.",
     works: [["al-Hawi", "The comprehensive book (of medicine)"], ["Fi’l-jadari wa’l-hasba", "On smallpox and measles"]] },
   { id: "farabi", name: "Abu Nasr al-Farabi", short: "al-Farabi", ar: "أبو نصر الفارابي", b: 870, bc: true, d: 950, dah: 339, lane: "philosophy", places: ["otrar", "baghdad", "aleppo", "damascus"],
@@ -687,7 +689,8 @@ const FIGURES = [
     text: "Maliki judge and philosopher of Cordoba, known in Europe as Averroes. He commented on nearly all of Aristotle and answered al-Ghazali in The Incoherence of the Incoherence. In the Decisive Treatise he argued that the Law commands those capable of it to study philosophy.",
     works: [["Tahafut al-tahafut", "The incoherence of the incoherence"], ["Fasl al-maqal", "The decisive treatise"], ["Bidayat al-mujtahid", "The beginning for the independent jurist"]] },
   { id: "kubra", name: "Najm al-Din Kubra", short: "Najm al-Din Kubra", ar: "نجم الدين كبرى", b: 1145, bc: true, bNote: "540 AH (1145–1146 CE) is given, but is uncertain.", d: 1221, dah: 618, lane: "sufism", places: ["urgench"],
-    text: "Sufi master of Khwarazm who described the visions and coloured lights seen on the mystical path. He founded the Kubrawi order and is said to have died defending Gurganj when the Mongols took the city in 1221." },
+    text: "Sufi master of Khwarazm who described the visions and coloured lights seen on the mystical path. He founded the Kubrawi order and is said to have died defending Gurganj when the Mongols took the city in 1221.",
+    works: [["Fawa’ih al-jamal wa-fawatih al-jalal", "Aromas of beauty and openings of majesty"], ["al-Usul al-ashara", "The ten principles"], ["Adab al-sufiyya", "Rules of conduct for Sufis"]] },
   { id: "fakhr-razi", name: "Fakhr al-Din al-Razi", short: "Fakhr al-Din al-Razi", ar: "فخر الدين الرازي", b: 1150, bc: true, bNote: "Born 543 or 544 AH (1149–1150 CE).", d: 1210, dah: 606, lane: "theology", also: ["quran", "philosophy"], schools: ["Ash’ari", "Shafi’i"], places: ["rayy", "bukhara", "samarkand", "herat"],
     text: "Ash’ari theologian from Rayy who brought the methods and questions of Ibn Sina into theology. His long Qur’an commentary treats theology, philosophy and natural science alongside exegesis. He debated scholars across Khurasan and Transoxiana and died in Herat.",
     works: [["Mafatih al-ghayb", "The keys to the unseen"], ["al-Matalib al-aliya", "The highest aims"]] },
@@ -786,16 +789,18 @@ const FIGURES = [
     works: [["Nayl al-awtar", "Attaining the goals"], ["Irshad al-fuhul", "Guidance for the masters (legal theory)"]] },
 
   // 1800 onward
-  { id: "nana-asmau", name: "Nana Asma’u", short: "Nana Asma’u", ar: "نانا أسماء", b: 1793, d: 1864, lane: "letters", schools: ["Qadiri"], places: ["degel", "sokoto"],
-    text: "Scholar and poet, daughter of Usman dan Fodio. She wrote in Arabic, Fulfulde and Hausa and organised the ’Yan Taru, a network of women teachers that carried education to women across the Sokoto Caliphate." },
+  { id: "nana-asmau", name: "Nana Asma’u", short: "Nana Asma’u", ar: "نانا أسماء", b: 1793, d: 1864, lane: "letters", schools: ["Qadiri"], places: ["degel", "sokoto"], teachers: [{ id: "dan-fodio", rel: "family and scholarly circle (father and daughter)" }],
+    text: "Scholar and poet, daughter of Usman dan Fodio. She wrote in Arabic, Fulfulde and Hausa and organised the ’Yan Taru, a network of women teachers that carried education to women across the Sokoto Caliphate.",
+    works: [["Wakar Gewaye", "The song of wandering (narrative of the jihad)"], ["Tawassuli ga Mata Masu Albarka", "Sufi women (poem on pious women, 1836–1837)"]] },
   { id: "tahtawi", name: "Rifa’a al-Tahtawi", short: "al-Tahtawi", ar: "رفاعة الطهطاوي", b: 1801, d: 1873, lane: "letters", places: ["tahta", "cairo", "paris", "cairo"],
     text: "Al-Azhar scholar who served as imam to the first Egyptian student mission in Paris (1826–31). His account of France described European institutions for Arabic readers, and he later directed Egypt’s School of Languages.",
     works: [["Takhlis al-ibriz fi talkhis Bariz", "The refinement of gold in summarising Paris"]] },
   { id: "sayyid-ahmad-khan", name: "Sayyid Ahmad Khan", short: "Sayyid Ahmad Khan", ar: "سيد أحمد خان", b: 1817, d: 1898, dah: 1315, lane: "letters", also: ["quran"], places: ["delhi", "aligarh"],
-    text: "Scholar and official of Delhi. After the uprising of 1857 he urged Indian Muslims to take up modern scientific education and opened a school at Aligarh in 1875, which became the Muhammadan Anglo-Oriental College in 1877. He read the Qur’an as in harmony with the laws of nature." },
-  { id: "marjani", name: "Shihab al-Din Marjani", short: "Marjani", ar: "شهاب الدين المرجاني", b: 1818, d: 1889, lane: "theology", also: ["letters"], schools: ["Hanafi"], places: ["kazan", "bukhara", "samarkand", "kazan"],
+    text: "Scholar and official of Delhi. After the uprising of 1857 he urged Indian Muslims to take up modern scientific education and opened a school at Aligarh in 1875, which became the Muhammadan Anglo-Oriental College in 1877. He read the Qur’an as in harmony with the laws of nature.",
+    works: [["Asbab-i baghawat-i Hind", "Causes of the Indian revolt"], ["Tafsir al-Qur’an", "Commentary on the Qur’an"], ["Tahdhib al-akhlaq", "Refinement of morals (reform journal)"]] },
+  { id: "marjani", name: "Shihab al-Din Marjani", short: "Marjani", ar: "شهاب الدين المرجاني", b: 1818, d: 1889, lane: "theology", also: ["letters", "law"], schools: ["Hanafi"], places: ["kazan", "bukhara", "samarkand", "kazan"],
     text: "Tatar theologian and historian who studied in Bukhara and Samarkand and became imam of Kazan’s First Mosque. He criticised blind imitation in theology and law and wrote histories of the Volga Tatars. He is seen as a forerunner of the Jadids.",
-    works: [["Mustafad al-akhbar", "Useful reports (history of Kazan and Bulghar)"]] },
+    works: [["Mustafad al-akhbar", "Useful reports (history of Kazan and Bulghar)"], ["Nazurat al-haqq", "Observing the truth (treatise on ijtihad, 1870)"]] },
   { id: "afghani", name: "Jamal al-Din al-Afghani", short: "al-Afghani", ar: "جمال الدين الأفغاني", b: 1838, bc: true, bNote: "Born 1254 AH (1838–1839 CE).", d: 1897, dah: 1314, lane: "philosophy", places: ["asadabad", "kabul", "cairo", "paris", "istanbul"],
     text: "Activist and thinker who presented himself as an Afghan; most modern historians, following Nikki Keddie, place his birth at Asadabad in Iran. He worked in Afghanistan, India, Egypt, Iran and Istanbul. He called for Muslim unity against European empire and for a revival of reason and philosophy in Islam. His Paris journal, edited with Muhammad Abduh, was read across the Muslim world.",
     works: [["al-Urwa al-wuthqa", "The firmest bond (journal, Paris 1884, edited with Muhammad Abduh)"]] },
@@ -983,14 +988,14 @@ const DEBATES = [
     related: ["free-will", "maqasid"] },
 
   { id: "sufism-law", title: "Sufism and the Law", term: "al-tasawwuf wa’l-shari’a", ar: "التصوف والشريعة",
-    phases: [[780, 1110]], lanes: ["sufism", "law"],
+    phases: [[780, 1130], [1295, 1330]], lanes: ["sufism", "law"],
     question: "What is the place of inner experience beside the outward Law?",
-    text: "As ascetics became Sufis, they described states of the heart and a knowledge beyond outward rules. Some jurists feared this would loosen obedience to the Law; Sufi authors replied that the inner path fulfils it. Al-Hallaj’s execution sharpened the debate, and al-Qushayri and al-Ghazali gave Sufism a lasting place within Sunni learning.",
+    text: "As ascetics became Sufis, they described states of the heart and a knowledge beyond outward rules. Some jurists feared this would loosen obedience to the Law; Sufi authors replied that the inner path fulfils it. Al-Hallaj’s execution sharpened the debate, and al-Qushayri and al-Ghazali gave Sufism a lasting place within Sunni learning, though later critics such as Ibn Taymiyya continued to police the boundary between sober piety and unlawful innovation.",
     positions: [
       { name: "Love beyond reward", text: "God is to be loved for Himself, not for paradise or out of fear of hell.", who: ["rabia"] },
-      { name: "The path within the Law", text: "Mystical experience is valid only within the bounds of the Law; sobriety is higher than ecstasy.", who: ["junayd", "qushayri", "ghazali", "jilani"] },
+      { name: "The path within the Law", text: "Mystical experience is valid only within the bounds of the Law; sobriety is higher than ecstasy.", who: ["junayd", "qushayri", "ghazali", "jilani", "aisha-bauniyya"], notes: { "aisha-bauniyya": "In al-Muntakhab fi usul al-rutab (The Principles of Sufism), Aisha al-Ba’uniyya grounded the four principles of the Qadiri Sufi path (repentance, sincerity, remembrance and love) directly in the Qur’an and Prophetic tradition, drawing on classical Sunni masters such as al-Qushayri and al-Ghazali." } },
       { name: "Speech from the state of union", text: "Ecstatic sayings attributed to al-Hallaj, such as “I am the Truth”, were read as the mystic speaking from union with God; their meaning and his intent remain disputed.", who: ["hallaj"] },
-      { name: "Suspicion of new practices", text: "Some jurists and hadith scholars opposed Sufi claims to special knowledge and practices such as listening to music.", who: [] }
+      { name: "Suspicion of new practices", text: "Some jurists and hadith scholars opposed Sufi claims to special knowledge and practices such as listening to music.", who: ["ibn-taymiyya"], notes: { "ibn-taymiyya": "Ibn Taymiyya did not reject Sufism altogether: he praised early sober masters such as al-Junayd who stayed within the Qur’an and Sunna, while fiercely attacking later ecstatic practices, sama’ gatherings and the doctrine of wahdat al-wujud as unlawful innovations." } }
     ],
     thread: [
       { y: 780, c: true, text: "Rabi’a teaches the love of God for His own sake in Basra.", who: ["rabia"], at: ["basra"] },
@@ -998,7 +1003,8 @@ const DEBATES = [
       { y: 922, text: "Al-Hallaj is executed in Baghdad after a long trial.", who: ["hallaj"], at: ["baghdad"] },
       { y: 1045, text: "Al-Qushayri writes his Epistle in Nishapur.", who: ["qushayri"], at: ["nishapur"] },
       { y: 1100, c: true, text: "Al-Ghazali writes The Revival of the Religious Sciences after leaving Baghdad.", who: ["ghazali"], at: ["damascus", "tus"] },
-      { y: 1127, text: "Abd al-Qadir al-Jilani, trained in Hanbali law, begins preaching in Baghdad; his sermons and books join Hanbali law with Sufism.", who: ["jilani"], at: ["baghdad"] }
+      { y: 1127, text: "Abd al-Qadir al-Jilani, trained in Hanbali law, begins preaching in Baghdad; his sermons and books join Hanbali law with Sufism.", who: ["jilani"], at: ["baghdad"] },
+      { y: 1310, c: true, text: "Ibn Taymiyya writes against Sufi practices and doctrines he judges contrary to the Law, while commending early sober masters who stayed within Qur’an and Sunna.", who: ["ibn-taymiyya"], at: ["damascus"] }
     ],
     related: ["unity-being", "sama"] },
 
@@ -1022,15 +1028,16 @@ const DEBATES = [
     related: ["attributes", "ijaz"] },
 
   { id: "philosophy", title: "Philosophy and revelation", term: "al-falsafa wa’l-shar’", ar: "الفلسفة والشرع",
-    phases: [[830, 1040], [1090, 1200]], lanes: ["philosophy", "theology"],
+    phases: [[830, 1040], [1090, 1210], [1250, 1380]], lanes: ["philosophy", "theology"],
     question: "Can Greek philosophy and revelation both be true, and who decides when they seem to clash?",
-    text: "The translation of Greek works raised the question of whether philosophy and revelation agree. Al-Kindi and al-Farabi argued that they reach the same truth by different paths; Ibn Sina built a complete system. Al-Ghazali judged three of its doctrines to be unbelief. Ibn Rushd replied that the Law commands philosophical study of those capable of demonstration, and that al-Ghazali misread the philosophers. Earlier, Abu Bakr al-Razi was reported to deny that prophets are needed at all; later, Ibn Khaldun kept logic but doubted that the philosophers’ metaphysics could be proven.",
+    text: "The translation of Greek works raised the question of whether philosophy and revelation agree. Al-Kindi and al-Farabi argued that they reach the same truth by different paths; Ibn Sina built a complete system. Al-Ghazali judged three of its doctrines to be unbelief. Ibn Rushd replied that the Law commands philosophical study of those capable of demonstration, and Nasir al-Din al-Tusi defended Ibn Sina against Fakhr al-Din al-Razi’s critiques. Earlier, Abu Bakr al-Razi was reported to deny that prophets are needed at all; later, Ibn Taymiyya refuted Greek logic and metaphysics while defending the harmony of sound reason with revelation, and Ibn Khaldun kept logic but doubted that the philosophers’ metaphysics could be proven.",
     positions: [
-      { name: "One truth, two paths", text: "Philosophy and revelation express the same truth, one by demonstration and the other by images for all people.", who: ["kindi", "farabi", "ibn-sina", "ibn-tufayl"], notes: { kindi: "Unlike al-Farabi and Ibn Sina, al-Kindi did not frame revelation as symbolic imagery for the masses: he treated prophetic knowledge as a direct divine science that philosophy also expresses rationally, and he broke with Aristotle to argue for creation from nothing (ex nihilo)." } },
+      { name: "One truth, two paths", text: "Philosophy and revelation express the same truth, one by demonstration and the other by images for all people.", who: ["kindi", "farabi", "ibn-sina", "ibn-tufayl", "nasir-tusi"], notes: { kindi: "Unlike al-Farabi and Ibn Sina, al-Kindi did not frame revelation as symbolic imagery for the masses: he treated prophetic knowledge as a direct divine science that philosophy also expresses rationally, and he broke with Aristotle to argue for creation from nothing (ex nihilo).", "nasir-tusi": "In his commentary on Ibn Sina’s Isharat (Remarks and Admonitions) and in Talkhis al-muhassal, Nasir al-Din al-Tusi defended Avicennan philosophy against Fakhr al-Din al-Razi’s theological critiques and helped integrate it into later Shi’i and Sunni learning." } },
       { name: "Philosophy errs on key points", text: "Logic and mathematics are sound, but three of the philosophers’ teachings contradict revelation, as al-Ghazali reads them: the eternity of the world, that God knows particulars only in a universal way, and the denial of bodily resurrection.", who: ["ghazali"] },
       { name: "The Law commands philosophy", text: "In the Decisive Treatise, scripture obliges those able to reason by demonstration to study philosophy, and where demonstration and the text seem to clash, the text is to be interpreted. The Incoherence of the Incoherence answers al-Ghazali point by point.", who: ["ibn-rushd"] },
       { name: "Wisdom by illumination", text: "True philosophy joins reasoning with direct experience of light.", who: ["suhrawardi"] },
       { name: "Reason without prophets", text: "God gives reason to all people equally, so no one is singled out to bring a revealed law, and revelation is not needed. This view is known mainly from the account of a hostile opponent.", who: ["abu-bakr-razi"] },
+      { name: "Sound reason agrees with revelation, not Greek logic", text: "Authentic revelation never contradicts clear reason, but Aristotelian logic and Avicennan metaphysics rest on flawed premises and must be rejected.", who: ["ibn-taymiyya"], notes: { "ibn-taymiyya": "In al-Radd ala al-mantiqiyyin (begun in Alexandria in 1309–1310) and Dar’ ta’arud al-aql wa’l-naql (composed after 1313), Ibn Taymiyya attacked Aristotelian logic and Avicennan metaphysics while arguing that sound reason and human nature (fitra) always accord with authentic revelation." } },
       { name: "Logic yes, metaphysics unproven", text: "Logic is a sound tool, but the philosophers’ claims about what lies beyond the senses cannot be proven and do not bring the happiness they promise.", who: ["ibn-khaldun"] }
     ],
     thread: [
@@ -1043,6 +1050,7 @@ const DEBATES = [
       { y: 1180, c: true, text: "Ibn Rushd answers al-Ghazali in The Incoherence of the Incoherence.", who: ["ibn-rushd"], at: ["cordoba"] },
       { y: 1186, c: true, text: "Suhrawardi writes The Philosophy of Illumination.", who: ["suhrawardi"], at: ["aleppo"] },
       { y: 1205, c: true, text: "Fakhr al-Din al-Razi draws philosophy into theology.", who: ["fakhr-razi"], at: ["herat"] },
+      { y: 1315, c: true, text: "In Damascus, Ibn Taymiyya writes Dar’ ta’arud al-aql wa’l-naql (Averting Conflict between Reason and Revelation), following his Refutation of the Logicians.", who: ["ibn-taymiyya"], at: ["damascus"] },
       { y: 1377, text: "At Qal’at Ibn Salama, Ibn Khaldun completes the first draft of the Muqaddima, which he went on revising; its survey of the sciences includes a refutation of philosophy.", who: ["ibn-khaldun"], at: ["qalat"] }
     ],
     related: ["heavens", "unity-being"] },
@@ -1066,15 +1074,15 @@ const DEBATES = [
     related: ["tafsir", "created-quran"] },
 
   { id: "tafsir", title: "How to interpret the Qur’an", term: "manahij al-tafsir", ar: "مناهج التفسير",
-    phases: [[870, 1375], [1880, 1985]], lanes: ["quran"],
+    phases: [[870, 1570], [1880, 1985]], lanes: ["quran"],
     question: "Should the Qur’an be read through transmitted reports, through language and reason, or through inner insight?",
     text: "Commentators differed on the sources of interpretation. Some built on reports from the Prophet and early authorities; others drew on grammar, rhetoric and theology; Sufis read inner meanings. Modern scholars asked how the Qur’an speaks to new societies, and some proposed reading it through itself or through its purposes.",
     positions: [
       { name: "By transmitted reports", text: "Explain verses by the reports of the Prophet, the Companions and their successors.", who: ["ibn-abbas", "tabari", "ibn-kathir", "suyuti"] },
-      { name: "By language and reason", text: "Explain verses through grammar, rhetoric and reasoned argument.", who: ["zamakhshari", "fakhr-razi"] },
+      { name: "By language and reason", text: "Explain verses through grammar, rhetoric and reasoned argument.", who: ["maturidi", "zamakhshari", "fakhr-razi", "ebussuud"], notes: { maturidi: "In Ta’wilat al-Qur’an, al-Maturidi distinguished tafsir (certain explanations transmitted from the Companions) from ta’wil (reasoned theological and linguistic interpretation open to jurists and theologians).", ebussuud: "In Irshad al-aql al-salim, completed in 1566, Ebussuud read the Qur’an through Arabic rhetoric and linguistic analysis, building on al-Zamakhshari, Fakhr al-Din al-Razi and al-Baydawi; his commentary became a standard text across Ottoman madrasas." } },
       { name: "By inner allusions (ishari)", text: "Beyond the outward meaning, verses carry subtle inner allusions disclosed to the purified heart, without setting aside the literal text.", who: ["qushayri"], notes: { qushayri: "In Lata’if al-isharat, begun in Nishapur in the 1040s, al-Qushayri reads the entire Qur’an for its spiritual allusions while keeping his commentary within the bounds of Sunni creed and law." } },
       { name: "By the Qur’an itself", text: "Verses are best explained by other verses.", who: ["tabatabai", "ibn-kathir"] },
-      { name: "By its purposes for today", text: "Read the Qur’an as moral guidance whose purposes speak to present societies.", who: ["abduh", "rida", "ibn-ashur", "fazlur-rahman"] }
+      { name: "By its purposes for today", text: "Read the Qur’an as moral guidance whose purposes speak to present societies.", who: ["sayyid-ahmad-khan", "abduh", "rida", "ibn-ashur", "fazlur-rahman"], notes: { "sayyid-ahmad-khan": "In his Urdu Tafsir al-Qur’an and his principles of exegesis (Tahrir fi usul al-tafsir, 1892), Sayyid Ahmad Khan argued that the word of God (revelation) cannot contradict the work of God (the law of nature), reading apparent miracles metaphorically." } }
     ],
     thread: [
       { y: 680, c: true, text: "Ibn Abbas explains the Qur’an to students in Mecca.", who: ["ibn-abbas"], at: ["mecca"] },
@@ -1084,8 +1092,10 @@ const DEBATES = [
       { y: 1205, c: true, text: "Fakhr al-Din al-Razi writes The Keys to the Unseen.", who: ["fakhr-razi"], at: ["herat"] },
       { y: 1360, c: true, text: "Ibn Kathir writes his commentary in Damascus.", who: ["ibn-kathir"], at: ["damascus"] },
       { y: 1466, text: "Al-Suyuti completes his part of the Tafsir al-Jalalayn, begun by al-Mahalli, on 10 Shawwal 870 AH.", who: ["suyuti"], at: ["cairo"] },
+      { y: 1566, text: "Ebussuud Efendi completes Irshad al-aql al-salim in Istanbul, a rhetorical and linguistic commentary that becomes standard across Ottoman madrasas.", who: ["ebussuud"], at: ["istanbul"] },
+      { y: 1892, text: "Sayyid Ahmad Khan publishes his principles of Qur’anic exegesis (Tahrir fi usul al-tafsir), setting out his naturalistic reading of scripture in harmony with modern science.", who: ["sayyid-ahmad-khan"], at: ["aligarh"] },
       { y: 1900, c: true, text: "Abduh lectures on the Qur’an at al-Azhar; Rida publishes the lectures in al-Manar.", who: ["abduh", "rida"], at: ["cairo"] },
-      { y: 1960, c: true, text: "Ibn Ashur completes al-Tahrir wa’l-tanwir in 1380 AH, some thirty-nine years after he began it; the complete work is first printed in 1984.", who: ["ibn-ashur"], at: ["tunis"] },
+      { y: 1956, text: "The first volume of Ibn Ashur’s thirty-volume Qur’an commentary al-Tahrir wa’l-tanwir is printed in Tunis; the complete work is first printed there in 1984.", who: ["ibn-ashur"], at: ["tunis"] },
       { y: 1972, c: true, text: "Tabataba’i completes al-Mizan in Qom.", who: ["tabatabai"], at: ["qom"] },
       { y: 1980, text: "Fazlur Rahman publishes Major Themes of the Qur’an.", who: ["fazlur-rahman"], at: ["chicago"] }
     ],
@@ -1094,16 +1104,17 @@ const DEBATES = [
   { id: "heavens", title: "Rethinking the heavens", term: "al-shukuk ala Batlamyus", ar: "الشكوك على بطلميوس",
     phases: [[1025, 1475]], lanes: ["sciences", "philosophy"],
     question: "Do Ptolemy’s models describe the real heavens?",
-    text: "Astronomers accepted Ptolemy’s observations but objected that his models broke the principle of uniform circular motion. Ibn al-Haytham’s Doubts on Ptolemy opened a long effort to build better models. At Maragha, al-Tusi and his colleagues designed new ones; Ulugh Beg’s observatory refined the numbers; Ali Qushji argued that astronomy need not depend on Aristotle’s physics.",
+    text: "Astronomers accepted Ptolemy’s observations but objected that his models broke the principle of uniform circular motion. Ibn al-Haytham’s Doubts on Ptolemy opened a long effort to build better models. Omar Khayyam directed new observations for the Jalali calendar in Isfahan; at Maragha, al-Tusi and his colleagues designed new planetary models; Ulugh Beg’s observatory refined the numbers; Ali Qushji argued that astronomy need not depend on Aristotle’s physics.",
     positions: [
       { name: "Ptolemy’s models are physically impossible", text: "A model must be built from uniform circular motions that could really exist.", who: ["ibn-haytham"] },
       { name: "New models from uniform motions", text: "Combinations of circles, such as the Tusi couple, can reproduce the observed motions.", who: ["nasir-tusi"] },
-      { name: "Better observations", text: "Large instruments and long observation give more exact parameters.", who: ["ulugh-beg", "biruni"] },
+      { name: "Better observations", text: "Large instruments and long observation give more exact parameters.", who: ["biruni", "omar-khayyam", "ulugh-beg"], notes: { "omar-khayyam": "At Sultan Malikshah’s observatory in Isfahan, Omar Khayyam led the observational programme behind the Jalali solar calendar (inaugurated in 1079) and the Zij-i Malikshahi tables; he also wrote a mathematical supplement to Ibn al-Haytham’s treatise on Ptolemaic planetary motion." } },
       { name: "Astronomy free of Aristotle", text: "Astronomy can rest on observation and mathematics rather than on natural philosophy.", who: ["qushji"] }
     ],
     thread: [
       { y: 1025, c: true, text: "Ibn al-Haytham writes Doubts on Ptolemy in Cairo.", who: ["ibn-haytham"], at: ["cairo"] },
       { y: 1031, c: true, text: "Al-Biruni works on The Mas’udic Canon in Ghazna; he still listed it among his unfinished works in 427 AH (1036 CE).", who: ["biruni"], at: ["ghazna"] },
+      { y: 1079, text: "The Jalali solar calendar, prepared from observations led by Omar Khayyam and his colleagues for Sultan Malikshah in Isfahan, is inaugurated.", who: ["omar-khayyam"], at: ["isfahan"] },
       { y: 1259, text: "The Maragha observatory is founded under al-Tusi’s direction, with Hulagu’s patronage.", who: ["nasir-tusi"], at: ["maragha"] },
       { y: 1261, text: "Al-Tusi presents his new planetary models in al-Tadhkira.", who: ["nasir-tusi"], at: ["maragha"] },
       { y: 1424, c: true, text: "Ulugh Beg’s observatory begins work in Samarkand.", who: ["ulugh-beg"], at: ["samarkand"] },
@@ -1113,15 +1124,15 @@ const DEBATES = [
     related: ["philosophy"] },
 
   { id: "sama", title: "Music, dance and the remembrance of God", term: "al-sama’ wa’l-dhikr", ar: "السماع والذكر",
-    phases: [[1040, 1200], [1250, 1390]], lanes: ["sufism", "law"],
+    phases: [[1040, 1200], [1250, 1390], [1545, 1660]], lanes: ["sufism", "law"],
     question: "May Sufis use music, dance and chanting aloud to draw near to God, or should remembrance be silent?",
-    text: "Sufis gathered to listen to poetry and music (sama’) and to repeat the names of God (dhikr), sometimes with movement and dance. Al-Ghazali devoted a book of The Revival of the Religious Sciences to listening and set conditions for it; Hanbali critics such as Ibn al-Jawzi and Ibn Taymiyya called such gatherings an innovation. The orders differed as well: Rumi’s followers made music and turning their central ritual, while in fourteenth-century Central Asia the circles of Baha’ al-Din Naqshband and Sayyid Ali Hamadani came to stand for silent and vocal remembrance.",
+    text: "Sufis gathered to listen to poetry and music (sama’) and to repeat the names of God (dhikr), sometimes with movement and dance. Al-Ghazali devoted a book of The Revival of the Religious Sciences to listening and set conditions for it; Hanbali critics such as Ibn al-Jawzi and Ibn Taymiyya called such gatherings an innovation. The orders differed as well: Rumi’s followers made music and turning their central ritual, while in Central Asia the Kubrawi tradition and the circles of Baha’ al-Din Naqshband and Sayyid Ali Hamadani came to stand for vocal and silent remembrance. In sixteenth- and seventeenth-century Istanbul, Ottoman jurists and writers such as Ebussuud and Katib Çelebi renewed the argument over singing and whirling remembrance (devran).",
     positions: [
-      { name: "Listening is lawful under conditions", text: "Listening to music and poetry is lawful and can stir the love of God when the time, the place and the company are right; it is forbidden where it stirs base desire.", who: ["ghazali", "qushayri"], notes: { qushayri: "Al-Qushayri’s Risala holds that listening to poetry sung to fine melodies is permitted in general if the listener believes nothing forbidden, hears nothing the Law condemns and is not led by desire: poems were recited before the Prophet, and a melody does not change the ruling. Listening that makes one keener to obey God is recommended." } },
+      { name: "Listening is lawful under conditions", text: "Listening to music and poetry is lawful and can stir the love of God when the time, the place and the company are right; it is forbidden where it stirs base desire.", who: ["qushayri", "ghazali", "katib-celebi"], notes: { qushayri: "Al-Qushayri’s Risala holds that listening to poetry sung to fine melodies is permitted in general if the listener believes nothing forbidden, hears nothing the Law condemns and is not led by desire: poems were recited before the Prophet, and a melody does not change the ruling. Listening that makes one keener to obey God is recommended.", "katib-celebi": "In Mizan al-haqq (The Balance of Truth, 1656), Katib Çelebi intervened in the Istanbul dispute between Kadızadeli preachers and Sufi orders over singing (taghanni) and whirling remembrance (devran), defending a moderate view of music under proper conditions and warning against militant attempts to ban established customs." } },
       { name: "Music and turning as worship", text: "Listening to music with turning movement belongs to the path itself; it became the central ritual of Rumi’s followers.", who: ["rumi"] },
-      { name: "Remembrance aloud", text: "God’s names are repeated aloud and in company, often with set movements of the body.", who: ["yasawi", "hamadani"] },
+      { name: "Remembrance aloud", text: "God’s names are repeated aloud and in company, often with set movements of the body.", who: ["yasawi", "kubra", "hamadani"], notes: { kubra: "In Fawa’ih al-jamal and his manuals of Sufi training, Najm al-Din Kubra made disciplined repetition of the formula of divine unity (dhikr) with breath and bodily posture the centre of the Kubrawi path, moving from audible recitation on the tongue into the heart and opening into visions of coloured light." } },
       { name: "Remembrance in silence", text: "The heart repeats the remembrance without moving the tongue or body, which avoids display; vocal dhikr and music gatherings are not needed and may be unlawful.", who: ["naqshband"] },
-      { name: "A forbidden innovation", text: "Gatherings for music and dance were unknown to the Prophet’s Companions and are an innovation in worship.", who: ["ibn-taymiyya"] }
+      { name: "A forbidden innovation", text: "Gatherings for music and dance were unknown to the Prophet’s Companions and are an innovation in worship.", who: ["ibn-taymiyya", "ebussuud"], notes: { ebussuud: "As Ottoman chief jurist (şeyhülislam), Ebussuud issued fatwas sharply opposing Sufi whirling remembrance (devran) and ritual dancing (raqs) as unlawful innovations, rejecting earlier Ottoman rulings that had permitted them." } }
     ],
     thread: [
       { y: 1045, text: "In his Epistle, written in Nishapur, al-Qushayri sets out conditions under which listening to sung poetry is permitted.", who: ["qushayri"], at: ["nishapur"] },
@@ -1131,7 +1142,9 @@ const DEBATES = [
       { y: 1250, c: true, text: "In Konya, Rumi makes listening to music and turning part of his circle’s worship.", who: ["rumi"], at: ["konya"] },
       { y: 1290, c: true, text: "Rumi’s son Sultan Walad organises his followers into the Mawlawi (Mevlevi) order, with the turning dance as its main ritual.", who: [], at: ["konya"] },
       { y: 1310, c: true, text: "Ibn Taymiyya and his circle write against Sufi listening as an innovation.", who: ["ibn-taymiyya"], at: ["damascus"] },
-      { y: 1380, c: true, text: "In Central Asia, the followers of Naqshband and of Sayyid Ali Hamadani divide over silent and vocal remembrance; later biographies make the two masters the faces of each side.", who: ["naqshband", "hamadani"], at: ["bukhara", "kulob"] }
+      { y: 1380, c: true, text: "In Central Asia, the followers of Naqshband and of Sayyid Ali Hamadani divide over silent and vocal remembrance; later biographies make the two masters the faces of each side.", who: ["naqshband", "hamadani"], at: ["bukhara", "kulob"] },
+      { y: 1550, c: true, text: "In Istanbul, Ottoman chief jurist Ebussuud Efendi issues fatwas condemning Sufi whirling remembrance (devran) and ritual dancing as unlawful.", who: ["ebussuud"], at: ["istanbul"] },
+      { y: 1656, text: "In Mizan al-haqq (The Balance of Truth), Katib Çelebi weighs the Istanbul disputes over singing and Sufi whirling, urging a middle course against militant efforts to ban them.", who: ["katib-celebi"], at: ["istanbul"] }
     ],
     related: ["sufism-law", "unity-being"] },
 
@@ -1141,7 +1154,7 @@ const DEBATES = [
     text: "By the eleventh century the Sunni legal schools had settled their doctrine, and many jurists held that later scholars should follow it, though whether the “gate of ijtihad” was ever closed is itself debated by historians. Others insisted that qualified scholars must still reason from the sources. Among Twelver Shi’is, a seventeenth- and eighteenth-century dispute pitted Akhbaris, who rejected speculative legal theory and relied on the Imams’ reports, against Usulis, who upheld the ijtihad of living jurists. The wider question returned with force in the eighteenth and nineteenth centuries.",
     positions: [
       { name: "Follow the school’s settled doctrine", text: "Later jurists rule within their school, refining its established positions.", who: ["marghinani", "nawawi"] },
-      { name: "Ijtihad remains open", text: "Qualified scholars must reason from the Qur’an and hadith, and blind imitation is not allowed to them.", who: ["ibn-hazm", "ibn-taymiyya", "suyuti", "shah-wali-allah", "shawkani"] },
+      { name: "Ijtihad remains open", text: "Qualified scholars must reason from the Qur’an and hadith, and blind imitation is not allowed to them.", who: ["ibn-hazm", "ibn-rushd", "ibn-taymiyya", "ibn-qayyim", "suyuti", "shah-wali-allah", "shawkani", "marjani"], notes: { "ibn-rushd": "In Bidayat al-mujtahid (The Distinguished Jurist’s Primer), Ibn Rushd compared the legal schools’ rulings and the causes of their disagreement so that qualified jurists could reason directly from the sources rather than rely on school deference.", "ibn-qayyim": "In I’lam al-muwaqqi’in, Ibn Qayyim mounted a sweeping critique of blind imitation (taqlid) of legal schools over scriptural evidence, distinguishing uncritical taqlid from evidence-based following (ittiba’).", marjani: "In Nazurat al-haqq (Kazan, 1870), Marjani defended independent reasoning (ijtihad) against rigid Bukharan taqlid on questions such as the northern summer night prayer, arguing that core scriptural duties outweigh later school precedent." } },
       { name: "Rely on the Imams’ reports (Akhbari)", text: "Law rests on the transmitted reports (akhbar) of the Imams; speculative legal theory and fallible juristic ijtihad are rejected, and where reports conflict or are silent, the scholar suspends judgment or exercises caution.", who: ["astarabadi"], notes: { astarabadi: "In al-Fawa’id al-madaniyya (1622), al-Astarabadi rejected consensus and rational legal theory and even argued that the Qur’an can serve as a source of law only through the Imams’ explanations preserved in their reports." } },
       { name: "Ijtihad by qualified jurists (Usuli)", text: "During the Occultation of the Twelfth Imam, lay believers follow a living qualified jurist (mujtahid), who derives legal rulings from the sources by principled reasoning.", who: ["hilli", "bihbahani"], notes: { bihbahani: "In Karbala, al-Wahid al-Bihbahani answered al-Astarabadi in al-Fawa’id al-usuliyya and Risalat al-ijtihad wa’l-akhbar, arguing that probabilistic juristic reasoning is unavoidable and securing the triumph of the Usuli school." } },
       { name: "Ijtihad for a new age", text: "Reform requires fresh reasoning on questions of law and society.", who: ["abduh", "rida", "iqbal"], notes: { rida: "In Muhawarat al-muslih wa’l-muqallid, dialogues between a reformer and an imitator (muqallid) first printed in al-Manar and issued as a book in 1906–07, Rashid Rida argues against taqlid and for ijtihad as the way to Muslim unity." } }
@@ -1157,6 +1170,7 @@ const DEBATES = [
       { y: 1740, c: true, text: "Shah Wali Allah urges wider ijtihad in Delhi.", who: ["shah-wali-allah"], at: ["delhi"] },
       { y: 1770, c: true, text: "In Karbala, al-Wahid al-Bihbahani leads the Usuli counter-offensive against the Akhbaris, training a generation of mujtahids and securing Usuli dominance in Twelver law.", who: ["bihbahani"], at: ["karbala"] },
       { y: 1810, c: true, text: "Al-Shawkani argues against fixed adherence to a school.", who: ["shawkani"], at: ["sanaa"] },
+      { y: 1870, text: "In Kazan, Shihab al-Din Marjani publishes Nazurat al-haqq, defending ijtihad against rigid Bukharan taqlid on questions including the northern summer night prayer.", who: ["marjani"], at: ["kazan"] },
       { y: 1900, c: true, text: "Muhammad Abduh calls for renewed ijtihad.", who: ["abduh"], at: ["cairo"] },
       { y: 1930, text: "Iqbal calls ijtihad “the principle of movement” in Islam.", who: ["iqbal"], at: ["lahore"] }
     ],
@@ -1294,16 +1308,19 @@ const SOURCES = {
     ["Library of Congress: al-Razi, The Comprehensive Book on Medicine, part 2 (World Digital Library)", "https://www.loc.gov/resource/gdcwdl.wdl_07458/?st=gallery"],
     ["Cambridge: Al-Rāzī (Religion, Learning and Science in the ʿAbbasid Period)", "https://www.cambridge.org/core/books/abs/religion-learning-and-science-in-the-abbasid-period/alrazi/762B6225FF0F3508D6B7CD7CB494218C"],
     ["Stanford Encyclopedia of Philosophy: Abu Bakr al-Razi", "https://plato.stanford.edu/entries/abu-bakr-al-razi/"],
-    ["Encyclopaedia Iranica: al-Ḥāwi", "https://www.iranicaonline.org/articles/hawi-medical-book/", "al-Hawi"]
+    ["Encyclopaedia Iranica: al-Ḥāwi", "https://www.iranicaonline.org/articles/hawi-medical-book/", "al-Hawi"],
+    ["Britannica: al-Rāzī", "https://www.britannica.com/biography/al-Razi", "birth c. 854 and death c. 925 or 935"],
+    ["TDV İslâm Ansiklopedisi: Râzî, Ebû Bekir", "https://islamansiklopedisi.org.tr/razi-ebu-bekir", "death in 313 AH (925 CE)"]
   ],
   "abu-dawud": [
     ["Britannica: Abū Dāʾūd", "https://www.britannica.com/biography/Abu-Daud"],
-    ["Islam Museum: Abu Dawud al-Sijistani", "https://www.islam.museum/en/person/abu-dawud-al-sijistani/"],
-    ["TDV İslâm Ansiklopedisi: Ebû Dâvûd es-Sicistânî", "https://islamansiklopedisi.org.tr/ebu-davud-es-sicistani"]
+    ["TDV İslâm Ansiklopedisi: Ebû Dâvûd es-Sicistânî", "https://islamansiklopedisi.org.tr/ebu-davud-es-sicistani"],
+    ["TDV İslâm Ansiklopedisi: es-Sünen (Ebû Dâvûd)", "https://islamansiklopedisi.org.tr/es-sunen--ebu-davud", "al-Sunan"]
   ],
   "abu-hafs-nasafi": [
-    ["nasafi.org: al-ʿAqīda al-nasafiyya and its author", "https://nasafi.org/"],
-    ["TDV İslâm Ansiklopedisi: Nesefî, Necmeddin", "https://islamansiklopedisi.org.tr/nesefi-necmeddin"]
+    ["Internet Archive: E. E. Elder, A Commentary on the Creed of Islam (Columbia University Press, 1950)", "https://archive.org/details/commentaryonthec030491mbp", "al-Aqa’id and al-Taftazani’s commentary"],
+    ["TDV İslâm Ansiklopedisi: Nesefî, Necmeddin", "https://islamansiklopedisi.org.tr/nesefi-necmeddin"],
+    ["TDV İslâm Ansiklopedisi: Akāidü’n-Nesefî", "https://islamansiklopedisi.org.tr/akaidun-nesefi", "al-Aqa’id"]
   ],
   "abu-hanifa": [
     ["Encyclopaedia Iranica: Abū Ḥanīfa", "https://www.iranicaonline.org/articles/abu-hanifa-noman-b/"],
@@ -1316,7 +1333,7 @@ const SOURCES = {
   ],
   "aisha": [
     ["Britannica: ʿĀʾishah", "https://www.britannica.com/biography/Aishah"],
-    ["Islam Museum: Battle of the Camel", "https://islam.museum/en/event/battle-of-the-camel/"],
+    ["Britannica: Battle of the Camel", "https://www.britannica.com/topic/Battle-of-the-Camel", "Battle of the Camel"],
     ["TDV İslâm Ansiklopedisi: Âişe", "https://islamansiklopedisi.org.tr/aise"]
   ],
   "aisha-bauniyya": [
@@ -1366,11 +1383,12 @@ const SOURCES = {
   ],
   "dan-fodio": [
     ["Britannica: Usman dan Fodio", "https://www.britannica.com/biography/Usman-dan-Fodio"],
-    ["Islam Museum: Usman dan Fodio", "https://www.islam.museum/en/person/usman-dan-fodio/"]
+    ["Oxford Reference: Sokoto Caliphate (Oxford Encyclopedia of African Thought)", "https://www.oxfordreference.com/viewbydoi/10.1093/acref/9780191828836.013.0309"]
   ],
   "ebussuud": [
     ["Oxford Reference: Ebussuud Efendi (Biographical Encyclopaedia of Islamic Philosophy)", "https://oxfordreference.com/view/10.1093/oi/authority.20110810104817111"],
-    ["TDV İslâm Ansiklopedisi: Ebüssuûd Efendi", "https://islamansiklopedisi.org.tr/ebussuud-efendi"]
+    ["TDV İslâm Ansiklopedisi: Ebüssuûd Efendi", "https://islamansiklopedisi.org.tr/ebussuud-efendi"],
+    ["TDV İslâm Ansiklopedisi: İrşâdü’l-akli’s-selîm", "https://islamansiklopedisi.org.tr/irsadul-aklis-selim", "Irshad al-aql al-salim"]
   ],
   "fakhr-razi": [
     ["University of Edinburgh Research Explorer: Fakhr al-Din al-Razi", "https://www.research.ed.ac.uk/en/publications/fakhr-al-din-al-razi/"],
@@ -1424,12 +1442,12 @@ const SOURCES = {
     ["IIIT: Ibn Ashur, Treatise on Maqasid al-Shariah, with a biographical introduction (sample PDF)", "https://iiit.org/wp-content/uploads/Ibn-Ashur-Treatise-on-Maqasid-Al-Shariah-Sample.pdf"],
     ["TDV İslâm Ansiklopedisi: İbn Âşûr, Muhammed Tâhir", "https://islamansiklopedisi.org.tr/ibn-asur-muhammed-tahir--1973"],
     ["TDV İslâm Ansiklopedisi: et-Tahrîr ve’t-Tenvîr", "https://islamansiklopedisi.org.tr/et-tahrir-vet-tenvir"],
-    ["Tafsir Al-Qur’an (Indonesian): Mengenal Tafsir at-Tahrir wa at-Tanwir", "https://tafsiralquran.id/mengenal-tafsir-at-tahrir-wa-at-tanwir-karya-%e1%b9%adahir-ibn-ashur/", "the years 1341–1380 AH, citing al-Hamid"]
+    ["Journal of Qur’anic Studies (Edinburgh University Press, 2019): Tropology and Inimitability: Ibn ʿĀshūr’s Theory of tafsīr", "https://www.euppublishing.com/doi/abs/10.3366/jqs.2019.0368", "al-Tahrir wa’l-tanwir"]
   ],
   "ibn-hajar": [
     ["Oxford Reference: Ahmad ibn Hajar al-Asqalani", "https://www.oxfordreference.com/view/10.1093/oi/authority.20110803095429356"],
-    ["Islam Museum: Completion of Fath al-Bari, 842/1438", "https://www.islam.museum/en/event/fath-al-bari-complete-842/"],
-    ["TDV İslâm Ansiklopedisi: İbn Hacer el-Askalânî", "https://islamansiklopedisi.org.tr/ibn-hacer-el-askalani"]
+    ["TDV İslâm Ansiklopedisi: İbn Hacer el-Askalânî", "https://islamansiklopedisi.org.tr/ibn-hacer-el-askalani"],
+    ["TDV İslâm Ansiklopedisi: Fethu’l-Bârî", "https://islamansiklopedisi.org.tr/fethul-bari", "Fath al-Bari"]
   ],
   "ibn-hanbal": [
     ["Britannica: Aḥmad ibn Ḥanbal", "https://www.britannica.com/biography/Ahmad-ibn-Hanbal"],
@@ -1538,6 +1556,7 @@ const SOURCES = {
     ["Oxford Academic: The rise of falsafa: al-Kindī, On First Philosophy", "https://academic.oup.com/edited-volume/38657/chapter-abstract/335767408", "Fi’l-falsafa al-ula"]
   ],
   "kubra": [
+    ["Encyclopaedia Iranica: Kobrawiya i. The Eponym", "https://www.iranicaonline.org/articles/kobrawiya-i-the-eponym/", "life and works"],
     ["TDV İslâm Ansiklopedisi: Necmeddîn-i Kübrâ", "https://islamansiklopedisi.org.tr/necmeddin-i-kubra"],
     ["Encyclopaedia Iranica: Khwarazmshahs iii", "https://www.iranicaonline.org/articles/khwarazmshah/iii-the-line-of-anustigin/", "Gurganj, 1221"],
     ["UNESCO World Heritage nomination: Kunya-Urgench", "https://whc.unesco.org/uploads/nominations/1199.pdf", "the fall of Gurganj"]
@@ -1548,7 +1567,7 @@ const SOURCES = {
   ],
   "malik": [
     ["Britannica: Mālik ibn Anas", "https://www.britannica.com/biography/Malik-ibn-Anas"],
-    ["Islam Museum: Muwaṭṭaʾ 952 (Malik transmits from Jaʿfar)", "https://www.islam.museum/en/passage/muwatta-6-952/", "the link with Jaʿfar al-Sadiq"],
+    ["TDV İslâm Ansiklopedisi: Ca’fer es-Sâdık", "https://islamansiklopedisi.org.tr/cafer-es-sadik", "the link with Jaʿfar al-Sadiq"],
     ["Routledge: Yasin Dutton, The Origins of Islamic Law (preview)", "https://api.pageplace.de/preview/DT0400.9781136110665_A23827084/preview-9781136110665_A23827084.pdf", "the birth year"]
   ],
   "marghinani": [
@@ -1557,7 +1576,8 @@ const SOURCES = {
   ],
   "marjani": [
     ["Minbar. Islamic Studies 13 (2020): The works of Shihab al-Din al-Marjani on Islamic scholastic theology", "https://doi.org/10.31162/2618-9569-2020-13-1-103-116"],
-    ["TDV İslâm Ansiklopedisi: Mercânî", "https://islamansiklopedisi.org.tr/mercani"]
+    ["TDV İslâm Ansiklopedisi: Mercânî", "https://islamansiklopedisi.org.tr/mercani"],
+    ["UvA-DARE: Michael Kemper, Imperial Russia as Dar al-Islam? (PDF)", "https://dare.uva.nl/document/2/167407", "Nazurat al-haqq"]
   ],
   "maturidi": [
     ["Britannica: Māturīdiyyah", "https://www.britannica.com/topic/Maturidiyah"],
@@ -1584,7 +1604,8 @@ const SOURCES = {
   "nana-asmau": [
     ["African Studies Centre Leiden: Nana Asmaʾu", "https://www.ascleiden.nl/content/library-weekly/nana-asmau"],
     ["Oxford Academic: Asmaʾu, Nana", "https://academic.oup.com/edited-volume/61663/chapter-abstract/553437989"],
-    ["Revue de la FM6OA: The life and contribution of Nana Asmaʾu", "https://www.fm6oa.org/revue/article/the-life-and-contribution-of-nana-asmau/"]
+    ["Revue de la FM6OA: The life and contribution of Nana Asmaʾu", "https://www.fm6oa.org/revue/article/the-life-and-contribution-of-nana-asmau/"],
+    ["Cambridge Companion to Sufism (ch. 8): Nana Asma’u, Nineteenth-Century West African Sufi", "https://www.cambridge.org/core/books/cambridge-companion-to-sufism/nana-asmau-nineteenthcentury-west-african-sufi1/C257E81964C37834C93FE9A7E03C638D", "education in Usman dan Fodio’s circle and Sufi works"]
   ],
   "naqshband": [
     ["Encyclopaedia Iranica: Bahāʾ-al-Dīn Naqšband", "https://www.iranicaonline.org/articles/baha-al-din-naqsband-kaja-mohammad-b/"],
@@ -1596,8 +1617,8 @@ const SOURCES = {
     ["Brill: al-Tadhkira fī ʿilm al-hayʾa", "https://www.degruyterbrill.com/document/isbn/9789004406476/html", "al-Tadhkira fi ilm al-hay’a"]
   ],
   "nawawi": [
-    ["Islam Museum: Imam al-Nawawi", "https://www.islam.museum/en/person/al-nawawi/"],
     ["TDV İslâm Ansiklopedisi: Nevevî", "https://islamansiklopedisi.org.tr/nevevi"],
+    ["TDV İslâm Ansiklopedisi: Minhâcü’t-tâlibîn", "https://islamansiklopedisi.org.tr/minhacut-talibin", "Minhaj al-talibin"],
     ["Britannica: Hadith", "https://www.britannica.com/topic/Hadith", "Riyad al-salihin"]
   ],
   "nazzam": [
@@ -1643,7 +1664,8 @@ const SOURCES = {
   "sayyid-ahmad-khan": [
     ["Britannica: Sir Sayyid Ahmad Khan", "https://www.britannica.com/biography/Sayyid-Ahmad-Khan"],
     ["TDV İslâm Ansiklopedisi: Ahmed Han, Seyyid", "https://islamansiklopedisi.org.tr/ahmed-han-seyyid", "death on 27 March 1898 (4 Dhu al-Qa’da 1315 AH)"],
-    ["Aligarh Muslim University: History", "https://www.amu.ac.in/about-us/history", "the 1875 school and the 1877 college"]
+    ["Aligarh Muslim University: History", "https://www.amu.ac.in/about-us/history", "the 1875 school and the 1877 college"],
+    ["Brill: Sir Sayyid Ahmad Khan, Asbab-i baghawat-i Hind and Tahdhib al-akhlaq", "https://brill.com/display/book/9789004472402/BP000012.xml", "his reform writings"]
   ],
   "shafii": [
     ["Britannica: Shāfiʿī (school of law)", "https://www.britannica.com/topic/Shafiiyah"],
@@ -1765,7 +1787,8 @@ const SOURCES = {
   "debate:hadith-criticism": [
     ["Britannica: ʿilm al-ḥadīth", "https://www.britannica.com/topic/ilm-al-hadith"],
     ["Britannica: isnād", "https://www.britannica.com/topic/isnad"],
-    ["Islam Museum: Abu Dawud al-Sijistani", "https://www.islam.museum/en/person/abu-dawud-al-sijistani/"]
+    ["Britannica: Abū Dāʾūd", "https://www.britannica.com/biography/Abu-Daud", "Abu Dawud’s Sunan"],
+    ["TDV İslâm Ansiklopedisi: es-Sünen (Ebû Dâvûd)", "https://islamansiklopedisi.org.tr/es-sunen--ebu-davud"]
   ],
   "debate:heavens": [
     ["Stanford Encyclopedia of Philosophy: Arabic and Islamic natural philosophy and natural science", "https://plato.stanford.edu/entries/arabic-islamic-natural/"]
@@ -1795,7 +1818,8 @@ const SOURCES = {
   "debate:philosophy": [
     ["Stanford Encyclopedia of Philosophy: Arabic and Islamic philosophy of religion", "https://plato.stanford.edu/entries/arabic-islamic-religion/"],
     ["Stanford Encyclopedia of Philosophy: al-Ghazali", "https://plato.stanford.edu/entries/al-ghazali/"],
-    ["Stanford Encyclopedia of Philosophy: Ibn Rushd", "https://plato.stanford.edu/entries/ibn-rushd/"]
+    ["Stanford Encyclopedia of Philosophy: Ibn Rushd", "https://plato.stanford.edu/entries/ibn-rushd/"],
+    ["Stanford Encyclopedia of Philosophy: Ibn Taymiyya", "https://plato.stanford.edu/entries/ibn-taymiyya/", "Ibn Taymiyya on logic, reason and revelation"]
   ],
   "debate:reason-law": [
     ["Britannica: qiyas", "https://www.britannica.com/topic/qiyas"],
@@ -1818,7 +1842,8 @@ const SOURCES = {
     ["Britannica: samāʿ", "https://www.britannica.com/topic/sama-Sufi-religious-practice"],
     ["Institute of Ismaili Studies: Leonard Lewisohn, The Sacred Music of Islam, Samaʿ in the Persian Sufi Tradition (PDF)", "https://iis.ac.uk/wp-content/uploads/2024/10/the-sacred-music-of-islam_pdf-366408512.pdf"],
     ["Shahzad Bashir: Movement and Stillness, the Practice of Sufi Dhikr in Fourteenth-Century Central Asia (PDF)", "https://www.themathesontrust.org/papers/islam/Bashir-Movement_and_Stillness_Sufi_Dhikr.pdf"],
-    ["Religions (2023): pre-modern Muslim treatments of listening to music (samāʿ)", "https://www2.mdpi.com/2077-1444/14/6/780"]
+    ["Religions (2023): pre-modern Muslim treatments of listening to music (samāʿ)", "https://www2.mdpi.com/2077-1444/14/6/780"],
+    ["TDV İslâm Ansiklopedisi: Devran", "https://islamansiklopedisi.org.tr/devran", "Ottoman disputes over whirling dhikr"]
   ],
   "debate:sufism-law": [
     ["Britannica: Sufism: history", "https://www.britannica.com/topic/Sufism/History"],
@@ -1880,7 +1905,7 @@ const SOURCES = {
   "event:fitna": [
     ["Britannica: Khārijite", "https://www.britannica.com/topic/Kharijite"],
     ["Britannica: ʿAlī", "https://www.britannica.com/biography/Ali-Muslim-caliph"],
-    ["Islam Museum: Battle of the Camel", "https://islam.museum/en/event/battle-of-the-camel/"],
+    ["Britannica: Battle of the Camel", "https://www.britannica.com/topic/Battle-of-the-Camel", "Battle of the Camel"],
     ["Stefan Heidemann, Raqqa II (2003): Die Geschichte von ar-Raqqa/ar-Rafiqa (PDF)", "https://www.aai.uni-hamburg.de/voror/personen/heidemann/medien/heidemann-raqqa-ii-2003-geschichte-von-al-raqqa.pdf", "the site of Siffin"]
   ],
   "event:granada": [
@@ -1925,7 +1950,6 @@ const SOURCES = {
   ],
   "event:revelation": [
     ["Britannica: Muhammad", "https://www.britannica.com/biography/Muhammad"],
-    ["Islam Museum: The first revelation", "https://www.islam.museum/en/event/first-revelation/"],
     ["TDV İslâm Ansiklopedisi: Muhammed", "https://islamansiklopedisi.org.tr/muhammed"]
   ],
   "event:safavids": [
@@ -1978,32 +2002,38 @@ const SOURCES = {
   ],
   "note:created-quran:jahiz": [
     ["Encyclopaedia Iranica: Jāḥeẓ", "https://www.iranicaonline.org/articles/jahez/"],
-    ["al-Majalla (Arabic): the createdness-of-the-Qur’an ordeal as told by al-Jahiz", "https://www.majalla.com/node/295361"]
+    ["TDV İslâm Ansiklopedisi: Câhiz", "https://islamansiklopedisi.org.tr/cahiz"],
+    ["TDV İslâm Ansiklopedisi: Halku’l-Kur’ân", "https://islamansiklopedisi.org.tr/halkul-kuran"]
   ],
   "note:created-quran:maturidi": [
-    ["nasafi.org: al-ʿAqīda al-Nasafiyya, paragraph 14 with commentary", "https://nasafi.org/paragraph-014/"],
-    ["DergiPark (PDF): Harun Kılıçaslan, The Transmission of the Divine Speech to the Prophet according to the Māturīdīs (2025)", "https://dergipark.org.tr/tr/download/article-file/5223695"]
+    ["DergiPark (PDF): Harun Kılıçaslan, The Transmission of the Divine Speech to the Prophet according to the Māturīdīs (2025)", "https://dergipark.org.tr/tr/download/article-file/5223695"],
+    ["TDV İslâm Ansiklopedisi: Akāidü’n-Nesefî", "https://islamansiklopedisi.org.tr/akaidun-nesefi"],
+    ["TDV İslâm Ansiklopedisi: Halku’l-Kur’ân", "https://islamansiklopedisi.org.tr/halkul-kuran"]
   ],
   "note:created-quran:tahawi": [
     ["TDV İslâm Ansiklopedisi: el-Akîdetü’t-Tahâviyye", "https://islamansiklopedisi.org.tr/el-akidetut-tahaviyye"],
-    ["Masud.co.uk: al-Tahawi’s creed in English", "https://masud.co.uk/?p=719"]
+    ["TDV İslâm Ansiklopedisi: Halku’l-Kur’ân", "https://islamansiklopedisi.org.tr/halkul-kuran"],
+    ["Internet Archive: al-Tahawi, al-Aqida al-Tahawiyya (Arabic text and English translation)", "https://archive.org/details/al-aqida-al-tahawiyya-by-imam-abu-jafar-ahmed-ibn-muhammad-ibn-salama-al-azdi-al"]
   ],
   "note:faith:abd-al-jabbar": [
     ["DergiPark (PDF): Selim Gülverdi, Kādî Abdülcebbâr ve Ebü’l-Muîn en-Nesefî’nin büyük günah hakkındaki görüşleri (2021)", "https://dergipark.org.tr/en/download/article-file/1527456"]
   ],
   "note:faith:ashari": [
-    ["Sacred Texts: D. B. Macdonald, Development of Muslim Theology (1903), al-Ashʿarī’s creed", "https://sacred-texts.com/isl/dmt/dmt20.htm"],
-    ["DOAJ: Baghbanzade, Abu-l-Hassan al-Ashʿarī on Faith", "https://doaj.org/article/263a1a8049644584a2dd21b27d5e2ee2"]
+    ["DOAJ: Baghbanzade, Abu-l-Hassan al-Ashʿarī on Faith", "https://doaj.org/article/263a1a8049644584a2dd21b27d5e2ee2"],
+    ["Encyclopaedia Iranica: Ašʿarī, Abu’l-Ḥasan", "https://www.iranicaonline.org/articles/asari-abul-hasan-ali-b/"],
+    ["TDV İslâm Ansiklopedisi: Eş’arî, Ebü’l-Hasan", "https://islamansiklopedisi.org.tr/esari-ebul-hasan"]
   ],
   "note:faith:ibn-hanbal": [
     ["Oxford University Research Archive: Christopher Melchert, Early Ḥanbalī Creeds (translation, PDF)", "https://ora.ox.ac.uk/objects/uuid:3f641916-8c75-4114-8e90-db25de3fa7be/files/m0192642159d0745d1d6a247c249d9a88"]
   ],
   "note:faith:maturidi": [
     ["Encyclopedia of Religion: Māturīdī, al-", "https://www.encyclopedia.com/environment/encyclopedias-almanacs-transcripts-and-maps/maturidi-al"],
-    ["al-islam.org: A History of Muslim Philosophy (ed. M. M. Sharif), chapter on Tahawism by A. K. M. Ayyub Ali", "https://al-islam.org/id/node/39527"]
+    ["TDV İslâm Ansiklopedisi: Mâtürîdî", "https://islamansiklopedisi.org.tr/maturidi"],
+    ["Brill: “You Must Know Your Faith in Detail” (Hanafi–Maturidi theology)", "https://brill.com/display/book/9789004440296/BP000005.xml"]
   ],
   "note:free-will:abu-hafs-nasafi": [
-    ["nasafi.org: al-ʿAqīda al-Nasafiyya, paragraph 20", "https://nasafi.org/?p=262"]
+    ["Internet Archive: E. E. Elder, A Commentary on the Creed of Islam (Columbia University Press, 1950)", "https://archive.org/details/commentaryonthec030491mbp"],
+    ["TDV İslâm Ansiklopedisi: Akāidü’n-Nesefî", "https://islamansiklopedisi.org.tr/akaidun-nesefi"]
   ],
   "note:free-will:ghazali": [
     ["Stanford Encyclopedia of Philosophy: al-Ghazali", "https://plato.stanford.edu/entries/al-ghazali/"],
@@ -2015,6 +2045,10 @@ const SOURCES = {
   "note:hadith-criticism:shaykh-tusi": [
     ["Magiran: How Shaykh Ṭūsī Encountered the Discourse of Mufīd and Murtaḍā on the Validity of an Isolated Tradition", "https://www.magiran.com/paper/1805418/?lang=en"],
     ["American Journal of Islam and Society (PDF): Liyakat Takim on the evaluation of hadith transmitters in Shiʿi biographical works", "https://ajis.org/index.php/ajiss/article/download/428/2159/4888"]
+  ],
+  "note:heavens:omar-khayyam": [
+    ["Encyclopaedia Iranica: Khayyam, Omar xv. As Astronomer", "https://www.iranicaonline.org/articles/khayyam-omar/khayyam-omar-xv-as-astronomer/"],
+    ["Biographical Encyclopedia of Astronomers: Khayyām (PDF)", "https://islamsci.mcgill.ca/RASI/BEA/Khayyam_BEA.pdf"]
   ],
   "note:ijaz:fakhr-razi": [
     ["Journal of Critical Studies on the Quranic Exegesis (2024): Fakhr al-Dīn al-Rāzī and the Concept of Ṣarfa (PDF)", "https://www.ensani.ir/fa/article/download/592643"]
@@ -2028,21 +2062,76 @@ const SOURCES = {
     ["Encyclopaedia Iranica: Ejtehād", "https://www.iranicaonline.org/articles/ejtehad/", "Risalat al-ijtihad wa’l-akhbar"],
     ["Brill: Robert Gleave, Inevitable Doubt: Two Theories of Shīʿī Jurisprudence (PDF)", "https://brill.com/display/book/9789004491960/back-1.pdf", "probabilistic reasoning and the mujtahid’s authority"]
   ],
+  "note:ijtihad:ibn-qayyim": [
+    ["Oxford University Press: Abdul-Rahman Mustafa, On Taqlid: Ibn al Qayyim’s Critique of Authority in Islamic Law", "https://global.oup.com/academic/product/on-taqlid-9780199937516"],
+    ["TDV İslâm Ansiklopedisi: İ’lâmü’l-muvakkiîn", "https://islamansiklopedisi.org.tr/ilamul-muvakkiin"]
+  ],
+  "note:ijtihad:ibn-rushd": [
+    ["TDV İslâm Ansiklopedisi: Bidâyetü’l-müctehid", "https://islamansiklopedisi.org.tr/bidayetul-muctehid"],
+    ["Library of Congress: Bidāyat al-mujtahid", "https://www.loc.gov/item/74227920/"]
+  ],
+  "note:ijtihad:marjani": [
+    ["UvA-DARE: Michael Kemper, Imperial Russia as Dar al-Islam? (PDF)", "https://dare.uva.nl/document/2/167407"],
+    ["Islamology: Dinara Mardanova, Debates around Ibādah between Shihab ad-Din Marjani and his Opponents", "https://islamology.in/journal/article/view/153"]
+  ],
   "note:ijtihad:rida": [
     ["NYU Arabic Collections Online: Rashid Rida, Muḥāwarāt al-muṣliḥ wa’l-muqallid (Cairo, 1906–07)", "https://sites.dlib.nyu.edu/viewer/node/24960"]
+  ],
+  "note:philosophy:ibn-taymiyya": [
+    ["Stanford Encyclopedia of Philosophy: Ibn Taymiyya", "https://plato.stanford.edu/entries/ibn-taymiyya/"],
+    ["TDV İslâm Ansiklopedisi: İbn Teymiyye, Takıyyüddin", "https://islamansiklopedisi.org.tr/ibn-teymiyye-takiyyuddin"]
   ],
   "note:philosophy:kindi": [
     ["Stanford Encyclopedia of Philosophy: al-Kindi", "https://plato.stanford.edu/entries/al-kindi/"],
     ["Stanford Encyclopedia of Philosophy: Arabic and Islamic Metaphysics", "https://plato.stanford.edu/entries/arabic-islamic-metaphysics/", "creation ex nihilo"]
   ],
+  "note:philosophy:nasir-tusi": [
+    ["Routledge Encyclopedia of Philosophy: al-Razi, Fakhr al-Din (Theology and Philosophy)", "https://www.rep.routledge.com/articles/biographical/al-razi-fakhr-al-din-1149-1209/v-1/sections/theology-and-philosophy"],
+    ["TDV İslâm Ansiklopedisi: Tûsî, Nasîrüddin", "https://islamansiklopedisi.org.tr/tusi-nasiruddin"]
+  ],
+  "note:sama:ebussuud": [
+    ["TDV İslâm Ansiklopedisi: Devran", "https://islamansiklopedisi.org.tr/devran"],
+    ["TDV İslâm Ansiklopedisi: Ebüssuûd Efendi", "https://islamansiklopedisi.org.tr/ebussuud-efendi"]
+  ],
+  "note:sama:katib-celebi": [
+    ["TDV İslâm Ansiklopedisi: Mîzânü’l-hak", "https://islamansiklopedisi.org.tr/mizanul-hak"],
+    ["Bozok Üniversitesi İlahiyat Fakültesi Dergisi (2019): Tacetdin Bıyık on Katib Çelebi’s views on music in Mizan al-haqq", "https://dergipark.org.tr/tr/pub/bozifder/article/632827"],
+    ["Internet Archive: Katib Çelebi, The Balance of Truth (trans. G. L. Lewis, 1957)", "https://archive.org/details/balanceoftruth0000ktip"]
+  ],
+  "note:sama:kubra": [
+    ["Iran (Taylor & Francis, 2019): Eyad Abuali, Words Clothed in Light: Dhikr, Colour and Synaesthesia in Early Kubrawi Sufism", "https://www.tandfonline.com/doi/full/10.1080/05786967.2019.1583046"],
+    ["Journal of the Institute for Sufi Studies (DergiPark, 2024): Sepideh Afrashteh, Dhikr in Islamic Sufism: the Order of Kubrawiyya", "https://dergipark.org.tr/en/pub/taed/article/1455266"],
+    ["Encyclopaedia Iranica: Kobrawiya i. The Eponym", "https://www.iranicaonline.org/articles/kobrawiya-i-the-eponym/"]
+  ],
   "note:sama:qushayri": [
     ["Arabic Wikisource: Ibn Taymiyya, al-Istiqama, quoting al-Qushayri’s chapter on samaʿ", "https://ar.wikisource.org/wiki/%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%82%D8%A7%D9%85%D8%A9/6"],
     ["Ganjoor: Persian translation of al-Qushayri’s Risala, chapter 52, on samaʿ", "https://ganjoor.net/osmani/qushayriyya/bab452/sh49"]
+  ],
+  "note:sufism-law:aisha-bauniyya": [
+    ["NYU Press: The Principles of Sufism (trans. Th. Emil Homerin)", "https://nyupress.org/9781479864683/the-principles-of-sufism/"],
+    ["Mamluk Studies Review 7.1 (2003): Th. Emil Homerin, Living Love: The Mystical Writings of ʿĀʾishah al-Bāʿūnīyah", "https://knowledge.uchicago.edu/records/ec50p-6bg66"]
+  ],
+  "note:sufism-law:ibn-taymiyya": [
+    ["Islamic Law and Society 31 (Brill, 2024): Ibn Taymiyya and his Circle on samāʿ: a Means to Purify Sufism", "https://brill.com/view/journals/ils/31/1-2/article-p30_002.xml"],
+    ["TDV İslâm Ansiklopedisi: İbn Teymiyye, Takıyyüddin", "https://islamansiklopedisi.org.tr/ibn-teymiyye-takiyyuddin"]
+  ],
+  "note:tafsir:ebussuud": [
+    ["TDV İslâm Ansiklopedisi: İrşâdü’l-akli’s-selîm", "https://islamansiklopedisi.org.tr/irsadul-aklis-selim"],
+    ["Oxford Reference: Ebussuud Efendi (Biographical Encyclopaedia of Islamic Philosophy)", "https://oxfordreference.com/view/10.1093/oi/authority.20110810104817111"]
+  ],
+  "note:tafsir:maturidi": [
+    ["TDV İslâm Ansiklopedisi: Teʾvîlâtü’l-Kurʾân", "https://islamansiklopedisi.org.tr/tevilatul-kuran"],
+    ["TDV İslâm Ansiklopedisi: Mâtürîdî", "https://islamansiklopedisi.org.tr/maturidi"],
+    ["Cogent Arts & Humanities (Taylor & Francis, 2026): Maturidi school’s scientific and polemical methodology", "https://www.tandfonline.com/doi/full/10.1080/23311983.2026.2646779"]
   ],
   "note:tafsir:qushayri": [
     ["TDV İslâm Ansiklopedisi: Kuşeyrî, Abdülkerîm b. Hevâzin", "https://islamansiklopedisi.org.tr/kuseyri-abdulkerim-b-hevazin"],
     ["TDV İslâm Ansiklopedisi: İşârî Tefsir", "https://islamansiklopedisi.org.tr/isari-tefsir"],
     ["Oxford University Press: Martin Nguyen, Sufi Master and Qur’an Scholar (Abū’l-Qāsim al-Qushayrī and the Laṭāʾif al-ishārāt)", "https://global.oup.com/academic/product/sufi-master-and-quran-scholar-9780197265130"]
+  ],
+  "note:tafsir:sayyid-ahmad-khan": [
+    ["Modern Asian Studies (Cambridge, 2024): The theological foundations of Muslim modernism and traditionalism in South Asia", "https://www.cambridge.org/core/journals/modern-asian-studies/article/theological-foundations-of-muslim-modernism-and-traditionalism-in-south-asia/CF73849C02B3C3C5B8C4142B48BC21C8"],
+    ["Cambridge University Press: Naicari Nature: Sir Sayyid Ahmad Khan and the Reconciliation of Science, Technology and Religion (PDF)", "https://resolve.cambridge.org/core/services/aop-cambridge-core/content/view/CCAB5EB1FD5A473BC831D93E6D9BF0D6/9781108594196c4_p69-86_CBO.pdf/naicari_nature_sir_sayyid_ahmad_khan_and_the_reconciliation_of_science_technology_and_religion.pdf"]
   ],
   "thread:caliphate-modern:1922": [
     ["Yale University Press: The Caliphate or Supreme Imamate", "https://yalebooks.yale.edu/book/9780300190274/the-caliphate-or-supreme-imamate/"]
@@ -2085,11 +2174,12 @@ const SOURCES = {
     ["Core (thesis): The Epistemological Foundation of Knowing God", "https://files.core.ac.uk/download/429701525.pdf", "dating al-Mughni to about 970–990"]
   ],
   "thread:hadith-criticism:1438": [
-    ["Islam Museum: Completion of Fath al-Bari, 842/1438", "https://www.islam.museum/en/event/fath-al-bari-complete-842/"]
+    ["TDV İslâm Ansiklopedisi: Fethu’l-Bârî", "https://islamansiklopedisi.org.tr/fethul-bari"],
+    ["Oxford Reference: Ahmad ibn Hajar al-Asqalani", "https://www.oxfordreference.com/view/10.1093/oi/authority.20110803095429356"]
   ],
   "thread:hadith-criticism:745": [
-    ["Akram Nadwi: The Status of Muhammad ibn Ishaq, Authority in Maghazi", "https://akramnadwi.com/?p=3561"],
-    ["Britannica: Ibn Isḥāq", "https://www.britannica.com/biography/Ibn-Ishaq"]
+    ["Britannica: Ibn Isḥāq", "https://www.britannica.com/biography/Ibn-Ishaq"],
+    ["TDV İslâm Ansiklopedisi: İbn İshak", "https://islamansiklopedisi.org.tr/ibn-ishak", "Malik’s criticism of Ibn Ishaq"]
   ],
   "thread:hadith-criticism:846": [
     ["Britannica: al-Bukhārī", "https://www.britannica.com/biography/al-Bukhari"],
@@ -2098,6 +2188,10 @@ const SOURCES = {
   ],
   "thread:heavens:1031": [
     ["Encyclopaedia Iranica: Bīrūnī, Abū Rayḥān i. Life", "https://www.iranicaonline.org/articles/biruni-abu-rayhan-index/biruni-abu-rayhan-i-life/", "al-Qanun al-Mas’udi still listed as unfinished in 427 AH (1036 CE)"]
+  ],
+  "thread:heavens:1079": [
+    ["Encyclopaedia Iranica: Khayyam, Omar xv. As Astronomer", "https://www.iranicaonline.org/articles/khayyam-omar/khayyam-omar-xv-as-astronomer/"],
+    ["Biographical Encyclopedia of Astronomers: Khayyām (PDF)", "https://islamsci.mcgill.ca/RASI/BEA/Khayyam_BEA.pdf"]
   ],
   "thread:heavens:1437": [
     ["University of Michigan: Early Astronomy, Ulugh Beg", "https://early-astronomy.web.itd.umich.edu/islamic_ulugh-beg.php", "star catalogue dated early 841 AH (1437 CE)"],
@@ -2124,6 +2218,10 @@ const SOURCES = {
     ["Encyclopaedia Iranica: Aḵbārīya", "https://www.iranicaonline.org/articles/akbariya/"],
     ["Oxford Academic: Liyakat Takim, Usul al-Fiqh and Ijtihad in Shi’ism (2021)", "https://academic.oup.com/book/41130/chapter/350641282"]
   ],
+  "thread:ijtihad:1870": [
+    ["UvA-DARE: Michael Kemper, Imperial Russia as Dar al-Islam? (PDF)", "https://dare.uva.nl/document/2/167407"],
+    ["Islamology: Dinara Mardanova, Debates around Ibādah between Shihab ad-Din Marjani and his Opponents", "https://islamology.in/journal/article/view/153"]
+  ],
   "thread:imamate:632": [
     ["Britannica: Abū Bakr", "https://www.britannica.com/biography/Abu-Bakr"]
   ],
@@ -2138,6 +2236,9 @@ const SOURCES = {
   ],
   "thread:maqasid:1946": [
     ["TDV İslâm Ansiklopedisi: Makāsıdü’ş-şerîa", "https://islamansiklopedisi.org.tr/makasidus-seria"]
+  ],
+  "thread:philosophy:1315": [
+    ["Stanford Encyclopedia of Philosophy: Ibn Taymiyya", "https://plato.stanford.edu/entries/ibn-taymiyya/"]
   ],
   "thread:philosophy:1377": [
     ["Britannica: Ibn Khaldūn, the Muqaddimah", "https://www.britannica.com/biography/Ibn-Khaldun/The-Muqaddimah-Ibn-Khalduns-philosophy-of-history"],
@@ -2185,7 +2286,8 @@ const SOURCES = {
     ["Journal of Oriental Studies (2026): Ibn al-Jawzī’s Critique of Sufi Dhikr, Samāʿ and Ritual Chanting in Talbīs Iblīs (PDF)", "https://journals.ysu.am/j-orient-stud/article/download/vol29_no1_2026_44/pdf/37134"]
   ],
   "thread:sama:1250": [
-    ["EBSCO Research Starters: Sufi Order Mawlawiyah", "https://ebsco.com/research-starters/history/sufi-order-mawlawiyah", "Rumi beginning the ritual"]
+    ["Britannica: Mawlawīyah", "https://www.britannica.com/topic/Mawlawiyah", "Rumi and the turning ritual"],
+    ["Britannica: Rūmī", "https://www.britannica.com/biography/Rumi"]
   ],
   "thread:sama:1290": [
     ["Britannica: Rūmī, death and legacy", "https://britannica.com/biography/Rumi/Death-and-legacy"]
@@ -2196,9 +2298,22 @@ const SOURCES = {
   "thread:sama:1380": [
     ["Shahzad Bashir: Movement and Stillness, the Practice of Sufi Dhikr in Fourteenth-Century Central Asia (PDF)", "https://www.themathesontrust.org/papers/islam/Bashir-Movement_and_Stillness_Sufi_Dhikr.pdf"]
   ],
+  "thread:sama:1550": [
+    ["TDV İslâm Ansiklopedisi: Devran", "https://islamansiklopedisi.org.tr/devran"],
+    ["TDV İslâm Ansiklopedisi: Ebüssuûd Efendi", "https://islamansiklopedisi.org.tr/ebussuud-efendi"]
+  ],
+  "thread:sama:1656": [
+    ["TDV İslâm Ansiklopedisi: Mîzânü’l-hak", "https://islamansiklopedisi.org.tr/mizanul-hak"],
+    ["Bozok Üniversitesi İlahiyat Fakültesi Dergisi (2019): Tacetdin Bıyık on Katib Çelebi’s views on music in Mizan al-haqq", "https://dergipark.org.tr/tr/pub/bozifder/article/632827"],
+    ["Internet Archive: Katib Çelebi, The Balance of Truth (trans. G. L. Lewis, 1957)", "https://archive.org/details/balanceoftruth0000ktip"]
+  ],
   "thread:sufism-law:1127": [
     ["Encyclopedia of the Modern Middle East: Qadiriyya Order", "https://encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/qadiriyya-order"],
     ["Britannica: ʿAbd al-Qādir al-Jīlānī", "https://www.britannica.com/biography/Abd-al-Qadir-al-Jilani", "first preaching in 1127"]
+  ],
+  "thread:sufism-law:1310": [
+    ["Islamic Law and Society 31 (Brill, 2024): Ibn Taymiyya and his Circle on samāʿ: a Means to Purify Sufism", "https://brill.com/view/journals/ils/31/1-2/article-p30_002.xml"],
+    ["TDV İslâm Ansiklopedisi: İbn Teymiyye, Takıyyüddin", "https://islamansiklopedisi.org.tr/ibn-teymiyye-takiyyuddin"]
   ],
   "thread:tafsir:1043": [
     ["TDV İslâm Ansiklopedisi: Kuşeyrî, Abdülkerîm b. Hevâzin", "https://islamansiklopedisi.org.tr/kuseyri-abdulkerim-b-hevazin", "beginning Lata’if al-isharat in 434 AH (1042–1043 CE)"],
@@ -2210,9 +2325,17 @@ const SOURCES = {
   "thread:tafsir:1466": [
     ["TDV İslâm Ansiklopedisi: Tefsîrü’l-Celâleyn", "https://islamansiklopedisi.org.tr/tefsirul-celaleyn", "completion in 870 AH (1466 CE)"]
   ],
-  "thread:tafsir:1960": [
-    ["Tafsir Al-Qur’an (Indonesian): Mengenal Tafsir at-Tahrir wa at-Tanwir", "https://tafsiralquran.id/mengenal-tafsir-at-tahrir-wa-at-tanwir-karya-%e1%b9%adahir-ibn-ashur/", "the years 1341–1380 AH, citing al-Hamid"],
-    ["TDV İslâm Ansiklopedisi: et-Tahrîr ve’t-Tenvîr", "https://islamansiklopedisi.org.tr/et-tahrir-vet-tenvir", "the first complete printing in 1984"]
+  "thread:tafsir:1566": [
+    ["TDV İslâm Ansiklopedisi: İrşâdü’l-akli’s-selîm", "https://islamansiklopedisi.org.tr/irsadul-aklis-selim"],
+    ["TDV İslâm Ansiklopedisi: Ebüssuûd Efendi", "https://islamansiklopedisi.org.tr/ebussuud-efendi", "completed c. 973 AH / 1566 CE"]
+  ],
+  "thread:tafsir:1892": [
+    ["Modern Asian Studies (Cambridge, 2024): The theological foundations of Muslim modernism and traditionalism in South Asia", "https://www.cambridge.org/core/journals/modern-asian-studies/article/theological-foundations-of-muslim-modernism-and-traditionalism-in-south-asia/CF73849C02B3C3C5B8C4142B48BC21C8"],
+    ["Cambridge University Press: Naicari Nature: Sir Sayyid Ahmad Khan and the Reconciliation of Science, Technology and Religion (PDF)", "https://resolve.cambridge.org/core/services/aop-cambridge-core/content/view/CCAB5EB1FD5A473BC831D93E6D9BF0D6/9781108594196c4_p69-86_CBO.pdf/naicari_nature_sir_sayyid_ahmad_khan_and_the_reconciliation_of_science_technology_and_religion.pdf"]
+  ],
+  "thread:tafsir:1956": [
+    ["TDV İslâm Ansiklopedisi: et-Tahrîr ve’t-Tenvîr", "https://islamansiklopedisi.org.tr/et-tahrir-vet-tenvir", "first volume printed in Tunis in 1956 and complete printing in 1984"],
+    ["Journal of Qur’anic Studies (Edinburgh University Press, 2019): Tropology and Inimitability: Ibn ʿĀshūr’s Theory of tafsīr", "https://www.euppublishing.com/doi/abs/10.3366/jqs.2019.0368"]
   ],
   "thread:tafsir:1972": [
     ["Encyclopaedia Iranica: Ṭabāṭabāʾi, Moḥammad-Ḥosayn", "https://www.iranicaonline.org/articles/tabatabai-mohammad-hosayn/", "its writing between 1955 and 1972"]

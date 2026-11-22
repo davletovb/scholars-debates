@@ -123,7 +123,7 @@ const PLACES = {
   cambridge: ["Cambridge", 52.20, 0.12, "west"],
   munich: ["Munich", 48.14, 11.58, "west"],
   oxford: ["Oxford", 51.75, -1.26, "west"],
-  kostroma: ["Kostroma", 57.77, 40.93, "west"],
+  kostroma: ["Kostroma", 57.77, 40.93, "volga"],
   chicago: ["Chicago", 41.88, -87.63, "west"]
 };
 

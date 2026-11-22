@@ -21,16 +21,19 @@ const SOURCES = {
     ["Library of Congress: al-Razi, The Comprehensive Book on Medicine, part 2 (World Digital Library)", "https://www.loc.gov/resource/gdcwdl.wdl_07458/?st=gallery"],
     ["Cambridge: Al-Rāzī (Religion, Learning and Science in the ʿAbbasid Period)", "https://www.cambridge.org/core/books/abs/religion-learning-and-science-in-the-abbasid-period/alrazi/762B6225FF0F3508D6B7CD7CB494218C"],
     ["Stanford Encyclopedia of Philosophy: Abu Bakr al-Razi", "https://plato.stanford.edu/entries/abu-bakr-al-razi/"],
-    ["Encyclopaedia Iranica: al-Ḥāwi", "https://www.iranicaonline.org/articles/hawi-medical-book/", "al-Hawi"]
+    ["Encyclopaedia Iranica: al-Ḥāwi", "https://www.iranicaonline.org/articles/hawi-medical-book/", "al-Hawi"],
+    ["Britannica: al-Rāzī", "https://www.britannica.com/biography/al-Razi", "birth c. 854 and death c. 925 or 935"],
+    ["TDV İslâm Ansiklopedisi: Râzî, Ebû Bekir", "https://islamansiklopedisi.org.tr/razi-ebu-bekir", "death in 313 AH (925 CE)"]
   ],
   "abu-dawud": [
     ["Britannica: Abū Dāʾūd", "https://www.britannica.com/biography/Abu-Daud"],
-    ["Islam Museum: Abu Dawud al-Sijistani", "https://www.islam.museum/en/person/abu-dawud-al-sijistani/"],
-    ["TDV İslâm Ansiklopedisi: Ebû Dâvûd es-Sicistânî", "https://islamansiklopedisi.org.tr/ebu-davud-es-sicistani"]
+    ["TDV İslâm Ansiklopedisi: Ebû Dâvûd es-Sicistânî", "https://islamansiklopedisi.org.tr/ebu-davud-es-sicistani"],
+    ["TDV İslâm Ansiklopedisi: es-Sünen (Ebû Dâvûd)", "https://islamansiklopedisi.org.tr/es-sunen--ebu-davud", "al-Sunan"]
   ],
   "abu-hafs-nasafi": [
-    ["nasafi.org: al-ʿAqīda al-nasafiyya and its author", "https://nasafi.org/"],
-    ["TDV İslâm Ansiklopedisi: Nesefî, Necmeddin", "https://islamansiklopedisi.org.tr/nesefi-necmeddin"]
+    ["Internet Archive: E. E. Elder, A Commentary on the Creed of Islam (Columbia University Press, 1950)", "https://archive.org/details/commentaryonthec030491mbp", "al-Aqa’id and al-Taftazani’s commentary"],
+    ["TDV İslâm Ansiklopedisi: Nesefî, Necmeddin", "https://islamansiklopedisi.org.tr/nesefi-necmeddin"],
+    ["TDV İslâm Ansiklopedisi: Akāidü’n-Nesefî", "https://islamansiklopedisi.org.tr/akaidun-nesefi", "al-Aqa’id"]
   ],
   "abu-hanifa": [
     ["Encyclopaedia Iranica: Abū Ḥanīfa", "https://www.iranicaonline.org/articles/abu-hanifa-noman-b/"],
@@ -43,7 +46,7 @@ const SOURCES = {
   ],
   "aisha": [
     ["Britannica: ʿĀʾishah", "https://www.britannica.com/biography/Aishah"],
-    ["Islam Museum: Battle of the Camel", "https://islam.museum/en/event/battle-of-the-camel/"],
+    ["Britannica: Battle of the Camel", "https://www.britannica.com/topic/Battle-of-the-Camel", "Battle of the Camel"],
     ["TDV İslâm Ansiklopedisi: Âişe", "https://islamansiklopedisi.org.tr/aise"]
   ],
   "aisha-bauniyya": [
@@ -93,11 +96,12 @@ const SOURCES = {
   ],
   "dan-fodio": [
     ["Britannica: Usman dan Fodio", "https://www.britannica.com/biography/Usman-dan-Fodio"],
-    ["Islam Museum: Usman dan Fodio", "https://www.islam.museum/en/person/usman-dan-fodio/"]
+    ["Oxford Reference: Sokoto Caliphate (Oxford Encyclopedia of African Thought)", "https://www.oxfordreference.com/viewbydoi/10.1093/acref/9780191828836.013.0309"]
   ],
   "ebussuud": [
     ["Oxford Reference: Ebussuud Efendi (Biographical Encyclopaedia of Islamic Philosophy)", "https://oxfordreference.com/view/10.1093/oi/authority.20110810104817111"],
-    ["TDV İslâm Ansiklopedisi: Ebüssuûd Efendi", "https://islamansiklopedisi.org.tr/ebussuud-efendi"]
+    ["TDV İslâm Ansiklopedisi: Ebüssuûd Efendi", "https://islamansiklopedisi.org.tr/ebussuud-efendi"],
+    ["TDV İslâm Ansiklopedisi: İrşâdü’l-akli’s-selîm", "https://islamansiklopedisi.org.tr/irsadul-aklis-selim", "Irshad al-aql al-salim"]
   ],
   "fakhr-razi": [
     ["University of Edinburgh Research Explorer: Fakhr al-Din al-Razi", "https://www.research.ed.ac.uk/en/publications/fakhr-al-din-al-razi/"],
@@ -151,12 +155,12 @@ const SOURCES = {
     ["IIIT: Ibn Ashur, Treatise on Maqasid al-Shariah, with a biographical introduction (sample PDF)", "https://iiit.org/wp-content/uploads/Ibn-Ashur-Treatise-on-Maqasid-Al-Shariah-Sample.pdf"],
     ["TDV İslâm Ansiklopedisi: İbn Âşûr, Muhammed Tâhir", "https://islamansiklopedisi.org.tr/ibn-asur-muhammed-tahir--1973"],
     ["TDV İslâm Ansiklopedisi: et-Tahrîr ve’t-Tenvîr", "https://islamansiklopedisi.org.tr/et-tahrir-vet-tenvir"],
-    ["Tafsir Al-Qur’an (Indonesian): Mengenal Tafsir at-Tahrir wa at-Tanwir", "https://tafsiralquran.id/mengenal-tafsir-at-tahrir-wa-at-tanwir-karya-%e1%b9%adahir-ibn-ashur/", "the years 1341–1380 AH, citing al-Hamid"]
+    ["Journal of Qur’anic Studies (Edinburgh University Press, 2019): Tropology and Inimitability: Ibn ʿĀshūr’s Theory of tafsīr", "https://www.euppublishing.com/doi/abs/10.3366/jqs.2019.0368", "al-Tahrir wa’l-tanwir"]
   ],
   "ibn-hajar": [
     ["Oxford Reference: Ahmad ibn Hajar al-Asqalani", "https://www.oxfordreference.com/view/10.1093/oi/authority.20110803095429356"],
-    ["Islam Museum: Completion of Fath al-Bari, 842/1438", "https://www.islam.museum/en/event/fath-al-bari-complete-842/"],
-    ["TDV İslâm Ansiklopedisi: İbn Hacer el-Askalânî", "https://islamansiklopedisi.org.tr/ibn-hacer-el-askalani"]
+    ["TDV İslâm Ansiklopedisi: İbn Hacer el-Askalânî", "https://islamansiklopedisi.org.tr/ibn-hacer-el-askalani"],
+    ["TDV İslâm Ansiklopedisi: Fethu’l-Bârî", "https://islamansiklopedisi.org.tr/fethul-bari", "Fath al-Bari"]
   ],
   "ibn-hanbal": [
     ["Britannica: Aḥmad ibn Ḥanbal", "https://www.britannica.com/biography/Ahmad-ibn-Hanbal"],
@@ -265,6 +269,7 @@ const SOURCES = {
     ["Oxford Academic: The rise of falsafa: al-Kindī, On First Philosophy", "https://academic.oup.com/edited-volume/38657/chapter-abstract/335767408", "Fi’l-falsafa al-ula"]
   ],
   "kubra": [
+    ["Encyclopaedia Iranica: Kobrawiya i. The Eponym", "https://www.iranicaonline.org/articles/kobrawiya-i-the-eponym/", "life and works"],
     ["TDV İslâm Ansiklopedisi: Necmeddîn-i Kübrâ", "https://islamansiklopedisi.org.tr/necmeddin-i-kubra"],
     ["Encyclopaedia Iranica: Khwarazmshahs iii", "https://www.iranicaonline.org/articles/khwarazmshah/iii-the-line-of-anustigin/", "Gurganj, 1221"],
     ["UNESCO World Heritage nomination: Kunya-Urgench", "https://whc.unesco.org/uploads/nominations/1199.pdf", "the fall of Gurganj"]
@@ -275,7 +280,7 @@ const SOURCES = {
   ],
   "malik": [
     ["Britannica: Mālik ibn Anas", "https://www.britannica.com/biography/Malik-ibn-Anas"],
-    ["Islam Museum: Muwaṭṭaʾ 952 (Malik transmits from Jaʿfar)", "https://www.islam.museum/en/passage/muwatta-6-952/", "the link with Jaʿfar al-Sadiq"],
+    ["TDV İslâm Ansiklopedisi: Ca’fer es-Sâdık", "https://islamansiklopedisi.org.tr/cafer-es-sadik", "the link with Jaʿfar al-Sadiq"],
     ["Routledge: Yasin Dutton, The Origins of Islamic Law (preview)", "https://api.pageplace.de/preview/DT0400.9781136110665_A23827084/preview-9781136110665_A23827084.pdf", "the birth year"]
   ],
   "marghinani": [
@@ -284,7 +289,8 @@ const SOURCES = {
   ],
   "marjani": [
     ["Minbar. Islamic Studies 13 (2020): The works of Shihab al-Din al-Marjani on Islamic scholastic theology", "https://doi.org/10.31162/2618-9569-2020-13-1-103-116"],
-    ["TDV İslâm Ansiklopedisi: Mercânî", "https://islamansiklopedisi.org.tr/mercani"]
+    ["TDV İslâm Ansiklopedisi: Mercânî", "https://islamansiklopedisi.org.tr/mercani"],
+    ["UvA-DARE: Michael Kemper, Imperial Russia as Dar al-Islam? (PDF)", "https://dare.uva.nl/document/2/167407", "Nazurat al-haqq"]
   ],
   "maturidi": [
     ["Britannica: Māturīdiyyah", "https://www.britannica.com/topic/Maturidiyah"],
@@ -311,7 +317,8 @@ const SOURCES = {
   "nana-asmau": [
     ["African Studies Centre Leiden: Nana Asmaʾu", "https://www.ascleiden.nl/content/library-weekly/nana-asmau"],
     ["Oxford Academic: Asmaʾu, Nana", "https://academic.oup.com/edited-volume/61663/chapter-abstract/553437989"],
-    ["Revue de la FM6OA: The life and contribution of Nana Asmaʾu", "https://www.fm6oa.org/revue/article/the-life-and-contribution-of-nana-asmau/"]
+    ["Revue de la FM6OA: The life and contribution of Nana Asmaʾu", "https://www.fm6oa.org/revue/article/the-life-and-contribution-of-nana-asmau/"],
+    ["Cambridge Companion to Sufism (ch. 8): Nana Asma’u, Nineteenth-Century West African Sufi", "https://www.cambridge.org/core/books/cambridge-companion-to-sufism/nana-asmau-nineteenthcentury-west-african-sufi1/C257E81964C37834C93FE9A7E03C638D", "education in Usman dan Fodio’s circle and Sufi works"]
   ],
   "naqshband": [
     ["Encyclopaedia Iranica: Bahāʾ-al-Dīn Naqšband", "https://www.iranicaonline.org/articles/baha-al-din-naqsband-kaja-mohammad-b/"],
@@ -323,8 +330,8 @@ const SOURCES = {
     ["Brill: al-Tadhkira fī ʿilm al-hayʾa", "https://www.degruyterbrill.com/document/isbn/9789004406476/html", "al-Tadhkira fi ilm al-hay’a"]
   ],
   "nawawi": [
-    ["Islam Museum: Imam al-Nawawi", "https://www.islam.museum/en/person/al-nawawi/"],
     ["TDV İslâm Ansiklopedisi: Nevevî", "https://islamansiklopedisi.org.tr/nevevi"],
+    ["TDV İslâm Ansiklopedisi: Minhâcü’t-tâlibîn", "https://islamansiklopedisi.org.tr/minhacut-talibin", "Minhaj al-talibin"],
     ["Britannica: Hadith", "https://www.britannica.com/topic/Hadith", "Riyad al-salihin"]
   ],
   "nazzam": [
@@ -370,7 +377,8 @@ const SOURCES = {
   "sayyid-ahmad-khan": [
     ["Britannica: Sir Sayyid Ahmad Khan", "https://www.britannica.com/biography/Sayyid-Ahmad-Khan"],
     ["TDV İslâm Ansiklopedisi: Ahmed Han, Seyyid", "https://islamansiklopedisi.org.tr/ahmed-han-seyyid", "death on 27 March 1898 (4 Dhu al-Qa’da 1315 AH)"],
-    ["Aligarh Muslim University: History", "https://www.amu.ac.in/about-us/history", "the 1875 school and the 1877 college"]
+    ["Aligarh Muslim University: History", "https://www.amu.ac.in/about-us/history", "the 1875 school and the 1877 college"],
+    ["Brill: Sir Sayyid Ahmad Khan, Asbab-i baghawat-i Hind and Tahdhib al-akhlaq", "https://brill.com/display/book/9789004472402/BP000012.xml", "his reform writings"]
   ],
   "shafii": [
     ["Britannica: Shāfiʿī (school of law)", "https://www.britannica.com/topic/Shafiiyah"],
@@ -492,7 +500,8 @@ const SOURCES = {
   "debate:hadith-criticism": [
     ["Britannica: ʿilm al-ḥadīth", "https://www.britannica.com/topic/ilm-al-hadith"],
     ["Britannica: isnād", "https://www.britannica.com/topic/isnad"],
-    ["Islam Museum: Abu Dawud al-Sijistani", "https://www.islam.museum/en/person/abu-dawud-al-sijistani/"]
+    ["Britannica: Abū Dāʾūd", "https://www.britannica.com/biography/Abu-Daud", "Abu Dawud’s Sunan"],
+    ["TDV İslâm Ansiklopedisi: es-Sünen (Ebû Dâvûd)", "https://islamansiklopedisi.org.tr/es-sunen--ebu-davud"]
   ],
   "debate:heavens": [
     ["Stanford Encyclopedia of Philosophy: Arabic and Islamic natural philosophy and natural science", "https://plato.stanford.edu/entries/arabic-islamic-natural/"]
@@ -522,7 +531,8 @@ const SOURCES = {
   "debate:philosophy": [
     ["Stanford Encyclopedia of Philosophy: Arabic and Islamic philosophy of religion", "https://plato.stanford.edu/entries/arabic-islamic-religion/"],
     ["Stanford Encyclopedia of Philosophy: al-Ghazali", "https://plato.stanford.edu/entries/al-ghazali/"],
-    ["Stanford Encyclopedia of Philosophy: Ibn Rushd", "https://plato.stanford.edu/entries/ibn-rushd/"]
+    ["Stanford Encyclopedia of Philosophy: Ibn Rushd", "https://plato.stanford.edu/entries/ibn-rushd/"],
+    ["Stanford Encyclopedia of Philosophy: Ibn Taymiyya", "https://plato.stanford.edu/entries/ibn-taymiyya/", "Ibn Taymiyya on logic, reason and revelation"]
   ],
   "debate:reason-law": [
     ["Britannica: qiyas", "https://www.britannica.com/topic/qiyas"],
@@ -545,7 +555,8 @@ const SOURCES = {
     ["Britannica: samāʿ", "https://www.britannica.com/topic/sama-Sufi-religious-practice"],
     ["Institute of Ismaili Studies: Leonard Lewisohn, The Sacred Music of Islam, Samaʿ in the Persian Sufi Tradition (PDF)", "https://iis.ac.uk/wp-content/uploads/2024/10/the-sacred-music-of-islam_pdf-366408512.pdf"],
     ["Shahzad Bashir: Movement and Stillness, the Practice of Sufi Dhikr in Fourteenth-Century Central Asia (PDF)", "https://www.themathesontrust.org/papers/islam/Bashir-Movement_and_Stillness_Sufi_Dhikr.pdf"],
-    ["Religions (2023): pre-modern Muslim treatments of listening to music (samāʿ)", "https://www2.mdpi.com/2077-1444/14/6/780"]
+    ["Religions (2023): pre-modern Muslim treatments of listening to music (samāʿ)", "https://www2.mdpi.com/2077-1444/14/6/780"],
+    ["TDV İslâm Ansiklopedisi: Devran", "https://islamansiklopedisi.org.tr/devran", "Ottoman disputes over whirling dhikr"]
   ],
   "debate:sufism-law": [
     ["Britannica: Sufism: history", "https://www.britannica.com/topic/Sufism/History"],
@@ -607,7 +618,7 @@ const SOURCES = {
   "event:fitna": [
     ["Britannica: Khārijite", "https://www.britannica.com/topic/Kharijite"],
     ["Britannica: ʿAlī", "https://www.britannica.com/biography/Ali-Muslim-caliph"],
-    ["Islam Museum: Battle of the Camel", "https://islam.museum/en/event/battle-of-the-camel/"],
+    ["Britannica: Battle of the Camel", "https://www.britannica.com/topic/Battle-of-the-Camel", "Battle of the Camel"],
     ["Stefan Heidemann, Raqqa II (2003): Die Geschichte von ar-Raqqa/ar-Rafiqa (PDF)", "https://www.aai.uni-hamburg.de/voror/personen/heidemann/medien/heidemann-raqqa-ii-2003-geschichte-von-al-raqqa.pdf", "the site of Siffin"]
   ],
   "event:granada": [
@@ -652,7 +663,6 @@ const SOURCES = {
   ],
   "event:revelation": [
     ["Britannica: Muhammad", "https://www.britannica.com/biography/Muhammad"],
-    ["Islam Museum: The first revelation", "https://www.islam.museum/en/event/first-revelation/"],
     ["TDV İslâm Ansiklopedisi: Muhammed", "https://islamansiklopedisi.org.tr/muhammed"]
   ],
   "event:safavids": [
@@ -705,32 +715,38 @@ const SOURCES = {
   ],
   "note:created-quran:jahiz": [
     ["Encyclopaedia Iranica: Jāḥeẓ", "https://www.iranicaonline.org/articles/jahez/"],
-    ["al-Majalla (Arabic): the createdness-of-the-Qur’an ordeal as told by al-Jahiz", "https://www.majalla.com/node/295361"]
+    ["TDV İslâm Ansiklopedisi: Câhiz", "https://islamansiklopedisi.org.tr/cahiz"],
+    ["TDV İslâm Ansiklopedisi: Halku’l-Kur’ân", "https://islamansiklopedisi.org.tr/halkul-kuran"]
   ],
   "note:created-quran:maturidi": [
-    ["nasafi.org: al-ʿAqīda al-Nasafiyya, paragraph 14 with commentary", "https://nasafi.org/paragraph-014/"],
-    ["DergiPark (PDF): Harun Kılıçaslan, The Transmission of the Divine Speech to the Prophet according to the Māturīdīs (2025)", "https://dergipark.org.tr/tr/download/article-file/5223695"]
+    ["DergiPark (PDF): Harun Kılıçaslan, The Transmission of the Divine Speech to the Prophet according to the Māturīdīs (2025)", "https://dergipark.org.tr/tr/download/article-file/5223695"],
+    ["TDV İslâm Ansiklopedisi: Akāidü’n-Nesefî", "https://islamansiklopedisi.org.tr/akaidun-nesefi"],
+    ["TDV İslâm Ansiklopedisi: Halku’l-Kur’ân", "https://islamansiklopedisi.org.tr/halkul-kuran"]
   ],
   "note:created-quran:tahawi": [
     ["TDV İslâm Ansiklopedisi: el-Akîdetü’t-Tahâviyye", "https://islamansiklopedisi.org.tr/el-akidetut-tahaviyye"],
-    ["Masud.co.uk: al-Tahawi’s creed in English", "https://masud.co.uk/?p=719"]
+    ["TDV İslâm Ansiklopedisi: Halku’l-Kur’ân", "https://islamansiklopedisi.org.tr/halkul-kuran"],
+    ["Internet Archive: al-Tahawi, al-Aqida al-Tahawiyya (Arabic text and English translation)", "https://archive.org/details/al-aqida-al-tahawiyya-by-imam-abu-jafar-ahmed-ibn-muhammad-ibn-salama-al-azdi-al"]
   ],
   "note:faith:abd-al-jabbar": [
     ["DergiPark (PDF): Selim Gülverdi, Kādî Abdülcebbâr ve Ebü’l-Muîn en-Nesefî’nin büyük günah hakkındaki görüşleri (2021)", "https://dergipark.org.tr/en/download/article-file/1527456"]
   ],
   "note:faith:ashari": [
-    ["Sacred Texts: D. B. Macdonald, Development of Muslim Theology (1903), al-Ashʿarī’s creed", "https://sacred-texts.com/isl/dmt/dmt20.htm"],
-    ["DOAJ: Baghbanzade, Abu-l-Hassan al-Ashʿarī on Faith", "https://doaj.org/article/263a1a8049644584a2dd21b27d5e2ee2"]
+    ["DOAJ: Baghbanzade, Abu-l-Hassan al-Ashʿarī on Faith", "https://doaj.org/article/263a1a8049644584a2dd21b27d5e2ee2"],
+    ["Encyclopaedia Iranica: Ašʿarī, Abu’l-Ḥasan", "https://www.iranicaonline.org/articles/asari-abul-hasan-ali-b/"],
+    ["TDV İslâm Ansiklopedisi: Eş’arî, Ebü’l-Hasan", "https://islamansiklopedisi.org.tr/esari-ebul-hasan"]
   ],
   "note:faith:ibn-hanbal": [
     ["Oxford University Research Archive: Christopher Melchert, Early Ḥanbalī Creeds (translation, PDF)", "https://ora.ox.ac.uk/objects/uuid:3f641916-8c75-4114-8e90-db25de3fa7be/files/m0192642159d0745d1d6a247c249d9a88"]
   ],
   "note:faith:maturidi": [
     ["Encyclopedia of Religion: Māturīdī, al-", "https://www.encyclopedia.com/environment/encyclopedias-almanacs-transcripts-and-maps/maturidi-al"],
-    ["al-islam.org: A History of Muslim Philosophy (ed. M. M. Sharif), chapter on Tahawism by A. K. M. Ayyub Ali", "https://al-islam.org/id/node/39527"]
+    ["TDV İslâm Ansiklopedisi: Mâtürîdî", "https://islamansiklopedisi.org.tr/maturidi"],
+    ["Brill: “You Must Know Your Faith in Detail” (Hanafi–Maturidi theology)", "https://brill.com/display/book/9789004440296/BP000005.xml"]
   ],
   "note:free-will:abu-hafs-nasafi": [
-    ["nasafi.org: al-ʿAqīda al-Nasafiyya, paragraph 20", "https://nasafi.org/?p=262"]
+    ["Internet Archive: E. E. Elder, A Commentary on the Creed of Islam (Columbia University Press, 1950)", "https://archive.org/details/commentaryonthec030491mbp"],
+    ["TDV İslâm Ansiklopedisi: Akāidü’n-Nesefî", "https://islamansiklopedisi.org.tr/akaidun-nesefi"]
   ],
   "note:free-will:ghazali": [
     ["Stanford Encyclopedia of Philosophy: al-Ghazali", "https://plato.stanford.edu/entries/al-ghazali/"],
@@ -742,6 +758,10 @@ const SOURCES = {
   "note:hadith-criticism:shaykh-tusi": [
     ["Magiran: How Shaykh Ṭūsī Encountered the Discourse of Mufīd and Murtaḍā on the Validity of an Isolated Tradition", "https://www.magiran.com/paper/1805418/?lang=en"],
     ["American Journal of Islam and Society (PDF): Liyakat Takim on the evaluation of hadith transmitters in Shiʿi biographical works", "https://ajis.org/index.php/ajiss/article/download/428/2159/4888"]
+  ],
+  "note:heavens:omar-khayyam": [
+    ["Encyclopaedia Iranica: Khayyam, Omar xv. As Astronomer", "https://www.iranicaonline.org/articles/khayyam-omar/khayyam-omar-xv-as-astronomer/"],
+    ["Biographical Encyclopedia of Astronomers: Khayyām (PDF)", "https://islamsci.mcgill.ca/RASI/BEA/Khayyam_BEA.pdf"]
   ],
   "note:ijaz:fakhr-razi": [
     ["Journal of Critical Studies on the Quranic Exegesis (2024): Fakhr al-Dīn al-Rāzī and the Concept of Ṣarfa (PDF)", "https://www.ensani.ir/fa/article/download/592643"]
@@ -755,21 +775,76 @@ const SOURCES = {
     ["Encyclopaedia Iranica: Ejtehād", "https://www.iranicaonline.org/articles/ejtehad/", "Risalat al-ijtihad wa’l-akhbar"],
     ["Brill: Robert Gleave, Inevitable Doubt: Two Theories of Shīʿī Jurisprudence (PDF)", "https://brill.com/display/book/9789004491960/back-1.pdf", "probabilistic reasoning and the mujtahid’s authority"]
   ],
+  "note:ijtihad:ibn-qayyim": [
+    ["Oxford University Press: Abdul-Rahman Mustafa, On Taqlid: Ibn al Qayyim’s Critique of Authority in Islamic Law", "https://global.oup.com/academic/product/on-taqlid-9780199937516"],
+    ["TDV İslâm Ansiklopedisi: İ’lâmü’l-muvakkiîn", "https://islamansiklopedisi.org.tr/ilamul-muvakkiin"]
+  ],
+  "note:ijtihad:ibn-rushd": [
+    ["TDV İslâm Ansiklopedisi: Bidâyetü’l-müctehid", "https://islamansiklopedisi.org.tr/bidayetul-muctehid"],
+    ["Library of Congress: Bidāyat al-mujtahid", "https://www.loc.gov/item/74227920/"]
+  ],
+  "note:ijtihad:marjani": [
+    ["UvA-DARE: Michael Kemper, Imperial Russia as Dar al-Islam? (PDF)", "https://dare.uva.nl/document/2/167407"],
+    ["Islamology: Dinara Mardanova, Debates around Ibādah between Shihab ad-Din Marjani and his Opponents", "https://islamology.in/journal/article/view/153"]
+  ],
   "note:ijtihad:rida": [
     ["NYU Arabic Collections Online: Rashid Rida, Muḥāwarāt al-muṣliḥ wa’l-muqallid (Cairo, 1906–07)", "https://sites.dlib.nyu.edu/viewer/node/24960"]
+  ],
+  "note:philosophy:ibn-taymiyya": [
+    ["Stanford Encyclopedia of Philosophy: Ibn Taymiyya", "https://plato.stanford.edu/entries/ibn-taymiyya/"],
+    ["TDV İslâm Ansiklopedisi: İbn Teymiyye, Takıyyüddin", "https://islamansiklopedisi.org.tr/ibn-teymiyye-takiyyuddin"]
   ],
   "note:philosophy:kindi": [
     ["Stanford Encyclopedia of Philosophy: al-Kindi", "https://plato.stanford.edu/entries/al-kindi/"],
     ["Stanford Encyclopedia of Philosophy: Arabic and Islamic Metaphysics", "https://plato.stanford.edu/entries/arabic-islamic-metaphysics/", "creation ex nihilo"]
   ],
+  "note:philosophy:nasir-tusi": [
+    ["Routledge Encyclopedia of Philosophy: al-Razi, Fakhr al-Din (Theology and Philosophy)", "https://www.rep.routledge.com/articles/biographical/al-razi-fakhr-al-din-1149-1209/v-1/sections/theology-and-philosophy"],
+    ["TDV İslâm Ansiklopedisi: Tûsî, Nasîrüddin", "https://islamansiklopedisi.org.tr/tusi-nasiruddin"]
+  ],
+  "note:sama:ebussuud": [
+    ["TDV İslâm Ansiklopedisi: Devran", "https://islamansiklopedisi.org.tr/devran"],
+    ["TDV İslâm Ansiklopedisi: Ebüssuûd Efendi", "https://islamansiklopedisi.org.tr/ebussuud-efendi"]
+  ],
+  "note:sama:katib-celebi": [
+    ["TDV İslâm Ansiklopedisi: Mîzânü’l-hak", "https://islamansiklopedisi.org.tr/mizanul-hak"],
+    ["Bozok Üniversitesi İlahiyat Fakültesi Dergisi (2019): Tacetdin Bıyık on Katib Çelebi’s views on music in Mizan al-haqq", "https://dergipark.org.tr/tr/pub/bozifder/article/632827"],
+    ["Internet Archive: Katib Çelebi, The Balance of Truth (trans. G. L. Lewis, 1957)", "https://archive.org/details/balanceoftruth0000ktip"]
+  ],
+  "note:sama:kubra": [
+    ["Iran (Taylor & Francis, 2019): Eyad Abuali, Words Clothed in Light: Dhikr, Colour and Synaesthesia in Early Kubrawi Sufism", "https://www.tandfonline.com/doi/full/10.1080/05786967.2019.1583046"],
+    ["Journal of the Institute for Sufi Studies (DergiPark, 2024): Sepideh Afrashteh, Dhikr in Islamic Sufism: the Order of Kubrawiyya", "https://dergipark.org.tr/en/pub/taed/article/1455266"],
+    ["Encyclopaedia Iranica: Kobrawiya i. The Eponym", "https://www.iranicaonline.org/articles/kobrawiya-i-the-eponym/"]
+  ],
   "note:sama:qushayri": [
     ["Arabic Wikisource: Ibn Taymiyya, al-Istiqama, quoting al-Qushayri’s chapter on samaʿ", "https://ar.wikisource.org/wiki/%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%82%D8%A7%D9%85%D8%A9/6"],
     ["Ganjoor: Persian translation of al-Qushayri’s Risala, chapter 52, on samaʿ", "https://ganjoor.net/osmani/qushayriyya/bab452/sh49"]
+  ],
+  "note:sufism-law:aisha-bauniyya": [
+    ["NYU Press: The Principles of Sufism (trans. Th. Emil Homerin)", "https://nyupress.org/9781479864683/the-principles-of-sufism/"],
+    ["Mamluk Studies Review 7.1 (2003): Th. Emil Homerin, Living Love: The Mystical Writings of ʿĀʾishah al-Bāʿūnīyah", "https://knowledge.uchicago.edu/records/ec50p-6bg66"]
+  ],
+  "note:sufism-law:ibn-taymiyya": [
+    ["Islamic Law and Society 31 (Brill, 2024): Ibn Taymiyya and his Circle on samāʿ: a Means to Purify Sufism", "https://brill.com/view/journals/ils/31/1-2/article-p30_002.xml"],
+    ["TDV İslâm Ansiklopedisi: İbn Teymiyye, Takıyyüddin", "https://islamansiklopedisi.org.tr/ibn-teymiyye-takiyyuddin"]
+  ],
+  "note:tafsir:ebussuud": [
+    ["TDV İslâm Ansiklopedisi: İrşâdü’l-akli’s-selîm", "https://islamansiklopedisi.org.tr/irsadul-aklis-selim"],
+    ["Oxford Reference: Ebussuud Efendi (Biographical Encyclopaedia of Islamic Philosophy)", "https://oxfordreference.com/view/10.1093/oi/authority.20110810104817111"]
+  ],
+  "note:tafsir:maturidi": [
+    ["TDV İslâm Ansiklopedisi: Teʾvîlâtü’l-Kurʾân", "https://islamansiklopedisi.org.tr/tevilatul-kuran"],
+    ["TDV İslâm Ansiklopedisi: Mâtürîdî", "https://islamansiklopedisi.org.tr/maturidi"],
+    ["Cogent Arts & Humanities (Taylor & Francis, 2026): Maturidi school’s scientific and polemical methodology", "https://www.tandfonline.com/doi/full/10.1080/23311983.2026.2646779"]
   ],
   "note:tafsir:qushayri": [
     ["TDV İslâm Ansiklopedisi: Kuşeyrî, Abdülkerîm b. Hevâzin", "https://islamansiklopedisi.org.tr/kuseyri-abdulkerim-b-hevazin"],
     ["TDV İslâm Ansiklopedisi: İşârî Tefsir", "https://islamansiklopedisi.org.tr/isari-tefsir"],
     ["Oxford University Press: Martin Nguyen, Sufi Master and Qur’an Scholar (Abū’l-Qāsim al-Qushayrī and the Laṭāʾif al-ishārāt)", "https://global.oup.com/academic/product/sufi-master-and-quran-scholar-9780197265130"]
+  ],
+  "note:tafsir:sayyid-ahmad-khan": [
+    ["Modern Asian Studies (Cambridge, 2024): The theological foundations of Muslim modernism and traditionalism in South Asia", "https://www.cambridge.org/core/journals/modern-asian-studies/article/theological-foundations-of-muslim-modernism-and-traditionalism-in-south-asia/CF73849C02B3C3C5B8C4142B48BC21C8"],
+    ["Cambridge University Press: Naicari Nature: Sir Sayyid Ahmad Khan and the Reconciliation of Science, Technology and Religion (PDF)", "https://resolve.cambridge.org/core/services/aop-cambridge-core/content/view/CCAB5EB1FD5A473BC831D93E6D9BF0D6/9781108594196c4_p69-86_CBO.pdf/naicari_nature_sir_sayyid_ahmad_khan_and_the_reconciliation_of_science_technology_and_religion.pdf"]
   ],
   "thread:caliphate-modern:1922": [
     ["Yale University Press: The Caliphate or Supreme Imamate", "https://yalebooks.yale.edu/book/9780300190274/the-caliphate-or-supreme-imamate/"]
@@ -812,11 +887,12 @@ const SOURCES = {
     ["Core (thesis): The Epistemological Foundation of Knowing God", "https://files.core.ac.uk/download/429701525.pdf", "dating al-Mughni to about 970–990"]
   ],
   "thread:hadith-criticism:1438": [
-    ["Islam Museum: Completion of Fath al-Bari, 842/1438", "https://www.islam.museum/en/event/fath-al-bari-complete-842/"]
+    ["TDV İslâm Ansiklopedisi: Fethu’l-Bârî", "https://islamansiklopedisi.org.tr/fethul-bari"],
+    ["Oxford Reference: Ahmad ibn Hajar al-Asqalani", "https://www.oxfordreference.com/view/10.1093/oi/authority.20110803095429356"]
   ],
   "thread:hadith-criticism:745": [
-    ["Akram Nadwi: The Status of Muhammad ibn Ishaq, Authority in Maghazi", "https://akramnadwi.com/?p=3561"],
-    ["Britannica: Ibn Isḥāq", "https://www.britannica.com/biography/Ibn-Ishaq"]
+    ["Britannica: Ibn Isḥāq", "https://www.britannica.com/biography/Ibn-Ishaq"],
+    ["TDV İslâm Ansiklopedisi: İbn İshak", "https://islamansiklopedisi.org.tr/ibn-ishak", "Malik’s criticism of Ibn Ishaq"]
   ],
   "thread:hadith-criticism:846": [
     ["Britannica: al-Bukhārī", "https://www.britannica.com/biography/al-Bukhari"],
@@ -825,6 +901,10 @@ const SOURCES = {
   ],
   "thread:heavens:1031": [
     ["Encyclopaedia Iranica: Bīrūnī, Abū Rayḥān i. Life", "https://www.iranicaonline.org/articles/biruni-abu-rayhan-index/biruni-abu-rayhan-i-life/", "al-Qanun al-Mas’udi still listed as unfinished in 427 AH (1036 CE)"]
+  ],
+  "thread:heavens:1079": [
+    ["Encyclopaedia Iranica: Khayyam, Omar xv. As Astronomer", "https://www.iranicaonline.org/articles/khayyam-omar/khayyam-omar-xv-as-astronomer/"],
+    ["Biographical Encyclopedia of Astronomers: Khayyām (PDF)", "https://islamsci.mcgill.ca/RASI/BEA/Khayyam_BEA.pdf"]
   ],
   "thread:heavens:1437": [
     ["University of Michigan: Early Astronomy, Ulugh Beg", "https://early-astronomy.web.itd.umich.edu/islamic_ulugh-beg.php", "star catalogue dated early 841 AH (1437 CE)"],
@@ -851,6 +931,10 @@ const SOURCES = {
     ["Encyclopaedia Iranica: Aḵbārīya", "https://www.iranicaonline.org/articles/akbariya/"],
     ["Oxford Academic: Liyakat Takim, Usul al-Fiqh and Ijtihad in Shi’ism (2021)", "https://academic.oup.com/book/41130/chapter/350641282"]
   ],
+  "thread:ijtihad:1870": [
+    ["UvA-DARE: Michael Kemper, Imperial Russia as Dar al-Islam? (PDF)", "https://dare.uva.nl/document/2/167407"],
+    ["Islamology: Dinara Mardanova, Debates around Ibādah between Shihab ad-Din Marjani and his Opponents", "https://islamology.in/journal/article/view/153"]
+  ],
   "thread:imamate:632": [
     ["Britannica: Abū Bakr", "https://www.britannica.com/biography/Abu-Bakr"]
   ],
@@ -865,6 +949,9 @@ const SOURCES = {
   ],
   "thread:maqasid:1946": [
     ["TDV İslâm Ansiklopedisi: Makāsıdü’ş-şerîa", "https://islamansiklopedisi.org.tr/makasidus-seria"]
+  ],
+  "thread:philosophy:1315": [
+    ["Stanford Encyclopedia of Philosophy: Ibn Taymiyya", "https://plato.stanford.edu/entries/ibn-taymiyya/"]
   ],
   "thread:philosophy:1377": [
     ["Britannica: Ibn Khaldūn, the Muqaddimah", "https://www.britannica.com/biography/Ibn-Khaldun/The-Muqaddimah-Ibn-Khalduns-philosophy-of-history"],
@@ -912,7 +999,8 @@ const SOURCES = {
     ["Journal of Oriental Studies (2026): Ibn al-Jawzī’s Critique of Sufi Dhikr, Samāʿ and Ritual Chanting in Talbīs Iblīs (PDF)", "https://journals.ysu.am/j-orient-stud/article/download/vol29_no1_2026_44/pdf/37134"]
   ],
   "thread:sama:1250": [
-    ["EBSCO Research Starters: Sufi Order Mawlawiyah", "https://ebsco.com/research-starters/history/sufi-order-mawlawiyah", "Rumi beginning the ritual"]
+    ["Britannica: Mawlawīyah", "https://www.britannica.com/topic/Mawlawiyah", "Rumi and the turning ritual"],
+    ["Britannica: Rūmī", "https://www.britannica.com/biography/Rumi"]
   ],
   "thread:sama:1290": [
     ["Britannica: Rūmī, death and legacy", "https://britannica.com/biography/Rumi/Death-and-legacy"]
@@ -923,9 +1011,22 @@ const SOURCES = {
   "thread:sama:1380": [
     ["Shahzad Bashir: Movement and Stillness, the Practice of Sufi Dhikr in Fourteenth-Century Central Asia (PDF)", "https://www.themathesontrust.org/papers/islam/Bashir-Movement_and_Stillness_Sufi_Dhikr.pdf"]
   ],
+  "thread:sama:1550": [
+    ["TDV İslâm Ansiklopedisi: Devran", "https://islamansiklopedisi.org.tr/devran"],
+    ["TDV İslâm Ansiklopedisi: Ebüssuûd Efendi", "https://islamansiklopedisi.org.tr/ebussuud-efendi"]
+  ],
+  "thread:sama:1656": [
+    ["TDV İslâm Ansiklopedisi: Mîzânü’l-hak", "https://islamansiklopedisi.org.tr/mizanul-hak"],
+    ["Bozok Üniversitesi İlahiyat Fakültesi Dergisi (2019): Tacetdin Bıyık on Katib Çelebi’s views on music in Mizan al-haqq", "https://dergipark.org.tr/tr/pub/bozifder/article/632827"],
+    ["Internet Archive: Katib Çelebi, The Balance of Truth (trans. G. L. Lewis, 1957)", "https://archive.org/details/balanceoftruth0000ktip"]
+  ],
   "thread:sufism-law:1127": [
     ["Encyclopedia of the Modern Middle East: Qadiriyya Order", "https://encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/qadiriyya-order"],
     ["Britannica: ʿAbd al-Qādir al-Jīlānī", "https://www.britannica.com/biography/Abd-al-Qadir-al-Jilani", "first preaching in 1127"]
+  ],
+  "thread:sufism-law:1310": [
+    ["Islamic Law and Society 31 (Brill, 2024): Ibn Taymiyya and his Circle on samāʿ: a Means to Purify Sufism", "https://brill.com/view/journals/ils/31/1-2/article-p30_002.xml"],
+    ["TDV İslâm Ansiklopedisi: İbn Teymiyye, Takıyyüddin", "https://islamansiklopedisi.org.tr/ibn-teymiyye-takiyyuddin"]
   ],
   "thread:tafsir:1043": [
     ["TDV İslâm Ansiklopedisi: Kuşeyrî, Abdülkerîm b. Hevâzin", "https://islamansiklopedisi.org.tr/kuseyri-abdulkerim-b-hevazin", "beginning Lata’if al-isharat in 434 AH (1042–1043 CE)"],
@@ -937,9 +1038,17 @@ const SOURCES = {
   "thread:tafsir:1466": [
     ["TDV İslâm Ansiklopedisi: Tefsîrü’l-Celâleyn", "https://islamansiklopedisi.org.tr/tefsirul-celaleyn", "completion in 870 AH (1466 CE)"]
   ],
-  "thread:tafsir:1960": [
-    ["Tafsir Al-Qur’an (Indonesian): Mengenal Tafsir at-Tahrir wa at-Tanwir", "https://tafsiralquran.id/mengenal-tafsir-at-tahrir-wa-at-tanwir-karya-%e1%b9%adahir-ibn-ashur/", "the years 1341–1380 AH, citing al-Hamid"],
-    ["TDV İslâm Ansiklopedisi: et-Tahrîr ve’t-Tenvîr", "https://islamansiklopedisi.org.tr/et-tahrir-vet-tenvir", "the first complete printing in 1984"]
+  "thread:tafsir:1566": [
+    ["TDV İslâm Ansiklopedisi: İrşâdü’l-akli’s-selîm", "https://islamansiklopedisi.org.tr/irsadul-aklis-selim"],
+    ["TDV İslâm Ansiklopedisi: Ebüssuûd Efendi", "https://islamansiklopedisi.org.tr/ebussuud-efendi", "completed c. 973 AH / 1566 CE"]
+  ],
+  "thread:tafsir:1892": [
+    ["Modern Asian Studies (Cambridge, 2024): The theological foundations of Muslim modernism and traditionalism in South Asia", "https://www.cambridge.org/core/journals/modern-asian-studies/article/theological-foundations-of-muslim-modernism-and-traditionalism-in-south-asia/CF73849C02B3C3C5B8C4142B48BC21C8"],
+    ["Cambridge University Press: Naicari Nature: Sir Sayyid Ahmad Khan and the Reconciliation of Science, Technology and Religion (PDF)", "https://resolve.cambridge.org/core/services/aop-cambridge-core/content/view/CCAB5EB1FD5A473BC831D93E6D9BF0D6/9781108594196c4_p69-86_CBO.pdf/naicari_nature_sir_sayyid_ahmad_khan_and_the_reconciliation_of_science_technology_and_religion.pdf"]
+  ],
+  "thread:tafsir:1956": [
+    ["TDV İslâm Ansiklopedisi: et-Tahrîr ve’t-Tenvîr", "https://islamansiklopedisi.org.tr/et-tahrir-vet-tenvir", "first volume printed in Tunis in 1956 and complete printing in 1984"],
+    ["Journal of Qur’anic Studies (Edinburgh University Press, 2019): Tropology and Inimitability: Ibn ʿĀshūr’s Theory of tafsīr", "https://www.euppublishing.com/doi/abs/10.3366/jqs.2019.0368"]
   ],
   "thread:tafsir:1972": [
     ["Encyclopaedia Iranica: Ṭabāṭabāʾi, Moḥammad-Ḥosayn", "https://www.iranicaonline.org/articles/tabatabai-mohammad-hosayn/", "its writing between 1955 and 1972"]
