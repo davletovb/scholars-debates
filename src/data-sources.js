@@ -96,7 +96,8 @@ const SOURCES = {
   ],
   "dan-fodio": [
     ["Britannica: Usman dan Fodio", "https://www.britannica.com/biography/Usman-dan-Fodio"],
-    ["Oxford Reference: Sokoto Caliphate (Oxford Encyclopedia of African Thought)", "https://www.oxfordreference.com/viewbydoi/10.1093/acref/9780191828836.013.0309"]
+    ["Britannica: Western Africa, the jihad of Usman dan Fodio", "https://www.britannica.com/place/western-Africa/The-jihad-of-Usman-dan-Fodio", "the Sokoto Caliphate"],
+    ["TDV İslâm Ansiklopedisi: Osman b. Fûdî", "https://islamansiklopedisi.org.tr/osman-b-fudi", "works including Ihya’ al-sunna and Bayan wujub al-hijra"]
   ],
   "ebussuud": [
     ["Oxford Reference: Ebussuud Efendi (Biographical Encyclopaedia of Islamic Philosophy)", "https://oxfordreference.com/view/10.1093/oi/authority.20110810104817111"],
@@ -160,7 +161,8 @@ const SOURCES = {
   "ibn-hajar": [
     ["Oxford Reference: Ahmad ibn Hajar al-Asqalani", "https://www.oxfordreference.com/view/10.1093/oi/authority.20110803095429356"],
     ["TDV İslâm Ansiklopedisi: İbn Hacer el-Askalânî", "https://islamansiklopedisi.org.tr/ibn-hacer-el-askalani"],
-    ["TDV İslâm Ansiklopedisi: Fethu’l-Bârî", "https://islamansiklopedisi.org.tr/fethul-bari", "Fath al-Bari"]
+    ["Journal of Near Eastern Studies 76 (2017): Joel Blecher, Revision in the Manuscript Age: New Evidence of Early Versions of Ibn Ḥajar’s Fatḥ al-bārī", "https://www.journals.uchicago.edu/doi/abs/10.1086/690766", "Fath al-Bari"],
+    ["George Washington University: Early Drafts of a Classic Work of Islamic Thought Discovered (2017)", "https://mediarelations.gwu.edu/early-drafts-classic-work-islamic-thought-discovered", "completion of Fath al-Bari in 1438"]
   ],
   "ibn-hanbal": [
     ["Britannica: Aḥmad ibn Ḥanbal", "https://www.britannica.com/biography/Ahmad-ibn-Hanbal"],
@@ -378,7 +380,7 @@ const SOURCES = {
     ["Britannica: Sir Sayyid Ahmad Khan", "https://www.britannica.com/biography/Sayyid-Ahmad-Khan"],
     ["TDV İslâm Ansiklopedisi: Ahmed Han, Seyyid", "https://islamansiklopedisi.org.tr/ahmed-han-seyyid", "death on 27 March 1898 (4 Dhu al-Qa’da 1315 AH)"],
     ["Aligarh Muslim University: History", "https://www.amu.ac.in/about-us/history", "the 1875 school and the 1877 college"],
-    ["Brill: Sir Sayyid Ahmad Khan, Asbab-i baghawat-i Hind and Tahdhib al-akhlaq", "https://brill.com/display/book/9789004472402/BP000012.xml", "his reform writings"]
+    ["Internet Archive: Syed Ahmed Khan, The Causes of the Indian Revolt (English translation of Asbab-i baghawat-i Hind)", "https://archive.org/details/in.ernet.dli.2015.200833", "Asbab-i baghawat-i Hind"]
   ],
   "shafii": [
     ["Britannica: Shāfiʿī (school of law)", "https://www.britannica.com/topic/Shafiiyah"],
@@ -714,9 +716,8 @@ const SOURCES = {
     ["TDV İslâm Ansiklopedisi: Buhârî, Muhammed b. İsmâil", "https://islamansiklopedisi.org.tr/buhari-muhammed-b-ismail", "the Nishapur dispute over recitation"]
   ],
   "note:created-quran:jahiz": [
-    ["Encyclopaedia Iranica: Jāḥeẓ", "https://www.iranicaonline.org/articles/jahez/"],
-    ["TDV İslâm Ansiklopedisi: Câhiz", "https://islamansiklopedisi.org.tr/cahiz"],
-    ["TDV İslâm Ansiklopedisi: Halku’l-Kur’ân", "https://islamansiklopedisi.org.tr/halkul-kuran"]
+    ["Al-Qanṭara 22 (CSIC, 2001): Nimrod Hurvitz, Who is the Accused? The Interrogation of Aḥmad Ibn Ḥanbal", "https://doi.org/10.3989/alqantara.2001.v22.i2.217", "al-Jahiz’s account of Ibn Hanbal’s interrogation and flogging in Khalq al-Qur’an"],
+    ["Encyclopaedia Iranica: Jāḥeẓ", "https://www.iranicaonline.org/articles/jahez/", "Ibn Abi Du’ad’s patronage and anti-anthropomorphist writings"]
   ],
   "note:created-quran:maturidi": [
     ["DergiPark (PDF): Harun Kılıçaslan, The Transmission of the Divine Speech to the Prophet according to the Māturīdīs (2025)", "https://dergipark.org.tr/tr/download/article-file/5223695"],
@@ -732,9 +733,9 @@ const SOURCES = {
     ["DergiPark (PDF): Selim Gülverdi, Kādî Abdülcebbâr ve Ebü’l-Muîn en-Nesefî’nin büyük günah hakkındaki görüşleri (2021)", "https://dergipark.org.tr/en/download/article-file/1527456"]
   ],
   "note:faith:ashari": [
-    ["DOAJ: Baghbanzade, Abu-l-Hassan al-Ashʿarī on Faith", "https://doaj.org/article/263a1a8049644584a2dd21b27d5e2ee2"],
-    ["Encyclopaedia Iranica: Ašʿarī, Abu’l-Ḥasan", "https://www.iranicaonline.org/articles/asari-abul-hasan-ali-b/"],
-    ["TDV İslâm Ansiklopedisi: Eş’arî, Ebü’l-Hasan", "https://islamansiklopedisi.org.tr/esari-ebul-hasan"]
+    ["Internet Archive: Duncan B. Macdonald, Development of Muslim Theology, Jurisprudence and Constitutional Theory (1903)", "https://archive.org/details/developmentofmux00macduoft", "al-Ash’ari’s short creed: faith as word and deed, increasing and decreasing"],
+    ["DOAJ: Baghbanzade, Abu-l-Hassan al-Ashʿarī on Faith", "https://doaj.org/article/263a1a8049644584a2dd21b27d5e2ee2", "faith as the heart’s assent (tasdiq) and its relation to deeds"],
+    ["Encyclopaedia Iranica: Ašʿarī, Abu’l-Ḥasan", "https://www.iranicaonline.org/articles/asari-abul-hasan-ali-b/"]
   ],
   "note:faith:ibn-hanbal": [
     ["Oxford University Research Archive: Christopher Melchert, Early Ḥanbalī Creeds (translation, PDF)", "https://ora.ox.ac.uk/objects/uuid:3f641916-8c75-4114-8e90-db25de3fa7be/files/m0192642159d0745d1d6a247c249d9a88"]
@@ -742,7 +743,7 @@ const SOURCES = {
   "note:faith:maturidi": [
     ["Encyclopedia of Religion: Māturīdī, al-", "https://www.encyclopedia.com/environment/encyclopedias-almanacs-transcripts-and-maps/maturidi-al"],
     ["TDV İslâm Ansiklopedisi: Mâtürîdî", "https://islamansiklopedisi.org.tr/maturidi"],
-    ["Brill: “You Must Know Your Faith in Detail” (Hanafi–Maturidi theology)", "https://brill.com/display/book/9789004440296/BP000005.xml"]
+    ["Brill: Ulrich Rudolph, Al-Māturīdī and the Development of Sunnī Theology in Samarqand (trans. Rodrigo Adem, 2015)", "https://brill.com/display/title/17168"]
   ],
   "note:free-will:abu-hafs-nasafi": [
     ["Internet Archive: E. E. Elder, A Commentary on the Creed of Islam (Columbia University Press, 1950)", "https://archive.org/details/commentaryonthec030491mbp"],
@@ -825,7 +826,7 @@ const SOURCES = {
     ["Mamluk Studies Review 7.1 (2003): Th. Emil Homerin, Living Love: The Mystical Writings of ʿĀʾishah al-Bāʿūnīyah", "https://knowledge.uchicago.edu/records/ec50p-6bg66"]
   ],
   "note:sufism-law:ibn-taymiyya": [
-    ["Islamic Law and Society 31 (Brill, 2024): Ibn Taymiyya and his Circle on samāʿ: a Means to Purify Sufism", "https://brill.com/view/journals/ils/31/1-2/article-p30_002.xml"],
+    ["Islamic Law and Society 31 (Brill, 2024): Ibn Taymiyya and his Circle on samāʿ: a means to Purify Sufism?", "https://brill.com/view/journals/ils/31/1-2/article-p30_002.xml"],
     ["TDV İslâm Ansiklopedisi: İbn Teymiyye, Takıyyüddin", "https://islamansiklopedisi.org.tr/ibn-teymiyye-takiyyuddin"]
   ],
   "note:tafsir:ebussuud": [
@@ -887,12 +888,14 @@ const SOURCES = {
     ["Core (thesis): The Epistemological Foundation of Knowing God", "https://files.core.ac.uk/download/429701525.pdf", "dating al-Mughni to about 970–990"]
   ],
   "thread:hadith-criticism:1438": [
-    ["TDV İslâm Ansiklopedisi: Fethu’l-Bârî", "https://islamansiklopedisi.org.tr/fethul-bari"],
+    ["Journal of Near Eastern Studies 76 (2017): Joel Blecher, Revision in the Manuscript Age: New Evidence of Early Versions of Ibn Ḥajar’s Fatḥ al-bārī", "https://www.journals.uchicago.edu/doi/abs/10.1086/690766"],
+    ["George Washington University: Early Drafts of a Classic Work of Islamic Thought Discovered (2017)", "https://mediarelations.gwu.edu/early-drafts-classic-work-islamic-thought-discovered", "completion of Fath al-Bari in 1438"],
     ["Oxford Reference: Ahmad ibn Hajar al-Asqalani", "https://www.oxfordreference.com/view/10.1093/oi/authority.20110803095429356"]
   ],
   "thread:hadith-criticism:745": [
     ["Britannica: Ibn Isḥāq", "https://www.britannica.com/biography/Ibn-Ishaq"],
-    ["TDV İslâm Ansiklopedisi: İbn İshak", "https://islamansiklopedisi.org.tr/ibn-ishak", "Malik’s criticism of Ibn Ishaq"]
+    ["TDV İslâm Ansiklopedisi: İbn İshak", "https://islamansiklopedisi.org.tr/ibn-ishak", "Malik’s criticism of Ibn Ishaq"],
+    ["Internet Archive: Alfred Guillaume, The Life of Muhammad (Oxford University Press, 1955), introduction", "https://archive.org/details/GuillaumeATheLifeOfMuhammad", "Malik’s hostility and Ibn Hanbal’s distinction between campaigns (maghazi) and legal rulings"]
   ],
   "thread:hadith-criticism:846": [
     ["Britannica: al-Bukhārī", "https://www.britannica.com/biography/al-Bukhari"],
@@ -1024,9 +1027,14 @@ const SOURCES = {
     ["Encyclopedia of the Modern Middle East: Qadiriyya Order", "https://encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/qadiriyya-order"],
     ["Britannica: ʿAbd al-Qādir al-Jīlānī", "https://www.britannica.com/biography/Abd-al-Qadir-al-Jilani", "first preaching in 1127"]
   ],
-  "thread:sufism-law:1310": [
-    ["Islamic Law and Society 31 (Brill, 2024): Ibn Taymiyya and his Circle on samāʿ: a Means to Purify Sufism", "https://brill.com/view/journals/ils/31/1-2/article-p30_002.xml"],
+  "thread:sufism-law:1315": [
+    ["Islamic Law and Society 31 (Brill, 2024): Ibn Taymiyya and his Circle on samāʿ: a means to Purify Sufism?", "https://brill.com/view/journals/ils/31/1-2/article-p30_002.xml"],
+    ["Stanford Encyclopedia of Philosophy: Ibn Taymiyya", "https://plato.stanford.edu/entries/ibn-taymiyya/", "return to Damascus in 1313"],
     ["TDV İslâm Ansiklopedisi: İbn Teymiyye, Takıyyüddin", "https://islamansiklopedisi.org.tr/ibn-teymiyye-takiyyuddin"]
+  ],
+  "thread:sufism-law:1513": [
+    ["Mamluk Studies Review 7.1 (2003): Th. Emil Homerin, Living Love: The Mystical Writings of ʿĀʾishah al-Bāʿūnīyah", "https://knowledge.uchicago.edu/records/ec50p-6bg66", "her move to Cairo in 919 AH (1513–1514 CE) and licences to teach law and issue fatwas"],
+    ["NYU Press: The Principles of Sufism (trans. Th. Emil Homerin)", "https://nyupress.org/9781479864683/the-principles-of-sufism/", "al-Muntakhab fi usul al-rutab"]
   ],
   "thread:tafsir:1043": [
     ["TDV İslâm Ansiklopedisi: Kuşeyrî, Abdülkerîm b. Hevâzin", "https://islamansiklopedisi.org.tr/kuseyri-abdulkerim-b-hevazin", "beginning Lata’if al-isharat in 434 AH (1042–1043 CE)"],
