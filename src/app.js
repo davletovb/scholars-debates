@@ -42,6 +42,7 @@
   // ---------------------------------------------------------------- calendars
   const ahFromCE = (y) => Math.floor((y + 0.5 - 622.5356) / 0.970224) + 1;
   const ceOfAH = (a) => 622.5356 + (a - 1) * 0.970224;
+  const approximateAH = (year) => year < 622 ? "before the Hijra" : `c. ${Math.max(1, ahFromCE(year))} AH`;
   const lifeCE = (f) => (f.bUnknown ? `d. ${f.dc ? "c. " : ""}${f.d} CE` : `${f.bc ? "c. " : ""}${f.b}–${f.dc ? "c. " : ""}${f.d} CE`);
   const deathAH = (f) => (f.dah ? `died ${f.dc ? "c. " : ""}${f.dah} AH` : `died c. ${ahFromCE(f.d)} AH`);
   const yearLabel = (y, c) => `${c ? "c. " : ""}${y}`;
@@ -837,7 +838,7 @@
         svg.select(".cursor-line").attr("x1", px).attr("x2", px).attr("visibility", show ? "visible" : "hidden");
         const tag = axis.select(".cursor-tag").attr("visibility", show ? "visible" : "hidden");
         if (show) {
-          const label = `${yr} CE, ${yr < 622 ? "before the Hijra" : `${Math.max(1, ahFromCE(yr))} AH`}`;
+          const label = `${yr} CE, ${approximateAH(yr)}`;
           const w = measure(label, "700 12px 'Alegreya Sans'") + 14;
           tag.attr("transform", `translate(${px},0)`);
           tag.select("rect").attr("x", -w / 2).attr("width", w);
@@ -1106,8 +1107,7 @@
     function event(e) {
       const dates = el("p", "dates");
       dates.appendChild(el("strong", null, `${e.circa ? "c. " : ""}${e.year} CE`));
-      const ah = e.ah || (e.year < 622 ? "before the Hijra" : `c. ${Math.max(1, ahFromCE(e.year))} AH`);
-      dates.appendChild(el("span", null, ah));
+      dates.appendChild(el("span", null, e.ah || approximateAH(e.year)));
       header([el("span", "chip plain", "Event")], e.title, null, [dates]);
       body.appendChild(el("p", "body", e.text));
       section("Where");
