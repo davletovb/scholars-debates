@@ -33,7 +33,7 @@ Add an entry to `FIGURES` in `src/data-figures.js`, add its sources in `src/data
 ```
 
 - `id` is permanent and used in URL addresses: lowercase letters, digits and hyphens (`a-z`, `0-9`, `-`).
-- `arLang` is an optional BCP 47 language code for `ar` when a native-script name uses non-Arabic orthography (for example `"fa"` for Perso-Arabic script); it defaults to `"ar"`.
+- `arLang` is an optional BCP 47 language code for `ar` when a native-script name uses non-Arabic orthography (for example `"fa"` for Perso-Arabic script or `"zh"` for Chinese, rendered left-to-right); it defaults to `"ar"`.
 - `b` and `d` are years CE. Add `bc: true` or `dc: true` when a year is approximate.
 - `bNote` explains a disputed or uncertain birth year in one sentence; the panel shows it under the dates.
 - `dNote` does the same for a disputed or uncertain death date, such as a year given differently by different sources.

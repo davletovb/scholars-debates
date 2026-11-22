@@ -1,8 +1,8 @@
 # Scholars and debates
 
-An interactive timeline of Muslim scholars and the debates they argued over, from 610 to 1988. A partial globe sits behind the timeline and turns to where things happened: select a scholar to follow their itinerary, or a debate to trace where it was argued year by year. With nothing selected, the globe follows the centuries in view.
+An interactive timeline of Muslim scholars and the debates they argued over, from 610 to 1998. A partial globe sits behind the timeline and turns to where things happened: select a scholar to follow their itinerary, or a debate to trace where it was argued year by year. With nothing selected, the globe follows the centuries in view.
 
-It currently holds 98 scholars, 20 debates and 29 events across seven eras.
+It currently holds 124 scholars, 20 debates and 29 events across seven eras.
 
 ## Using it
 
