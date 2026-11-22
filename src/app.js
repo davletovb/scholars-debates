@@ -43,7 +43,7 @@
   const ahFromCE = (y) => Math.floor((y + 0.5 - 622.5356) / 0.970224) + 1;
   const ceOfAH = (a) => 622.5356 + (a - 1) * 0.970224;
   const lifeCE = (f) => (f.bUnknown ? `d. ${f.dc ? "c. " : ""}${f.d} CE` : `${f.bc ? "c. " : ""}${f.b}–${f.dc ? "c. " : ""}${f.d} CE`);
-  const deathAH = (f) => (f.dah ? `died ${f.dah} AH` : `died c. ${ahFromCE(f.d)} AH`);
+  const deathAH = (f) => (f.dah ? `died ${f.dc ? "c. " : ""}${f.dah} AH` : `died c. ${ahFromCE(f.d)} AH`);
   const yearLabel = (y, c) => `${c ? "c. " : ""}${y}`;
   const norm = (s) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[’'‘ʿʾ`]/g, "").toLowerCase();
   const placeName = (id) => PLACES[id][0];

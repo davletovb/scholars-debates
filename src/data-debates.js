@@ -147,14 +147,14 @@ const DEBATES = [
     related: ["free-will", "maqasid"] },
 
   { id: "sufism-law", title: "Sufism and the Law", term: "al-tasawwuf wa’l-shari’a", ar: "التصوف والشريعة",
-    phases: [[780, 1110]], lanes: ["sufism", "law"],
+    phases: [[780, 1130], [1295, 1330], [1495, 1520]], lanes: ["sufism", "law"],
     question: "What is the place of inner experience beside the outward Law?",
-    text: "As ascetics became Sufis, they described states of the heart and a knowledge beyond outward rules. Some jurists feared this would loosen obedience to the Law; Sufi authors replied that the inner path fulfils it. Al-Hallaj’s execution sharpened the debate, and al-Qushayri and al-Ghazali gave Sufism a lasting place within Sunni learning.",
+    text: "As ascetics became Sufis, they described states of the heart and a knowledge beyond outward rules. Some jurists feared this would loosen obedience to the Law; Sufi authors replied that the inner path fulfils it. Al-Hallaj’s execution sharpened the debate, and al-Qushayri and al-Ghazali gave Sufism a lasting place within Sunni learning, though later critics such as Ibn Taymiyya continued to police the boundary between sober piety and unlawful innovation.",
     positions: [
       { name: "Love beyond reward", text: "God is to be loved for Himself, not for paradise or out of fear of hell.", who: ["rabia"] },
-      { name: "The path within the Law", text: "Mystical experience is valid only within the bounds of the Law; sobriety is higher than ecstasy.", who: ["junayd", "qushayri", "ghazali", "jilani"] },
+      { name: "The path within the Law", text: "Mystical experience is valid only within the bounds of the Law; sobriety is higher than ecstasy.", who: ["junayd", "qushayri", "ghazali", "jilani", "aisha-bauniyya"], notes: { "aisha-bauniyya": "In al-Muntakhab fi usul al-rutab (The Principles of Sufism), Aisha al-Ba’uniyya grounded the four fundamental principles of the Sufi path (repentance, sincerity, remembrance and love) in the Qur’an, prophetic traditions and the teachings of earlier Sufi masters." } },
       { name: "Speech from the state of union", text: "Ecstatic sayings attributed to al-Hallaj, such as “I am the Truth”, were read as the mystic speaking from union with God; their meaning and his intent remain disputed.", who: ["hallaj"] },
-      { name: "Suspicion of new practices", text: "Some jurists and hadith scholars opposed Sufi claims to special knowledge and practices such as listening to music.", who: [] }
+      { name: "Suspicion of new practices", text: "Some jurists and hadith scholars opposed Sufi claims to special knowledge and practices such as listening to music.", who: ["ibn-taymiyya"], notes: { "ibn-taymiyya": "Ibn Taymiyya did not reject Sufism altogether: he praised early sober masters such as al-Junayd who stayed within the Qur’an and Sunna, while fiercely attacking later ecstatic practices, sama’ gatherings and the doctrine of wahdat al-wujud as unlawful innovations." } }
     ],
     thread: [
       { y: 780, c: true, text: "Rabi’a teaches the love of God for His own sake in Basra.", who: ["rabia"], at: ["basra"] },
@@ -162,7 +162,9 @@ const DEBATES = [
       { y: 922, text: "Al-Hallaj is executed in Baghdad after a long trial.", who: ["hallaj"], at: ["baghdad"] },
       { y: 1045, text: "Al-Qushayri writes his Epistle in Nishapur.", who: ["qushayri"], at: ["nishapur"] },
       { y: 1100, c: true, text: "Al-Ghazali writes The Revival of the Religious Sciences after leaving Baghdad.", who: ["ghazali"], at: ["damascus", "tus"] },
-      { y: 1127, text: "Abd al-Qadir al-Jilani, trained in Hanbali law, begins preaching in Baghdad; his sermons and books join Hanbali law with Sufism.", who: ["jilani"], at: ["baghdad"] }
+      { y: 1127, text: "Abd al-Qadir al-Jilani, trained in Hanbali law, begins preaching in Baghdad; his sermons and books join Hanbali law with Sufism.", who: ["jilani"], at: ["baghdad"] },
+      { y: 1315, c: true, text: "After returning to Damascus in 1313, Ibn Taymiyya and his circle write against Sufi practices and doctrines they judge contrary to the Law, while commending early sober masters who stayed within Qur’an and Sunna.", who: ["ibn-taymiyya"], at: ["damascus"] },
+      { y: 1513, c: true, text: "Aisha al-Ba’uniyya moves from Damascus to Cairo (919 AH), where she is licensed to teach law and issue fatwas alongside her Sufi writings, including al-Muntakhab fi usul al-rutab.", who: ["aisha-bauniyya"], at: ["damascus", "cairo"] }
     ],
     related: ["unity-being", "sama"] },
 
@@ -171,7 +173,7 @@ const DEBATES = [
     question: "Is the Qur’an, as God’s speech, created or eternal?",
     text: "The Mu’tazila held that the Qur’an was created in time, since only God is eternal. In 833 Caliph al-Ma’mun required judges and scholars to affirm this, an inquisition known as the Mihna. Ahmad ibn Hanbal refused and was flogged. The Mihna ended under al-Mutawakkil, and the uncreated Qur’an became the Sunni position.",
     positions: [
-      { name: "Created", text: "Only God is eternal, so His speech as revealed and recited is created.", who: ["jahiz", "abd-al-jabbar"], notes: { jahiz: "Al-Jahiz, who enjoyed the patronage of the judge Ibn Abi Du’ad, wrote tracts against the hadith scholars as anthropomorphists. In his epistle Khalq al-Qur’an he gave his own account of the inquisition: Ahmad ibn Hanbal gave way repeatedly, received only thirty lashes, and Ibn Abi Du’ad never urged his execution.", "abd-al-jabbar": "In the seventh part of al-Mughni, Abd al-Jabbar argues that speech is ordered letters and sounds, which can exist only in time, so God’s speech is created; God is called speaking because He makes speech." } },
+      { name: "Created", text: "Only God is eternal, so His speech as revealed and recited is created.", who: ["jahiz", "abd-al-jabbar"], notes: { jahiz: "Al-Jahiz, who enjoyed the patronage of the chief judge Ibn Abi Du’ad, wrote against the hadith scholars as anthropomorphists. In his epistle Khalq al-Qur’an he gave his own polemical account of the inquisition, maintaining that Ahmad ibn Hanbal debated his interrogators, yielded in argument, and was struck only thirty times with whips that posed no danger to his life.", "abd-al-jabbar": "In the seventh part of al-Mughni, Abd al-Jabbar argues that speech is ordered letters and sounds, which can exist only in time, so God’s speech is created; God is called speaking because He makes speech." } },
       { name: "Uncreated", text: "The Qur’an is God’s speech and is not created.", who: ["ibn-hanbal", "bukhari", "tahawi"], notes: { bukhari: "In Khalq af’al al-’ibad, al-Bukhari affirmed that the Qur’an itself is God’s uncreated speech while holding that human acts, including the act of reciting it, are created, a distinction that drew fierce opposition in Nishapur.", tahawi: "Al-Tahawi’s creed says the Qur’an came from God as speech “without how”, sent down as revelation, and is not created like human speech; whoever hears it and calls it human speech has disbelieved." } },
       { name: "Eternal speech, created recitation", text: "God’s speech is an eternal attribute; the letters, sounds and copies are created.", who: ["ashari", "maturidi"], notes: { maturidi: "Unlike the Ash’ari view that God’s eternal speech can be heard, al-Maturidi taught that the eternal speech cannot itself be heard: what reaches the ear is created sound and letters that express it." } }
     ],
@@ -186,15 +188,16 @@ const DEBATES = [
     related: ["attributes", "ijaz"] },
 
   { id: "philosophy", title: "Philosophy and revelation", term: "al-falsafa wa’l-shar’", ar: "الفلسفة والشرع",
-    phases: [[830, 1040], [1090, 1200]], lanes: ["philosophy", "theology"],
+    phases: [[830, 1040], [1090, 1210], [1250, 1380]], lanes: ["philosophy", "theology"],
     question: "Can Greek philosophy and revelation both be true, and who decides when they seem to clash?",
-    text: "The translation of Greek works raised the question of whether philosophy and revelation agree. Al-Kindi and al-Farabi argued that they reach the same truth by different paths; Ibn Sina built a complete system. Al-Ghazali judged three of its doctrines to be unbelief. Ibn Rushd replied that the Law commands philosophical study of those capable of demonstration, and that al-Ghazali misread the philosophers. Earlier, Abu Bakr al-Razi was reported to deny that prophets are needed at all; later, Ibn Khaldun kept logic but doubted that the philosophers’ metaphysics could be proven.",
+    text: "The translation of Greek works raised the question of whether philosophy and revelation agree. Al-Kindi and al-Farabi argued that they reach the same truth by different paths; Ibn Sina built a complete system. Al-Ghazali judged three of its doctrines to be unbelief. Ibn Rushd replied that the Law commands philosophical study of those capable of demonstration, and Nasir al-Din al-Tusi defended Ibn Sina against Fakhr al-Din al-Razi’s critiques. Earlier, Abu Bakr al-Razi was reported to deny that prophets are needed at all; later, Ibn Taymiyya refuted Greek logic and metaphysics while defending the harmony of sound reason with revelation, and Ibn Khaldun kept logic but doubted that the philosophers’ metaphysics could be proven.",
     positions: [
-      { name: "One truth, two paths", text: "Philosophy and revelation express the same truth, one by demonstration and the other by images for all people.", who: ["kindi", "farabi", "ibn-sina", "ibn-tufayl"], notes: { kindi: "Unlike al-Farabi and Ibn Sina, al-Kindi did not frame revelation as symbolic imagery for the masses: he treated prophetic knowledge as a direct divine science that philosophy also expresses rationally, and he broke with Aristotle to argue for creation from nothing (ex nihilo)." } },
+      { name: "One truth, two paths", text: "Philosophy and revelation express the same truth, one by demonstration and the other by images for all people.", who: ["kindi", "farabi", "ibn-sina", "ibn-tufayl", "nasir-tusi"], notes: { kindi: "Unlike al-Farabi and Ibn Sina, al-Kindi did not frame revelation as symbolic imagery for the masses: he treated prophetic knowledge as a direct divine science that philosophy also expresses rationally, and he broke with Aristotle to argue for creation from nothing (ex nihilo).", "nasir-tusi": "In his commentary on Ibn Sina’s Isharat (Remarks and Admonitions) and in Talkhis al-muhassal, Nasir al-Din al-Tusi defended Avicennan philosophy against Fakhr al-Din al-Razi’s theological critiques and helped integrate it into later Shi’i and Sunni learning." } },
       { name: "Philosophy errs on key points", text: "Logic and mathematics are sound, but three of the philosophers’ teachings contradict revelation, as al-Ghazali reads them: the eternity of the world, that God knows particulars only in a universal way, and the denial of bodily resurrection.", who: ["ghazali"] },
       { name: "The Law commands philosophy", text: "In the Decisive Treatise, scripture obliges those able to reason by demonstration to study philosophy, and where demonstration and the text seem to clash, the text is to be interpreted. The Incoherence of the Incoherence answers al-Ghazali point by point.", who: ["ibn-rushd"] },
       { name: "Wisdom by illumination", text: "True philosophy joins reasoning with direct experience of light.", who: ["suhrawardi"] },
       { name: "Reason without prophets", text: "God gives reason to all people equally, so no one is singled out to bring a revealed law, and revelation is not needed. This view is known mainly from the account of a hostile opponent.", who: ["abu-bakr-razi"] },
+      { name: "Sound reason agrees with revelation, not Greek logic", text: "Authentic revelation never contradicts clear reason, but Aristotelian logic and Avicennan metaphysics rest on flawed premises and must be rejected.", who: ["ibn-taymiyya"], notes: { "ibn-taymiyya": "In al-Radd ala al-mantiqiyyin (begun in Alexandria in 1309–1310) and Dar’ ta’arud al-aql wa’l-naql (composed after 1313), Ibn Taymiyya attacked Aristotelian logic and Avicennan metaphysics while arguing that sound reason and human nature (fitra) always accord with authentic revelation." } },
       { name: "Logic yes, metaphysics unproven", text: "Logic is a sound tool, but the philosophers’ claims about what lies beyond the senses cannot be proven and do not bring the happiness they promise.", who: ["ibn-khaldun"] }
     ],
     thread: [
@@ -207,6 +210,7 @@ const DEBATES = [
       { y: 1180, c: true, text: "Ibn Rushd answers al-Ghazali in The Incoherence of the Incoherence.", who: ["ibn-rushd"], at: ["cordoba"] },
       { y: 1186, c: true, text: "Suhrawardi writes The Philosophy of Illumination.", who: ["suhrawardi"], at: ["aleppo"] },
       { y: 1205, c: true, text: "Fakhr al-Din al-Razi draws philosophy into theology.", who: ["fakhr-razi"], at: ["herat"] },
+      { y: 1315, c: true, text: "In Damascus, Ibn Taymiyya writes Dar’ ta’arud al-aql wa’l-naql (Averting Conflict between Reason and Revelation), following his Refutation of the Logicians.", who: ["ibn-taymiyya"], at: ["damascus"] },
       { y: 1377, text: "At Qal’at Ibn Salama, Ibn Khaldun completes the first draft of the Muqaddima, which he went on revising; its survey of the sciences includes a refutation of philosophy.", who: ["ibn-khaldun"], at: ["qalat"] }
     ],
     related: ["heavens", "unity-being"] },
@@ -230,15 +234,15 @@ const DEBATES = [
     related: ["tafsir", "created-quran"] },
 
   { id: "tafsir", title: "How to interpret the Qur’an", term: "manahij al-tafsir", ar: "مناهج التفسير",
-    phases: [[870, 1375], [1880, 1985]], lanes: ["quran"],
+    phases: [[870, 1570], [1880, 1985]], lanes: ["quran"],
     question: "Should the Qur’an be read through transmitted reports, through language and reason, or through inner insight?",
     text: "Commentators differed on the sources of interpretation. Some built on reports from the Prophet and early authorities; others drew on grammar, rhetoric and theology; Sufis read inner meanings. Modern scholars asked how the Qur’an speaks to new societies, and some proposed reading it through itself or through its purposes.",
     positions: [
       { name: "By transmitted reports", text: "Explain verses by the reports of the Prophet, the Companions and their successors.", who: ["ibn-abbas", "tabari", "ibn-kathir", "suyuti"] },
-      { name: "By language and reason", text: "Explain verses through grammar, rhetoric and reasoned argument.", who: ["zamakhshari", "fakhr-razi"] },
+      { name: "By language and reason", text: "Explain verses through grammar, rhetoric and reasoned argument.", who: ["maturidi", "zamakhshari", "fakhr-razi", "ebussuud"], notes: { maturidi: "In Ta’wilat al-Qur’an, al-Maturidi distinguished tafsir (certain explanations transmitted from the Companions) from ta’wil (reasoned theological and linguistic interpretation open to jurists and theologians).", ebussuud: "In Irshad al-aql al-salim, completed c. 1566, Ebussuud read the Qur’an through Arabic rhetoric and linguistic analysis, building on al-Zamakhshari, Fakhr al-Din al-Razi and al-Baydawi; his commentary became a standard text across Ottoman madrasas." } },
       { name: "By inner allusions (ishari)", text: "Beyond the outward meaning, verses carry subtle inner allusions disclosed to the purified heart, without setting aside the literal text.", who: ["qushayri"], notes: { qushayri: "In Lata’if al-isharat, begun in Nishapur in the 1040s, al-Qushayri reads the entire Qur’an for its spiritual allusions while keeping his commentary within the bounds of Sunni creed and law." } },
       { name: "By the Qur’an itself", text: "Verses are best explained by other verses.", who: ["tabatabai", "ibn-kathir"] },
-      { name: "By its purposes for today", text: "Read the Qur’an as moral guidance whose purposes speak to present societies.", who: ["abduh", "rida", "ibn-ashur", "fazlur-rahman"] }
+      { name: "By its purposes for today", text: "Read the Qur’an as moral guidance whose purposes speak to present societies.", who: ["sayyid-ahmad-khan", "abduh", "rida", "ibn-ashur", "fazlur-rahman"], notes: { "sayyid-ahmad-khan": "In his Urdu Tafsir al-Qur’an and his principles of exegesis (Tahrir fi usul al-tafsir, 1892), Sayyid Ahmad Khan argued that the word of God (revelation) cannot contradict the work of God (the law of nature), reading apparent miracles metaphorically." } }
     ],
     thread: [
       { y: 680, c: true, text: "Ibn Abbas explains the Qur’an to students in Mecca.", who: ["ibn-abbas"], at: ["mecca"] },
@@ -248,8 +252,10 @@ const DEBATES = [
       { y: 1205, c: true, text: "Fakhr al-Din al-Razi writes The Keys to the Unseen.", who: ["fakhr-razi"], at: ["herat"] },
       { y: 1360, c: true, text: "Ibn Kathir writes his commentary in Damascus.", who: ["ibn-kathir"], at: ["damascus"] },
       { y: 1466, text: "Al-Suyuti completes his part of the Tafsir al-Jalalayn, begun by al-Mahalli, on 10 Shawwal 870 AH.", who: ["suyuti"], at: ["cairo"] },
+      { y: 1566, c: true, text: "Ebussuud Efendi completes Irshad al-aql al-salim in Istanbul, a rhetorical and linguistic commentary that becomes standard across Ottoman madrasas.", who: ["ebussuud"], at: ["istanbul"] },
+      { y: 1892, text: "Sayyid Ahmad Khan publishes his principles of Qur’anic exegesis (Tahrir fi usul al-tafsir) in Agra, setting out his naturalistic reading of scripture in harmony with modern science.", who: ["sayyid-ahmad-khan"], at: ["agra"] },
       { y: 1900, c: true, text: "Abduh lectures on the Qur’an at al-Azhar; Rida publishes the lectures in al-Manar.", who: ["abduh", "rida"], at: ["cairo"] },
-      { y: 1960, c: true, text: "Ibn Ashur completes al-Tahrir wa’l-tanwir in 1380 AH, some thirty-nine years after he began it; the complete work is first printed in 1984.", who: ["ibn-ashur"], at: ["tunis"] },
+      { y: 1956, text: "The first volume of Ibn Ashur’s thirty-volume Qur’an commentary al-Tahrir wa’l-tanwir is printed in Tunis; the complete work is first printed there in 1984.", who: ["ibn-ashur"], at: ["tunis"] },
       { y: 1972, c: true, text: "Tabataba’i completes al-Mizan in Qom.", who: ["tabatabai"], at: ["qom"] },
       { y: 1980, text: "Fazlur Rahman publishes Major Themes of the Qur’an.", who: ["fazlur-rahman"], at: ["chicago"] }
     ],
@@ -258,16 +264,17 @@ const DEBATES = [
   { id: "heavens", title: "Rethinking the heavens", term: "al-shukuk ala Batlamyus", ar: "الشكوك على بطلميوس",
     phases: [[1025, 1475]], lanes: ["sciences", "philosophy"],
     question: "Do Ptolemy’s models describe the real heavens?",
-    text: "Astronomers accepted Ptolemy’s observations but objected that his models broke the principle of uniform circular motion. Ibn al-Haytham’s Doubts on Ptolemy opened a long effort to build better models. At Maragha, al-Tusi and his colleagues designed new ones; Ulugh Beg’s observatory refined the numbers; Ali Qushji argued that astronomy need not depend on Aristotle’s physics.",
+    text: "Astronomers accepted Ptolemy’s observations but objected that his models broke the principle of uniform circular motion. Ibn al-Haytham’s Doubts on Ptolemy opened a long effort to build better models. Omar Khayyam took part in the Seljuq astronomical observations behind the Jalali calendar; at Maragha, al-Tusi and his colleagues designed new planetary models; Ulugh Beg’s observatory refined the numbers; Ali Qushji argued that astronomy need not depend on Aristotle’s physics.",
     positions: [
       { name: "Ptolemy’s models are physically impossible", text: "A model must be built from uniform circular motions that could really exist.", who: ["ibn-haytham"] },
       { name: "New models from uniform motions", text: "Combinations of circles, such as the Tusi couple, can reproduce the observed motions.", who: ["nasir-tusi"] },
-      { name: "Better observations", text: "Large instruments and long observation give more exact parameters.", who: ["ulugh-beg", "biruni"] },
+      { name: "Better observations", text: "Large instruments and long observation give more exact parameters.", who: ["biruni", "omar-khayyam", "ulugh-beg"], notes: { "omar-khayyam": "Under Sultan Malikshah, Omar Khayyam took a prominent part in the Seljuq astronomical observations (usually placed at Isfahan) behind the Jalali solar calendar (inaugurated in 1079) and is associated with the Zij-i Malikshahi tables; Qutb al-Din al-Shirazi also credits him with a supplementary chapter to Ibn al-Haytham’s treatise on a problem in Ptolemaic planetary motion." } },
       { name: "Astronomy free of Aristotle", text: "Astronomy can rest on observation and mathematics rather than on natural philosophy.", who: ["qushji"] }
     ],
     thread: [
       { y: 1025, c: true, text: "Ibn al-Haytham writes Doubts on Ptolemy in Cairo.", who: ["ibn-haytham"], at: ["cairo"] },
       { y: 1031, c: true, text: "Al-Biruni works on The Mas’udic Canon in Ghazna; he still listed it among his unfinished works in 427 AH (1036 CE).", who: ["biruni"], at: ["ghazna"] },
+      { y: 1079, text: "The Jalali solar calendar is inaugurated for Sultan Malikshah; Omar Khayyam was among the astronomers who took part in the observations behind it, usually placed at Isfahan.", who: ["omar-khayyam"], at: ["isfahan"] },
       { y: 1259, text: "The Maragha observatory is founded under al-Tusi’s direction, with Hulagu’s patronage.", who: ["nasir-tusi"], at: ["maragha"] },
       { y: 1261, text: "Al-Tusi presents his new planetary models in al-Tadhkira.", who: ["nasir-tusi"], at: ["maragha"] },
       { y: 1424, c: true, text: "Ulugh Beg’s observatory begins work in Samarkand.", who: ["ulugh-beg"], at: ["samarkand"] },
@@ -277,15 +284,15 @@ const DEBATES = [
     related: ["philosophy"] },
 
   { id: "sama", title: "Music, dance and the remembrance of God", term: "al-sama’ wa’l-dhikr", ar: "السماع والذكر",
-    phases: [[1040, 1200], [1250, 1390]], lanes: ["sufism", "law"],
+    phases: [[1040, 1200], [1250, 1390], [1545, 1660]], lanes: ["sufism", "law"],
     question: "May Sufis use music, dance and chanting aloud to draw near to God, or should remembrance be silent?",
-    text: "Sufis gathered to listen to poetry and music (sama’) and to repeat the names of God (dhikr), sometimes with movement and dance. Al-Ghazali devoted a book of The Revival of the Religious Sciences to listening and set conditions for it; Hanbali critics such as Ibn al-Jawzi and Ibn Taymiyya called such gatherings an innovation. The orders differed as well: Rumi’s followers made music and turning their central ritual, while in fourteenth-century Central Asia the circles of Baha’ al-Din Naqshband and Sayyid Ali Hamadani came to stand for silent and vocal remembrance.",
+    text: "Sufis gathered to listen to poetry and music (sama’) and to repeat the names of God (dhikr), sometimes with movement and dance. Al-Ghazali devoted a book of The Revival of the Religious Sciences to listening and set conditions for it; Hanbali critics such as Ibn al-Jawzi and Ibn Taymiyya called such gatherings an innovation. The orders differed as well: Rumi’s followers made music and turning their central ritual, while in Central Asia Baha’ al-Din Naqshband’s circle came to stand for silent remembrance and the Kubrawi tradition of Najm al-Din Kubra and Sayyid Ali Hamadani for vocal remembrance. In sixteenth- and seventeenth-century Istanbul, Ottoman jurists and writers such as Ebussuud and Katib Çelebi renewed the argument over singing and whirling remembrance (devran).",
     positions: [
-      { name: "Listening is lawful under conditions", text: "Listening to music and poetry is lawful and can stir the love of God when the time, the place and the company are right; it is forbidden where it stirs base desire.", who: ["ghazali", "qushayri"], notes: { qushayri: "Al-Qushayri’s Risala holds that listening to poetry sung to fine melodies is permitted in general if the listener believes nothing forbidden, hears nothing the Law condemns and is not led by desire: poems were recited before the Prophet, and a melody does not change the ruling. Listening that makes one keener to obey God is recommended." } },
+      { name: "Listening is lawful under conditions", text: "Listening to music and poetry is lawful and can stir the love of God when the time, the place and the company are right; it is forbidden where it stirs base desire.", who: ["qushayri", "ghazali", "katib-celebi"], notes: { qushayri: "Al-Qushayri’s Risala holds that listening to poetry sung to fine melodies is permitted in general if the listener believes nothing forbidden, hears nothing the Law condemns and is not led by desire: poems were recited before the Prophet, and a melody does not change the ruling. Listening that makes one keener to obey God is recommended.", "katib-celebi": "In Mizan al-haqq (The Balance of Truth, c. 1656), Katib Çelebi intervened in the Istanbul dispute between Kadızadeli preachers and Sufi orders over singing (taghanni) and whirling remembrance (devran), defending a moderate view of music under proper conditions and warning against militant attempts to ban established customs." } },
       { name: "Music and turning as worship", text: "Listening to music with turning movement belongs to the path itself; it became the central ritual of Rumi’s followers.", who: ["rumi"] },
-      { name: "Remembrance aloud", text: "God’s names are repeated aloud and in company, often with set movements of the body.", who: ["yasawi", "hamadani"] },
+      { name: "Remembrance aloud", text: "God’s names are repeated aloud and in company, often with set movements of the body.", who: ["yasawi", "kubra", "hamadani"], notes: { kubra: "In Fawa’ih al-jamal and his manuals of Sufi training, Najm al-Din Kubra made disciplined repetition of the formula of divine unity (dhikr) with breath and bodily posture the centre of the Kubrawi path, moving from audible recitation on the tongue into the heart and opening into visions of coloured light." } },
       { name: "Remembrance in silence", text: "The heart repeats the remembrance without moving the tongue or body, which avoids display; vocal dhikr and music gatherings are not needed and may be unlawful.", who: ["naqshband"] },
-      { name: "A forbidden innovation", text: "Gatherings for music and dance were unknown to the Prophet’s Companions and are an innovation in worship.", who: ["ibn-taymiyya"] }
+      { name: "A forbidden innovation", text: "Gatherings for music and dance were unknown to the Prophet’s Companions and are an innovation in worship.", who: ["ibn-taymiyya", "ebussuud"], notes: { ebussuud: "As Ottoman chief jurist (şeyhülislam), Ebussuud issued fatwas sharply opposing Sufi whirling remembrance (devran) and ritual dancing (raqs) as unlawful innovations, rejecting earlier Ottoman rulings that had permitted them." } }
     ],
     thread: [
       { y: 1045, text: "In his Epistle, written in Nishapur, al-Qushayri sets out conditions under which listening to sung poetry is permitted.", who: ["qushayri"], at: ["nishapur"] },
@@ -295,7 +302,9 @@ const DEBATES = [
       { y: 1250, c: true, text: "In Konya, Rumi makes listening to music and turning part of his circle’s worship.", who: ["rumi"], at: ["konya"] },
       { y: 1290, c: true, text: "Rumi’s son Sultan Walad organises his followers into the Mawlawi (Mevlevi) order, with the turning dance as its main ritual.", who: [], at: ["konya"] },
       { y: 1310, c: true, text: "Ibn Taymiyya and his circle write against Sufi listening as an innovation.", who: ["ibn-taymiyya"], at: ["damascus"] },
-      { y: 1380, c: true, text: "In Central Asia, the followers of Naqshband and of Sayyid Ali Hamadani divide over silent and vocal remembrance; later biographies make the two masters the faces of each side.", who: ["naqshband", "hamadani"], at: ["bukhara", "kulob"] }
+      { y: 1380, c: true, text: "In Central Asia, the followers of Naqshband and of Sayyid Ali Hamadani divide over silent and vocal remembrance; later biographies make the two masters the faces of each side.", who: ["naqshband", "hamadani"], at: ["bukhara", "kulob"] },
+      { y: 1550, c: true, text: "In Istanbul, Ottoman chief jurist Ebussuud Efendi issues fatwas condemning Sufi whirling remembrance (devran) and ritual dancing as unlawful.", who: ["ebussuud"], at: ["istanbul"] },
+      { y: 1656, c: true, text: "In Mizan al-haqq (The Balance of Truth), Katib Çelebi weighs the Istanbul disputes over singing and Sufi whirling, urging a middle course against militant efforts to ban them.", who: ["katib-celebi"], at: ["istanbul"] }
     ],
     related: ["sufism-law", "unity-being"] },
 
@@ -305,7 +314,7 @@ const DEBATES = [
     text: "By the eleventh century the Sunni legal schools had settled their doctrine, and many jurists held that later scholars should follow it, though whether the “gate of ijtihad” was ever closed is itself debated by historians. Others insisted that qualified scholars must still reason from the sources. Among Twelver Shi’is, a seventeenth- and eighteenth-century dispute pitted Akhbaris, who rejected speculative legal theory and relied on the Imams’ reports, against Usulis, who upheld the ijtihad of living jurists. The wider question returned with force in the eighteenth and nineteenth centuries.",
     positions: [
       { name: "Follow the school’s settled doctrine", text: "Later jurists rule within their school, refining its established positions.", who: ["marghinani", "nawawi"] },
-      { name: "Ijtihad remains open", text: "Qualified scholars must reason from the Qur’an and hadith, and blind imitation is not allowed to them.", who: ["ibn-hazm", "ibn-taymiyya", "suyuti", "shah-wali-allah", "shawkani"] },
+      { name: "Ijtihad remains open", text: "Qualified scholars must reason from the Qur’an and hadith, and blind imitation is not allowed to them.", who: ["ibn-hazm", "ibn-rushd", "ibn-taymiyya", "ibn-qayyim", "suyuti", "shah-wali-allah", "shawkani", "marjani"], notes: { "ibn-rushd": "In Bidayat al-mujtahid (The Distinguished Jurist’s Primer), Ibn Rushd compared the legal schools’ rulings and the causes of their disagreement so that qualified jurists could reason directly from the sources rather than rely on school deference.", "ibn-qayyim": "In I’lam al-muwaqqi’in, Ibn Qayyim mounted a sweeping critique of blind imitation (taqlid) of legal schools over scriptural evidence, distinguishing uncritical taqlid from evidence-based following (ittiba’).", marjani: "In Nazurat al-haqq (Kazan, c. 1870), Marjani defended independent reasoning (ijtihad) against Volga-Ural scholars who dropped the night prayer in short northern summer nights, arguing that core scriptural duties outweigh later school precedent." } },
       { name: "Rely on the Imams’ reports (Akhbari)", text: "Law rests on the transmitted reports (akhbar) of the Imams; speculative legal theory and fallible juristic ijtihad are rejected, and where reports conflict or are silent, the scholar suspends judgment or exercises caution.", who: ["astarabadi"], notes: { astarabadi: "In al-Fawa’id al-madaniyya (1622), al-Astarabadi rejected consensus and rational legal theory and even argued that the Qur’an can serve as a source of law only through the Imams’ explanations preserved in their reports." } },
       { name: "Ijtihad by qualified jurists (Usuli)", text: "During the Occultation of the Twelfth Imam, lay believers follow a living qualified jurist (mujtahid), who derives legal rulings from the sources by principled reasoning.", who: ["hilli", "bihbahani"], notes: { bihbahani: "In Karbala, al-Wahid al-Bihbahani answered al-Astarabadi in al-Fawa’id al-usuliyya and Risalat al-ijtihad wa’l-akhbar, arguing that probabilistic juristic reasoning is unavoidable and securing the triumph of the Usuli school." } },
       { name: "Ijtihad for a new age", text: "Reform requires fresh reasoning on questions of law and society.", who: ["abduh", "rida", "iqbal"], notes: { rida: "In Muhawarat al-muslih wa’l-muqallid, dialogues between a reformer and an imitator (muqallid) first printed in al-Manar and issued as a book in 1906–07, Rashid Rida argues against taqlid and for ijtihad as the way to Muslim unity." } }
@@ -321,6 +330,7 @@ const DEBATES = [
       { y: 1740, c: true, text: "Shah Wali Allah urges wider ijtihad in Delhi.", who: ["shah-wali-allah"], at: ["delhi"] },
       { y: 1770, c: true, text: "In Karbala, al-Wahid al-Bihbahani leads the Usuli counter-offensive against the Akhbaris, training a generation of mujtahids and securing Usuli dominance in Twelver law.", who: ["bihbahani"], at: ["karbala"] },
       { y: 1810, c: true, text: "Al-Shawkani argues against fixed adherence to a school.", who: ["shawkani"], at: ["sanaa"] },
+      { y: 1870, c: true, text: "In Kazan, Shihab al-Din Marjani publishes Nazurat al-haqq, defending ijtihad against Volga-Ural scholars who suspended the night prayer during short northern summer nights.", who: ["marjani"], at: ["kazan"] },
       { y: 1900, c: true, text: "Muhammad Abduh calls for renewed ijtihad.", who: ["abduh"], at: ["cairo"] },
       { y: 1930, text: "Iqbal calls ijtihad “the principle of movement” in Islam.", who: ["iqbal"], at: ["lahore"] }
     ],
