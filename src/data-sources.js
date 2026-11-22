@@ -1236,7 +1236,7 @@ const SOURCES = {
     ["Stanford Encyclopedia of Philosophy: Nicolaus Copernicus", "https://plato.stanford.edu/entries/copernicus/"]
   ],
   "thread:heavens:1437": [
-    ["University of Michigan: Early Astronomy, Ulugh Beg", "https://early-astronomy.web.itd.umich.edu/islamic_ulugh-beg.php", "star catalogue dated early 841 AH (1437 CE)"],
+    ["University of Michigan: Early Astronomy, Ulugh Beg", "https://www.early-astronomy-um.org/islamic_ulugh-beg.php", "star catalogue dated early 841 AH (1437 CE)"],
     ["Biographical Encyclopedia of Astronomers (ISMI): Ulugh Beg", "https://ismi.mpiwg-berlin.mpg.de/index.php/biography/Ulugh_Beg_BEA.htm", "observing programme to about 1440"]
   ],
   "thread:ijaz:1070": [
@@ -1456,8 +1456,8 @@ const SOURCES = {
     ["TDV İslâm Ansiklopedisi: Zebîdî, Muhammed Murtazâ", "https://islamansiklopedisi.org.tr/zebidi-muhammed-murtaza"],
     ["ghazali.org: Itḥāf al-sadāh al-muttaqīn (colophon, 5 Jumada II 1201 AH / 1787 CE)", "https://www.ghazali.org/ithaf/", "completion in Jumada II 1201 AH (1787 CE)"]
   ],
-  "thread:tafsir:1043": [
-    ["TDV İslâm Ansiklopedisi: Kuşeyrî, Abdülkerîm b. Hevâzin", "https://islamansiklopedisi.org.tr/kuseyri-abdulkerim-b-hevazin", "beginning Lata’if al-isharat in 434 AH (1042–1043 CE)"],
+  "thread:tafsir:1045": [
+    ["Journal of Sufi Studies (2013): Martin Nguyen on al-Qushayrī’s commentaries", "https://doi.org/10.1163/22105956-12341244", "manuscript evidence for 437 AH (1045–1046 CE), p. 19 n. 6"],
     ["Oxford University Press: Martin Nguyen, Sufi Master and Qur’an Scholar (Abū’l-Qāsim al-Qushayrī and the Laṭāʾif al-ishārāt)", "https://global.oup.com/academic/product/sufi-master-and-quran-scholar-9780197265130"]
   ],
   "thread:tafsir:1134": [
