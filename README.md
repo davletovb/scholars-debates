@@ -1,8 +1,8 @@
 # Scholars and debates
 
-An interactive timeline of Muslim scholars and the debates they argued over, from 610 to 1988. A partial globe sits behind the timeline and turns to where things happened: select a scholar to follow the places of their life, or a debate to see where it was argued, year by year. With nothing selected, the globe follows the centuries in view.
+An interactive timeline of Muslim scholars and the debates they argued over, from 610 to 1998. A partial globe sits behind the timeline and turns to where things happened: select a scholar to follow the places of their life, or a debate to see where it was argued, year by year. With nothing selected, the globe follows the centuries in view.
 
-The first version holds 98 scholars, 20 debates and 29 events across seven eras.
+The current version holds 124 scholars, 20 debates and 29 events across seven eras.
 
 ## Using it
 
@@ -60,7 +60,7 @@ Add an entry to `FIGURES` in `src/data-figures.js`, then run `npm run check` and
 ```
 
 - `id` is permanent and used in addresses: lowercase letters, digits and hyphens.
-- `arLang` is an optional BCP 47 language code for `ar` when a native-script name uses non-Arabic orthography (e.g. `"fa"` for Perso-Arabic script); it defaults to `"ar"`.
+- `arLang` is an optional BCP 47 language code for `ar` when a native-script name uses non-Arabic orthography (e.g. `"fa"` for Perso-Arabic script or `"zh"` for Chinese, rendered left-to-right); it defaults to `"ar"`.
 - `b` and `d` are years CE. Add `bc: true` or `dc: true` when a year is approximate.
 - `bNote` explains a disputed or uncertain birth year in one sentence; the panel shows it under the dates.
 - `dNote` does the same for a disputed or uncertain death date, such as a year given differently by different sources.
@@ -103,7 +103,7 @@ Add an entry to `DEBATES` in `src/data-debates.js` with `phases` (spans of years
 
 ## Status
 
-Birth years, teacher links, works and several itineraries and dated events were checked in a November 2026 audit against specialist reference works (TDV İslâm Ansiklopedisi, Encyclopaedia Iranica, the Stanford Encyclopedia of Philosophy and others). Every scholar, debate and event now lists its sources (`src/data-sources.js`), shown at the end of its panel. A full-content review later that month narrowed several position cards and biographies, added death-date notes where sources disagree, corrected a few map sites and routes (Siffin, Ulugh Beg, Ali Qushji, al-Nawawi, Suhraward), upgraded secondary citations to specialist reference works and peer-reviewed studies, closed internal debate gaps (`tafsir`, `reform`, `renewal`, `philosophy`, `sufism-law`, `heavens`, `sama`, and `ijtihad`), and linked five previously unlinked scholars into existing debates. Counted by life midpoint (the rule used in the Browse modal), the 1500–1800 era holds 10 scholars (13 overlapping lifespans), and counted by primary lane, the Sciences lane holds 7 scholars (8 including secondary `also` tags). Ibadi and Isma’ili scholars, Southeast Asia, Africa beyond Sokoto and more women scholars are still to be added, as is a debate on early Arabic grammar for the one scholar still unlinked (`sibawayh`, listed by `npm run check`).
+Birth years, teacher links, works and several itineraries and dated events were checked in a November 2026 audit against specialist reference works (TDV İslâm Ansiklopedisi, Encyclopaedia Iranica, the Stanford Encyclopedia of Philosophy and others). Every scholar, debate and event now lists its sources (`src/data-sources.js`), shown at the end of its panel. A full-content review later that month narrowed several position cards and biographies, added death-date notes where sources disagree, corrected a few map sites and routes (Siffin, Ulugh Beg, Ali Qushji, al-Nawawi, Suhraward), upgraded secondary citations to specialist reference works and peer-reviewed studies, closed internal debate gaps (`tafsir`, `reform`, `renewal`, `philosophy`, `sufism-law`, `heavens`, `sama`, and `ijtihad`), and linked five previously unlinked scholars into existing debates. A major coverage expansion then brought the dataset to 124 scholars across Sunni, Twelver, Isma’ili, Zaydi and Ibadi traditions, doubled women scholars from 5 to 10, added Southeast Asian, Chinese Han Kitab and Timbuktu scholars, populated traditionalist and modern Islamist/political positions in `renewal`, `reform` and `caliphate-modern`, and strengthened early modern and classical anchors (Ibn al-Jawzi, Ibn al-Salah, Ibn al-Shatir, Mir Damad, al-Nabulusi and al-Zabidi). Counted by life midpoint (the rule used in the Browse modal), the 1500–1800 era now holds 18 scholars (22 overlapping lifespans), and counted by primary lane, the Sciences lane holds 8 scholars (9 including secondary `also` tags). A debate on early Arabic grammar for the one scholar still unlinked (`sibawayh`, listed by `npm run check`), along with further regional and twentieth-century coverage, remains open for future work.
 
 ## Credits
 

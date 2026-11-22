@@ -326,7 +326,7 @@
     const axis = d3.select("#axis");
     const ov = d3.select("#overview");
     const labelsBox = $("#lanelabels");
-    const Y0 = 590, Y1 = 1995;
+    const Y0 = 590, Y1 = 2005;
     const ROW = 20, LPAD = 4, DROW = 17;
     let ppy = 3.4, padL = 180;
     const x = (y) => padL + (y - Y0) * ppy;
@@ -414,7 +414,7 @@
       const gSp = svg.append("g").attr("aria-hidden", "true");
       gSp.append("line").attr("class", "spine").attr("x1", 0).attr("x2", width).attr("y1", L.spineY - 2).attr("y2", L.spineY - 2);
       gSp.append("line").attr("class", "spine").attr("x1", 0).attr("x2", width).attr("y1", L.spineY + 2).attr("y2", L.spineY + 2);
-      for (let yr = 600; yr <= 1990; yr += 50) {
+      for (let yr = 600; yr <= 2000; yr += 50) {
         gSp.append("path").attr("d", STAR_SM).attr("transform", `translate(${x(yr)},${L.spineY}) scale(${yr % 100 === 0 ? 0.75 : 0.45})`).attr("fill", "#0b1230").attr("stroke", "rgba(220,179,92,0.7)");
       }
 
@@ -522,13 +522,13 @@
       axis.selectAll("*").remove();
       const g = axis.append("g").attr("class", "axis-g");
       const step = ppy >= 6 ? 25 : ppy >= 2.6 ? 50 : 100;
-      for (let yr = 600; yr <= 1990; yr += step) {
+      for (let yr = 600; yr <= 2000; yr += step) {
         const major = yr % 100 === 0;
         g.append("line").attr("class", "tick-line").attr("x1", x(yr)).attr("x2", x(yr)).attr("y1", major ? 0 : 8).attr("y2", 16);
         if (major || ppy >= 2.6) g.append("text").attr("class", "tick-ce").attr("x", x(yr) + 4).attr("y", 13).text(yr === 600 ? "600 CE" : yr);
       }
       const ahStep = ppy >= 4.5 ? 50 : 100;
-      for (let a = 0; a <= 1400; a += ahStep) {
+      for (let a = 0; a <= 1420; a += ahStep) {
         const yr = ceOfAH(Math.max(1, a));
         g.append("line").attr("class", "tick-line ah").attr("x1", x(yr)).attr("x2", x(yr)).attr("y1", 17).attr("y2", 27);
         g.append("text").attr("class", "tick-ah").attr("x", x(yr) + 4).attr("y", 26).text(a === 0 ? "1 AH" : a + " AH");
@@ -833,7 +833,7 @@
         const r = scroller.getBoundingClientRect();
         const px = e.clientX - r.left + scroller.scrollLeft;
         const yr = Math.round(yearAt(px));
-        const show = px > padL && yr >= 600 && yr <= 1990;
+        const show = px > padL && yr >= 600 && yr <= 2000;
         svg.select(".cursor-line").attr("x1", px).attr("x2", px).attr("visibility", show ? "visible" : "hidden");
         const tag = axis.select(".cursor-tag").attr("visibility", show ? "visible" : "hidden");
         if (show) {
@@ -956,7 +956,7 @@
       for (const c of kicker) k.appendChild(c);
       body.appendChild(k);
       const h = el("h2", null, title); h.id = "panelTitle"; body.appendChild(h);
-      if (ar) { const a = el("p", "ar", ar); a.lang = arLang || "ar"; body.appendChild(a); }
+      if (ar) { const a = el("p", "ar", ar); a.lang = arLang || "ar"; if (arLang && arLang.startsWith("zh")) a.dir = "ltr"; body.appendChild(a); }
       if (extra) for (const n of extra) body.appendChild(n);
     }
 
@@ -1292,7 +1292,7 @@
       const figs = FIGURES.filter((f) => f.mid >= era.start && f.mid < era.end).sort((a, b) => a.mid - b.mid);
       if (!figs.length) continue;
       const box = el("div", "browse-era");
-      box.appendChild(el("h4", null, era.end === 1990 ? `${era.name}, from ${era.start}` : `${era.name}, ${era.start}–${era.end}`));
+      box.appendChild(el("h4", null, era.end === 2000 ? `${era.name}, from ${era.start}` : `${era.name}, ${era.start}–${era.end}`));
       const links = el("div", "links");
       for (const f of figs) { const b = el("button", "link", f.short); b.type = "button"; b.dataset.kind = "fig"; b.dataset.id = f.id; links.appendChild(b); }
       box.appendChild(links);
