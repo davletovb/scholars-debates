@@ -18,6 +18,7 @@ for (const f of FIGURES) {
   if (!(f.b < f.d)) errs.push(f.id + " dates");
   if (f.bNote !== undefined && typeof f.bNote !== "string") errs.push(f.id + " bNote");
   if (f.dNote !== undefined && typeof f.dNote !== "string") errs.push(f.id + " dNote");
+  if (f.arLang !== undefined && (typeof f.arLang !== "string" || !f.arLang.trim())) errs.push(f.id + " arLang");
   if (f.bUnknown && !f.bc) errs.push(f.id + " bUnknown needs bc: the plotted birth year is an estimate");
   if (f.dah) { const est = (f.d - 622.5356) / 0.970224 + 1; if (Math.abs(est - f.dah) > 1.6) warn.push(`${f.id}: d ${f.d} -> AH≈${est.toFixed(1)} vs dah ${f.dah}`); }
   if (!f.text) errs.push(f.id + " text");
@@ -41,7 +42,10 @@ for (const d of DEBATES) {
   const ys = d.thread.map(t => t.y); for (let i = 1; i < ys.length; i++) if (ys[i] < ys[i - 1]) errs.push(d.id + " thread order");
   for (const [s, e] of d.phases) if (!(s < e)) errs.push(d.id + " phase");
 }
-for (const e of EVENTS) for (const p of e.places) if (!PLACES[p]) errs.push(e.id + " place " + p);
+for (const e of EVENTS) {
+  if (e.ah !== undefined && (typeof e.ah !== "string" || !e.ah.trim())) errs.push(e.id + " ah");
+  for (const p of e.places) if (!PLACES[p]) errs.push(e.id + " place " + p);
+}
 // sources: every scholar, debate and event has at least one; every key points at something real
 {
   const S = ctx.__s, need = [...FIGURES.map((f) => f.id), ...DEBATES.map((d) => "debate:" + d.id), ...EVENTS.map((e) => "event:" + e.id)];

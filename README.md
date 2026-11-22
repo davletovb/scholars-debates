@@ -60,12 +60,14 @@ Add an entry to `FIGURES` in `src/data-figures.js`, then run `npm run check` and
 ```
 
 - `id` is permanent and used in addresses: lowercase letters, digits and hyphens.
+- `arLang` is an optional BCP 47 language code for `ar` when a native-script name uses non-Arabic orthography (e.g. `"fa"` for Perso-Arabic script); it defaults to `"ar"`.
 - `b` and `d` are years CE. Add `bc: true` or `dc: true` when a year is approximate.
 - `bNote` explains a disputed or uncertain birth year in one sentence; the panel shows it under the dates.
 - `dNote` does the same for a disputed or uncertain death date, such as a year given differently by different sources.
 - `bUnknown: true` (with `bc: true`) marks a birth year the sources do not give. `b` is then only where the life line starts: the page shows "d. 1102 CE" instead of a birth year and says the start is an estimate.
-- `dah` is the death year AH where sources give it; otherwise the page works one out and marks it approximate.
+- `dah` is the death year AH where sources give it; otherwise the page works one out and marks it approximate. Events in `src/data-places.js` likewise accept an optional explicit `ah` label when an exact or multi-year Hijri date is needed instead of the computed `c.` fallback.
 - `lane` is one of `quran`, `hadith`, `law`, `theology`, `sufism`, `philosophy`, `sciences`, `letters`.
+- `schools` holds legal, theological, confessional or Sufi order chips. For Twelver Shi’i scholars, `Ja’fari` is used when their primary lane is `law` or `hadith` (legal-school label) and `Twelver` when their primary lane is `theology`, `philosophy`, `quran` or `sciences` (confessional label).
 - `places` run in the order of the life, returns included, and must exist in `PLACES`; the globe draws the route through them.
 - `teachers` lists ids of other scholars; students are worked out from it. Where the link is weaker or different from direct study, write `{ id: "jafar", rel: "hadith transmission" }`; the label shows under the name on both scholars' panels, so phrase it to read either way.
 

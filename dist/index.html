@@ -418,7 +418,7 @@ const PLACES = {
   kerman: ["Kerman", 30.28, 57.08, "iran"],
   khartank: ["Khartank", 39.81, 66.94, "transoxiana"],
   gilan: ["Gilan", 37.28, 49.58, "iran"],
-  suhraward: ["Suhraward", 36.55, 48.30, "iran"],
+  suhraward: ["Suhraward", 36.07, 48.44, "iran"],
   nishapur: ["Nishapur", 36.21, 58.80, "iran"],
   tus: ["Tus", 36.48, 59.52, "iran"],
   nasa: ["Nasa", 37.98, 58.20, "iran"],
@@ -453,6 +453,7 @@ const PLACES = {
   panipat: ["Panipat", 29.39, 76.97, "southasia"],
   karachi: ["Karachi", 24.86, 67.00, "southasia"],
   hazara: ["Hazara", 34.15, 73.20, "southasia"],
+  nandana: ["Nandana", 32.73, 73.24, "southasia"],
   degel: ["Degel", 13.45, 5.65, "westafrica"],
   sokoto: ["Sokoto", 13.06, 5.24, "westafrica"],
   kazan: ["Kazan", 55.79, 49.12, "volga"],
@@ -498,29 +499,29 @@ const ERAS = [
 ];
 
 const EVENTS = [
-  { id: "revelation", year: 610, title: "First revelation", text: "By tradition, in 610 Muhammad receives the first verses of the Qur’an in the cave of Hira near Mecca.", places: ["mecca"] },
-  { id: "hijra", year: 622, title: "The Hijra", text: "The Prophet and his followers move from Mecca to Medina. The Islamic calendar counts its years from here.", places: ["mecca", "medina"] },
+  { id: "revelation", year: 610, ah: "before the Hijra", title: "First revelation", text: "By tradition, in 610 Muhammad receives the first verses of the Qur’an in the cave of Hira near Mecca.", places: ["mecca"] },
+  { id: "hijra", year: 622, ah: "1 AH", title: "The Hijra", text: "The Prophet and his followers move from Mecca to Medina. The Islamic calendar counts its years from here.", places: ["mecca", "medina"] },
   { id: "death-prophet", year: 632, title: "Death of the Prophet", text: "Muhammad dies in Medina, and the question of who should lead the community begins.", places: ["medina"] },
   { id: "codex", year: 650, circa: true, title: "The Uthmanic codex", text: "Islamic tradition credits Caliph Uthman with a standard consonantal text of the Qur’an, copied and sent to the main cities.", places: ["medina"] },
   { id: "fitna", year: 656, title: "First civil war", text: "War between Ali and his opponents (656–661): the Battle of the Camel near Basra in 656, then Siffin in 657, with Kufa as Ali’s capital. It is the background to the first theological disputes.", places: ["basra", "siffin", "kufa"] },
-  { id: "karbala", year: 680, title: "Karbala", text: "Husayn, grandson of the Prophet, is killed by Umayyad forces at Karbala.", places: ["karbala"] },
+  { id: "karbala", year: 680, ah: "61 AH", title: "Karbala", text: "Husayn, grandson of the Prophet, is killed by Umayyad forces at Karbala.", places: ["karbala"] },
   { id: "expansion", year: 711, title: "Iberia, Sindh and Samarkand", text: "Muslim armies cross into al-Andalus and Sindh in 711 and take Samarkand in 712; Multan, in the north of the Sindh campaign, falls soon after.", places: ["cordoba", "multan", "samarkand"] },
   { id: "abbasid-rev", year: 750, title: "The Abbasid revolution", text: "A movement launched in Khurasan overthrows the Umayyads. Abu al-Abbas is acclaimed caliph at Kufa in 749, and the Umayyads are defeated in 750.", places: ["merv", "kufa"] },
   { id: "baghdad-founded", year: 762, title: "Baghdad founded", text: "Caliph al-Mansur founds his round city on the Tigris.", places: ["baghdad"] },
   { id: "translation", year: 830, circa: true, title: "The translation movement", text: "Over some two centuries, Greek, Persian and Indian works are translated into Arabic in Baghdad; al-Ma’mun is among the movement’s leading patrons.", places: ["baghdad"] },
   { id: "mihna", year: 833, title: "The Mihna begins", text: "Al-Ma’mun orders scholars and judges to affirm that the Qur’an is created.", places: ["baghdad"] },
-  { id: "buyids", year: 945, title: "Buyids take Baghdad", text: "A Shi’i dynasty from the Iranian highlands rules Baghdad; the Abbasid caliph keeps his title but loses practical power.", places: ["baghdad"] },
+  { id: "buyids", year: 945, ah: "334 AH", title: "Buyids take Baghdad", text: "A Shi’i dynasty from the Iranian highlands rules Baghdad; the Abbasid caliph keeps his title but loses practical power.", places: ["baghdad"] },
   { id: "azhar", year: 972, title: "Al-Azhar completed", text: "The Fatimids complete the mosque of al-Azhar in their new city of Cairo.", places: ["cairo"] },
   { id: "seljuqs", year: 1055, title: "Seljuqs take Baghdad", text: "The Turkic Seljuqs enter Baghdad and present themselves as protectors of the Sunni caliphate.", places: ["baghdad"] },
   { id: "nizamiyya", year: 1067, title: "The Nizamiyya opens", text: "The vizier Nizam al-Mulk’s college opens in Baghdad, one of a network of colleges across the Seljuq lands.", places: ["baghdad"] },
-  { id: "mongols-transoxiana", year: 1220, title: "Mongols take Bukhara and Samarkand", text: "Chinggis Khan’s armies take and sack the great cities of Transoxiana.", places: ["bukhara", "samarkand"] },
+  { id: "mongols-transoxiana", year: 1220, ah: "616–617 AH", title: "Mongols take Bukhara and Samarkand", text: "Chinggis Khan’s armies take and sack the great cities of Transoxiana.", places: ["bukhara", "samarkand"] },
   { id: "gurganj", year: 1221, title: "Mongols take Gurganj", text: "After a long siege the Mongols take Gurganj, the capital of Khwarazm.", places: ["urgench"] },
   { id: "baghdad-falls", year: 1258, title: "Fall of Baghdad", text: "Hulagu’s Mongol army sacks Baghdad and kills the last Abbasid caliph there.", places: ["baghdad"] },
   { id: "maragha", year: 1259, title: "Maragha observatory founded", text: "Under Hulagu’s patronage, Nasir al-Din al-Tusi founds and directs an observatory at Maragha with a team of astronomers.", places: ["maragha"] },
   { id: "timur", year: 1370, title: "Timur rules from Samarkand", text: "Timur makes Samarkand the capital of a new empire; from his later campaigns he brings scholars and craftsmen there.", places: ["samarkand"] },
   { id: "constantinople", year: 1453, title: "Ottomans take Constantinople", text: "Mehmed II takes Constantinople, the Byzantine capital, and makes it the Ottoman capital. Istanbul is the city’s modern name.", places: ["istanbul"] },
   { id: "granada", year: 1492, title: "Fall of Granada", text: "The last Muslim kingdom in Iberia surrenders to Castile and Aragon.", places: ["granada"] },
-  { id: "safavids", year: 1501, title: "Safavid state founded", text: "Shah Isma’il takes Tabriz and makes Twelver Shi’ism the religion of the state.", places: ["tabriz"] },
+  { id: "safavids", year: 1501, ah: "907 AH", title: "Safavid state founded", text: "Shah Isma’il takes Tabriz and makes Twelver Shi’ism the religion of the state.", places: ["tabriz"] },
   { id: "mughals", year: 1526, title: "Mughal empire founded", text: "Babur defeats the Delhi sultan at Panipat and then takes Delhi.", places: ["panipat", "delhi"] },
   { id: "printing", year: 1729, title: "Müteferrika’s press publishes its first book", text: "Ibrahim Müteferrika’s press in Istanbul prints the Arabic–Turkish dictionary of Vankulu, its first book.", places: ["istanbul"] },
   { id: "egypt-invasion", year: 1798, title: "French invasion of Egypt", text: "Napoleon’s army lands at Alexandria and takes Cairo.", places: ["alexandria", "cairo"] },
@@ -530,10 +531,10 @@ const EVENTS = [
 ];
 
 // Figures. b/d = birth and death years CE; bc/dc mark an approximate year.
-// bNote explains an uncertain or disputed birth year in the panel. bUnknown
-// marks a birth year the sources do not give: b is then only a plotting estimate.
-// dah = death year AH where commonly given. places run in order of the life.
-// teachers holds ids, or { id, rel } where the link needs a narrower label.
+// bNote/dNote explain uncertain or disputed years in the panel. bUnknown marks
+// a birth year the sources do not give: b is then only a plotting estimate.
+// dah = death year AH where commonly given. arLang = optional BCP 47 tag for ar.
+// places run in order of the life. teachers holds ids, or { id, rel }.
 
 const FIGURES = [
   // 610–661
@@ -554,7 +555,7 @@ const FIGURES = [
   { id: "wasil", name: "Wasil ibn Ata", short: "Wasil ibn Ata", ar: "واصل بن عطاء", b: 700, bc: true, bNote: "Born 80 AH (699–700 CE).", d: 748, dah: 131, lane: "theology", schools: ["Mu’tazili"], places: ["medina", "basra"], teachers: [{ id: "hasan-basri", rel: "study in his circle, by tradition" }],
     text: "Basran theologian regarded as the founder of the Mu’tazila. Tradition says he left al-Hasan al-Basri’s circle over the grave sinner, whom he placed in an “intermediate position”, neither believer nor unbeliever." },
   { id: "jafar", name: "Ja’far al-Sadiq", short: "Ja’far al-Sadiq", ar: "جعفر الصادق", b: 702, bc: true, bNote: "Usually given as 83 AH (702–703 CE); 699 and 705 are also reported.", d: 765, dah: 148, lane: "law", schools: ["Ja’fari"], places: ["medina"],
-    text: "Great-great-grandson of Ali and the sixth Imam of Twelver and Isma’ili Shi’is. He taught law and hadith in Medina. Twelver jurisprudence is named after him, and Sunni scholars, among them Abu Hanifa and Malik, are reported to have learned from him." },
+    text: "Great-great-grandson of Ali, the sixth Imam in Twelver Shi’ism and the fifth in Nizari and Musta’li Isma’ili reckoning. He taught law and hadith in Medina. Twelver jurisprudence is named after him, and Sunni scholars, among them Abu Hanifa and Malik, are reported to have learned from him." },
   { id: "ibn-ishaq", name: "Muhammad ibn Ishaq", short: "Ibn Ishaq", ar: "محمد بن إسحاق", b: 704, bc: true, bNote: "Reported as 85 AH (c. 704 CE) and as 80 AH (c. 699 CE).", d: 767, dah: 150, lane: "letters", places: ["medina", "baghdad"],
     text: "Medinan historian whose biography of the Prophet is the earliest substantial one to survive, mainly in the recension of Ibn Hisham (d. 833).",
     works: [["Sirat rasul Allah", "The life of the Messenger of God, surviving mainly in Ibn Hisham’s recension"]] },
@@ -571,7 +572,7 @@ const FIGURES = [
   { id: "shafii", name: "Muhammad ibn Idris al-Shafi’i", short: "al-Shafi’i", ar: "محمد بن إدريس الشافعي", b: 767, d: 820, dah: 204, lane: "law", schools: ["Shafi’i"], places: ["gaza", "mecca", "medina", "baghdad", "fustat"], teachers: ["malik"],
     text: "Jurist who studied with Malik and with the Hanafis of Iraq. In the Risala he ranked the sources of law: the Qur’an, the Prophet’s practice as known through hadith, consensus and analogy. He is the founder of the Shafi’i school, and the conventional account also makes him the founder of legal theory; some historians argue that the classical theory took shape only later.",
     works: [["al-Risala", "The epistle"], ["Kitab al-Umm", "The mother book"]] },
-  { id: "nazzam", name: "Ibrahim ibn Sayyar al-Nazzam", short: "al-Nazzam", ar: "إبراهيم بن سيار النظام", b: 778, bc: true, bNote: "Reported between 154 and 168 AH (775–782 CE).", d: 840, dc: true, dNote: "Died between about 835 and 845; the year is not known.", lane: "theology", schools: ["Mu’tazili"], places: ["basra", "baghdad"],
+  { id: "nazzam", name: "Ibrahim ibn Sayyar al-Nazzam", short: "al-Nazzam", ar: "إبراهيم بن سيار النظام", b: 782, bc: true, bNote: "About 165 AH (c. 782 CE); his exact birth year is not known.", d: 840, dc: true, dNote: "Died between about 835 and 845 (Encyclopaedia Iranica gives c. 221 AH / 836 CE); the year is not known.", lane: "theology", schools: ["Mu’tazili"], places: ["basra", "baghdad"],
     text: "Mu’tazili theologian of Basra who moved to Baghdad in the 820s and taught al-Jahiz, among others. He rejected the atomism of his teacher Abu al-Hudhayl and, by several reports, held that the Qur’an is inimitable because God turned people away from matching it. His works survive only in fragments quoted by others." },
   { id: "jahiz", name: "al-Jahiz", short: "al-Jahiz", ar: "الجاحظ", b: 776, bc: true, d: 868, dah: 255, dNote: "Died in 255 AH, a year that runs from December 868 to December 869 CE.", lane: "letters", also: ["theology"], schools: ["Mu’tazili"], places: ["basra", "baghdad"], teachers: [{ id: "nazzam", rel: "student and follower" }],
     text: "Prose writer and Mu’tazili theologian of Basra. His Book of Animals and his essays on rhetoric, society and theology set the standard for Arabic literary prose.",
@@ -582,19 +583,19 @@ const FIGURES = [
   { id: "kindi", name: "Ya’qub ibn Ishaq al-Kindi", short: "al-Kindi", ar: "يعقوب بن إسحاق الكندي", b: 801, bc: true, d: 873, dc: true, lane: "philosophy", places: ["kufa", "basra", "baghdad"],
     text: "First major philosopher to write in Arabic, called “the philosopher of the Arabs”. He worked with a circle of translators of Greek works, correcting some of their versions, and argued that philosophy and revelation lead to the same truths.",
     works: [["Fi’l-falsafa al-ula", "On first philosophy"]] },
-  { id: "bukhari", name: "Muhammad ibn Isma’il al-Bukhari", short: "al-Bukhari", ar: "محمد بن إسماعيل البخاري", b: 810, d: 870, dah: 256, lane: "hadith", places: ["bukhara", "mecca", "baghdad", "nishapur", "khartank"],
+  { id: "bukhari", name: "Muhammad ibn Isma’il al-Bukhari", short: "al-Bukhari", ar: "محمد بن إسماعيل البخاري", b: 810, d: 870, dah: 256, lane: "hadith", places: ["bukhara", "mecca", "baghdad", "nishapur", "khartank"], teachers: [{ id: "ibn-hanbal", rel: "meetings and study in Baghdad" }],
     text: "Born in Bukhara, he travelled from the Hijaz to Iraq, Syria and Egypt collecting hadith. His Sahih, which he said took sixteen years to compile, was selected by strict criteria for unbroken chains of reliable narrators and is regarded by Sunni Muslims as the most authentic book after the Qur’an. He died at Khartank, a village near Samarkand.",
     works: [["al-Jami’ al-sahih", "The sound collection"]] },
-  { id: "muslim", name: "Muslim ibn al-Hajjaj", short: "Muslim", ar: "مسلم بن الحجاج", b: 817, bc: true, d: 875, dah: 261, lane: "hadith", places: ["nishapur"], teachers: ["bukhari", "ibn-hanbal"],
+  { id: "muslim", name: "Muslim ibn al-Hajjaj", short: "Muslim", ar: "مسلم بن الحجاج", b: 817, bc: true, bNote: "Reported as 201, 202, 204 or 206 AH (816–822 CE).", d: 875, dah: 261, lane: "hadith", places: ["nishapur"], teachers: ["bukhari", "ibn-hanbal"],
     text: "Hadith scholar of Nishapur who studied with al-Bukhari and Ibn Hanbal. His Sahih ranks second only to al-Bukhari’s and is valued for grouping the chains and variant wordings of a report together.",
     works: [["al-Sahih", "The sound (collection)"]] },
   { id: "abu-dawud", name: "Abu Dawud al-Sijistani", short: "Abu Dawud", ar: "أبو داود السجستاني", b: 817, d: 889, dah: 275, lane: "hadith", places: ["zaranj", "baghdad", "basra"], teachers: ["ibn-hanbal"],
     text: "Hadith scholar from Sijistan who studied with Ibn Hanbal and settled in Basra. His Sunan gathers the reports used in law, with notes on their reliability, and is one of the six canonical Sunni collections.",
     works: [["al-Sunan", "The practices"]] },
-  { id: "tirmidhi", name: "Muhammad ibn Isa al-Tirmidhi", short: "al-Tirmidhi", ar: "محمد بن عيسى الترمذي", b: 824, bc: true, bNote: "Probably 209 AH (824–825 CE).", d: 892, dah: 279, lane: "hadith", places: ["termez"], teachers: ["bukhari"],
+  { id: "tirmidhi", name: "Muhammad ibn Isa al-Tirmidhi", short: "al-Tirmidhi", ar: "محمد بن عيسى الترمذي", b: 824, bc: true, bNote: "Probably 209 AH (824–825 CE).", d: 892, dah: 279, lane: "hadith", places: ["termez"], teachers: ["bukhari", { id: "muslim", rel: "hadith transmission (one report)" }, { id: "abu-dawud", rel: "hadith transmission (one report)" }],
     text: "Hadith scholar from Termez on the Oxus and a student of al-Bukhari. His Jami’ often comments on a report’s reliability and transmission and records how the legal schools used it, making it a guide to both hadith and law.",
     works: [["al-Jami’", "The compendium"]] },
-  { id: "junayd", name: "al-Junayd al-Baghdadi", short: "al-Junayd", ar: "الجنيد البغدادي", b: 830, bc: true, d: 910, dah: 298, lane: "sufism", places: ["baghdad"],
+  { id: "junayd", name: "al-Junayd al-Baghdadi", short: "al-Junayd", ar: "الجنيد البغدادي", b: 830, bc: true, d: 910, dah: 298, dNote: "Sources differ on his death year: TDV favours 297 AH (909–910 CE) and also reports 296 and 298 AH.", lane: "sufism", places: ["baghdad"],
     text: "Sufi master of Baghdad who taught a “sober” path in which mystical experience stays within the bounds of the Law. Many later Sufi lineages trace their chains of masters through him." },
   { id: "tabari", name: "Muhammad ibn Jarir al-Tabari", short: "al-Tabari", ar: "محمد بن جرير الطبري", b: 839, d: 923, dah: 310, lane: "quran", also: ["letters", "law"], places: ["amol", "rayy", "baghdad"],
     text: "Scholar from Amol in Tabaristan who settled in Baghdad. His Qur’an commentary gathers and weighs the reports of early authorities verse by verse, and his History of Prophets and Kings runs from creation to his own time.",
@@ -630,11 +631,11 @@ const FIGURES = [
   { id: "ibn-haytham", name: "Ibn al-Haytham", short: "Ibn al-Haytham", ar: "ابن الهيثم", b: 965, bc: true, d: 1040, dc: true, lane: "sciences", places: ["basra", "cairo"],
     text: "Mathematician and physicist from Basra who worked in Cairo. His Book of Optics explained vision as light entering the eye and tested claims by controlled experiment. In his Doubts on Ptolemy he exposed contradictions in the accepted model of the heavens.",
     works: [["Kitab al-manazir", "The book of optics"], ["al-Shukuk ala Batlamyus", "Doubts on Ptolemy"]] },
-  { id: "mawardi", name: "Abu al-Hasan al-Mawardi", short: "al-Mawardi", ar: "أبو الحسن الماوردي", b: 974, bNote: "Born 364 AH (974–975 CE) in Basra.", d: 1058, dah: 450, lane: "law", schools: ["Shafi’i"], places: ["basra", "baghdad"],
+  { id: "mawardi", name: "Abu al-Hasan al-Mawardi", short: "al-Mawardi", ar: "أبو الحسن الماوردي", b: 974, bc: true, bNote: "Born 364 AH (974–975 CE) in Basra.", d: 1058, dah: 450, lane: "law", schools: ["Shafi’i"], places: ["basra", "baghdad"],
     text: "Shafi’i judge in Baghdad and envoy of the Abbasid caliphs. His Ordinances of Government gave the classic juristic account of the caliphate and its delegated powers, at a time when real power lay with the Buyids and then the Seljuqs.",
     works: [["al-Ahkam al-sultaniyya", "The ordinances of government"]] },
-  { id: "biruni", name: "Abu al-Rayhan al-Biruni", short: "al-Biruni", ar: "أبو الريحان البيروني", b: 973, d: 1048, dc: true, lane: "sciences", places: ["kath", "jurjan", "urgench", "ghazna"],
-    text: "Scholar from Kath in Khwarazm who served the courts of Jurjan, Khwarazm and Ghazna. He measured the radius of the Earth and wrote on astronomy, minerals and calendars. His book on India describes its religion and science with rare care.",
+  { id: "biruni", name: "Abu al-Rayhan al-Biruni", short: "al-Biruni", ar: "أبو الريحان البيروني", b: 973, d: 1048, dc: true, dNote: "A traditional date is 2 Rajab 440 AH (11 December 1048 CE); Encyclopaedia Iranica argues from his late writings that he died after 442 AH (1050 CE).", lane: "sciences", places: ["kath", "jurjan", "urgench", "ghazna", "nandana", "ghazna"],
+    text: "Scholar from Kath in Khwarazm who served the courts of Jurjan, Khwarazm and Ghazna. He measured the radius of the Earth at Nandana in Punjab and wrote on astronomy, minerals and calendars. His book on India describes its religion and science with rare care.",
     works: [["Tahqiq ma li’l-Hind", "An inquiry into India"], ["al-Qanun al-Mas’udi", "The Mas’udic canon"]] },
   { id: "karima", name: "Karima al-Marwaziyya", short: "Karima al-Marwaziyya", ar: "كريمة المروزية", b: 974, bc: true, bUnknown: true, bNote: "Birth year unknown; later sources say she lived about a hundred years.", d: 1070, dah: 463, lane: "hadith", places: ["merv", "mecca"],
     text: "Hadith scholar born near Merv who settled in Mecca. She was a leading authority on the text of al-Bukhari’s Sahih, and her copy became one of its most trusted transmissions. Al-Khatib al-Baghdadi is reported to have read the whole Sahih with her in Mecca in five days." },
@@ -662,7 +663,7 @@ const FIGURES = [
   { id: "ghazali", name: "Abu Hamid al-Ghazali", short: "al-Ghazali", ar: "أبو حامد الغزالي", b: 1058, bc: true, bNote: "Medieval biographers give 1058 or 1059; remarks in his own letters and autobiography point to 1055 or 1056.", d: 1111, dah: 505, lane: "theology", also: ["sufism", "law", "philosophy"], schools: ["Ash’ari", "Shafi’i"], places: ["tus", "nishapur", "baghdad", "damascus", "jerusalem", "mecca", "baghdad", "tus", "nishapur", "tus"], teachers: ["juwayni"],
     text: "Ash’ari theologian and Shafi’i jurist who taught at the Nizamiyya in Baghdad. In The Incoherence of the Philosophers he rejected key doctrines of Ibn Sina. After a crisis in 1095 he left his post for a Sufi life, travelling to Damascus, Jerusalem and Mecca, and in 1106 he returned to teaching at the Nizamiyya of Nishapur. His Revival of the Religious Sciences joined law, theology and spirituality.",
     works: [["Tahafut al-falasifa", "The incoherence of the philosophers"], ["Ihya’ ulum al-din", "The revival of the religious sciences"], ["al-Munqidh min al-dalal", "The deliverer from error"]] },
-  { id: "abu-hafs-nasafi", name: "Najm al-Din Abu Hafs al-Nasafi", short: "Abu Hafs al-Nasafi", ar: "نجم الدين عمر النسفي", b: 1068, bNote: "Born 461 AH (1068–1069 CE) at Nasaf.", d: 1142, dah: 537, lane: "theology", schools: ["Maturidi", "Hanafi"], places: ["nasaf", "bukhara", "samarkand"],
+  { id: "abu-hafs-nasafi", name: "Najm al-Din Abu Hafs al-Nasafi", short: "Abu Hafs al-Nasafi", ar: "نجم الدين عمر النسفي", b: 1068, bc: true, bNote: "Born 461 AH (1068–1069 CE) at Nasaf.", d: 1142, dah: 537, lane: "theology", schools: ["Maturidi", "Hanafi"], places: ["nasaf", "bukhara", "samarkand"],
     text: "Hanafi jurist and Maturidi theologian of Samarkand. His short creed, al-Aqa’id, was taught for centuries, often through the commentary al-Taftazani wrote on it two centuries later.",
     works: [["al-Aqa’id", "The creed"]] },
   { id: "zamakhshari", name: "al-Zamakhshari", short: "al-Zamakhshari", ar: "الزمخشري", b: 1075, d: 1144, dah: 538, lane: "quran", also: ["letters"], schools: ["Mu’tazili", "Hanafi"], places: ["zamakhshar", "bukhara", "mecca", "urgench"],
@@ -671,7 +672,7 @@ const FIGURES = [
   { id: "jilani", name: "Abd al-Qadir al-Jilani", short: "Abd al-Qadir al-Jilani", ar: "عبد القادر الجيلاني", b: 1078, bc: true, bNote: "Born 470 AH, which spans 1077 and 1078 CE.", d: 1166, dah: 561, lane: "sufism", schools: ["Hanbali", "Qadiri"], places: ["gilan", "baghdad"],
     text: "Hanbali preacher and teacher from Gilan who ran a school and hospice in Baghdad. His sermons urged obedience to the Law and sincerity before God. The Qadiri order, among the most widespread Sufi orders, traces itself to him.",
     works: [["Futuh al-ghayb", "Revelations of the unseen"], ["al-Ghunya", "Sufficient provision"]] },
-  { id: "yasawi", name: "Ahmad Yasawi", short: "Ahmad Yasawi", ar: "أحمد يسوي", b: 1093, bc: true, bUnknown: true, bNote: "Birth year unknown; 1093 is worked back from a traditional lifespan, and 1105 is also reported.", d: 1166, lane: "sufism", places: ["sayram", "bukhara", "turkistan"],
+  { id: "yasawi", name: "Ahmad Yasawi", short: "Ahmad Yasawi", ar: "أحمد يسوي", b: 1093, bc: true, bUnknown: true, bNote: "Birth year unknown; 1093 is worked back from a traditional lifespan, and 1105 is also reported.", d: 1166, dc: true, dah: 562, dNote: "Traditional sources place his death in 562 AH (1166–1167 CE).", lane: "sufism", places: ["sayram", "bukhara", "turkistan"],
     text: "Sufi master from Sayram who studied in Bukhara and taught in the town of Yasi, now Turkistan. Verses in Turkic attributed to him spread Sufi teaching among the Turkic peoples of the steppe. Timur later built the great shrine over his grave.",
     works: [["Divan-i hikmat", "Book of wisdom, a later collection of verse attributed to him and his followers"]] },
   { id: "ibn-tufayl", name: "Ibn Tufayl", short: "Ibn Tufayl", ar: "ابن طفيل", b: 1105, bc: true, d: 1185, dah: 581, lane: "philosophy", places: ["guadix", "granada", "marrakesh"],
@@ -746,7 +747,7 @@ const FIGURES = [
   { id: "suyuti", name: "Jalal al-Din al-Suyuti", short: "al-Suyuti", ar: "جلال الدين السيوطي", b: 1445, d: 1505, dah: 911, lane: "quran", also: ["hadith", "law"], schools: ["Shafi’i"], places: ["cairo"],
     text: "Shafi’i scholar of Cairo who wrote several hundred works on the Qur’an, hadith, law, grammar and history. His al-Itqan is a standard handbook of the Qur’anic sciences, and he completed the Tafsir al-Jalalayn begun by his teacher al-Mahalli.",
     works: [["al-Itqan fi ulum al-Qur’an", "Mastery of the Qur’anic sciences"], ["Tafsir al-Jalalayn", "Commentary of the two Jalals, al-Mahalli and al-Suyuti"]] },
-  { id: "aisha-bauniyya", name: "Aisha al-Ba’uniyya", short: "Aisha al-Ba’uniyya", ar: "عائشة الباعونية", b: 1456, bc: true, bUnknown: true, bNote: "Birth year unknown; she was born in the mid-fifteenth century.", d: 1517, dah: 922, dNote: "Printed sources give her death as 922 AH and as 923 AH, both in 1517 CE.", lane: "sufism", also: ["letters"], places: ["damascus", "cairo", "damascus"],
+  { id: "aisha-bauniyya", name: "Aisha al-Ba’uniyya", short: "Aisha al-Ba’uniyya", ar: "عائشة الباعونية", b: 1456, bc: true, bUnknown: true, bNote: "Birth year unknown; she was born in the mid-fifteenth century.", d: 1517, dah: 923, dNote: "Th. Emil Homerin’s recent studies give 16 Dhu al-Qa’da 923 AH (November 1517 CE); some other printed sources give 922 AH (1516 CE).", lane: "sufism", also: ["letters"], places: ["damascus", "cairo", "damascus"],
     text: "Sufi master and poet of Damascus from a family of scholars and judges. She probably wrote more works in Arabic than any other woman before the twentieth century, including poems in praise of the Prophet and a treatise on the Sufi path.",
     works: [["al-Muntakhab fi usul al-rutab", "Selections on the principles of the stations"]] },
 
@@ -757,8 +758,8 @@ const FIGURES = [
   { id: "sirhindi", name: "Ahmad Sirhindi", short: "Ahmad Sirhindi", ar: "أحمد السرهندي", b: 1564, d: 1624, dah: 1034, lane: "sufism", schools: ["Naqshbandi", "Hanafi"], places: ["sirhind", "agra", "delhi", "sirhind"],
     text: "Naqshbandi master of Sirhind in Mughal India, called the “renewer of the second millennium”. His letters criticised the religious policy of Akbar’s court and answered the unity of being associated with Ibn Arabi with a “unity of witnessing”.",
     works: [["Maktubat", "His collected letters"]] },
-  { id: "mulla-sadra", name: "Mulla Sadra", short: "Mulla Sadra", ar: "ملا صدرا", b: 1572, bc: true, d: 1640, dc: true, dah: 1050, lane: "philosophy", schools: ["Twelver"], places: ["shiraz", "qazvin", "isfahan", "qom", "shiraz", "basra"],
-    text: "Philosopher of Safavid Iran born in Shiraz. His “transcendent philosophy” holds that existence, not essence, is fundamental and that all substance is in motion, drawing together Ibn Sina, Suhrawardi, Ibn Arabi and Shi’i theology. He died around 1640, reportedly at Basra on pilgrimage.",
+  { id: "mulla-sadra", name: "Mulla Sadra", short: "Mulla Sadra", ar: "ملا صدرا", b: 1572, bc: true, d: 1640, dc: true, dah: 1050, dNote: "Traditional sources give 1050 AH (1640–1641 CE); the Stanford Encyclopedia of Philosophy favours 1045 AH (1635–1636 CE) on the basis of his grandson’s report.", lane: "philosophy", schools: ["Twelver"], places: ["shiraz", "qazvin", "isfahan", "qom", "shiraz", "basra"],
+    text: "Philosopher of Safavid Iran born in Shiraz. His “transcendent philosophy” holds that existence, not essence, is fundamental and that all substance is in motion, drawing together Ibn Sina, Suhrawardi, Ibn Arabi and Shi’i theology. He died on pilgrimage, reportedly at Basra.",
     works: [["al-Asfar al-arba’a", "The four journeys"]] },
   { id: "katib-celebi", name: "Katib Çelebi", short: "Katib Çelebi", ar: "كاتب جلبي", b: 1609, d: 1657, dah: 1067, lane: "letters", places: ["istanbul", "aleppo", "istanbul"],
     text: "Ottoman scholar and official in Istanbul, also called Hajji Khalifa. His bibliography lists some 15,000 books in Arabic, Persian and Turkish, and his geography drew on European atlases. He urged the use of reason in public disputes.",
@@ -782,12 +783,12 @@ const FIGURES = [
   { id: "tahtawi", name: "Rifa’a al-Tahtawi", short: "al-Tahtawi", ar: "رفاعة الطهطاوي", b: 1801, d: 1873, lane: "letters", places: ["tahta", "cairo", "paris", "cairo"],
     text: "Al-Azhar scholar who served as imam to the first Egyptian student mission in Paris (1826–31). His account of France described European institutions for Arabic readers, and he later directed Egypt’s School of Languages.",
     works: [["Takhlis al-ibriz fi talkhis Bariz", "The refinement of gold in summarising Paris"]] },
-  { id: "sayyid-ahmad-khan", name: "Sayyid Ahmad Khan", short: "Sayyid Ahmad Khan", ar: "سيد أحمد خان", b: 1817, d: 1898, lane: "letters", also: ["quran"], places: ["delhi", "aligarh"],
+  { id: "sayyid-ahmad-khan", name: "Sayyid Ahmad Khan", short: "Sayyid Ahmad Khan", ar: "سيد أحمد خان", b: 1817, d: 1898, dah: 1315, lane: "letters", also: ["quran"], places: ["delhi", "aligarh"],
     text: "Scholar and official of Delhi. After the uprising of 1857 he urged Indian Muslims to take up modern scientific education and opened a school at Aligarh in 1875, which became the Muhammadan Anglo-Oriental College in 1877. He read the Qur’an as in harmony with the laws of nature." },
   { id: "marjani", name: "Shihab al-Din Marjani", short: "Marjani", ar: "شهاب الدين المرجاني", b: 1818, d: 1889, lane: "theology", also: ["letters"], schools: ["Hanafi"], places: ["kazan", "bukhara", "samarkand", "kazan"],
     text: "Tatar theologian and historian who studied in Bukhara and Samarkand and became imam of Kazan’s First Mosque. He criticised blind imitation in theology and law and wrote histories of the Volga Tatars. He is seen as a forerunner of the Jadids.",
     works: [["Mustafad al-akhbar", "Useful reports (history of Kazan and Bulghar)"]] },
-  { id: "afghani", name: "Jamal al-Din al-Afghani", short: "al-Afghani", ar: "جمال الدين الأفغاني", b: 1838, bc: true, bNote: "Born 1254 AH (1838–1839 CE).", d: 1897, lane: "philosophy", places: ["asadabad", "kabul", "cairo", "paris", "istanbul"],
+  { id: "afghani", name: "Jamal al-Din al-Afghani", short: "al-Afghani", ar: "جمال الدين الأفغاني", b: 1838, bc: true, bNote: "Born 1254 AH (1838–1839 CE).", d: 1897, dah: 1314, lane: "philosophy", places: ["asadabad", "kabul", "cairo", "paris", "istanbul"],
     text: "Activist and thinker who presented himself as an Afghan; most modern historians, following Nikki Keddie, place his birth at Asadabad in Iran. He worked in Afghanistan, India, Egypt, Iran and Istanbul. He called for Muslim unity against European empire and for a revival of reason and philosophy in Islam. His Paris journal, edited with Muhammad Abduh, was read across the Muslim world.",
     works: [["al-Urwa al-wuthqa", "The firmest bond (journal, Paris 1884, edited with Muhammad Abduh)"]] },
   { id: "abduh", name: "Muhammad Abduh", short: "Muhammad Abduh", ar: "محمد عبده", b: 1849, d: 1905, lane: "theology", also: ["quran", "law"], places: ["cairo", "beirut", "paris", "cairo"], teachers: ["afghani"],
@@ -799,7 +800,7 @@ const FIGURES = [
   { id: "rida", name: "Muhammad Rashid Rida", short: "Rashid Rida", ar: "محمد رشيد رضا", b: 1865, d: 1935, lane: "quran", also: ["law"], places: ["qalamun", "cairo"], teachers: ["abduh"],
     text: "Syrian-born scholar who moved to Cairo to work with Muhammad Abduh. His journal al-Manar spread reformist ideas across the Muslim world, and he continued Abduh’s Qur’an commentary. From 1922, as the Ottoman state ended, he wrote on the caliphate and how it might be restored.",
     works: [["al-Manar", "The lighthouse (journal he founded and edited, 1898–1935)"], ["al-Khilafa aw al-imama al-uzma", "The caliphate or supreme imamate (in al-Manar 1922–23; as a book 1923)"]] },
-  { id: "behbudi", name: "Mahmudkhoja Behbudi", short: "Behbudi", ar: "محمودخواجه بهبودی", b: 1875, d: 1919, lane: "letters", places: ["samarkand", "nasaf"],
+  { id: "behbudi", name: "Mahmudkhoja Behbudi", short: "Behbudi", ar: "محمودخواجه بهبودی", arLang: "fa", b: 1875, d: 1919, lane: "letters", places: ["samarkand", "nasaf"],
     text: "Jadid reformer, mufti and publisher of Samarkand. He opened new method schools, wrote textbooks and published the journal Oyina. His play The Patricide, written in 1911, was the first Uzbek play. He was killed in Qarshi in 1919.",
     works: [["Padarkush", "The patricide (play, written 1911, published 1913)"], ["Oyina", "The mirror (journal he founded and edited, 1913–15)"]] },
   { id: "iqbal", name: "Muhammad Iqbal", short: "Iqbal", ar: "محمد إقبال", b: 1877, d: 1938, lane: "philosophy", also: ["letters"], places: ["sialkot", "lahore", "cambridge", "munich", "lahore"],
@@ -814,7 +815,7 @@ const FIGURES = [
   { id: "abd-al-raziq", name: "Ali Abd al-Raziq", short: "Ali Abd al-Raziq", ar: "علي عبد الرازق", b: 1888, d: 1966, lane: "law", places: ["cairo", "oxford", "cairo"],
     text: "Egyptian al-Azhar scholar and judge. In Islam and the Foundations of Governance (1925), written after the caliphate was abolished, he argued that the caliphate is not a religious duty. In response al-Azhar’s Council of Senior Scholars expelled him from the ranks of the ulama, and he lost his post as a judge.",
     works: [["al-Islam wa usul al-hukm", "Islam and the foundations of governance"]] },
-  { id: "tabatabai", name: "Muhammad Husayn Tabataba’i", short: "Tabataba’i", ar: "محمد حسين الطباطبائي", b: 1904, d: 1981, lane: "quran", also: ["philosophy"], schools: ["Twelver"], places: ["tabriz", "najaf", "tabriz", "qom"],
+  { id: "tabatabai", name: "Muhammad Husayn Tabataba’i", short: "Tabataba’i", ar: "محمد حسين الطباطبائي", b: 1904, d: 1981, dah: 1402, lane: "quran", also: ["philosophy"], schools: ["Twelver"], places: ["tabriz", "najaf", "tabriz", "qom"],
     text: "Twelver scholar and philosopher from Tabriz who taught in Qom. His commentary al-Mizan interprets the Qur’an by the Qur’an itself, and his teaching revived the study of Mulla Sadra.",
     works: [["al-Mizan fi tafsir al-Qur’an", "The balance, on interpreting the Qur’an"], ["Bidayat al-hikma", "The beginning of philosophy"]] },
   { id: "fazlur-rahman", name: "Fazlur Rahman", short: "Fazlur Rahman", ar: "فضل الرحمن", b: 1919, d: 1988, lane: "philosophy", also: ["quran"], places: ["hazara", "lahore", "oxford", "karachi", "chicago"],
@@ -856,7 +857,7 @@ const DEBATES = [
     text: "The first civil war pushed Muslims to ask whether those who sinned gravely, rulers included, remained believers. The answers defined the earliest theological groups and, later, how each school understood faith itself.",
     positions: [
       { name: "The sinner has left Islam", text: "A grave sinner is an unbeliever. This was the view of radical Khariji groups such as the Azariqa; the Ibadis called the sinner ungrateful to God (kafir ni’ma) but not an apostate, and lived alongside other Muslims.", who: [] },
-      { name: "Faith is belief and affirmation", text: "Faith is assent of the heart and affirmation of the tongue; deeds do not enter its definition, and the sinner’s fate is left to God.", who: ["abu-hanifa", "maturidi"], notes: { maturidi: "Against al-Ash’ari, al-Maturidi held that faith is assent (tasdiq) and so can neither grow nor shrink; confession with the tongue is only a sign of it, which the community needs in order to treat a person as Muslim." } },
+      { name: "Faith is belief and affirmation", text: "Faith is assent of the heart and affirmation of the tongue; deeds do not enter its definition, and the sinner’s fate is left to God.", who: ["abu-hanifa", "maturidi"], notes: { maturidi: "Al-Maturidi defined faith strictly as assent of the heart (tasdiq), holding that it neither grows nor shrinks; unlike creedal formulas that fold works into faith, he treated verbal confession only as an outward sign by which the community recognises a Muslim." } },
       { name: "The intermediate position", text: "The grave sinner is neither believer nor unbeliever but in a position between the two.", who: ["wasil", "abd-al-jabbar"], notes: { "abd-al-jabbar": "For Abd al-Jabbar faith is knowing God, confessing Him and doing what religion commands while avoiding what it forbids. The grave sinner is therefore called a fasiq, and if he dies unrepentant he stays in Hell forever, though punished less than an unbeliever." } },
       { name: "Faith is belief, word and deed", text: "Faith includes deeds and rises and falls with them; the sinner remains a believer with deficient faith.", who: ["ibn-hanbal", "bukhari", "ashari"], notes: { "ibn-hanbal": "The creeds transmitted under Ibn Hanbal’s name call faith word and deed, increasing and decreasing, and one of them adds that whoever omits the prayer has committed unbelief. A modern study reassigns several of these creeds to his contemporaries, so their exact wording may not be his.", ashari: "Al-Ash’ari’s short creed says faith is word and deed and increases and decreases; elsewhere he defines faith as the heart’s assent (tasdiq), with confession and deeds following from it." } }
     ],
@@ -875,7 +876,7 @@ const DEBATES = [
     text: "The Qur’an speaks both of God’s all-encompassing will and of human accountability. Early Muslims argued over whether people create their own acts, and each theological school framed its answer around God’s justice and power.",
     positions: [
       { name: "Humans create their own acts", text: "God’s justice requires that people be the authors of their deeds, or reward and punishment would be unjust.", who: ["wasil", "abd-al-jabbar"] },
-      { name: "God compels all acts", text: "People have no real power over their acts. This was the view of the Jabriyya.", who: [] },
+      { name: "God compels all acts", text: "People have no real power over their acts. Critics applied the label “Jabriyya” (compulsionists) to proponents of strict determinism, largely as a polemical term rather than a self-designation.", who: [] },
       { name: "God creates, humans acquire", text: "God creates every act, and the human being “acquires” it, which grounds responsibility. This is al-Ash’ari’s doctrine.", who: ["ashari", "juwayni", "ghazali"], notes: { juwayni: "Al-Juwayni’s al-Irshad teaches this doctrine of acquisition; in his later al-Aqida al-Nizamiyya he gives the power God creates in a person a real effect on the act.", ghazali: "In the Revival’s book on divine unity and trust in God, al-Ghazali argues that God creates every event, human acts included; his Persian Alchemy of Happiness says a person is compelled even in the act of choosing." } },
       { name: "God creates, humans choose", text: "God creates acts, but the human power of choice is real and is what responsibility rests on. Maturidi authors also speak of acquisition, but tie it to this power of choice.", who: ["maturidi", "abu-hafs-nasafi"], notes: { "abu-hafs-nasafi": "Abu Hafs al-Nasafi’s creed says humans have acts of choice for which they are rewarded and punished; the good among them happens with God’s good pleasure, the bad does not." } }
     ],
@@ -917,7 +918,7 @@ const DEBATES = [
   { id: "reason-law", title: "Reason and text in the law", term: "al-ra’y wa’l-athar", ar: "الرأي والأثر",
     phases: [[720, 900]], lanes: ["law"],
     question: "When the texts are silent, how far may a jurist reason, and by what rules?",
-    text: "Early jurists differed on how to reach rulings. The circle of Kufa used reasoned opinion and analogy freely; the scholars of hadith preferred a report, even a weak one, over opinion. Al-Shafi’i proposed a method that ranked the sources and limited reasoning to analogy.",
+    text: "Early jurists differed on how to reach rulings. The circle of Kufa used reasoned opinion and analogy freely; hadith-minded jurists such as Ibn Hanbal preferred a reported tradition, even one classed as “weak” in early usage (a broad label that covered what later critics called fair, hasan, not fabrications), over personal opinion. Al-Shafi’i proposed a method that ranked the sources and limited reasoning to analogy.",
     positions: [
       { name: "Reasoned opinion and analogy", text: "Where the texts are silent, the jurist reasons from their purposes and from similar cases.", who: ["abu-hanifa"] },
       { name: "The practice of Medina", text: "The living practice of the Prophet’s city is itself evidence of his sunna.", who: ["malik"] },
@@ -940,7 +941,7 @@ const DEBATES = [
     text: "Scripture speaks of God’s hand, face and hearing, and says that He istawa ’ala al-’arsh (Q. 20:5), rendered “rose over”, “settled on” or “established Himself on” the throne. Some read such words as attributes to be affirmed, some interpreted them figuratively, and some denied that attributes are distinct from God’s essence. The question shaped every theological school and returned sharply in Mamluk Damascus and Cairo.",
     positions: [
       { name: "No attributes distinct from the essence", text: "To protect God’s unity, His knowledge and power are not things added to His essence.", who: ["wasil", "abd-al-jabbar"], notes: { "abd-al-jabbar": "Following Abu Hashim, Abd al-Jabbar explained God’s being knowing and powerful as states (ahwal) He has by virtue of His essence, not as attributes added to it." } },
-      { name: "Affirm without asking how", text: "Accept the texts as they come, without likening God to creatures and without explaining them away.", who: ["ibn-hanbal", "ibn-taymiyya"] },
+      { name: "Affirm without asking how", text: "Accept the texts as they come, without likening God to creatures and without explaining them away.", who: ["ibn-hanbal", "ibn-taymiyya"], notes: { "ibn-taymiyya": "Ibn Taymiyya held that the linguistic meaning (ma’na) of God’s attributes is known from ordinary Arabic usage, while their modality (kayfiyya), how they belong to God, remains unknown and utterly unlike created things." } },
       { name: "Eternal attributes affirmed by argument", text: "God has eternal attributes such as knowledge, power and speech, and reason can argue for them. Maturidis add that God’s act of bringing things into being (takwin) is itself an eternal attribute.", who: ["ashari", "maturidi", "taftazani"], notes: { maturidi: "In Kitab al-Tawhid al-Maturidi argues that God’s creating is as eternal as His knowledge and power and distinct from the things created, and reads God’s “rising over the Throne” as neither sitting nor direction, since the Throne is itself created.", taftazani: "In his commentary on al-Nasafi’s creed (1367), al-Taftazani accepted the Maturidi view that takwin is an eternal attribute; his later works side with the Ash’aris." } },
       { name: "Figurative reading of bodily terms", text: "Texts that seem to give God a body or a place may be read figuratively, by their sense in Arabic and the demands of reason.", who: ["juwayni", "fakhr-razi"] }
     ],
@@ -964,7 +965,7 @@ const DEBATES = [
       { name: "Reason knows, revelation completes", text: "Reason can know good and evil and some duties, such as the duty to know God, even without revelation; revelation settles what reason cannot.", who: ["maturidi"] }
     ],
     thread: [
-      { y: 800, c: true, text: "The Basran Mu’tazila make God’s justice and rational ethics central.", who: ["jahiz"], at: ["basra"] },
+      { y: 800, c: true, text: "The Basran Mu’tazila make God’s justice and rational ethics central.", who: [], at: ["basra"] },
       { y: 925, c: true, text: "Al-Ash’ari argues that God’s command defines the good.", who: ["ashari"], at: ["baghdad"] },
       { y: 935, c: true, text: "Al-Maturidi in Samarkand holds that reason can know good and evil, and the duty to know God, before revelation.", who: ["maturidi"], at: ["samarkand"] },
       { y: 1000, c: true, text: "Al-Mufid and Qadi Abd al-Jabbar defend rational ethics.", who: ["mufid", "abd-al-jabbar"], at: ["baghdad", "rayy"] },
@@ -999,8 +1000,8 @@ const DEBATES = [
     text: "The Mu’tazila held that the Qur’an was created in time, since only God is eternal. In 833 Caliph al-Ma’mun required judges and scholars to affirm this, an inquisition known as the Mihna. Ahmad ibn Hanbal refused and was flogged. The Mihna ended under al-Mutawakkil, and the uncreated Qur’an became the Sunni position.",
     positions: [
       { name: "Created", text: "Only God is eternal, so His speech as revealed and recited is created.", who: ["jahiz", "abd-al-jabbar"], notes: { jahiz: "Al-Jahiz, who enjoyed the patronage of the judge Ibn Abi Du’ad, wrote tracts against the hadith scholars as anthropomorphists. In his epistle Khalq al-Qur’an he gave his own account of the inquisition: Ahmad ibn Hanbal gave way repeatedly, received only thirty lashes, and Ibn Abi Du’ad never urged his execution.", "abd-al-jabbar": "In the seventh part of al-Mughni, Abd al-Jabbar argues that speech is ordered letters and sounds, which can exist only in time, so God’s speech is created; God is called speaking because He makes speech." } },
-      { name: "Uncreated", text: "The Qur’an is God’s speech and is not created.", who: ["ibn-hanbal", "bukhari", "tahawi"], notes: { tahawi: "Al-Tahawi’s creed says the Qur’an came from God as speech “without how”, sent down as revelation, and is not created like human speech; whoever hears it and calls it human speech has disbelieved." } },
-      { name: "Eternal speech, created recitation", text: "God’s speech is an eternal attribute; the letters, sounds and copies are created.", who: ["ashari", "maturidi"], notes: { maturidi: "Against al-Ash’ari, who held that God’s speech can be heard, al-Maturidi taught that the eternal speech cannot itself be heard: what reaches the ear is created sound and letters that express it." } }
+      { name: "Uncreated", text: "The Qur’an is God’s speech and is not created.", who: ["ibn-hanbal", "bukhari", "tahawi"], notes: { bukhari: "In Khalq af’al al-’ibad, al-Bukhari affirmed that the Qur’an itself is God’s uncreated speech while holding that human acts, including the act of reciting it, are created, a distinction that drew fierce opposition in Nishapur.", tahawi: "Al-Tahawi’s creed says the Qur’an came from God as speech “without how”, sent down as revelation, and is not created like human speech; whoever hears it and calls it human speech has disbelieved." } },
+      { name: "Eternal speech, created recitation", text: "God’s speech is an eternal attribute; the letters, sounds and copies are created.", who: ["ashari", "maturidi"], notes: { maturidi: "Unlike the Ash’ari view that God’s eternal speech can be heard, al-Maturidi taught that the eternal speech cannot itself be heard: what reaches the ear is created sound and letters that express it." } }
     ],
     thread: [
       { y: 827, text: "Al-Ma’mun proclaims that the Qur’an is created.", who: [], at: ["baghdad"] },
@@ -1017,7 +1018,7 @@ const DEBATES = [
     question: "Can Greek philosophy and revelation both be true, and who decides when they seem to clash?",
     text: "The translation of Greek works raised the question of whether philosophy and revelation agree. Al-Kindi and al-Farabi argued that they reach the same truth by different paths; Ibn Sina built a complete system. Al-Ghazali judged three of its doctrines to be unbelief. Ibn Rushd replied that the Law commands philosophical study of those capable of demonstration, and that al-Ghazali misread the philosophers. Earlier, Abu Bakr al-Razi was reported to deny that prophets are needed at all; later, Ibn Khaldun kept logic but doubted that the philosophers’ metaphysics could be proven.",
     positions: [
-      { name: "One truth, two paths", text: "Philosophy and revelation express the same truth, one by demonstration and the other by images for all people.", who: ["kindi", "farabi", "ibn-sina", "ibn-tufayl"] },
+      { name: "One truth, two paths", text: "Philosophy and revelation express the same truth, one by demonstration and the other by images for all people.", who: ["kindi", "farabi", "ibn-sina", "ibn-tufayl"], notes: { kindi: "Unlike al-Farabi and Ibn Sina, al-Kindi did not frame revelation as symbolic imagery for the masses: he treated prophetic knowledge as a direct divine science that philosophy also expresses rationally, and he broke with Aristotle to argue for creation from nothing (ex nihilo)." } },
       { name: "Philosophy errs on key points", text: "Logic and mathematics are sound, but three of the philosophers’ teachings contradict revelation, as al-Ghazali reads them: the eternity of the world, that God knows particulars only in a universal way, and the denial of bodily resurrection.", who: ["ghazali"] },
       { name: "The Law commands philosophy", text: "In the Decisive Treatise, scripture obliges those able to reason by demonstration to study philosophy, and where demonstration and the text seem to clash, the text is to be interpreted. The Incoherence of the Incoherence answers al-Ghazali point by point.", who: ["ibn-rushd"] },
       { name: "Wisdom by illumination", text: "True philosophy joins reasoning with direct experience of light.", who: ["suhrawardi"] },
@@ -1092,11 +1093,11 @@ const DEBATES = [
     ],
     thread: [
       { y: 1025, c: true, text: "Ibn al-Haytham writes Doubts on Ptolemy in Cairo.", who: ["ibn-haytham"], at: ["cairo"] },
-      { y: 1031, c: true, text: "Al-Biruni writes The Mas’udic Canon in Ghazna.", who: ["biruni"], at: ["ghazna"] },
+      { y: 1031, c: true, text: "Al-Biruni works on The Mas’udic Canon in Ghazna; he still listed it among his unfinished works in 427 AH (1036 CE).", who: ["biruni"], at: ["ghazna"] },
       { y: 1259, text: "The Maragha observatory is founded under al-Tusi’s direction, with Hulagu’s patronage.", who: ["nasir-tusi"], at: ["maragha"] },
       { y: 1261, text: "Al-Tusi presents his new planetary models in al-Tadhkira.", who: ["nasir-tusi"], at: ["maragha"] },
       { y: 1424, c: true, text: "Ulugh Beg’s observatory begins work in Samarkand.", who: ["ulugh-beg"], at: ["samarkand"] },
-      { y: 1437, c: true, text: "The Zij-i Sultani star tables are completed.", who: ["ulugh-beg", "qushji"], at: ["samarkand"] },
+      { y: 1437, c: true, text: "The star catalogue of the Zij-i Sultani is completed; the broader observing programme continued to about 1440.", who: ["ulugh-beg", "qushji"], at: ["samarkand"] },
       { y: 1472, c: true, text: "Ali Qushji teaches in Istanbul.", who: ["qushji"], at: ["istanbul"] }
     ],
     related: ["philosophy"] },
@@ -1328,11 +1329,14 @@ const SOURCES = {
   "biruni": [
     ["Britannica: al-Bīrūnī (summary)", "https://www.britannica.com/summary/al-Biruni"],
     ["Encyclopaedia Iranica: Bīrūnī, Abū Rayḥān i. Life", "https://www.iranicaonline.org/articles/biruni-abu-rayhan-index/biruni-abu-rayhan-i-life/"],
+    ["Encyclopaedia Iranica: Bīrūnī, Abū Rayḥān iv. Geography", "https://www.iranicaonline.org/articles/biruni-abu-rayhan-index/biruni-abu-rayhan-iv/", "measuring the Earth’s radius at Nandana"],
     ["ISMI (Max Planck Institute): Kitāb fī taḥqīq mā li’l-Hind", "https://ismi.mpiwg-berlin.mpg.de/bibcite/reference/15909", "Tahqiq ma li’l-Hind"]
   ],
   "bukhari": [
     ["Library of Congress: manuscript of al-Bukhari’s Sahih, vol. 4 (World Digital Library)", "https://www.loc.gov/resource/gdcwdl.wdl_17619/?sp=1&st=grid"],
     ["Britannica: al-Bukhārī", "https://www.britannica.com/biography/al-Bukhari"],
+    ["TDV İslâm Ansiklopedisi: Buhârî, Muhammed b. İsmâil", "https://islamansiklopedisi.org.tr/buhari-muhammed-b-ismail", "meetings and study with Ibn Hanbal in Baghdad"],
+    ["Rize İlahiyat Dergisi 24 (2023): Recep Bilgin on al-Bukhari and Ibn Hanbal", "https://doi.org/10.32950/rid.1301430", "al-Bukhari’s visits to Ibn Hanbal’s circles and absence of direct narration in the Sahih"],
     ["TDV İslâm Ansiklopedisi: el-Câmiu’s-sahîh", "https://islamansiklopedisi.org.tr/el-camius-sahih--buhari", "the sixteen years of composition"]
   ],
   "dan-fodio": [
@@ -1464,7 +1468,7 @@ const SOURCES = {
     ["Encyclopaedia Iranica: Jaʿfar al-Ṣādeq ii. Teachings", "https://www.iranicaonline.org/articles/jafar-al-sadeq-ii-teachings/"],
     ["Encyclopaedia Iranica: Jaʿfar al-Ṣādeq", "https://www.iranicaonline.org/articles/jafar-al-sadeq/"],
     ["Britannica: Jaʿfar al-Ṣādiq", "https://www.britannica.com/biography/Jafar-al-Sadiq"],
-    ["Encyclopaedia Iranica: Ismailism xvii. The imamate in Ismailism", "https://www.iranicaonline.org/articles/ismailism-xvii-the-imamate-in-ismailism/", "his descent"]
+    ["Encyclopaedia Iranica: Ismailism xvii. The imamate in Ismailism", "https://www.iranicaonline.org/articles/ismailism-xvii-the-imamate-in-ismailism/", "his descent and Isma’ili numbering"]
   ],
   "jahiz": [
     ["Oxford Academic: al-Jāḥiẓ", "https://academic.oup.com/reference/62361/reference-article-abstract/554570021"],
@@ -1572,7 +1576,8 @@ const SOURCES = {
     ["Britannica: Hadith", "https://www.britannica.com/topic/Hadith", "Riyad al-salihin"]
   ],
   "nazzam": [
-    ["Encyclopedia of Religion: Nazzam, al- (782–c. 840)", "https://encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/nazzam-al-782-c-840"],
+    ["Encyclopedia of Islam and the Muslim World: Nazzam, al- (782–c. 840)", "https://encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/nazzam-al-782-c-840"],
+    ["Encyclopaedia Iranica: Abū Esḥāq Naẓẓām", "https://www.iranicaonline.org/articles/abu-eshaq-ebrahim-b-3/", "dates c. 165–221 AH (c. 782–836 CE)"],
     ["DergiPark (PDF): al-Naẓẓām’s ṣarfa and al-Jāḥiẓ on the inimitability of the Qur’an", "https://dergipark.org.tr/en/download/article-file/4746272", "his view of sarfa"]
   ],
   "nursi": [
@@ -1590,7 +1595,7 @@ const SOURCES = {
     ["Library of Congress: al-Qushayri’s Epistle on Sufism", "https://www.loc.gov/item/2021667378/", "al-Risala al-Qushayriyya"]
   ],
   "qushji": [
-    ["TDV İslâm Ansiklopedisi: Ali Kuşçu", "https://www.nazariyat.org/en/issues/cilt-10-sayi-2/jamil-ragep-ali-kuscu"],
+    ["Nazariyat (2024): F. Jamil Ragep, ʿAlī Qūshjī on the Earth’s Motion and Bīrjandī’s Critique", "https://www.nazariyat.org/en/issues/cilt-10-sayi-2/jamil-ragep-ali-kuscu"],
     ["TDV İslâm Ansiklopedisi: Ali Kuşçu", "https://islamansiklopedisi.org.tr/ali-kuscu"],
     ["Encyclopaedia Iranica: ʿAli Qušji", "https://www.iranicaonline.org/articles/ali-qusji-qusju-ala-al-din-ali-mohammad-theologian-and-scientist-d/", "the teacher link"],
     ["Biographical Encyclopedia of Astronomers (ISMI): Qūshjī", "https://ismi.mpiwg-berlin.mpg.de/biography/Qushji_BEA.htm", "the teacher link"]
@@ -1611,6 +1616,7 @@ const SOURCES = {
   ],
   "sayyid-ahmad-khan": [
     ["Britannica: Sir Sayyid Ahmad Khan", "https://www.britannica.com/biography/Sayyid-Ahmad-Khan"],
+    ["TDV İslâm Ansiklopedisi: Ahmed Han, Seyyid", "https://islamansiklopedisi.org.tr/ahmed-han-seyyid", "death on 27 March 1898 (4 Dhu al-Qa’da 1315 AH)"],
     ["Aligarh Muslim University: History", "https://www.amu.ac.in/about-us/history", "the 1875 school and the 1877 college"]
   ],
   "shafii": [
@@ -1667,7 +1673,7 @@ const SOURCES = {
   ],
   "tahawi": [
     ["Oxford Reference: al-Tahawi (Biographical Encyclopaedia of Islamic Philosophy)", "https://oxfordreference.com/view/10.1093/oi/authority.20110803095405786"],
-    ["Islam Museum: The Qur’an as the speech of God (in the Tahawi creed)", "https://www.islam.museum/en/concept/kalam-allah/"],
+    ["TDV İslâm Ansiklopedisi: el-Akîdetü’t-Tahâviyye", "https://islamansiklopedisi.org.tr/el-akidetut-tahaviyye", "the Tahawi creed"],
     ["TDV İslâm Ansiklopedisi: Tahâvî", "https://islamansiklopedisi.org.tr/tahavi"]
   ],
   "tahtawi": [
@@ -1709,7 +1715,7 @@ const SOURCES = {
   ],
   "debate:created-quran": [
     ["Britannica: miḥnah", "https://www.britannica.com/topic/mihnah"],
-    ["Islam Museum: The Qur’an as the speech of God (in the Tahawi creed)", "https://www.islam.museum/en/concept/kalam-allah/"],
+    ["TDV İslâm Ansiklopedisi: Halku’l-Kur’ân", "https://islamansiklopedisi.org.tr/halkul-kuran"],
     ["Oxford Academic: Mihna (John Nawas)", "https://academic.oup.com/reference/62361/reference-article-abstract/554577879"]
   ],
   "debate:faith": [
@@ -1721,7 +1727,9 @@ const SOURCES = {
     ["Britannica: Qadariyyah", "https://www.britannica.com/topic/Qadariyyah"],
     ["Britannica: Muʿtazilah", "https://www.britannica.com/topic/Mutazilah"],
     ["Britannica: Māturīdiyyah", "https://www.britannica.com/topic/Maturidiyah"],
-    ["Oxford Academic: Coercion and Moral Agency in Ashʿarism", "https://academic.oup.com/book/10075/chapter-abstract/157534748"]
+    ["Oxford Academic: Coercion and Moral Agency in Ashʿarism", "https://academic.oup.com/book/10075/chapter-abstract/157534748"],
+    ["TDV İslâm Ansiklopedisi: Cebriyye", "https://islamansiklopedisi.org.tr/cebriyye", "the doctrine of compulsion"],
+    ["Livnat Holtzman: Debating the Doctrine of jabr (Compulsion) (PDF)", "https://arabic.biu.ac.il/files/arabic/shared/islamic_theology_holtzman.pdf", "Jabriyya as a polemical label"]
   ],
   "debate:good-evil": [
     ["Britannica: Muʿtazilah", "https://www.britannica.com/topic/Mutazilah"],
@@ -1762,7 +1770,8 @@ const SOURCES = {
   ],
   "debate:reason-law": [
     ["Britannica: qiyas", "https://www.britannica.com/topic/qiyas"],
-    ["Britannica: sharia: development of the schools of law", "https://www.britannica.com/topic/sharia/Development-of-different-schools-of-law"]
+    ["Britannica: sharia: development of the schools of law", "https://www.britannica.com/topic/sharia/Development-of-different-schools-of-law"],
+    ["TDV İslâm Ansiklopedisi: Ahmed b. Hanbel", "https://islamansiklopedisi.org.tr/ahmed-b-hanbel", "Ibn Hanbal’s use of “weak” for reports later classed as fair (hasan)"]
   ],
   "debate:reform": [
     ["Britannica: Activities of the Jadid reformers", "https://www.britannica.com/topic/Activities-of-the-Jadid-reformers-1707518"],
@@ -1808,7 +1817,8 @@ const SOURCES = {
     ["Britannica: Iraq: the Abbasid caliphate", "https://www.britannica.com/place/Iraq/The-Abbasid-Caliphate"]
   ],
   "event:buyids": [
-    ["Britannica: Buyid dynasty", "https://www.britannica.com/topic/Buyid-dynasty"]
+    ["Britannica: Buyid dynasty", "https://www.britannica.com/topic/Buyid-dynasty"],
+    ["Encyclopaedia Iranica: Buyids", "https://www.iranicaonline.org/articles/buyids/", "entry into Baghdad on 11 Jumada I 334 AH (19 December 945 CE)"]
   ],
   "event:caliphate-abolished": [
     ["Britannica: Abdülmecid II", "https://www.britannica.com/biography/Abdulmecid-II"],
@@ -1863,7 +1873,9 @@ const SOURCES = {
   ],
   "event:mongols-transoxiana": [
     ["Britannica: Bukhara", "https://www.britannica.com/place/Bukhara"],
-    ["Britannica: Mongol empire", "https://www.britannica.com/place/Mongol-empire"]
+    ["Britannica: Mongol empire", "https://www.britannica.com/place/Mongol-empire"],
+    ["Encyclopaedia Iranica: Bukhara iii. After the Mongol Invasion", "https://www.iranicaonline.org/articles/bukhara-iii/", "Bukhara taken 4 Dhu al-Hijja 616 AH (10 February 1220 CE)"],
+    ["Oxford Research Encyclopedia of Asian History: Bukhara under the Mongols", "https://doi.org/10.1093/acrefore/9780190277727.013.8", "move on Bukhara in Muharram 617 AH (March 1220 CE)"]
   ],
   "event:mughals": [
     ["Britannica: Battles of Panipat", "https://www.britannica.com/event/Battles-of-Panipat"]
@@ -1884,7 +1896,8 @@ const SOURCES = {
   ],
   "event:safavids": [
     ["Britannica: Safavid dynasty", "https://www.britannica.com/topic/Safavid-dynasty"],
-    ["Britannica: Ismāʿīl I", "https://www.britannica.com/biography/Ismail-I-shah-of-Iran"]
+    ["Britannica: Ismāʿīl I", "https://www.britannica.com/biography/Ismail-I-shah-of-Iran"],
+    ["Encyclopaedia Iranica: Esmāʿīl I Ṣafawī i. Biography", "https://www.iranicaonline.org/articles/esmail-i-safawi/esmail-i-safawi-i-biography/", "accession in 907 AH (1501 CE)"]
   ],
   "event:seljuqs": [
     ["Britannica: Iraq from 1055 to 1534", "https://www.britannica.com/place/Iraq/Iraq-from-1055-to-1534"],
@@ -1908,8 +1921,15 @@ const SOURCES = {
   "note:attributes:abd-al-jabbar": [
     ["CORE (PDF): J. R. T. M. Peters, God’s Created Speech", "https://core.ac.uk/download/43595204.pdf"]
   ],
+  "note:attributes:ibn-taymiyya": [
+    ["Brill (2020): Jon Hoover, Early Mamlūk Ashʿarism against Ibn Taymiyya on the Nonliteral Reinterpretation of God’s Attributes", "https://brill.com/display/book/edcoll/9789004426610/BP000014.xml"],
+    ["Brill (2022): Carl Sharif El-Tobgui, Ibn Taymiyya on Reason and Revelation, ch. 4", "https://brill.com/display/book/9789004412866/BP000006.xml"]
+  ],
   "note:attributes:maturidi": [
-    ["Wikipedia: Kitab al-Tawhid (al-Maturidi)", "https://en.wikipedia.org/wiki/Kitab_al-Tawhid_(Al-Maturidi)"]
+    ["TDV İslâm Ansiklopedisi: Kitâbü’t-Tevhîd (Mâtürîdî)", "https://islamansiklopedisi.org.tr/kitabut-tevhid--maturidi"],
+    ["TDV İslâm Ansiklopedisi: Tekvin", "https://islamansiklopedisi.org.tr/tekvin", "takwin as an eternal attribute"],
+    ["TDV İslâm Ansiklopedisi: İstivâ", "https://islamansiklopedisi.org.tr/istiva", "reading “rising over the Throne” without place or direction"],
+    ["Encyclopedia of Religion: Māturīdī, al-", "https://www.encyclopedia.com/environment/encyclopedias-almanacs-transcripts-and-maps/maturidi-al"]
   ],
   "note:attributes:taftazani": [
     ["Encyclopedia of Religion: Taftāzānī, al-", "https://encyclopedia.com/environment/encyclopedias-almanacs-transcripts-and-maps/taftazani-al"]
@@ -1917,6 +1937,10 @@ const SOURCES = {
   "note:created-quran:abd-al-jabbar": [
     ["CORE (PDF): J. R. T. M. Peters, God’s Created Speech", "https://core.ac.uk/download/43595204.pdf"],
     ["Ulumuna: Ibnu Rusydi, al-Qāḍī ʿAbd al-Jabbār’s View on Khalq al-Qurʾān (2015)", "https://doi.org/10.20414/ujis.v19i2.347"]
+  ],
+  "note:created-quran:bukhari": [
+    ["TDV İslâm Ansiklopedisi: Halku Efʿâli’l-İbâd", "https://islamansiklopedisi.org.tr/halku-efalil-ibad"],
+    ["TDV İslâm Ansiklopedisi: Buhârî, Muhammed b. İsmâil", "https://islamansiklopedisi.org.tr/buhari-muhammed-b-ismail", "the Nishapur dispute over recitation"]
   ],
   "note:created-quran:jahiz": [
     ["Encyclopaedia Iranica: Jāḥeẓ", "https://www.iranicaonline.org/articles/jahez/"],
@@ -1927,7 +1951,7 @@ const SOURCES = {
     ["DergiPark (PDF): Harun Kılıçaslan, The Transmission of the Divine Speech to the Prophet according to the Māturīdīs (2025)", "https://dergipark.org.tr/tr/download/article-file/5223695"]
   ],
   "note:created-quran:tahawi": [
-    ["Islam Museum: The Qur’an as the speech of God (in the Tahawi creed)", "https://www.islam.museum/en/concept/kalam-allah/"],
+    ["TDV İslâm Ansiklopedisi: el-Akîdetü’t-Tahâviyye", "https://islamansiklopedisi.org.tr/el-akidetut-tahaviyye"],
     ["Masud.co.uk: al-Tahawi’s creed in English", "https://masud.co.uk/?p=719"]
   ],
   "note:faith:abd-al-jabbar": [
@@ -1963,6 +1987,10 @@ const SOURCES = {
   ],
   "note:ijtihad:rida": [
     ["NYU Arabic Collections Online: Rashid Rida, Muḥāwarāt al-muṣliḥ wa’l-muqallid (Cairo, 1906–07)", "https://sites.dlib.nyu.edu/viewer/node/24960"]
+  ],
+  "note:philosophy:kindi": [
+    ["Stanford Encyclopedia of Philosophy: al-Kindi", "https://plato.stanford.edu/entries/al-kindi/"],
+    ["Stanford Encyclopedia of Philosophy: Arabic and Islamic Metaphysics", "https://plato.stanford.edu/entries/arabic-islamic-metaphysics/", "creation ex nihilo"]
   ],
   "note:sama:qushayri": [
     ["Arabic Wikisource: Ibn Taymiyya, al-Istiqama, quoting al-Qushayri’s chapter on samaʿ", "https://ar.wikisource.org/wiki/%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%82%D8%A7%D9%85%D8%A9/6"],
@@ -2020,6 +2048,13 @@ const SOURCES = {
     ["TDV İslâm Ansiklopedisi: el-Câmiu’s-sahîh", "https://islamansiklopedisi.org.tr/el-camius-sahih--buhari"],
     ["Library of Congress: The Fourth Volume of al-Bukhari’s Collection of Authentic Hadiths", "https://www.loc.gov/item/2021667384/", "the date 846"]
   ],
+  "thread:heavens:1031": [
+    ["Encyclopaedia Iranica: Bīrūnī, Abū Rayḥān i. Life", "https://www.iranicaonline.org/articles/biruni-abu-rayhan-index/biruni-abu-rayhan-i-life/", "al-Qanun al-Mas’udi still listed as unfinished in 427 AH (1036 CE)"]
+  ],
+  "thread:heavens:1437": [
+    ["University of Michigan: Early Astronomy, Ulugh Beg", "https://early-astronomy.web.itd.umich.edu/islamic_ulugh-beg.php", "star catalogue dated early 841 AH (1437 CE)"],
+    ["Biographical Encyclopedia of Astronomers (ISMI): Ulugh Beg", "https://ismi.mpiwg-berlin.mpg.de/index.php/biography/Ulugh_Beg_BEA.htm", "observing programme to about 1440"]
+  ],
   "thread:ijaz:1070": [
     ["JILSA (PDF): ʿAbd al-Qāhir al-Jurjānī on Qur’anic nazm and his criticism of ṣarfa", "https://jurnalfahum.uinsa.ac.id/index.php/jilsa/article/download/1432/584"]
   ],
@@ -2051,7 +2086,7 @@ const SOURCES = {
   "thread:philosophy:1377": [
     ["Britannica: Ibn Khaldūn, the Muqaddimah", "https://www.britannica.com/biography/Ibn-Khaldun/The-Muqaddimah-Ibn-Khalduns-philosophy-of-history"],
     ["CEEOL: Haris Dubravac, About Limitations of Intellect, Ibn Khaldūn’s Criticism of Philosophy", "https://ceeol.com/search/article-detail?id=1176198"],
-    ["Encyclopedia.com: Ibn Khaldūn", "https://encyclopedia.com/topic/Ibn_Khaldun.aspx", "completion in 1377"]
+    ["Encyclopedia of Religion: Ibn Khaldūn", "https://www.encyclopedia.com/people/history/historians-miscellaneous-biographies/ibn-khaldun", "completion in 1377"]
   ],
   "thread:philosophy:838": [
     ["Oxford Academic: The rise of falsafa: al-Kindī, On First Philosophy", "https://academic.oup.com/edited-volume/38657/chapter-abstract/335767408"],
@@ -2109,7 +2144,7 @@ const SOURCES = {
     ["Brill: Andrew Lane, A Traditional Muʿtazilite Qurʾān Commentary", "https://brill.com/display/book/9789047417767/front-4.pdf", "the completion date, 23 Rabiʿ II 528 (20 February 1134) at Mecca"]
   ],
   "thread:tafsir:1466": [
-    ["Islam Museum: Al-Suyuti completes Tafsir al-Jalalayn, 870/1466", "https://www.islam.museum/en/event/al-suyuti-completes-tafsir-al-jalalayn-870/"]
+    ["TDV İslâm Ansiklopedisi: Tefsîrü’l-Celâleyn", "https://islamansiklopedisi.org.tr/tefsirul-celaleyn", "completion in 870 AH (1466 CE)"]
   ],
   "thread:tafsir:1960": [
     ["Tafsir Al-Qur’an (Indonesian): Mengenal Tafsir at-Tahrir wa at-Tanwir", "https://tafsiralquran.id/mengenal-tafsir-at-tahrir-wa-at-tanwir-karya-%e1%b9%adahir-ibn-ashur/", "the years 1341–1380 AH, citing al-Hamid"],
@@ -2964,7 +2999,7 @@ const SOURCES = {
         svg.select(".cursor-line").attr("x1", px).attr("x2", px).attr("visibility", show ? "visible" : "hidden");
         const tag = axis.select(".cursor-tag").attr("visibility", show ? "visible" : "hidden");
         if (show) {
-          const label = `${yr} CE, ${ahFromCE(yr) > 0 ? ahFromCE(yr) + " AH" : "before the Hijra"}`;
+          const label = `${yr} CE, ${yr < 622 ? "before the Hijra" : `${Math.max(1, ahFromCE(yr))} AH`}`;
           const w = measure(label, "700 12px 'Alegreya Sans'") + 14;
           tag.attr("transform", `translate(${px},0)`);
           tag.select("rect").attr("x", -w / 2).attr("width", w);
@@ -3077,13 +3112,13 @@ const SOURCES = {
       return c;
     };
 
-    function header(kicker, title, ar, extra) {
+    function header(kicker, title, ar, extra, arLang) {
       body.textContent = "";
       const k = el("div", "kicker");
       for (const c of kicker) k.appendChild(c);
       body.appendChild(k);
       const h = el("h2", null, title); h.id = "panelTitle"; body.appendChild(h);
-      if (ar) { const a = el("p", "ar", ar); a.lang = "ar"; body.appendChild(a); }
+      if (ar) { const a = el("p", "ar", ar); a.lang = arLang || "ar"; body.appendChild(a); }
       if (extra) for (const n of extra) body.appendChild(n);
     }
 
@@ -3099,7 +3134,7 @@ const SOURCES = {
         extra.push(el("p", "bnote", note));
       }
       if (f.dNote) extra.push(el("p", "bnote", f.dNote));
-      header(chips, f.name, f.ar, extra);
+      header(chips, f.name, f.ar, extra, f.arLang);
       body.appendChild(el("p", "body", f.text));
       // what this scholar argued in each debate: the position card(s) and the dated entries naming them
       if (f.debates.length) {
@@ -3233,7 +3268,8 @@ const SOURCES = {
     function event(e) {
       const dates = el("p", "dates");
       dates.appendChild(el("strong", null, `${e.circa ? "c. " : ""}${e.year} CE`));
-      dates.appendChild(el("span", null, `${e.circa ? "c. " : ""}${Math.max(1, ahFromCE(e.year))} AH`));
+      const ah = e.ah || (e.year < 622 ? "before the Hijra" : `c. ${Math.max(1, ahFromCE(e.year))} AH`);
+      dates.appendChild(el("span", null, ah));
       header([el("span", "chip plain", "Event")], e.title, null, [dates]);
       body.appendChild(el("p", "body", e.text));
       section("Where");

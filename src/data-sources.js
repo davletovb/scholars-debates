@@ -71,11 +71,14 @@ const SOURCES = {
   "biruni": [
     ["Britannica: al-Bīrūnī (summary)", "https://www.britannica.com/summary/al-Biruni"],
     ["Encyclopaedia Iranica: Bīrūnī, Abū Rayḥān i. Life", "https://www.iranicaonline.org/articles/biruni-abu-rayhan-index/biruni-abu-rayhan-i-life/"],
+    ["Encyclopaedia Iranica: Bīrūnī, Abū Rayḥān iv. Geography", "https://www.iranicaonline.org/articles/biruni-abu-rayhan-index/biruni-abu-rayhan-iv/", "measuring the Earth’s radius at Nandana"],
     ["ISMI (Max Planck Institute): Kitāb fī taḥqīq mā li’l-Hind", "https://ismi.mpiwg-berlin.mpg.de/bibcite/reference/15909", "Tahqiq ma li’l-Hind"]
   ],
   "bukhari": [
     ["Library of Congress: manuscript of al-Bukhari’s Sahih, vol. 4 (World Digital Library)", "https://www.loc.gov/resource/gdcwdl.wdl_17619/?sp=1&st=grid"],
     ["Britannica: al-Bukhārī", "https://www.britannica.com/biography/al-Bukhari"],
+    ["TDV İslâm Ansiklopedisi: Buhârî, Muhammed b. İsmâil", "https://islamansiklopedisi.org.tr/buhari-muhammed-b-ismail", "meetings and study with Ibn Hanbal in Baghdad"],
+    ["Rize İlahiyat Dergisi 24 (2023): Recep Bilgin on al-Bukhari and Ibn Hanbal", "https://doi.org/10.32950/rid.1301430", "al-Bukhari’s visits to Ibn Hanbal’s circles and absence of direct narration in the Sahih"],
     ["TDV İslâm Ansiklopedisi: el-Câmiu’s-sahîh", "https://islamansiklopedisi.org.tr/el-camius-sahih--buhari", "the sixteen years of composition"]
   ],
   "dan-fodio": [
@@ -207,7 +210,7 @@ const SOURCES = {
     ["Encyclopaedia Iranica: Jaʿfar al-Ṣādeq ii. Teachings", "https://www.iranicaonline.org/articles/jafar-al-sadeq-ii-teachings/"],
     ["Encyclopaedia Iranica: Jaʿfar al-Ṣādeq", "https://www.iranicaonline.org/articles/jafar-al-sadeq/"],
     ["Britannica: Jaʿfar al-Ṣādiq", "https://www.britannica.com/biography/Jafar-al-Sadiq"],
-    ["Encyclopaedia Iranica: Ismailism xvii. The imamate in Ismailism", "https://www.iranicaonline.org/articles/ismailism-xvii-the-imamate-in-ismailism/", "his descent"]
+    ["Encyclopaedia Iranica: Ismailism xvii. The imamate in Ismailism", "https://www.iranicaonline.org/articles/ismailism-xvii-the-imamate-in-ismailism/", "his descent and Isma’ili numbering"]
   ],
   "jahiz": [
     ["Oxford Academic: al-Jāḥiẓ", "https://academic.oup.com/reference/62361/reference-article-abstract/554570021"],
@@ -315,7 +318,8 @@ const SOURCES = {
     ["Britannica: Hadith", "https://www.britannica.com/topic/Hadith", "Riyad al-salihin"]
   ],
   "nazzam": [
-    ["Encyclopedia of Religion: Nazzam, al- (782–c. 840)", "https://encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/nazzam-al-782-c-840"],
+    ["Encyclopedia of Islam and the Muslim World: Nazzam, al- (782–c. 840)", "https://encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/nazzam-al-782-c-840"],
+    ["Encyclopaedia Iranica: Abū Esḥāq Naẓẓām", "https://www.iranicaonline.org/articles/abu-eshaq-ebrahim-b-3/", "dates c. 165–221 AH (c. 782–836 CE)"],
     ["DergiPark (PDF): al-Naẓẓām’s ṣarfa and al-Jāḥiẓ on the inimitability of the Qur’an", "https://dergipark.org.tr/en/download/article-file/4746272", "his view of sarfa"]
   ],
   "nursi": [
@@ -333,7 +337,7 @@ const SOURCES = {
     ["Library of Congress: al-Qushayri’s Epistle on Sufism", "https://www.loc.gov/item/2021667378/", "al-Risala al-Qushayriyya"]
   ],
   "qushji": [
-    ["TDV İslâm Ansiklopedisi: Ali Kuşçu", "https://www.nazariyat.org/en/issues/cilt-10-sayi-2/jamil-ragep-ali-kuscu"],
+    ["Nazariyat (2024): F. Jamil Ragep, ʿAlī Qūshjī on the Earth’s Motion and Bīrjandī’s Critique", "https://www.nazariyat.org/en/issues/cilt-10-sayi-2/jamil-ragep-ali-kuscu"],
     ["TDV İslâm Ansiklopedisi: Ali Kuşçu", "https://islamansiklopedisi.org.tr/ali-kuscu"],
     ["Encyclopaedia Iranica: ʿAli Qušji", "https://www.iranicaonline.org/articles/ali-qusji-qusju-ala-al-din-ali-mohammad-theologian-and-scientist-d/", "the teacher link"],
     ["Biographical Encyclopedia of Astronomers (ISMI): Qūshjī", "https://ismi.mpiwg-berlin.mpg.de/biography/Qushji_BEA.htm", "the teacher link"]
@@ -354,6 +358,7 @@ const SOURCES = {
   ],
   "sayyid-ahmad-khan": [
     ["Britannica: Sir Sayyid Ahmad Khan", "https://www.britannica.com/biography/Sayyid-Ahmad-Khan"],
+    ["TDV İslâm Ansiklopedisi: Ahmed Han, Seyyid", "https://islamansiklopedisi.org.tr/ahmed-han-seyyid", "death on 27 March 1898 (4 Dhu al-Qa’da 1315 AH)"],
     ["Aligarh Muslim University: History", "https://www.amu.ac.in/about-us/history", "the 1875 school and the 1877 college"]
   ],
   "shafii": [
@@ -410,7 +415,7 @@ const SOURCES = {
   ],
   "tahawi": [
     ["Oxford Reference: al-Tahawi (Biographical Encyclopaedia of Islamic Philosophy)", "https://oxfordreference.com/view/10.1093/oi/authority.20110803095405786"],
-    ["Islam Museum: The Qur’an as the speech of God (in the Tahawi creed)", "https://www.islam.museum/en/concept/kalam-allah/"],
+    ["TDV İslâm Ansiklopedisi: el-Akîdetü’t-Tahâviyye", "https://islamansiklopedisi.org.tr/el-akidetut-tahaviyye", "the Tahawi creed"],
     ["TDV İslâm Ansiklopedisi: Tahâvî", "https://islamansiklopedisi.org.tr/tahavi"]
   ],
   "tahtawi": [
@@ -452,7 +457,7 @@ const SOURCES = {
   ],
   "debate:created-quran": [
     ["Britannica: miḥnah", "https://www.britannica.com/topic/mihnah"],
-    ["Islam Museum: The Qur’an as the speech of God (in the Tahawi creed)", "https://www.islam.museum/en/concept/kalam-allah/"],
+    ["TDV İslâm Ansiklopedisi: Halku’l-Kur’ân", "https://islamansiklopedisi.org.tr/halkul-kuran"],
     ["Oxford Academic: Mihna (John Nawas)", "https://academic.oup.com/reference/62361/reference-article-abstract/554577879"]
   ],
   "debate:faith": [
@@ -464,7 +469,9 @@ const SOURCES = {
     ["Britannica: Qadariyyah", "https://www.britannica.com/topic/Qadariyyah"],
     ["Britannica: Muʿtazilah", "https://www.britannica.com/topic/Mutazilah"],
     ["Britannica: Māturīdiyyah", "https://www.britannica.com/topic/Maturidiyah"],
-    ["Oxford Academic: Coercion and Moral Agency in Ashʿarism", "https://academic.oup.com/book/10075/chapter-abstract/157534748"]
+    ["Oxford Academic: Coercion and Moral Agency in Ashʿarism", "https://academic.oup.com/book/10075/chapter-abstract/157534748"],
+    ["TDV İslâm Ansiklopedisi: Cebriyye", "https://islamansiklopedisi.org.tr/cebriyye", "the doctrine of compulsion"],
+    ["Livnat Holtzman: Debating the Doctrine of jabr (Compulsion) (PDF)", "https://arabic.biu.ac.il/files/arabic/shared/islamic_theology_holtzman.pdf", "Jabriyya as a polemical label"]
   ],
   "debate:good-evil": [
     ["Britannica: Muʿtazilah", "https://www.britannica.com/topic/Mutazilah"],
@@ -505,7 +512,8 @@ const SOURCES = {
   ],
   "debate:reason-law": [
     ["Britannica: qiyas", "https://www.britannica.com/topic/qiyas"],
-    ["Britannica: sharia: development of the schools of law", "https://www.britannica.com/topic/sharia/Development-of-different-schools-of-law"]
+    ["Britannica: sharia: development of the schools of law", "https://www.britannica.com/topic/sharia/Development-of-different-schools-of-law"],
+    ["TDV İslâm Ansiklopedisi: Ahmed b. Hanbel", "https://islamansiklopedisi.org.tr/ahmed-b-hanbel", "Ibn Hanbal’s use of “weak” for reports later classed as fair (hasan)"]
   ],
   "debate:reform": [
     ["Britannica: Activities of the Jadid reformers", "https://www.britannica.com/topic/Activities-of-the-Jadid-reformers-1707518"],
@@ -551,7 +559,8 @@ const SOURCES = {
     ["Britannica: Iraq: the Abbasid caliphate", "https://www.britannica.com/place/Iraq/The-Abbasid-Caliphate"]
   ],
   "event:buyids": [
-    ["Britannica: Buyid dynasty", "https://www.britannica.com/topic/Buyid-dynasty"]
+    ["Britannica: Buyid dynasty", "https://www.britannica.com/topic/Buyid-dynasty"],
+    ["Encyclopaedia Iranica: Buyids", "https://www.iranicaonline.org/articles/buyids/", "entry into Baghdad on 11 Jumada I 334 AH (19 December 945 CE)"]
   ],
   "event:caliphate-abolished": [
     ["Britannica: Abdülmecid II", "https://www.britannica.com/biography/Abdulmecid-II"],
@@ -606,7 +615,9 @@ const SOURCES = {
   ],
   "event:mongols-transoxiana": [
     ["Britannica: Bukhara", "https://www.britannica.com/place/Bukhara"],
-    ["Britannica: Mongol empire", "https://www.britannica.com/place/Mongol-empire"]
+    ["Britannica: Mongol empire", "https://www.britannica.com/place/Mongol-empire"],
+    ["Encyclopaedia Iranica: Bukhara iii. After the Mongol Invasion", "https://www.iranicaonline.org/articles/bukhara-iii/", "Bukhara taken 4 Dhu al-Hijja 616 AH (10 February 1220 CE)"],
+    ["Oxford Research Encyclopedia of Asian History: Bukhara under the Mongols", "https://doi.org/10.1093/acrefore/9780190277727.013.8", "move on Bukhara in Muharram 617 AH (March 1220 CE)"]
   ],
   "event:mughals": [
     ["Britannica: Battles of Panipat", "https://www.britannica.com/event/Battles-of-Panipat"]
@@ -627,7 +638,8 @@ const SOURCES = {
   ],
   "event:safavids": [
     ["Britannica: Safavid dynasty", "https://www.britannica.com/topic/Safavid-dynasty"],
-    ["Britannica: Ismāʿīl I", "https://www.britannica.com/biography/Ismail-I-shah-of-Iran"]
+    ["Britannica: Ismāʿīl I", "https://www.britannica.com/biography/Ismail-I-shah-of-Iran"],
+    ["Encyclopaedia Iranica: Esmāʿīl I Ṣafawī i. Biography", "https://www.iranicaonline.org/articles/esmail-i-safawi/esmail-i-safawi-i-biography/", "accession in 907 AH (1501 CE)"]
   ],
   "event:seljuqs": [
     ["Britannica: Iraq from 1055 to 1534", "https://www.britannica.com/place/Iraq/Iraq-from-1055-to-1534"],
@@ -651,8 +663,15 @@ const SOURCES = {
   "note:attributes:abd-al-jabbar": [
     ["CORE (PDF): J. R. T. M. Peters, God’s Created Speech", "https://core.ac.uk/download/43595204.pdf"]
   ],
+  "note:attributes:ibn-taymiyya": [
+    ["Brill (2020): Jon Hoover, Early Mamlūk Ashʿarism against Ibn Taymiyya on the Nonliteral Reinterpretation of God’s Attributes", "https://brill.com/display/book/edcoll/9789004426610/BP000014.xml"],
+    ["Brill (2022): Carl Sharif El-Tobgui, Ibn Taymiyya on Reason and Revelation, ch. 4", "https://brill.com/display/book/9789004412866/BP000006.xml"]
+  ],
   "note:attributes:maturidi": [
-    ["Wikipedia: Kitab al-Tawhid (al-Maturidi)", "https://en.wikipedia.org/wiki/Kitab_al-Tawhid_(Al-Maturidi)"]
+    ["TDV İslâm Ansiklopedisi: Kitâbü’t-Tevhîd (Mâtürîdî)", "https://islamansiklopedisi.org.tr/kitabut-tevhid--maturidi"],
+    ["TDV İslâm Ansiklopedisi: Tekvin", "https://islamansiklopedisi.org.tr/tekvin", "takwin as an eternal attribute"],
+    ["TDV İslâm Ansiklopedisi: İstivâ", "https://islamansiklopedisi.org.tr/istiva", "reading “rising over the Throne” without place or direction"],
+    ["Encyclopedia of Religion: Māturīdī, al-", "https://www.encyclopedia.com/environment/encyclopedias-almanacs-transcripts-and-maps/maturidi-al"]
   ],
   "note:attributes:taftazani": [
     ["Encyclopedia of Religion: Taftāzānī, al-", "https://encyclopedia.com/environment/encyclopedias-almanacs-transcripts-and-maps/taftazani-al"]
@@ -660,6 +679,10 @@ const SOURCES = {
   "note:created-quran:abd-al-jabbar": [
     ["CORE (PDF): J. R. T. M. Peters, God’s Created Speech", "https://core.ac.uk/download/43595204.pdf"],
     ["Ulumuna: Ibnu Rusydi, al-Qāḍī ʿAbd al-Jabbār’s View on Khalq al-Qurʾān (2015)", "https://doi.org/10.20414/ujis.v19i2.347"]
+  ],
+  "note:created-quran:bukhari": [
+    ["TDV İslâm Ansiklopedisi: Halku Efʿâli’l-İbâd", "https://islamansiklopedisi.org.tr/halku-efalil-ibad"],
+    ["TDV İslâm Ansiklopedisi: Buhârî, Muhammed b. İsmâil", "https://islamansiklopedisi.org.tr/buhari-muhammed-b-ismail", "the Nishapur dispute over recitation"]
   ],
   "note:created-quran:jahiz": [
     ["Encyclopaedia Iranica: Jāḥeẓ", "https://www.iranicaonline.org/articles/jahez/"],
@@ -670,7 +693,7 @@ const SOURCES = {
     ["DergiPark (PDF): Harun Kılıçaslan, The Transmission of the Divine Speech to the Prophet according to the Māturīdīs (2025)", "https://dergipark.org.tr/tr/download/article-file/5223695"]
   ],
   "note:created-quran:tahawi": [
-    ["Islam Museum: The Qur’an as the speech of God (in the Tahawi creed)", "https://www.islam.museum/en/concept/kalam-allah/"],
+    ["TDV İslâm Ansiklopedisi: el-Akîdetü’t-Tahâviyye", "https://islamansiklopedisi.org.tr/el-akidetut-tahaviyye"],
     ["Masud.co.uk: al-Tahawi’s creed in English", "https://masud.co.uk/?p=719"]
   ],
   "note:faith:abd-al-jabbar": [
@@ -706,6 +729,10 @@ const SOURCES = {
   ],
   "note:ijtihad:rida": [
     ["NYU Arabic Collections Online: Rashid Rida, Muḥāwarāt al-muṣliḥ wa’l-muqallid (Cairo, 1906–07)", "https://sites.dlib.nyu.edu/viewer/node/24960"]
+  ],
+  "note:philosophy:kindi": [
+    ["Stanford Encyclopedia of Philosophy: al-Kindi", "https://plato.stanford.edu/entries/al-kindi/"],
+    ["Stanford Encyclopedia of Philosophy: Arabic and Islamic Metaphysics", "https://plato.stanford.edu/entries/arabic-islamic-metaphysics/", "creation ex nihilo"]
   ],
   "note:sama:qushayri": [
     ["Arabic Wikisource: Ibn Taymiyya, al-Istiqama, quoting al-Qushayri’s chapter on samaʿ", "https://ar.wikisource.org/wiki/%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%82%D8%A7%D9%85%D8%A9/6"],
@@ -763,6 +790,13 @@ const SOURCES = {
     ["TDV İslâm Ansiklopedisi: el-Câmiu’s-sahîh", "https://islamansiklopedisi.org.tr/el-camius-sahih--buhari"],
     ["Library of Congress: The Fourth Volume of al-Bukhari’s Collection of Authentic Hadiths", "https://www.loc.gov/item/2021667384/", "the date 846"]
   ],
+  "thread:heavens:1031": [
+    ["Encyclopaedia Iranica: Bīrūnī, Abū Rayḥān i. Life", "https://www.iranicaonline.org/articles/biruni-abu-rayhan-index/biruni-abu-rayhan-i-life/", "al-Qanun al-Mas’udi still listed as unfinished in 427 AH (1036 CE)"]
+  ],
+  "thread:heavens:1437": [
+    ["University of Michigan: Early Astronomy, Ulugh Beg", "https://early-astronomy.web.itd.umich.edu/islamic_ulugh-beg.php", "star catalogue dated early 841 AH (1437 CE)"],
+    ["Biographical Encyclopedia of Astronomers (ISMI): Ulugh Beg", "https://ismi.mpiwg-berlin.mpg.de/index.php/biography/Ulugh_Beg_BEA.htm", "observing programme to about 1440"]
+  ],
   "thread:ijaz:1070": [
     ["JILSA (PDF): ʿAbd al-Qāhir al-Jurjānī on Qur’anic nazm and his criticism of ṣarfa", "https://jurnalfahum.uinsa.ac.id/index.php/jilsa/article/download/1432/584"]
   ],
@@ -794,7 +828,7 @@ const SOURCES = {
   "thread:philosophy:1377": [
     ["Britannica: Ibn Khaldūn, the Muqaddimah", "https://www.britannica.com/biography/Ibn-Khaldun/The-Muqaddimah-Ibn-Khalduns-philosophy-of-history"],
     ["CEEOL: Haris Dubravac, About Limitations of Intellect, Ibn Khaldūn’s Criticism of Philosophy", "https://ceeol.com/search/article-detail?id=1176198"],
-    ["Encyclopedia.com: Ibn Khaldūn", "https://encyclopedia.com/topic/Ibn_Khaldun.aspx", "completion in 1377"]
+    ["Encyclopedia of Religion: Ibn Khaldūn", "https://www.encyclopedia.com/people/history/historians-miscellaneous-biographies/ibn-khaldun", "completion in 1377"]
   ],
   "thread:philosophy:838": [
     ["Oxford Academic: The rise of falsafa: al-Kindī, On First Philosophy", "https://academic.oup.com/edited-volume/38657/chapter-abstract/335767408"],
@@ -852,7 +886,7 @@ const SOURCES = {
     ["Brill: Andrew Lane, A Traditional Muʿtazilite Qurʾān Commentary", "https://brill.com/display/book/9789047417767/front-4.pdf", "the completion date, 23 Rabiʿ II 528 (20 February 1134) at Mecca"]
   ],
   "thread:tafsir:1466": [
-    ["Islam Museum: Al-Suyuti completes Tafsir al-Jalalayn, 870/1466", "https://www.islam.museum/en/event/al-suyuti-completes-tafsir-al-jalalayn-870/"]
+    ["TDV İslâm Ansiklopedisi: Tefsîrü’l-Celâleyn", "https://islamansiklopedisi.org.tr/tefsirul-celaleyn", "completion in 870 AH (1466 CE)"]
   ],
   "thread:tafsir:1960": [
     ["Tafsir Al-Qur’an (Indonesian): Mengenal Tafsir at-Tahrir wa at-Tanwir", "https://tafsiralquran.id/mengenal-tafsir-at-tahrir-wa-at-tanwir-karya-%e1%b9%adahir-ibn-ashur/", "the years 1341–1380 AH, citing al-Hamid"],

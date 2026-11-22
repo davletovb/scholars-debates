@@ -837,7 +837,7 @@
         svg.select(".cursor-line").attr("x1", px).attr("x2", px).attr("visibility", show ? "visible" : "hidden");
         const tag = axis.select(".cursor-tag").attr("visibility", show ? "visible" : "hidden");
         if (show) {
-          const label = `${yr} CE, ${ahFromCE(yr) > 0 ? ahFromCE(yr) + " AH" : "before the Hijra"}`;
+          const label = `${yr} CE, ${yr < 622 ? "before the Hijra" : `${Math.max(1, ahFromCE(yr))} AH`}`;
           const w = measure(label, "700 12px 'Alegreya Sans'") + 14;
           tag.attr("transform", `translate(${px},0)`);
           tag.select("rect").attr("x", -w / 2).attr("width", w);
@@ -950,13 +950,13 @@
       return c;
     };
 
-    function header(kicker, title, ar, extra) {
+    function header(kicker, title, ar, extra, arLang) {
       body.textContent = "";
       const k = el("div", "kicker");
       for (const c of kicker) k.appendChild(c);
       body.appendChild(k);
       const h = el("h2", null, title); h.id = "panelTitle"; body.appendChild(h);
-      if (ar) { const a = el("p", "ar", ar); a.lang = "ar"; body.appendChild(a); }
+      if (ar) { const a = el("p", "ar", ar); a.lang = arLang || "ar"; body.appendChild(a); }
       if (extra) for (const n of extra) body.appendChild(n);
     }
 
@@ -972,7 +972,7 @@
         extra.push(el("p", "bnote", note));
       }
       if (f.dNote) extra.push(el("p", "bnote", f.dNote));
-      header(chips, f.name, f.ar, extra);
+      header(chips, f.name, f.ar, extra, f.arLang);
       body.appendChild(el("p", "body", f.text));
       // what this scholar argued in each debate: the position card(s) and the dated entries naming them
       if (f.debates.length) {
@@ -1106,7 +1106,8 @@
     function event(e) {
       const dates = el("p", "dates");
       dates.appendChild(el("strong", null, `${e.circa ? "c. " : ""}${e.year} CE`));
-      dates.appendChild(el("span", null, `${e.circa ? "c. " : ""}${Math.max(1, ahFromCE(e.year))} AH`));
+      const ah = e.ah || (e.year < 622 ? "before the Hijra" : `c. ${Math.max(1, ahFromCE(e.year))} AH`);
+      dates.appendChild(el("span", null, ah));
       header([el("span", "chip plain", "Event")], e.title, null, [dates]);
       body.appendChild(el("p", "body", e.text));
       section("Where");
