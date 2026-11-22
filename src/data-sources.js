@@ -89,8 +89,8 @@ const SOURCES = {
     ["TDV İslâm Ansiklopedisi: Sadr, Muhammed Bâkır", "https://islamansiklopedisi.org.tr/sadr-muhammed-bakir"]
   ],
   "barelwi": [
-    ["Brill EI3O: Aḥmad Riżā Khān Barelwī (Usha Sanyal)", "https://referenceworks.brill.com/display/entries/EI3O/COM-23995.xml"],
-    ["Brill EI3O: Deobandīs", "https://referenceworks.brill.com/display/entries/EI3O/COM-35956.xml", "South Asian madrasa networks and the 1904 Bareilly madrasa"],
+    ["Brill EI3O: Barelwīs (Usha Sanyal)", "https://referenceworks.brill.com/display/entries/EI3O/COM-23995.xml"],
+    ["Brill EI3O: Madrasa in South Asia (Francis Robinson)", "https://referenceworks.brill.com/display/entries/EI3O/COM-35956.xml", "South Asian madrasa networks and the 1904 Bareilly madrasa"],
     ["Oxford Academic: Nile Green on South Asian Sunni devotion", "https://academic.oup.com/book/6150/chapter/149705917"],
     ["TDV İslâm Ansiklopedisi: Rızâ Han Birelvî", "https://islamansiklopedisi.org.tr/riza-han-birelvi"]
   ],
@@ -338,7 +338,7 @@ const SOURCES = {
   ],
   "liu-zhi": [
     ["Harvard University Press: Sachiko Murata, William C. Chittick & Tu Weiming, The Sage Learning of Liu Zhi", "https://www.hup.harvard.edu/books/9780674033252"],
-    ["Brill EI3O: Liu Zhi", "https://referenceworks.brill.com/doi/10.1163/1573-3912_ei3_COM_35858"],
+    ["Brill (PDF): Tianfang Dianli: Norms and Rites of Islam in Imperial China", "https://brill.com/display/book/9789004319257/B9789004319257_003.pdf", "Tianfang dianli"],
     ["Cambridge (Iranian Studies): Jāmī: A Legend in China", "https://www.cambridge.org/core/journals/iranian-studies/article/jami-a-legend-in-china-a-study-of-the-transmission-and-transformation-of-jamis-texts-in-china/DC351E4C8B3750D4E0B757BB162557F4", "his use of Jami’s Lawa’ih"],
     ["TDV İslâm Ansiklopedisi: Liu Zhi", "https://islamansiklopedisi.org.tr/liu-zhi"]
   ],
@@ -438,8 +438,7 @@ const SOURCES = {
   "qadi-numan": [
     ["Institute of Ismaili Studies: al-Nuʿman, al-Qadi (d. 363 AH / 974 CE)", "https://www.iis.ac.uk/scholarly-contributions/al-numan-al-qadi-d-363-ah-974-ce/"],
     ["Encyclopaedia Iranica: Ejtehād", "https://www.iranicaonline.org/articles/ejtehad/", "Kitab ikhtilaf usul al-madhahib"],
-    ["TDV İslâm Ansiklopedisi: Kādî Nu’mân", "https://islamansiklopedisi.org.tr/kadi-numan"],
-    ["TDV İslâm Ansiklopedisi: Deâimü’l-İslâm", "https://islamansiklopedisi.org.tr/deaimul-islam", "Da’a’im al-Islam"]
+    ["TDV İslâm Ansiklopedisi: Nu‘mân b. Muhammed", "https://islamansiklopedisi.org.tr/numan-b-muhammed", "court service at al-Mahdiyya and al-Mansuriyya, Da’a’im al-Islam"]
   ],
   "qasim-rassi": [
     ["Cambridge University Press: Patricia Crone, God’s Rule, ch. 9 “The Zaydis” (PDF)", "https://resolve.cambridge.org/core/services/aop-cambridge-core/content/view/6B69E868DD32C812D5D39ECF705285A8/9780748646500c9_p99-109_CBO.pdf/the-zaydis.pdf"],
@@ -556,10 +555,12 @@ const SOURCES = {
     ["TDV İslâm Ansiklopedisi: Rifâa et-Tahtâvî", "https://islamansiklopedisi.org.tr/rifaa-et-tahtavi"]
   ],
   "thanawi": [
-    ["Brill EI3O: Deobandīs", "https://referenceworks.brill.com/display/entries/EI3O/COM-35956.xml"],
-    ["Brill EWIO: Ashraf ʿAlī Thānawī and taqlīd", "https://referenceworks.brill.com/display/entries/EWIO/COM-002098.xml"],
+    ["Brill EI3O: Madrasa in South Asia (Francis Robinson)", "https://referenceworks.brill.com/display/entries/EI3O/COM-35956.xml"],
+    ["Brill EWIO: Marriage Practices: India: 19th and early 20th century (Asiya Alam)", "https://referenceworks.brill.com/display/entries/EWIO/COM-002098.xml", "Ashraf Ali Thanawi’s Bihishti zewar and taqlid"],
     ["Max Planck / Journal of Religious History (2021, PDF): Margrit Pernau & Max Stille on Bihishti zewar", "https://pure.mpg.de/rest/items/item_3231501_8/component/file_3293688/content", "Bihishti zewar"],
-    ["TDV İslâm Ansiklopedisi: Eşref Ali", "https://islamansiklopedisi.org.tr/esref-ali"]
+    ["TDV İslâm Ansiklopedisi: Eşref Ali", "https://islamansiklopedisi.org.tr/esref-ali"],
+    ["University of California Press: Barbara Daly Metcalf, Perfecting Women: Maulana Ashraf ʿAli Thanawi’s Bihishti Zewar", "https://www.ucpress.edu/books/perfecting-women/paper"],
+    ["Cambridge (CSSH, 2022): Sovereign and Virtuous Body: The Competent Muslim Woman’s Guide to Health in Thanawi’s Bihishti Zewar (1905)", "https://www.cambridge.org/core/journals/comparative-studies-in-society-and-history/article/sovereign-and-virtuous-body-the-competent-muslim-womans-guide-to-health-in-thanawis-bihishti-zewar-1905/889725055B23F6D4098313D2C5192269"]
   ],
   "tirmidhi": [
     ["Britannica: al-Tirmidhī", "https://www.britannica.com/biography/al-Tirmidhi"],
@@ -576,7 +577,7 @@ const SOURCES = {
   "wang-daiyu": [
     ["Matheson Trust / Journal of Sufi Studies 2 (2013, PDF): Kristian Petersen on Wang Daiyu", "https://www.themathesontrust.org/papers/fareasternreligions/petersen-heartofwangdaiyus.pdf"],
     ["Cambridge University Press: Islamic Thought in China", "https://www.cambridge.org/core/books/islamic-thought-in-china/multiple-meanings-of-pilgrimage-in-sinoislamic-thought/DFE5B03CA526CC212558AE4613585184"],
-    ["Brill EI3O: Wang Daiyu", "https://referenceworks.brill.com/display/entries/EI3O/COM-35928.xml"]
+    ["Religions (MDPI, 2026): Recasting Islamic Thought in China: Conceptual Reconfiguration in Wang Daiyu’s Han Kitab", "https://www.mdpi.com/2077-1444/17/10/1118"]
   ],
   "wasil": [
     ["Britannica: Muʿtazilah", "https://www.britannica.com/topic/Mutazilah"],
@@ -693,14 +694,14 @@ const SOURCES = {
     ["Britannica: Muḥammad ʿAbduh", "https://www.britannica.com/biography/Muhammad-Abduh", "conservative opposition at al-Azhar"],
     ["Britannica: Sir Sayyid Ahmad Khan", "https://www.britannica.com/biography/Sayyid-Ahmad-Khan", "conservative opposition in India"],
     ["Britannica: Deoband school", "https://www.britannica.com/topic/Deoband-school", "Deoband and traditional madrasa learning"],
-    ["Brill EI3O: Aḥmad Riżā Khān Barelwī (Usha Sanyal)", "https://referenceworks.brill.com/display/entries/EI3O/COM-23995.xml", "Barelwi traditionalist education"]
+    ["Brill EI3O: Barelwīs (Usha Sanyal)", "https://referenceworks.brill.com/display/entries/EI3O/COM-23995.xml", "Barelwi traditionalist education"]
   ],
   "debate:renewal": [
     ["Britannica: Islamic world: reform from 1683", "https://www.britannica.com/topic/Islamic-world/Islamic-history-from-1683-to-the-present-reform-dependency-and-recovery"],
     ["Britannica: Wahhābī", "https://www.britannica.com/topic/Wahhabi"],
     ["Oxford Academic: Asmaʾu, Nana", "https://academic.oup.com/edited-volume/61663/chapter-abstract/553437989"],
     ["Britannica: ʿAbd al-Ghanī al-Nābulusī", "https://www.britannica.com/biography/Abd-al-Ghani-al-Nabulusi", "al-Nabulusi’s defence of Sufi and Ottoman practice"],
-    ["Brill EI3O: Aḥmad Riżā Khān Barelwī (Usha Sanyal)", "https://referenceworks.brill.com/display/entries/EI3O/COM-23995.xml", "Barelwi defence of inherited devotional practice"]
+    ["Brill EI3O: Barelwīs (Usha Sanyal)", "https://referenceworks.brill.com/display/entries/EI3O/COM-23995.xml", "Barelwi defence of inherited devotional practice"]
   ],
   "debate:sama": [
     ["Britannica: samāʿ", "https://www.britannica.com/topic/sama-Sufi-religious-practice"],
@@ -963,14 +964,15 @@ const SOURCES = {
   ],
   "note:ijtihad:qadi-numan": [
     ["Encyclopaedia Iranica: Ejtehād", "https://www.iranicaonline.org/articles/ejtehad/"],
-    ["Institute of Ismaili Studies: al-Nuʿman, al-Qadi (d. 363 AH / 974 CE)", "https://www.iis.ac.uk/scholarly-contributions/al-numan-al-qadi-d-363-ah-974-ce/"]
+    ["Institute of Ismaili Studies: al-Nuʿman, al-Qadi (d. 363 AH / 974 CE)", "https://www.iis.ac.uk/scholarly-contributions/al-numan-al-qadi-d-363-ah-974-ce/"],
+    ["TDV İslâm Ansiklopedisi: Nu‘mân b. Muhammed", "https://islamansiklopedisi.org.tr/numan-b-muhammed"]
   ],
   "note:ijtihad:rida": [
     ["NYU Arabic Collections Online: Rashid Rida, Muḥāwarāt al-muṣliḥ wa’l-muqallid (Cairo, 1906–07)", "https://sites.dlib.nyu.edu/viewer/node/24960"]
   ],
   "note:ijtihad:thanawi": [
-    ["Brill EWIO: Ashraf ʿAlī Thānawī and taqlīd", "https://referenceworks.brill.com/display/entries/EWIO/COM-002098.xml"],
-    ["Brill EI3O: Deobandīs", "https://referenceworks.brill.com/display/entries/EI3O/COM-35956.xml"]
+    ["Brill EWIO: Marriage Practices: India: 19th and early 20th century (Asiya Alam)", "https://referenceworks.brill.com/display/entries/EWIO/COM-002098.xml", "Thanawi’s defence of taqlid and Maliki legal borrowing"],
+    ["Brill EI3O: Madrasa in South Asia (Francis Robinson)", "https://referenceworks.brill.com/display/entries/EI3O/COM-35956.xml"]
   ],
   "note:imamate:jabir-ibn-zayd": [
     ["TDV İslâm Ansiklopedisi: Câbir b. Zeyd", "https://islamansiklopedisi.org.tr/cabir-b-zeyd"],
@@ -982,7 +984,7 @@ const SOURCES = {
   ],
   "note:imamate:qadi-numan": [
     ["Institute of Ismaili Studies: al-Nuʿman, al-Qadi (d. 363 AH / 974 CE)", "https://www.iis.ac.uk/scholarly-contributions/al-numan-al-qadi-d-363-ah-974-ce/"],
-    ["TDV İslâm Ansiklopedisi: Deâimü’l-İslâm", "https://islamansiklopedisi.org.tr/deaimul-islam"]
+    ["TDV İslâm Ansiklopedisi: Nu‘mân b. Muhammed", "https://islamansiklopedisi.org.tr/numan-b-muhammed"]
   ],
   "note:imamate:shammakhi": [
     ["Cambridge University Press: Paul M. Love Jr., Ibadi Muslims of North Africa (2018), ch. 7", "https://www.cambridge.org/core/books/ibadi-muslims-of-north-africa/end-of-a-tradition/656A6A9B8E73B8B2D779AB9FE9A15D67"],
@@ -1008,24 +1010,20 @@ const SOURCES = {
     ["Routledge Encyclopedia of Philosophy: al-Razi, Fakhr al-Din (Theology and Philosophy)", "https://www.rep.routledge.com/articles/biographical/al-razi-fakhr-al-din-1149-1209/v-1/sections/theology-and-philosophy"],
     ["TDV İslâm Ansiklopedisi: Tûsî, Nasîrüddin", "https://islamansiklopedisi.org.tr/tusi-nasiruddin"]
   ],
-  "note:philosophy:wang-daiyu": [
-    ["Matheson Trust / Journal of Sufi Studies 2 (2013, PDF): Kristian Petersen on Wang Daiyu", "https://www.themathesontrust.org/papers/fareasternreligions/petersen-heartofwangdaiyus.pdf"],
-    ["Brill EI3O: Wang Daiyu", "https://referenceworks.brill.com/display/entries/EI3O/COM-35928.xml"]
-  ],
   "note:reason-law:jabir-ibn-zayd": [
     ["Cambridge University Press: Omer Awass, Fatwa and the Making and Renewal of Islamic Law (2023), ch. 2", "https://www.cambridge.org/core/books/fatwa-and-the-making-and-renewal-of-islamic-law/fatwa-in-the-classical-age/7DE13632B92F01C307F98C8CE400C792"],
     ["TDV İslâm Ansiklopedisi: Câbir b. Zeyd", "https://islamansiklopedisi.org.tr/cabir-b-zeyd"]
   ],
   "note:reform:barelwi": [
-    ["Brill EI3O: Aḥmad Riżā Khān Barelwī (Usha Sanyal)", "https://referenceworks.brill.com/display/entries/EI3O/COM-23995.xml"],
-    ["Brill EI3O: Deobandīs", "https://referenceworks.brill.com/display/entries/EI3O/COM-35956.xml"]
+    ["Brill EI3O: Barelwīs (Usha Sanyal)", "https://referenceworks.brill.com/display/entries/EI3O/COM-23995.xml"],
+    ["Brill EI3O: Madrasa in South Asia (Francis Robinson)", "https://referenceworks.brill.com/display/entries/EI3O/COM-35956.xml"]
   ],
   "note:reform:thanawi": [
-    ["Brill EI3O: Deobandīs", "https://referenceworks.brill.com/display/entries/EI3O/COM-35956.xml"],
+    ["Brill EI3O: Madrasa in South Asia (Francis Robinson)", "https://referenceworks.brill.com/display/entries/EI3O/COM-35956.xml"],
     ["Max Planck / Journal of Religious History (2021, PDF): Margrit Pernau & Max Stille on Bihishti zewar", "https://pure.mpg.de/rest/items/item_3231501_8/component/file_3293688/content"]
   ],
   "note:renewal:barelwi": [
-    ["Brill EI3O: Aḥmad Riżā Khān Barelwī (Usha Sanyal)", "https://referenceworks.brill.com/display/entries/EI3O/COM-23995.xml"],
+    ["Brill EI3O: Barelwīs (Usha Sanyal)", "https://referenceworks.brill.com/display/entries/EI3O/COM-23995.xml"],
     ["TDV İslâm Ansiklopedisi: Rızâ Han Birelvî", "https://islamansiklopedisi.org.tr/riza-han-birelvi"]
   ],
   "note:renewal:nabulusi": [
@@ -1076,7 +1074,7 @@ const SOURCES = {
   ],
   "note:sufism-law:liu-zhi": [
     ["Harvard University Press: Sachiko Murata, William C. Chittick & Tu Weiming, The Sage Learning of Liu Zhi", "https://www.hup.harvard.edu/books/9780674033252"],
-    ["Brill EI3O: Liu Zhi", "https://referenceworks.brill.com/doi/10.1163/1573-3912_ei3_COM_35858"]
+    ["Brill (PDF): Tianfang Dianli: Norms and Rites of Islam in Imperial China", "https://brill.com/display/book/9789004319257/B9789004319257_003.pdf"]
   ],
   "note:sufism-law:raniri": [
     ["Cambridge University Press: Islamic Connections (Shari’a-mindedness in the Malay World and the contributions of Nur al-Din al-Raniri)", "https://www.cambridge.org/core/books/islamic-connections/shariamindedness-in-the-malay-world-and-the-indian-connection-the-contributions-of-nur-aldin-alraniri-and-nik-abdul-aziz-bin-haji-nik-mat/3E31F6C8CB33F7DFCBAF74ADB5CCDE9D"],
@@ -1126,7 +1124,8 @@ const SOURCES = {
   ],
   "note:unity-being:raniri": [
     ["Cambridge University Press: Islamic Connections (Shari’a-mindedness in the Malay World and the contributions of Nur al-Din al-Raniri)", "https://www.cambridge.org/core/books/islamic-connections/shariamindedness-in-the-malay-world-and-the-indian-connection-the-contributions-of-nur-aldin-alraniri-and-nik-abdul-aziz-bin-haji-nik-mat/3E31F6C8CB33F7DFCBAF74ADB5CCDE9D"],
-    ["Brill (PDF): G. W. J. Drewes on Nur al-Din al-Raniri", "https://brill.com/display/book/9789004454170/B9789004454170_s008.pdf"]
+    ["Brill (PDF): G. W. J. Drewes on Nur al-Din al-Raniri", "https://brill.com/display/book/9789004454170/B9789004454170_s008.pdf"],
+    ["TDV İslâm Ansiklopedisi: Nûreddin er-Rânîrî", "https://islamansiklopedisi.org.tr/nureddin-er-raniri", "1637–1644 tenure in Aceh and distinction between orthodox and heretical wujudiyya"]
   ],
   "note:unity-being:sinkili": [
     ["Brill EI3O: ʿAbd al-Raʾūf al-Sinkilī (Peter G. Riddell)", "https://referenceworks.brill.com/display/entries/EI3O/COM-0149.xml"],
@@ -1134,7 +1133,7 @@ const SOURCES = {
   ],
   "note:unity-being:wang-daiyu": [
     ["Matheson Trust / Journal of Sufi Studies 2 (2013, PDF): Kristian Petersen on Wang Daiyu", "https://www.themathesontrust.org/papers/fareasternreligions/petersen-heartofwangdaiyus.pdf"],
-    ["Brill EI3O: Wang Daiyu", "https://referenceworks.brill.com/display/entries/EI3O/COM-35928.xml"]
+    ["Religions (MDPI, 2026): Recasting Islamic Thought in China: Conceptual Reconfiguration in Wang Daiyu’s Han Kitab", "https://www.mdpi.com/2077-1444/17/10/1118"]
   ],
   "thread:caliphate-modern:1922": [
     ["Yale University Press: The Caliphate or Supreme Imamate", "https://yalebooks.yale.edu/book/9780300190274/the-caliphate-or-supreme-imamate/"]
@@ -1275,7 +1274,8 @@ const SOURCES = {
   ],
   "thread:ijtihad:955": [
     ["Encyclopaedia Iranica: Ejtehād", "https://www.iranicaonline.org/articles/ejtehad/"],
-    ["Institute of Ismaili Studies: al-Nuʿman, al-Qadi (d. 363 AH / 974 CE)", "https://www.iis.ac.uk/scholarly-contributions/al-numan-al-qadi-d-363-ah-974-ce/"]
+    ["Institute of Ismaili Studies: al-Nuʿman, al-Qadi (d. 363 AH / 974 CE)", "https://www.iis.ac.uk/scholarly-contributions/al-numan-al-qadi-d-363-ah-974-ce/"],
+    ["TDV İslâm Ansiklopedisi: Nu‘mân b. Muhammed", "https://islamansiklopedisi.org.tr/numan-b-muhammed", "al-Mansuriyya and Kitab ikhtilaf usul al-madhahib"]
   ],
   "thread:imamate:1515": [
     ["Cambridge University Press: Paul M. Love Jr., Ibadi Muslims of North Africa (2018), ch. 7", "https://www.cambridge.org/core/books/ibadi-muslims-of-north-africa/end-of-a-tradition/656A6A9B8E73B8B2D779AB9FE9A15D67"],
@@ -1299,9 +1299,10 @@ const SOURCES = {
     ["Encyclopaedia Iranica: Ḡayba", "https://www.iranicaonline.org/articles/gayba/"],
     ["Encyclopaedia Iranica: Islam in Iran ix. The Deputies of Mahdi", "https://www.iranicaonline.org/articles/islam-in-iran-ix-the-deputies-of-mahdi/"]
   ],
-  "thread:imamate:909": [
+  "thread:imamate:910": [
     ["Britannica: ʿUbayd Allāh al-Mahdī", "https://www.britannica.com/biography/Ubayd-Allah-al-Mahdi"],
-    ["Encyclopaedia Iranica: Fatimids", "https://www.iranicaonline.org/articles/fatimids/"]
+    ["Encyclopaedia Iranica: Fatimids", "https://www.iranicaonline.org/articles/fatimids/"],
+    ["Encyclopaedia Iranica: Isma’ilism iii. Isma’ili History (Farhad Daftary)", "https://www.iranicaonline.org/articles/ismailism/iii-ismaili-history/", "entry into Raqqada and proclamation as caliph in January 910"]
   ],
   "thread:imamate:941": [
     ["Encyclopaedia Iranica: Ḡayba", "https://www.iranicaonline.org/articles/gayba/"],
@@ -1309,7 +1310,7 @@ const SOURCES = {
   ],
   "thread:imamate:960": [
     ["Institute of Ismaili Studies: al-Nuʿman, al-Qadi (d. 363 AH / 974 CE)", "https://www.iis.ac.uk/scholarly-contributions/al-numan-al-qadi-d-363-ah-974-ce/"],
-    ["TDV İslâm Ansiklopedisi: Deâimü’l-İslâm", "https://islamansiklopedisi.org.tr/deaimul-islam"]
+    ["TDV İslâm Ansiklopedisi: Nu‘mân b. Muhammed", "https://islamansiklopedisi.org.tr/numan-b-muhammed", "al-Mansuriyya and Da’a’im al-Islam (c. 349/960)"]
   ],
   "thread:maqasid:1078": [
     ["TDV İslâm Ansiklopedisi: Cüveynî, İmâmü’l-Haremeyn", "https://islamansiklopedisi.org.tr/cuveyni-imamul-haremeyn"]
@@ -1336,10 +1337,6 @@ const SOURCES = {
     ["Encyclopaedia Iranica: Dāmād, Mīr(-e), Sayyed Moḥammad Bāqer", "https://www.iranicaonline.org/articles/damad-mir-e-sayyed-mohammad-baqer-b/"],
     ["TDV İslâm Ansiklopedisi: Dâmâd, Muhammed Bâkır", "https://islamansiklopedisi.org.tr/damad-muhammed-bakir"]
   ],
-  "thread:philosophy:1642": [
-    ["Matheson Trust / Journal of Sufi Studies 2 (2013, PDF): Kristian Petersen on Wang Daiyu", "https://www.themathesontrust.org/papers/fareasternreligions/petersen-heartofwangdaiyus.pdf"],
-    ["Brill EI3O: Wang Daiyu", "https://referenceworks.brill.com/display/entries/EI3O/COM-35928.xml"]
-  ],
   "thread:philosophy:838": [
     ["Oxford Academic: The rise of falsafa: al-Kindī, On First Philosophy", "https://academic.oup.com/edited-volume/38657/chapter-abstract/335767408"],
     ["Stanford Encyclopedia of Philosophy: al-Kindi", "https://plato.stanford.edu/entries/al-kindi/"]
@@ -1357,18 +1354,20 @@ const SOURCES = {
   ],
   "thread:reform:1867": [
     ["Britannica: Deoband school", "https://www.britannica.com/topic/Deoband-school"],
-    ["Brill EI3O: Deobandīs", "https://referenceworks.brill.com/display/entries/EI3O/COM-35956.xml"]
+    ["Brill EI3O: Madrasa in South Asia (Francis Robinson)", "https://referenceworks.brill.com/display/entries/EI3O/COM-35956.xml"]
   ],
   "thread:reform:1875": [
     ["Aligarh Muslim University: History", "https://www.amu.ac.in/about-us/history"]
   ],
   "thread:reform:1904": [
-    ["Brill EI3O: Aḥmad Riżā Khān Barelwī (Usha Sanyal)", "https://referenceworks.brill.com/display/entries/EI3O/COM-23995.xml"],
-    ["Brill EI3O: Deobandīs", "https://referenceworks.brill.com/display/entries/EI3O/COM-35956.xml"]
+    ["Brill EI3O: Barelwīs (Usha Sanyal)", "https://referenceworks.brill.com/display/entries/EI3O/COM-23995.xml"],
+    ["Brill EI3O: Madrasa in South Asia (Francis Robinson)", "https://referenceworks.brill.com/display/entries/EI3O/COM-35956.xml"]
   ],
   "thread:reform:1905": [
     ["Max Planck / Journal of Religious History (2021, PDF): Margrit Pernau & Max Stille on Bihishti zewar", "https://pure.mpg.de/rest/items/item_3231501_8/component/file_3293688/content"],
-    ["TDV İslâm Ansiklopedisi: Eşref Ali", "https://islamansiklopedisi.org.tr/esref-ali"]
+    ["TDV İslâm Ansiklopedisi: Eşref Ali", "https://islamansiklopedisi.org.tr/esref-ali"],
+    ["University of California Press: Barbara Daly Metcalf, Perfecting Women: Maulana Ashraf ʿAli Thanawi’s Bihishti Zewar", "https://www.ucpress.edu/books/perfecting-women/paper"],
+    ["Cambridge (CSSH, 2022): Sovereign and Virtuous Body: The Competent Muslim Woman’s Guide to Health in Thanawi’s Bihishti Zewar (1905)", "https://www.cambridge.org/core/journals/comparative-studies-in-society-and-history/article/sovereign-and-virtuous-body-the-competent-muslim-womans-guide-to-health-in-thanawis-bihishti-zewar-1905/889725055B23F6D4098313D2C5192269"]
   ],
   "thread:reform:1911": [
     ["Encyclopaedia Iranica: Behbudi", "https://www.iranicaonline.org/articles/behbudi-molla-mahmud-kaja/"]
@@ -1383,16 +1382,17 @@ const SOURCES = {
     ["Britannica: ʿAbd al-Ghanī al-Nābulusī", "https://www.britannica.com/biography/Abd-al-Ghani-al-Nabulusi"],
     ["Brill: Samer Akkach, Letters of a Sufi Scholar", "https://brill.com/display/title/14508"]
   ],
-  "thread:renewal:1785": [
+  "thread:renewal:1787": [
     ["Brill (PDF): Stefan Reichmuth on Murtaḍā al-Zabīdī", "https://brill.com/display/book/edcoll/9789047413349/B9789047413349_s011.pdf"],
-    ["TDV İslâm Ansiklopedisi: Zebîdî, Muhammed Murtazâ", "https://islamansiklopedisi.org.tr/zebidi-muhammed-murtaza"]
+    ["TDV İslâm Ansiklopedisi: Zebîdî, Muhammed Murtazâ", "https://islamansiklopedisi.org.tr/zebidi-muhammed-murtaza"],
+    ["ghazali.org: Itḥāf al-sadāh al-muttaqīn (colophon, 5 Jumada II 1201 AH / 1787 CE)", "https://www.ghazali.org/ithaf/", "completion in Jumada II 1201 AH (1787 CE)"]
   ],
   "thread:renewal:1840": [
     ["Revue de la FM6OA: The life and contribution of Nana Asmaʾu", "https://www.fm6oa.org/revue/article/the-life-and-contribution-of-nana-asmau/"],
     ["Brill: Sufi Feminism, Women Leaders in African Sufi Movements", "https://doi.org/10.1163/15700666-12340258"]
   ],
   "thread:renewal:1906": [
-    ["Brill EI3O: Aḥmad Riżā Khān Barelwī (Usha Sanyal)", "https://referenceworks.brill.com/display/entries/EI3O/COM-23995.xml"],
+    ["Brill EI3O: Barelwīs (Usha Sanyal)", "https://referenceworks.brill.com/display/entries/EI3O/COM-23995.xml"],
     ["TDV İslâm Ansiklopedisi: Rızâ Han Birelvî", "https://islamansiklopedisi.org.tr/riza-han-birelvi"]
   ],
   "thread:sama:1045": [
@@ -1451,9 +1451,10 @@ const SOURCES = {
     ["Mamluk Studies Review 7.1 (2003): Th. Emil Homerin, Living Love: The Mystical Writings of ʿĀʾishah al-Bāʿūnīyah", "https://knowledge.uchicago.edu/records/ec50p-6bg66", "her move to Cairo in 919 AH (1513–1514 CE) and licences to teach law and issue fatwas"],
     ["NYU Press: The Principles of Sufism (trans. Th. Emil Homerin)", "https://nyupress.org/9781479864683/the-principles-of-sufism/", "al-Muntakhab fi usul al-rutab"]
   ],
-  "thread:sufism-law:1785": [
+  "thread:sufism-law:1787": [
     ["Brill (PDF): Stefan Reichmuth on Murtaḍā al-Zabīdī", "https://brill.com/display/book/edcoll/9789047413349/B9789047413349_s011.pdf"],
-    ["TDV İslâm Ansiklopedisi: Zebîdî, Muhammed Murtazâ", "https://islamansiklopedisi.org.tr/zebidi-muhammed-murtaza"]
+    ["TDV İslâm Ansiklopedisi: Zebîdî, Muhammed Murtazâ", "https://islamansiklopedisi.org.tr/zebidi-muhammed-murtaza"],
+    ["ghazali.org: Itḥāf al-sadāh al-muttaqīn (colophon, 5 Jumada II 1201 AH / 1787 CE)", "https://www.ghazali.org/ithaf/", "completion in Jumada II 1201 AH (1787 CE)"]
   ],
   "thread:tafsir:1043": [
     ["TDV İslâm Ansiklopedisi: Kuşeyrî, Abdülkerîm b. Hevâzin", "https://islamansiklopedisi.org.tr/kuseyri-abdulkerim-b-hevazin", "beginning Lata’if al-isharat in 434 AH (1042–1043 CE)"],
@@ -1493,7 +1494,12 @@ const SOURCES = {
   ],
   "thread:unity-being:1640": [
     ["Cambridge University Press: Islamic Connections (Shari’a-mindedness in the Malay World and the contributions of Nur al-Din al-Raniri)", "https://www.cambridge.org/core/books/islamic-connections/shariamindedness-in-the-malay-world-and-the-indian-connection-the-contributions-of-nur-aldin-alraniri-and-nik-abdul-aziz-bin-haji-nik-mat/3E31F6C8CB33F7DFCBAF74ADB5CCDE9D"],
-    ["Brill (PDF): G. W. J. Drewes on Nur al-Din al-Raniri", "https://brill.com/display/book/9789004454170/B9789004454170_s008.pdf"]
+    ["Brill (PDF): G. W. J. Drewes on Nur al-Din al-Raniri", "https://brill.com/display/book/9789004454170/B9789004454170_s008.pdf"],
+    ["TDV İslâm Ansiklopedisi: Nûreddin er-Rânîrî", "https://islamansiklopedisi.org.tr/nureddin-er-raniri", "1637–1644 tenure in Aceh and distinction between orthodox and heretical wujudiyya"]
+  ],
+  "thread:unity-being:1642": [
+    ["Matheson Trust / Journal of Sufi Studies 2 (2013, PDF): Kristian Petersen on Wang Daiyu", "https://www.themathesontrust.org/papers/fareasternreligions/petersen-heartofwangdaiyus.pdf"],
+    ["Religions (MDPI, 2026): Recasting Islamic Thought in China: Conceptual Reconfiguration in Wang Daiyu’s Han Kitab", "https://www.mdpi.com/2077-1444/17/10/1118"]
   ],
   "thread:unity-being:1665": [
     ["Brill EI3O: ʿAbd al-Raʾūf al-Sinkilī (Peter G. Riddell)", "https://referenceworks.brill.com/display/entries/EI3O/COM-0149.xml"],

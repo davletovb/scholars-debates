@@ -10,7 +10,7 @@ Every scholar, debate and event lists its sources in `src/data-sources.js`, show
 
 ## Current coverage
 
-The dataset currently holds 124 scholars, 20 debates and 29 events across seven eras and 131 places.
+The dataset currently holds 124 scholars, 20 debates and 29 events across seven eras and 134 places.
 
 - **1500–1800 era**: 18 scholars counted by life midpoint (the rule used in the Browse modal), or 22 with overlapping lifespans.
 - **Sciences lane**: 8 scholars counted by primary lane, or 9 including secondary `also` tags.

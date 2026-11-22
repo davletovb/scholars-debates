@@ -396,6 +396,7 @@ const PLACES = {
   tunis: ["Tunis", 36.80, 10.18, "andalus"],
   qayrawan: ["Qayrawan", 35.67, 10.10, "andalus"],
   mahdiyya: ["al-Mahdiyya", 35.50, 11.06, "andalus"],
+  mansuriyya: ["al-Mansuriyya", 35.66, 10.11, "andalus"],
   yefren: ["Yefren (Jabal Nafusa)", 32.06, 12.53, "andalus"],
   fez: ["Fez", 34.06, -4.98, "andalus"],
   qalat: ["Qal’at Ibn Salama, near Frenda", 35.02, 1.05, "andalus"],
@@ -465,6 +466,8 @@ const PLACES = {
   agra: ["Agra", 27.18, 78.01, "southasia"],
   sirhind: ["Sirhind", 30.64, 76.38, "southasia"],
   deoband: ["Deoband", 29.70, 77.68, "southasia"],
+  "thana-bhawan": ["Thana Bhawan", 29.59, 77.42, "southasia"],
+  kanpur: ["Kanpur", 26.47, 80.35, "southasia"],
   bareilly: ["Bareilly", 28.37, 79.43, "southasia"],
   bilgram: ["Bilgram", 27.18, 80.04, "southasia"],
   rander: ["Rander (Gujarat)", 21.22, 72.80, "southasia"],
@@ -657,8 +660,8 @@ const FIGURES = [
   { id: "ashari", name: "Abu al-Hasan al-Ash’ari", short: "al-Ash’ari", ar: "أبو الحسن الأشعري", b: 874, bc: true, d: 936, dah: 324, lane: "theology", schools: ["Ash’ari"], places: ["basra", "baghdad"],
     text: "Trained as a Mu’tazili in Basra, he broke with them around the age of forty. He defended doctrines such as the uncreated Qur’an and the divine attributes with rational argument, and the Ash’ari school became the leading Sunni theology.",
     works: [["Maqalat al-Islamiyyin", "The doctrines of the Muslims"], ["al-Ibana", "The elucidation"]] },
-  { id: "qadi-numan", name: "al-Qadi al-Nu’man", short: "al-Qadi al-Nu’man", ar: "القاضي النعمان", b: 903, bc: true, bUnknown: true, bNote: "Birth year unknown; he was born in Qayrawan around the turn of the tenth century.", d: 974, dah: 363, lane: "law", schools: ["Isma’ili"], places: ["qayrawan", "mahdiyya", "cairo"],
-    text: "Chief judge under the Fatimid caliphs and founder of Isma’ili jurisprudence. Moving with Caliph al-Mu’izz from North Africa to Cairo in 973, he compiled Da’a’im al-Islam as the official legal code of the Fatimid state and attacked Sunni legal theory and ijtihad in favour of the authority of the living Imam.",
+  { id: "qadi-numan", name: "al-Qadi al-Nu’man", short: "al-Qadi al-Nu’man", ar: "القاضي النعمان", b: 903, bc: true, bUnknown: true, bNote: "Birth year unknown; he was born in Qayrawan around the turn of the tenth century.", d: 974, dah: 363, lane: "law", schools: ["Isma’ili"], places: ["qayrawan", "mahdiyya", "mansuriyya", "cairo"],
+    text: "Chief judge under the Fatimid caliphs and founder of Isma’ili jurisprudence. Serving the court at al-Mahdiyya and al-Mansuriyya before moving with Caliph al-Mu’izz to Cairo in 973, he compiled Da’a’im al-Islam as the official legal code of the Fatimid state and attacked Sunni legal theory and ijtihad in favour of the authority of the living Imam.",
     works: [["Da’a’im al-Islam", "The pillars of Islam"], ["Kitab ikhtilaf usul al-madhahib", "The disagreement of the principles of the legal schools"]] },
 
   // 945–1258
@@ -832,11 +835,11 @@ const FIGURES = [
   { id: "astarabadi", name: "Muhammad Amin al-Astarabadi", short: "al-Astarabadi", ar: "محمد أمين الأسترآبادي", b: 1575, bc: true, bUnknown: true, bNote: "Birth year unknown; he received a hadith licence in Najaf in 1007 AH (1598 CE).", d: 1627, dc: true, dah: 1036, dNote: "Sources give his death in Mecca as 1033 AH (1623–1624 CE) or 1036 AH (1626–1627 CE).", lane: "law", also: ["hadith"], schools: ["Ja’fari", "Akhbari"], places: ["astarabad", "najaf", "shiraz", "medina", "mecca"],
     text: "Twelver jurist and hadith scholar associated with Astarabad who revived the Akhbari school in the early seventeenth century. Trained in Najaf and Shiraz before living in Medina and Mecca, he argued in al-Fawa’id al-madaniyya that the Imams’ transmitted reports are the sole reliable source of religious law, rejecting juristic ijtihad and speculative legal theory.",
     works: [["al-Fawa’id al-madaniyya", "Medinan insights (on Akhbari legal theory)"]] },
-  { id: "wang-daiyu", name: "Wang Daiyu", short: "Wang Daiyu", ar: "王岱舆", arLang: "zh", b: 1580, bc: true, bNote: "Born in Nanjing in the late sixteenth century, estimated between about 1570 and 1590.", d: 1658, dc: true, dah: 1068, dNote: "Sources place his death around 1658–1660 (c. 1068 AH).", lane: "philosophy", also: ["theology", "sufism"], places: ["nanjing", "beijing"],
+  { id: "wang-daiyu", name: "Wang Daiyu", short: "Wang Daiyu", ar: "王岱舆", arLang: "zh", b: 1580, bc: true, bNote: "Born in Nanjing in the late sixteenth century, estimated between about 1570 and 1590.", d: 1658, dc: true, dNote: "Sources place his death around 1658–1660.", lane: "philosophy", also: ["theology", "sufism"], places: ["nanjing", "beijing"],
     text: "Chinese Muslim scholar of Nanjing and a pioneer of the Han Kitab tradition of writing Islamic thought in classical Chinese. In Zhengjiao zhenquan (1642) he explained Islamic monotheism and Sufi metaphysics in dialogue with Neo-Confucian philosophy.",
     works: [["Zhengjiao zhenquan", "A real commentary on the true teaching (1642)"]] },
   { id: "raniri", name: "Nur al-Din al-Raniri", short: "al-Raniri", ar: "نور الدين الرانيري", b: 1595, bc: true, bUnknown: true, bNote: "Birth year unknown; he was born in Rander, Gujarat, in the late sixteenth century.", d: 1658, dah: 1068, lane: "law", also: ["sufism", "theology"], schools: ["Shafi’i"], places: ["rander", "mecca", "aceh", "rander"],
-    text: "Scholar of Hadhrami descent born in Rander, Gujarat, who served as Shaykh al-Islam of the Sultanate of Aceh under Sultan Iskandar Thani (1637–1641). Writing in Malay and Arabic, he composed a foundational manual of Shafi’i ritual law and led a sharp campaign against the Malay wujudiyya mystics Hamzah Fansuri and Shamsuddin al-Sumatrani.",
+    text: "Scholar of Hadhrami descent born in Rander, Gujarat, who served as Shaykh al-Islam of the Sultanate of Aceh from 1637 to 1644 under Sultan Iskandar Thani and Sultanah Safiyyat al-Din. Writing in Malay and Arabic, he composed a foundational manual of Shafi’i ritual law and led a sharp campaign against the Malay wujudiyya mystics Hamzah Fansuri and Shamsuddin al-Sumatrani.",
     works: [["Sirat al-mustaqim", "The straight path (Malay manual of Shafi’i ritual law)"], ["Hujjat al-siddiq", "Proof of the truthful (polemic against wujudiyya)"]] },
   { id: "katib-celebi", name: "Katib Çelebi", short: "Katib Çelebi", ar: "كاتب جلبي", b: 1609, d: 1657, dah: 1067, lane: "letters", places: ["istanbul", "aleppo", "istanbul"],
     text: "Ottoman scholar and official in Istanbul, also called Hajji Khalifa. His bibliography lists some 15,000 books in Arabic, Persian and Turkish, and his geography drew on European atlases. He urged the use of reason in public disputes.",
@@ -847,7 +850,7 @@ const FIGURES = [
   { id: "nabulusi", name: "Abd al-Ghani al-Nabulusi", short: "al-Nabulusi", ar: "عبد الغني النابلسي", b: 1641, d: 1731, dah: 1143, lane: "sufism", also: ["law", "theology"], schools: ["Hanafi", "Naqshbandi", "Qadiri"], places: ["damascus", "istanbul", "damascus", "jerusalem", "cairo", "mecca", "medina", "damascus"],
     text: "Hanafi jurist, Sufi master and prolific writer of Ottoman Damascus. Travelling widely across Syria, Egypt and the Hijaz, he defended Ibn Arabi’s unity of being, lawful music, Sufi devotion and established Ottoman customs against Kadızadeli puritan critics.",
     works: [["al-Wujud al-haqq", "True being (defence of Ibn Arabi)"], ["Idah al-dalalat fi sama’ al-alat", "Clarifying the proofs on listening to musical instruments"]] },
-  { id: "liu-zhi", name: "Liu Zhi", short: "Liu Zhi", ar: "刘智", arLang: "zh", b: 1660, bc: true, bNote: "Born in Nanjing around 1660–1670.", d: 1730, dc: true, dah: 1142, dNote: "Died around 1730 (c. 1142 AH); modern estimates range from 1724 to 1739.", lane: "sufism", also: ["philosophy", "law"], places: ["nanjing"],
+  { id: "liu-zhi", name: "Liu Zhi", short: "Liu Zhi", ar: "刘智", arLang: "zh", b: 1660, bc: true, bNote: "Born in Nanjing around 1660–1670.", d: 1730, dc: true, dNote: "Died around 1730; modern estimates range from 1724 to 1739.", lane: "sufism", also: ["philosophy", "law"], places: ["nanjing"],
     text: "Foremost author of the Han Kitab in Qing-era Nanjing. Drawing on Persian Sufi works in the Ibn Arabi tradition, especially Jami’s Lawa’ih, he presented Islamic metaphysics, ritual law and the Prophet’s biography in classical Chinese prose.",
     works: [["Tianfang xingli", "Nature and principle in Islam (1704)"], ["Tianfang dianli", "Norms and rites of Islam (1710)"]] },
   { id: "shah-wali-allah", name: "Shah Wali Allah of Delhi", short: "Shah Wali Allah", ar: "شاه ولي الله الدهلوي", b: 1703, d: 1762, dah: 1176, lane: "hadith", also: ["law", "theology"], schools: ["Hanafi", "Naqshbandi"], places: ["delhi", "mecca", "medina", "delhi"],
@@ -891,11 +894,11 @@ const FIGURES = [
   { id: "gasprinski", name: "Ismail Gasprinski", short: "Gasprinski", ar: "إسماعيل غصبرينسكي", b: 1851, d: 1914, lane: "letters", places: ["bakhchysarai"],
     text: "Crimean Tatar educator and publisher. His “new method” schools taught reading by sound along with modern subjects, and his newspaper Terjüman, in a common Turkic language, was read widely among the Muslims of the Russian Empire and beyond. The Jadid movement took its name from his method.",
     works: [["Terjüman", "The interpreter (newspaper he founded in 1883 and edited until his death)"]] },
-  { id: "barelwi", name: "Ahmad Riza Khan Barelwi", short: "Ahmad Riza Khan Barelwi", ar: "أحمد رضا خان البريلوي", b: 1856, d: 1921, dah: 1340, lane: "law", also: ["theology", "sufism"], schools: ["Hanafi", "Qadiri"], places: ["bareilly", "mecca", "bareilly"],
+  { id: "barelwi", name: "Ahmad Riza Khan Barelwi", short: "Ahmad Riza Khan Barelwi", ar: "أحمد رضا خان البريلوي", b: 1856, d: 1921, dah: 1340, lane: "law", also: ["theology", "sufism"], schools: ["Hanafi", "Qadiri"], places: ["bareilly", "mecca", "medina", "bareilly"],
     text: "Hanafi jurist and Qadiri Sufi of Bareilly in northern India who led the Ahl-i Sunnat wa Jama’at movement. Writing prolific fatwas and polemics, he defended inherited devotional practices such as celebrating the Prophet’s birthday and seeking intercession at saints’ shrines against Deobandi and Ahl-i Hadith critics, and supported traditional madrasas from 1904.",
-    works: [["Fatawa-yi Rizwiyya", "Collected Hanafi legal opinions"], ["Husam al-Haramayn", "The sword of the Two Sanctuaries (1906)"]] },
-  { id: "thanawi", name: "Ashraf Ali Thanawi", short: "Ashraf Ali Thanawi", ar: "أشرف علي التهانوي", b: 1863, d: 1943, dah: 1362, lane: "law", also: ["sufism", "quran"], schools: ["Hanafi", "Chishti"], places: ["deoband", "mecca", "deoband"],
-    text: "Hanafi jurist, Sufi guide and leading scholar of the Deobandi school in northern India. He defended adherence to the Hanafi school and classical madrasa learning while using Urdu print to reach ordinary believers, most famously in his guide to law and piety, Bihishti zewar.",
+    works: [["Fatawa-yi Rizwiyya", "Collected Hanafi legal opinions"], ["Husam al-Haramayn", "The sword of the Two Sanctuaries (1906 Hijazi fatwas against Deobandi and Ahmadi leaders)"]] },
+  { id: "thanawi", name: "Ashraf Ali Thanawi", short: "Ashraf Ali Thanawi", ar: "أشرف علي التهانوي", b: 1863, d: 1943, dah: 1362, lane: "law", also: ["sufism", "quran"], schools: ["Hanafi", "Chishti"], places: ["thana-bhawan", "deoband", "mecca", "kanpur", "mecca", "thana-bhawan"],
+    text: "Hanafi jurist, Sufi guide and leading scholar of the Deobandi school in northern India. Trained at Deoband and teaching for fourteen years in Kanpur before settling in 1897 at his khanqah in Thana Bhawan, he defended adherence to the Hanafi school and classical madrasa learning while using Urdu print to reach ordinary believers, most famously in Bihishti zewar.",
     works: [["Bihishti zewar", "Heavenly ornaments (Urdu manual of Hanafi law and ethics, c. 1905)"], ["Bayan al-Qur’an", "Exposition of the Qur’an (Urdu commentary)"]] },
   { id: "rida", name: "Muhammad Rashid Rida", short: "Rashid Rida", ar: "محمد رشيد رضا", b: 1865, d: 1935, lane: "quran", also: ["law"], places: ["qalamun", "cairo"], teachers: ["abduh"],
     text: "Syrian-born scholar who moved to Cairo to work with Muhammad Abduh. His journal al-Manar spread reformist ideas across the Muslim world, and he continued Abduh’s Qur’an commentary. From 1922, as the Ottoman state ended, he wrote on the caliphate and how it might be restored.",
@@ -960,9 +963,9 @@ const DEBATES = [
       { y: 750, c: true, text: "Ja’far al-Sadiq teaches in Medina; Shi’i tradition traces the doctrine of the Imam by designation to him.", who: ["jafar"], at: ["medina"] },
       { y: 840, c: true, text: "Al-Qasim al-Rassi writes in Medina and Egypt on the conditions of the Zaydi imamate, grounding leadership in Alid descent, learning and righteous action.", who: ["qasim-rassi"], at: ["medina", "fustat"] },
       { y: 874, text: "The eleventh Twelver Imam, Hasan al-Askari, dies in Samarra; Twelver Shi’is hold that his son enters the Minor Occultation (al-ghayba al-sughra), communicating through four deputies.", who: [], at: ["samarra"] },
-      { y: 909, text: "Ubayd Allah al-Mahdi is proclaimed Fatimid caliph in Ifriqiya (909–910), establishing an Isma’ili imamate-caliphate in North Africa.", who: [], at: ["qayrawan"] },
+      { y: 910, text: "After Abu Abdallah al-Shi’i takes Raqqada in 909, Ubayd Allah al-Mahdi enters the city in January 910 and is proclaimed Fatimid caliph in Ifriqiya, establishing an Isma’ili imamate-caliphate in North Africa.", who: [], at: ["qayrawan"] },
       { y: 941, text: "The fourth deputy of the hidden Twelfth Imam dies in Baghdad, beginning the Major Occultation (al-ghayba al-kubra) in Twelver doctrine.", who: [], at: ["baghdad"] },
-      { y: 960, c: true, text: "Al-Qadi al-Nu’man compiles Da’a’im al-Islam for the Fatimid caliph al-Mu’izz, placing devotion to the designated Isma’ili Imam at the centre of law and religion.", who: ["qadi-numan"], at: ["mahdiyya"] },
+      { y: 960, c: true, text: "At al-Mansuriyya, al-Qadi al-Nu’man compiles Da’a’im al-Islam for the Fatimid caliph al-Mu’izz, placing devotion to the designated Isma’ili Imam at the centre of law and religion.", who: ["qadi-numan"], at: ["mansuriyya"] },
       { y: 1000, c: true, text: "Al-Mufid defends the Imami doctrine of leadership with rational argument in Buyid Baghdad.", who: ["mufid"], at: ["baghdad"] },
       { y: 1045, c: true, text: "Al-Mawardi writes The Ordinances of Government, defining the caliph’s powers and those he may delegate.", who: ["mawardi"], at: ["baghdad"] },
       { y: 1094, c: true, text: "Al-Ghazali defends the Abbasid caliph against the Isma’ili claim to an infallible Imam.", who: ["ghazali"], at: ["baghdad"] },
@@ -976,7 +979,7 @@ const DEBATES = [
     text: "The first civil war pushed Muslims to ask whether those who sinned gravely, rulers included, remained believers. The answers defined the earliest theological groups and, later, how each school understood faith itself.",
     positions: [
       { name: "The sinner has left Islam", text: "A grave sinner is an unbeliever and no longer belongs to the community. This was the view of radical Khariji groups such as the Azariqa.", who: [] },
-      { name: "Ungrateful to God, not an apostate", text: "A grave sinner is guilty of ingratitude for God’s blessings (kafir ni’ma) rather than polytheistic apostasy, and remains legally within the Muslim community, able to intermarry and inherit alongside other Muslims.", who: ["jabir-ibn-zayd"], notes: { "jabir-ibn-zayd": "Early Ibadi doctrine, rooted in Jabir ibn Zayd’s Basran circle, distinguished the grave sinner’s ingratitude (kufr ni’ma) from apostasy (shirk), rejecting Khariji bloodshed against fellow Muslims." } },
+      { name: "Ungrateful to God, not a polytheist", text: "A grave sinner is guilty of ingratitude for God’s blessings (kufr ni’ma) rather than the unbelief of polytheism (kufr shirk), and remains legally within the Muslim community, able to intermarry and inherit alongside other Muslims.", who: ["jabir-ibn-zayd"], notes: { "jabir-ibn-zayd": "Early Ibadi doctrine, rooted in Jabir ibn Zayd’s Basran circle, distinguished the grave sinner’s ingratitude (kufr ni’ma) from the unbelief of polytheism (kufr shirk), rejecting Khariji bloodshed against fellow Muslims." } },
       { name: "Faith is belief and affirmation", text: "Faith is assent of the heart and affirmation of the tongue; deeds do not enter its definition, and the sinner’s fate is left to God.", who: ["abu-hanifa", "maturidi"], notes: { maturidi: "Al-Maturidi defined faith strictly as assent of the heart (tasdiq), holding that it neither grows nor shrinks; unlike creedal formulas that fold works into faith, he treated verbal confession only as an outward sign by which the community recognises a Muslim." } },
       { name: "The intermediate position", text: "The grave sinner is neither believer nor unbeliever but in a position between the two.", who: ["wasil", "abd-al-jabbar"], notes: { "abd-al-jabbar": "For Abd al-Jabbar faith is knowing God, confessing Him and doing what religion commands while avoiding what it forbids. The grave sinner is therefore called a fasiq, and if he dies unrepentant he stays in Hell forever, though punished less than an unbeliever." } },
       { name: "Faith is belief, word and deed", text: "Faith includes deeds and rises and falls with them; the sinner remains a believer with deficient faith.", who: ["ibn-hanbal", "bukhari", "ashari"], notes: { "ibn-hanbal": "The creeds transmitted under Ibn Hanbal’s name call faith word and deed, increasing and decreasing, and one of them adds that whoever omits the prayer has committed unbelief. A modern study reassigns several of these creeds to his contemporaries, so their exact wording may not be his.", ashari: "Al-Ash’ari’s short creed says faith is word and deed and increases and decreases; elsewhere he defines faith as the heart’s assent (tasdiq), with confession and deeds following from it." } }
@@ -1121,7 +1124,7 @@ const DEBATES = [
       { y: 1190, c: true, text: "In Baghdad, Ibn al-Jawzi writes Talbis Iblis, warning that later Sufi innovations depart from prophetic law while commending early ascetics.", who: ["ibn-al-jawzi"], at: ["baghdad"] },
       { y: 1315, c: true, text: "After returning to Damascus in 1313, Ibn Taymiyya and his circle write against Sufi practices and doctrines they judge contrary to the Law, while commending early sober masters who stayed within Qur’an and Sunna.", who: ["ibn-taymiyya"], at: ["damascus"] },
       { y: 1513, c: true, text: "Aisha al-Ba’uniyya moves from Damascus to Cairo (919 AH), where she is licensed to teach law and issue fatwas alongside her Sufi writings, including al-Muntakhab fi usul al-rutab.", who: ["aisha-bauniyya"], at: ["damascus", "cairo"] },
-      { y: 1785, c: true, text: "In Cairo, Murtada al-Zabidi completes Ithaf al-sada al-muttaqin, his vast commentary linking al-Ghazali’s Sufi ethics with hadith and Sunni jurisprudence.", who: ["zabidi"], at: ["cairo"] }
+      { y: 1787, text: "In Cairo, Murtada al-Zabidi completes Ithaf al-sada al-muttaqin (1201 AH / 1787), his vast commentary linking al-Ghazali’s Sufi ethics with hadith and Sunni jurisprudence.", who: ["zabidi"], at: ["cairo"] }
     ],
     related: ["unity-being", "sama"] },
 
@@ -1145,11 +1148,11 @@ const DEBATES = [
     related: ["attributes", "ijaz"] },
 
   { id: "philosophy", title: "Philosophy and revelation", term: "al-falsafa wa’l-shar’", ar: "الفلسفة والشرع",
-    phases: [[830, 1210], [1250, 1380], [1590, 1660]], lanes: ["philosophy", "theology"],
+    phases: [[830, 1210], [1250, 1380], [1590, 1635]], lanes: ["philosophy", "theology"],
     question: "Can Greek philosophy and revelation both be true, and who decides when they seem to clash?",
-    text: "The translation of Greek works raised the question of whether philosophy and revelation agree. Al-Kindi, al-Farabi and the Isma’ili philosopher Nasir-i Khusraw argued that they reach the same truth by different paths, and Ibn Sina built a complete system. Al-Ghazali judged three of its doctrines to be unbelief. Ibn Rushd replied that the Law commands philosophical study of those capable of demonstration, and Nasir al-Din al-Tusi defended Ibn Sina against Fakhr al-Din al-Razi’s critiques. Earlier, Abu Bakr al-Razi was reported to deny that prophets are needed at all; later, Ibn Taymiyya refuted Greek logic and metaphysics while Ibn Khaldun kept logic but doubted that metaphysics could be proven. In the seventeenth century Mir Damad forged the Safavid synthesis of Isfahan, while Wang Daiyu brought Islamic theology into dialogue with Neo-Confucian philosophy in China.",
+    text: "The translation of Greek works raised the question of whether philosophy and revelation agree. Al-Kindi and al-Farabi argued that they reach the same truth by different paths; Ibn Sina built a complete system, and the Isma’ili philosopher Nasir-i Khusraw likewise sought to harmonise Greek philosophy with revelation. Al-Ghazali judged three of the philosophers’ doctrines to be unbelief. Ibn Rushd replied that the Law commands philosophical study of those capable of demonstration, and Nasir al-Din al-Tusi defended Ibn Sina against Fakhr al-Din al-Razi’s critiques. Earlier, Abu Bakr al-Razi was reported to deny that prophets are needed at all; later, Ibn Taymiyya refuted Greek logic and metaphysics while Ibn Khaldun kept logic but doubted that the philosophers’ metaphysics could be proven. In the seventeenth century Mir Damad forged the Safavid synthesis of Isfahan.",
     positions: [
-      { name: "One truth, two paths", text: "Philosophy and revelation express the same truth, one by demonstration and the other by images for all people.", who: ["kindi", "farabi", "ibn-sina", "nasir-khusraw", "ibn-tufayl", "nasir-tusi", "wang-daiyu"], notes: { kindi: "Unlike al-Farabi and Ibn Sina, al-Kindi did not frame revelation as symbolic imagery for the masses: he treated prophetic knowledge as a direct divine science that philosophy also expresses rationally, and he broke with Aristotle to argue for creation from nothing (ex nihilo).", "nasir-khusraw": "In Jami’ al-hikmatayn (Harmony of the Two Wisdoms, 462 AH / 1069–1070), Nasir-i Khusraw sought to reconcile Greek philosophy with Isma’ili scriptural interpretation (ta’wil), presenting both as expressions of a single divine wisdom.", "nasir-tusi": "In his commentary on Ibn Sina’s Isharat (Remarks and Admonitions) and in Talkhis al-muhassal, Nasir al-Din al-Tusi defended Avicennan philosophy against Fakhr al-Din al-Razi’s theological critiques and helped integrate it into later Shi’i and Sunni learning.", "wang-daiyu": "In Zhengjiao zhenquan (1642), Wang Daiyu translated Islamic monotheism and metaphysics into the vocabulary of Neo-Confucian philosophy, arguing that authentic Confucian principle and Islamic revelation converge in the Real One." } },
+      { name: "One truth, two paths", text: "Philosophy and revelation express the same truth, one by demonstration and the other by images for all people.", who: ["kindi", "farabi", "ibn-sina", "nasir-khusraw", "ibn-tufayl", "nasir-tusi"], notes: { kindi: "Unlike al-Farabi and Ibn Sina, al-Kindi did not frame revelation as symbolic imagery for the masses: he treated prophetic knowledge as a direct divine science that philosophy also expresses rationally, and he broke with Aristotle to argue for creation from nothing (ex nihilo).", "nasir-khusraw": "In Jami’ al-hikmatayn (Harmony of the Two Wisdoms, 462 AH / 1069–1070), Nasir-i Khusraw sought to reconcile Greek philosophy with Isma’ili scriptural interpretation (ta’wil), presenting both as expressions of a single divine wisdom.", "nasir-tusi": "In his commentary on Ibn Sina’s Isharat (Remarks and Admonitions) and in Talkhis al-muhassal, Nasir al-Din al-Tusi defended Avicennan philosophy against Fakhr al-Din al-Razi’s theological critiques and helped integrate it into later Shi’i and Sunni learning." } },
       { name: "Philosophy errs on key points", text: "Logic and mathematics are sound, but three of the philosophers’ teachings contradict revelation, as al-Ghazali reads them: the eternity of the world, that God knows particulars only in a universal way, and the denial of bodily resurrection.", who: ["ghazali"] },
       { name: "The Law commands philosophy", text: "In the Decisive Treatise, scripture obliges those able to reason by demonstration to study philosophy, and where demonstration and the text seem to clash, the text is to be interpreted. The Incoherence of the Incoherence answers al-Ghazali point by point.", who: ["ibn-rushd"] },
       { name: "Wisdom by illumination", text: "True philosophy joins reasoning with direct experience of light.", who: ["suhrawardi", "mir-damad"], notes: { "mir-damad": "In al-Qabasat, Mir Damad fused Ibn Sina’s Peripatetic philosophy with Suhrawardi’s Illuminationism and Shi’i theology, proposing “perpetual creation” (huduth dahri) to resolve the clash between the world’s eternity and its creation." } },
@@ -1170,8 +1173,7 @@ const DEBATES = [
       { y: 1205, c: true, text: "Fakhr al-Din al-Razi draws philosophy into theology.", who: ["fakhr-razi"], at: ["herat"] },
       { y: 1315, c: true, text: "In Damascus, Ibn Taymiyya writes Dar’ ta’arud al-aql wa’l-naql (Averting Conflict between Reason and Revelation), following his Refutation of the Logicians.", who: ["ibn-taymiyya"], at: ["damascus"] },
       { y: 1377, text: "At Qal’at Ibn Salama, Ibn Khaldun completes the first draft of the Muqaddima, which he went on revising; its survey of the sciences includes a refutation of philosophy.", who: ["ibn-khaldun"], at: ["qalat"] },
-      { y: 1625, c: true, text: "In Safavid Isfahan, Mir Damad completes al-Qabasat (1034 AH / 1624–1625), joining Avicennan metaphysics and Illuminationism around the doctrine of perpetual creation (huduth dahri).", who: ["mir-damad"], at: ["isfahan"] },
-      { y: 1642, text: "In Nanjing, Wang Daiyu publishes Zhengjiao zhenquan (A Real Commentary on the True Teaching), explaining Islamic theology and metaphysics through Neo-Confucian concepts.", who: ["wang-daiyu"], at: ["nanjing"] }
+      { y: 1625, c: true, text: "In Safavid Isfahan, Mir Damad completes al-Qabasat (1034 AH / 1624–1625), joining Avicennan metaphysics and Illuminationism around the doctrine of perpetual creation (huduth dahri).", who: ["mir-damad"], at: ["isfahan"] }
     ],
     related: ["heavens", "unity-being"] },
 
@@ -1286,7 +1288,7 @@ const DEBATES = [
       { name: "Ijtihad for a new age", text: "Reform requires fresh reasoning on questions of law and society.", who: ["abduh", "rida", "iqbal"], notes: { rida: "In Muhawarat al-muslih wa’l-muqallid, dialogues between a reformer and an imitator (muqallid) first printed in al-Manar and issued as a book in 1906–07, Rashid Rida argues against taqlid and for ijtihad as the way to Muslim unity." } }
     ],
     thread: [
-      { y: 955, c: true, text: "In Fatimid Ifriqiya, al-Qadi al-Nu’man writes Kitab ikhtilaf usul al-madhahib, rejecting Sunni legal theory and ijtihad in favour of the living Imam’s authority.", who: ["qadi-numan"], at: ["mahdiyya"] },
+      { y: 955, c: true, text: "At the Fatimid capital al-Mansuriyya, al-Qadi al-Nu’man writes Kitab ikhtilaf usul al-madhahib, rejecting Sunni legal theory and ijtihad in favour of the living Imam’s authority.", who: ["qadi-numan"], at: ["mansuriyya"] },
       { y: 1050, c: true, text: "Ibn Hazm condemns imitation in law.", who: ["ibn-hazm"], at: ["cordoba"] },
       { y: 1190, c: true, text: "Al-Marghinani writes al-Hidaya, which becomes one of the most influential statements of Hanafi doctrine.", who: ["marghinani"], at: ["samarkand"] },
       { y: 1275, c: true, text: "Al-Nawawi sets out the Shafi’i school’s settled positions.", who: ["nawawi"], at: ["damascus"] },
@@ -1327,10 +1329,11 @@ const DEBATES = [
   { id: "unity-being", title: "The unity of being and its critics", term: "wahdat al-wujud", ar: "وحدة الوجود",
     phases: [[1230, 1500], [1600, 1765]], lanes: ["sufism", "theology", "philosophy"],
     question: "If God alone truly exists, what is the reality of the world?",
-    text: "Ibn Arabi taught that God alone has true existence and that all things are His self-manifestations. Later followers and critics called this teaching the unity of being, a phrase he did not use as its name. Critics such as Ibn Taymiyya held that it erased the line between Creator and creation. Jami and Abd al-Ghani al-Nabulusi defended it, and Han Kitab authors in China expressed it in classical Chinese; in Aceh, Nur al-Din al-Raniri attacked wujudiyya mystics while Abd al-Ra’uf al-Sinkili sought a reconciling middle way; in Mughal India Ahmad Sirhindi proposed a “unity of witnessing”, and Shah Wali Allah tried to reconcile the two.",
+    text: "Ibn Arabi taught that God alone has true existence and that all things are His self-manifestations. Later followers and critics called this teaching the unity of being, a phrase he did not use as its name. Critics such as Ibn Taymiyya held that it erased the line between Creator and creation. Jami and Abd al-Ghani al-Nabulusi defended it, and Han Kitab authors in China expressed it in classical Chinese; in Aceh, Nur al-Din al-Raniri attacked what he called heretical wujudiyya while Abd al-Ra’uf al-Sinkili sought a reconciling middle way; in Mughal India Ahmad Sirhindi proposed a “unity of witnessing”, and Shah Wali Allah tried to reconcile the two.",
     positions: [
       { name: "Unity of being", text: "God alone truly exists; the world is His self-manifestation.", who: ["ibn-arabi", "jami", "wang-daiyu", "nabulusi", "liu-zhi"], notes: { "wang-daiyu": "In Zhengjiao zhenquan (1642), Wang Daiyu drew on Persian Sufi metaphysics in the Ibn Arabi tradition to explain the “Real One” (Zhenyi) and the world’s dependence on God in Neo-Confucian philosophical terms.", nabulusi: "In al-Wujud al-haqq and commentaries on Ibn Arabi, Abd al-Ghani al-Nabulusi defended wahdat al-wujud as strict monotheism rather than pantheism, arguing that attributing real existence to God alone safeguards divine transcendence.", "liu-zhi": "In Tianfang xingli (Nature and Principle in Islam, 1704), Liu Zhi adapted Jami’s Lawa’ih and Ibn Arabi’s cosmology of divine self-manifestation into classical Chinese, structuring the cosmos as descending levels of God’s disclosure." } },
-      { name: "Creator and creation must stay distinct", text: "The doctrine confuses God with the world and contradicts scripture.", who: ["ibn-taymiyya", "raniri"], notes: { raniri: "In Hujjat al-siddiq and other Malay polemics in Aceh (1637–1641), Nur al-Din al-Raniri condemned the wujudiyya teachings of Hamzah Fansuri and Shamsuddin al-Sumatrani as heretical pantheism that blurred Creator and creation." } },
+      { name: "Creator and creation must stay distinct", text: "The doctrine confuses God with the world and contradicts scripture.", who: ["ibn-taymiyya"] },
+      { name: "Orthodox versus heretical wujudiyya", text: "Distinguish a Sharia-bound form of the unity of being that preserves divine transcendence from monistic readings judged to confuse Creator and creation.", who: ["raniri"], notes: { raniri: "Serving as Shaykh al-Islam of Aceh (1637–1644), Nur al-Din al-Raniri did not reject wahdat al-wujud altogether: in Malay and Arabic polemics such as Hujjat al-siddiq he distinguished an orthodox, Sharia-bound wujudiyya from the doctrines of Hamzah Fansuri and Shamsuddin al-Sumatrani, which he condemned as heretical monism blurring Creator and creation." } },
       { name: "Unity of witnessing", text: "The mystic experiences unity, but in reality God and the world remain distinct.", who: ["sirhindi"] },
       { name: "Gradation of being", text: "Existence is one reality in degrees of intensity.", who: ["mulla-sadra"] },
       { name: "Reconciliation", text: "The two views differ in wording more than in substance.", who: ["sinkili", "shah-wali-allah"], notes: { sinkili: "Returning to Aceh from Medina, Abd al-Ra’uf al-Sinkili softened al-Raniri’s polarising campaign against wujudiyya, drawing on his teacher Ibrahim al-Kurani to interpret the unity of being in harmony with divine transcendence and Sunni law." } }
@@ -1341,7 +1344,8 @@ const DEBATES = [
       { y: 1480, c: true, text: "Jami defends and explains Ibn Arabi in Herat.", who: ["jami"], at: ["herat"] },
       { y: 1610, c: true, text: "Sirhindi’s letters propose the unity of witnessing.", who: ["sirhindi"], at: ["sirhind"] },
       { y: 1630, c: true, text: "Mulla Sadra completes The Four Journeys.", who: ["mulla-sadra"], at: ["shiraz"] },
-      { y: 1640, c: true, text: "As Shaykh al-Islam of Aceh (1637–1641), Nur al-Din al-Raniri campaigns against Malay wujudiyya mystics in treatises such as Hujjat al-siddiq.", who: ["raniri"], at: ["aceh"] },
+      { y: 1640, c: true, text: "As Shaykh al-Islam of Aceh (1637–1644), Nur al-Din al-Raniri campaigns against Malay wujudiyya mystics in treatises such as Hujjat al-siddiq.", who: ["raniri"], at: ["aceh"] },
+      { y: 1642, text: "In Nanjing, Wang Daiyu publishes Zhengjiao zhenquan (A Real Commentary on the True Teaching), presenting Islamic monotheism and Sufi metaphysics of the Real One in Neo-Confucian Chinese prose.", who: ["wang-daiyu"], at: ["nanjing"] },
       { y: 1665, c: true, text: "In Aceh, Abd al-Ra’uf al-Sinkili mediates the controversy over wujudiyya, framing Sufi metaphysics within Shafi’i law and Shattari devotion.", who: ["sinkili"], at: ["aceh"] },
       { y: 1685, c: true, text: "In Ottoman Damascus, Abd al-Ghani al-Nabulusi writes treatises such as al-Wujud al-haqq defending Ibn Arabi’s unity of being against puritan critics.", who: ["nabulusi"], at: ["damascus"] },
       { y: 1704, text: "In Nanjing, Liu Zhi completes Tianfang xingli, rendering Ibn Arabi’s and Jami’s metaphysics of being into classical Chinese.", who: ["liu-zhi"], at: ["nanjing"] },
@@ -1349,28 +1353,28 @@ const DEBATES = [
     ],
     related: ["sufism-law", "philosophy", "sama"] },
 
-  { id: "renewal", title: "Renewal and reform in the 18th and 19th centuries", term: "al-tajdid wa’l-islah", ar: "التجديد والإصلاح",
+  { id: "renewal", title: "Renewal and reform", term: "al-tajdid wa’l-islah", ar: "التجديد والإصلاح",
     phases: [[1680, 1920]], lanes: ["theology", "law", "hadith"],
     question: "How should the faith be renewed, and which inherited practices are corruptions?",
-    text: "In the eighteenth and nineteenth centuries scholars across the Muslim world called for renewal: a return to the Qur’an and hadith and the correction of practices they judged to be innovations. The movements differed widely in method and aim. Many Sufis and school jurists defended inherited practice against them.",
+    text: "From the late seventeenth to the early twentieth century, scholars across the Muslim world called for renewal: a return to the Qur’an and hadith and the correction of practices they judged to be innovations. The movements differed widely in method and aim. Many Sufis and school jurists defended inherited practice against them.",
     positions: [
       { name: "Renewal through synthesis", text: "Join hadith, law, theology and Sufism into a coherent whole.", who: ["shah-wali-allah"] },
       { name: "Purify worship", text: "Strict monotheism forbids seeking the intercession of saints and venerating tombs.", who: ["ibn-abd-al-wahhab"] },
       { name: "Reform of state and society", text: "Rulers who govern unjustly must be resisted and a just order built.", who: ["dan-fodio"] },
       { name: "Renewal through teaching", text: "Renewal spreads through teaching: women as well as men are to learn and teach the faith, in their own languages as well as in Arabic.", who: ["nana-asmau"] },
       { name: "Back to the sources", text: "Rulings should come from the Qur’an and hadith, not from one school.", who: ["shawkani"] },
-      { name: "Defence of inherited practice", text: "Established Sufi and school practice rests on scholarly authority.", who: ["nabulusi", "zabidi", "barelwi"], notes: { nabulusi: "Against the puritan Kadızadeli movement in the Ottoman lands, Abd al-Ghani al-Nabulusi defended Sufi orders, visiting saints’ tombs, music and established scholarly customs as grounded in the Sharia.", zabidi: "In Cairo, Murtada al-Zabidi linked Indian, Yemeni and Ottoman ulama in a scholarly renewal that conserved classical Hanafi jurisprudence, hadith chains and al-Ghazali’s Sufi ethics rather than breaking with inherited practice.", barelwi: "Leading the Ahl-i Sunnat wa Jama’at movement from Bareilly, Ahmad Riza Khan Barelwi issued extensive Hanafi fatwas and his 1906 Husam al-Haramayn defending the Prophet’s birthday celebration (mawlid), shrine visitation and intercession against Deobandi and Ahl-i Hadith critics." } }
+      { name: "Defence of inherited practice", text: "Established Sufi and school practice rests on scholarly authority.", who: ["nabulusi", "zabidi", "barelwi"], notes: { nabulusi: "Against the puritan Kadızadeli movement in the Ottoman lands, Abd al-Ghani al-Nabulusi defended Sufi orders, visiting saints’ tombs, music and established scholarly customs as grounded in the Sharia.", zabidi: "In Cairo, Murtada al-Zabidi linked Indian, Yemeni and Ottoman ulama in a scholarly renewal that conserved classical Hanafi jurisprudence, hadith chains and al-Ghazali’s Sufi ethics rather than breaking with inherited practice.", barelwi: "Leading the Ahl-i Sunnat wa Jama’at movement from Bareilly, Ahmad Riza Khan Barelwi issued extensive Hanafi fatwas (Fatawa-yi Rizwiyya) defending the Prophet’s birthday celebration (mawlid), shrine visitation and intercession against Deobandi and Ahl-i Hadith critics, and in Husam al-Haramayn (1906) compiled Hijazi fatwas condemning leading Deobandi elders (including Thanawi) and Mirza Ghulam Ahmad over their statements regarding the Prophet." } }
     ],
     thread: [
       { y: 1690, c: true, text: "In Damascus, Abd al-Ghani al-Nabulusi defends Sufi devotion, tomb visitation and established Ottoman customs against Kadızadeli puritanism.", who: ["nabulusi"], at: ["damascus"] },
       { y: 1732, text: "Shah Wali Allah returns to Delhi from the Hijaz.", who: ["shah-wali-allah"], at: ["mecca", "delhi"] },
       { y: 1744, text: "Ibn Abd al-Wahhab allies with Muhammad ibn Saud at Diriyah; 1744 is the conventional date.", who: ["ibn-abd-al-wahhab"], at: ["diriyah"] },
-      { y: 1785, c: true, text: "In Cairo, Murtada al-Zabidi teaches hadith and completes his commentary on al-Ghazali’s Ihya’, renewing inherited Sunni-Sufi learning across Ottoman and Indian networks.", who: ["zabidi"], at: ["cairo"] },
+      { y: 1787, text: "In Cairo, Murtada al-Zabidi completes his ten-volume commentary on al-Ghazali’s Ihya’ (5 Jumada II 1201 AH / March 1787), renewing inherited Sunni-Sufi learning across Ottoman, Yemeni and Indian networks.", who: ["zabidi"], at: ["cairo"] },
       { y: 1804, text: "Usman dan Fodio’s emigration and the start of the jihad in Hausaland.", who: ["dan-fodio"], at: ["degel"] },
       { y: 1809, text: "Sokoto becomes the capital of the new caliphate.", who: ["dan-fodio"], at: ["sokoto"] },
       { y: 1815, c: true, text: "Al-Shawkani writes against fixed adherence to a school.", who: ["shawkani"], at: ["sanaa"] },
       { y: 1840, c: true, text: "By the 1840s Nana Asma’u’s ’Yan Taru network of women teachers is carrying education from Sokoto across the caliphate.", who: ["nana-asmau"], at: ["sokoto"] },
-      { y: 1906, c: true, text: "During his Hijaz pilgrimage (1323 AH / 1906), Ahmad Riza Khan Barelwi compiles Husam al-Haramayn with endorsements from Meccan and Medinan ulama, defending devotional reverence for the Prophet against reformist critics.", who: ["barelwi"], at: ["bareilly", "mecca"] }
+      { y: 1906, text: "During his Hijaz pilgrimage in 1906 (1323–1324 AH), Ahmad Riza Khan Barelwi obtains fatwas from Meccan and Medinan ulama and compiles Husam al-Haramayn, condemning leading Deobandi elders (including Thanawi) and Mirza Ghulam Ahmad over their statements regarding the Prophet.", who: ["barelwi"], at: ["mecca", "medina"] }
     ],
     related: ["ijtihad", "reform"] },
 
@@ -1396,7 +1400,7 @@ const DEBATES = [
       { y: 1884, text: "Al-Afghani and Abduh publish al-Urwa al-wuthqa in Paris.", who: ["afghani", "abduh"], at: ["paris"] },
       { y: 1898, text: "Rashid Rida founds al-Manar in Cairo.", who: ["rida"], at: ["cairo"] },
       { y: 1904, text: "In Bareilly, Ahmad Riza Khan Barelwi supports the founding of Madrasa Manzar-i Islam to train traditional Sunni-Sufi ulama.", who: ["barelwi"], at: ["bareilly"] },
-      { y: 1905, c: true, text: "Ashraf Ali Thanawi issues Bihishti zewar (Heavenly Ornaments), bringing Deobandi Hanafi law, ethics and piety into Urdu print for ordinary households.", who: ["thanawi"], at: ["deoband"] },
+      { y: 1905, c: true, text: "At his khanqah in Thana Bhawan, Ashraf Ali Thanawi writes Bihishti zewar (Heavenly Ornaments, c. 1905), bringing Deobandi Hanafi law, ethics and piety into Urdu print for ordinary households.", who: ["thanawi"], at: ["thana-bhawan"] },
       { y: 1911, text: "Behbudi writes The Patricide in Samarkand, the first Uzbek play.", who: ["behbudi"], at: ["samarkand"] },
       { y: 1926, text: "Exiled to Barla, Said Nursi begins writing most of the Risale-i Nur.", who: ["nursi"], at: ["barla"] },
       { y: 1930, text: "Iqbal publishes his Six Lectures on the Reconstruction of Religious Thought in Islam.", who: ["iqbal"], at: ["lahore"] }
@@ -1520,8 +1524,8 @@ const SOURCES = {
     ["TDV İslâm Ansiklopedisi: Sadr, Muhammed Bâkır", "https://islamansiklopedisi.org.tr/sadr-muhammed-bakir"]
   ],
   "barelwi": [
-    ["Brill EI3O: Aḥmad Riżā Khān Barelwī (Usha Sanyal)", "https://referenceworks.brill.com/display/entries/EI3O/COM-23995.xml"],
-    ["Brill EI3O: Deobandīs", "https://referenceworks.brill.com/display/entries/EI3O/COM-35956.xml", "South Asian madrasa networks and the 1904 Bareilly madrasa"],
+    ["Brill EI3O: Barelwīs (Usha Sanyal)", "https://referenceworks.brill.com/display/entries/EI3O/COM-23995.xml"],
+    ["Brill EI3O: Madrasa in South Asia (Francis Robinson)", "https://referenceworks.brill.com/display/entries/EI3O/COM-35956.xml", "South Asian madrasa networks and the 1904 Bareilly madrasa"],
     ["Oxford Academic: Nile Green on South Asian Sunni devotion", "https://academic.oup.com/book/6150/chapter/149705917"],
     ["TDV İslâm Ansiklopedisi: Rızâ Han Birelvî", "https://islamansiklopedisi.org.tr/riza-han-birelvi"]
   ],
@@ -1769,7 +1773,7 @@ const SOURCES = {
   ],
   "liu-zhi": [
     ["Harvard University Press: Sachiko Murata, William C. Chittick & Tu Weiming, The Sage Learning of Liu Zhi", "https://www.hup.harvard.edu/books/9780674033252"],
-    ["Brill EI3O: Liu Zhi", "https://referenceworks.brill.com/doi/10.1163/1573-3912_ei3_COM_35858"],
+    ["Brill (PDF): Tianfang Dianli: Norms and Rites of Islam in Imperial China", "https://brill.com/display/book/9789004319257/B9789004319257_003.pdf", "Tianfang dianli"],
     ["Cambridge (Iranian Studies): Jāmī: A Legend in China", "https://www.cambridge.org/core/journals/iranian-studies/article/jami-a-legend-in-china-a-study-of-the-transmission-and-transformation-of-jamis-texts-in-china/DC351E4C8B3750D4E0B757BB162557F4", "his use of Jami’s Lawa’ih"],
     ["TDV İslâm Ansiklopedisi: Liu Zhi", "https://islamansiklopedisi.org.tr/liu-zhi"]
   ],
@@ -1869,8 +1873,7 @@ const SOURCES = {
   "qadi-numan": [
     ["Institute of Ismaili Studies: al-Nuʿman, al-Qadi (d. 363 AH / 974 CE)", "https://www.iis.ac.uk/scholarly-contributions/al-numan-al-qadi-d-363-ah-974-ce/"],
     ["Encyclopaedia Iranica: Ejtehād", "https://www.iranicaonline.org/articles/ejtehad/", "Kitab ikhtilaf usul al-madhahib"],
-    ["TDV İslâm Ansiklopedisi: Kādî Nu’mân", "https://islamansiklopedisi.org.tr/kadi-numan"],
-    ["TDV İslâm Ansiklopedisi: Deâimü’l-İslâm", "https://islamansiklopedisi.org.tr/deaimul-islam", "Da’a’im al-Islam"]
+    ["TDV İslâm Ansiklopedisi: Nu‘mân b. Muhammed", "https://islamansiklopedisi.org.tr/numan-b-muhammed", "court service at al-Mahdiyya and al-Mansuriyya, Da’a’im al-Islam"]
   ],
   "qasim-rassi": [
     ["Cambridge University Press: Patricia Crone, God’s Rule, ch. 9 “The Zaydis” (PDF)", "https://resolve.cambridge.org/core/services/aop-cambridge-core/content/view/6B69E868DD32C812D5D39ECF705285A8/9780748646500c9_p99-109_CBO.pdf/the-zaydis.pdf"],
@@ -1987,10 +1990,12 @@ const SOURCES = {
     ["TDV İslâm Ansiklopedisi: Rifâa et-Tahtâvî", "https://islamansiklopedisi.org.tr/rifaa-et-tahtavi"]
   ],
   "thanawi": [
-    ["Brill EI3O: Deobandīs", "https://referenceworks.brill.com/display/entries/EI3O/COM-35956.xml"],
-    ["Brill EWIO: Ashraf ʿAlī Thānawī and taqlīd", "https://referenceworks.brill.com/display/entries/EWIO/COM-002098.xml"],
+    ["Brill EI3O: Madrasa in South Asia (Francis Robinson)", "https://referenceworks.brill.com/display/entries/EI3O/COM-35956.xml"],
+    ["Brill EWIO: Marriage Practices: India: 19th and early 20th century (Asiya Alam)", "https://referenceworks.brill.com/display/entries/EWIO/COM-002098.xml", "Ashraf Ali Thanawi’s Bihishti zewar and taqlid"],
     ["Max Planck / Journal of Religious History (2021, PDF): Margrit Pernau & Max Stille on Bihishti zewar", "https://pure.mpg.de/rest/items/item_3231501_8/component/file_3293688/content", "Bihishti zewar"],
-    ["TDV İslâm Ansiklopedisi: Eşref Ali", "https://islamansiklopedisi.org.tr/esref-ali"]
+    ["TDV İslâm Ansiklopedisi: Eşref Ali", "https://islamansiklopedisi.org.tr/esref-ali"],
+    ["University of California Press: Barbara Daly Metcalf, Perfecting Women: Maulana Ashraf ʿAli Thanawi’s Bihishti Zewar", "https://www.ucpress.edu/books/perfecting-women/paper"],
+    ["Cambridge (CSSH, 2022): Sovereign and Virtuous Body: The Competent Muslim Woman’s Guide to Health in Thanawi’s Bihishti Zewar (1905)", "https://www.cambridge.org/core/journals/comparative-studies-in-society-and-history/article/sovereign-and-virtuous-body-the-competent-muslim-womans-guide-to-health-in-thanawis-bihishti-zewar-1905/889725055B23F6D4098313D2C5192269"]
   ],
   "tirmidhi": [
     ["Britannica: al-Tirmidhī", "https://www.britannica.com/biography/al-Tirmidhi"],
@@ -2007,7 +2012,7 @@ const SOURCES = {
   "wang-daiyu": [
     ["Matheson Trust / Journal of Sufi Studies 2 (2013, PDF): Kristian Petersen on Wang Daiyu", "https://www.themathesontrust.org/papers/fareasternreligions/petersen-heartofwangdaiyus.pdf"],
     ["Cambridge University Press: Islamic Thought in China", "https://www.cambridge.org/core/books/islamic-thought-in-china/multiple-meanings-of-pilgrimage-in-sinoislamic-thought/DFE5B03CA526CC212558AE4613585184"],
-    ["Brill EI3O: Wang Daiyu", "https://referenceworks.brill.com/display/entries/EI3O/COM-35928.xml"]
+    ["Religions (MDPI, 2026): Recasting Islamic Thought in China: Conceptual Reconfiguration in Wang Daiyu’s Han Kitab", "https://www.mdpi.com/2077-1444/17/10/1118"]
   ],
   "wasil": [
     ["Britannica: Muʿtazilah", "https://www.britannica.com/topic/Mutazilah"],
@@ -2124,14 +2129,14 @@ const SOURCES = {
     ["Britannica: Muḥammad ʿAbduh", "https://www.britannica.com/biography/Muhammad-Abduh", "conservative opposition at al-Azhar"],
     ["Britannica: Sir Sayyid Ahmad Khan", "https://www.britannica.com/biography/Sayyid-Ahmad-Khan", "conservative opposition in India"],
     ["Britannica: Deoband school", "https://www.britannica.com/topic/Deoband-school", "Deoband and traditional madrasa learning"],
-    ["Brill EI3O: Aḥmad Riżā Khān Barelwī (Usha Sanyal)", "https://referenceworks.brill.com/display/entries/EI3O/COM-23995.xml", "Barelwi traditionalist education"]
+    ["Brill EI3O: Barelwīs (Usha Sanyal)", "https://referenceworks.brill.com/display/entries/EI3O/COM-23995.xml", "Barelwi traditionalist education"]
   ],
   "debate:renewal": [
     ["Britannica: Islamic world: reform from 1683", "https://www.britannica.com/topic/Islamic-world/Islamic-history-from-1683-to-the-present-reform-dependency-and-recovery"],
     ["Britannica: Wahhābī", "https://www.britannica.com/topic/Wahhabi"],
     ["Oxford Academic: Asmaʾu, Nana", "https://academic.oup.com/edited-volume/61663/chapter-abstract/553437989"],
     ["Britannica: ʿAbd al-Ghanī al-Nābulusī", "https://www.britannica.com/biography/Abd-al-Ghani-al-Nabulusi", "al-Nabulusi’s defence of Sufi and Ottoman practice"],
-    ["Brill EI3O: Aḥmad Riżā Khān Barelwī (Usha Sanyal)", "https://referenceworks.brill.com/display/entries/EI3O/COM-23995.xml", "Barelwi defence of inherited devotional practice"]
+    ["Brill EI3O: Barelwīs (Usha Sanyal)", "https://referenceworks.brill.com/display/entries/EI3O/COM-23995.xml", "Barelwi defence of inherited devotional practice"]
   ],
   "debate:sama": [
     ["Britannica: samāʿ", "https://www.britannica.com/topic/sama-Sufi-religious-practice"],
@@ -2394,14 +2399,15 @@ const SOURCES = {
   ],
   "note:ijtihad:qadi-numan": [
     ["Encyclopaedia Iranica: Ejtehād", "https://www.iranicaonline.org/articles/ejtehad/"],
-    ["Institute of Ismaili Studies: al-Nuʿman, al-Qadi (d. 363 AH / 974 CE)", "https://www.iis.ac.uk/scholarly-contributions/al-numan-al-qadi-d-363-ah-974-ce/"]
+    ["Institute of Ismaili Studies: al-Nuʿman, al-Qadi (d. 363 AH / 974 CE)", "https://www.iis.ac.uk/scholarly-contributions/al-numan-al-qadi-d-363-ah-974-ce/"],
+    ["TDV İslâm Ansiklopedisi: Nu‘mân b. Muhammed", "https://islamansiklopedisi.org.tr/numan-b-muhammed"]
   ],
   "note:ijtihad:rida": [
     ["NYU Arabic Collections Online: Rashid Rida, Muḥāwarāt al-muṣliḥ wa’l-muqallid (Cairo, 1906–07)", "https://sites.dlib.nyu.edu/viewer/node/24960"]
   ],
   "note:ijtihad:thanawi": [
-    ["Brill EWIO: Ashraf ʿAlī Thānawī and taqlīd", "https://referenceworks.brill.com/display/entries/EWIO/COM-002098.xml"],
-    ["Brill EI3O: Deobandīs", "https://referenceworks.brill.com/display/entries/EI3O/COM-35956.xml"]
+    ["Brill EWIO: Marriage Practices: India: 19th and early 20th century (Asiya Alam)", "https://referenceworks.brill.com/display/entries/EWIO/COM-002098.xml", "Thanawi’s defence of taqlid and Maliki legal borrowing"],
+    ["Brill EI3O: Madrasa in South Asia (Francis Robinson)", "https://referenceworks.brill.com/display/entries/EI3O/COM-35956.xml"]
   ],
   "note:imamate:jabir-ibn-zayd": [
     ["TDV İslâm Ansiklopedisi: Câbir b. Zeyd", "https://islamansiklopedisi.org.tr/cabir-b-zeyd"],
@@ -2413,7 +2419,7 @@ const SOURCES = {
   ],
   "note:imamate:qadi-numan": [
     ["Institute of Ismaili Studies: al-Nuʿman, al-Qadi (d. 363 AH / 974 CE)", "https://www.iis.ac.uk/scholarly-contributions/al-numan-al-qadi-d-363-ah-974-ce/"],
-    ["TDV İslâm Ansiklopedisi: Deâimü’l-İslâm", "https://islamansiklopedisi.org.tr/deaimul-islam"]
+    ["TDV İslâm Ansiklopedisi: Nu‘mân b. Muhammed", "https://islamansiklopedisi.org.tr/numan-b-muhammed"]
   ],
   "note:imamate:shammakhi": [
     ["Cambridge University Press: Paul M. Love Jr., Ibadi Muslims of North Africa (2018), ch. 7", "https://www.cambridge.org/core/books/ibadi-muslims-of-north-africa/end-of-a-tradition/656A6A9B8E73B8B2D779AB9FE9A15D67"],
@@ -2439,24 +2445,20 @@ const SOURCES = {
     ["Routledge Encyclopedia of Philosophy: al-Razi, Fakhr al-Din (Theology and Philosophy)", "https://www.rep.routledge.com/articles/biographical/al-razi-fakhr-al-din-1149-1209/v-1/sections/theology-and-philosophy"],
     ["TDV İslâm Ansiklopedisi: Tûsî, Nasîrüddin", "https://islamansiklopedisi.org.tr/tusi-nasiruddin"]
   ],
-  "note:philosophy:wang-daiyu": [
-    ["Matheson Trust / Journal of Sufi Studies 2 (2013, PDF): Kristian Petersen on Wang Daiyu", "https://www.themathesontrust.org/papers/fareasternreligions/petersen-heartofwangdaiyus.pdf"],
-    ["Brill EI3O: Wang Daiyu", "https://referenceworks.brill.com/display/entries/EI3O/COM-35928.xml"]
-  ],
   "note:reason-law:jabir-ibn-zayd": [
     ["Cambridge University Press: Omer Awass, Fatwa and the Making and Renewal of Islamic Law (2023), ch. 2", "https://www.cambridge.org/core/books/fatwa-and-the-making-and-renewal-of-islamic-law/fatwa-in-the-classical-age/7DE13632B92F01C307F98C8CE400C792"],
     ["TDV İslâm Ansiklopedisi: Câbir b. Zeyd", "https://islamansiklopedisi.org.tr/cabir-b-zeyd"]
   ],
   "note:reform:barelwi": [
-    ["Brill EI3O: Aḥmad Riżā Khān Barelwī (Usha Sanyal)", "https://referenceworks.brill.com/display/entries/EI3O/COM-23995.xml"],
-    ["Brill EI3O: Deobandīs", "https://referenceworks.brill.com/display/entries/EI3O/COM-35956.xml"]
+    ["Brill EI3O: Barelwīs (Usha Sanyal)", "https://referenceworks.brill.com/display/entries/EI3O/COM-23995.xml"],
+    ["Brill EI3O: Madrasa in South Asia (Francis Robinson)", "https://referenceworks.brill.com/display/entries/EI3O/COM-35956.xml"]
   ],
   "note:reform:thanawi": [
-    ["Brill EI3O: Deobandīs", "https://referenceworks.brill.com/display/entries/EI3O/COM-35956.xml"],
+    ["Brill EI3O: Madrasa in South Asia (Francis Robinson)", "https://referenceworks.brill.com/display/entries/EI3O/COM-35956.xml"],
     ["Max Planck / Journal of Religious History (2021, PDF): Margrit Pernau & Max Stille on Bihishti zewar", "https://pure.mpg.de/rest/items/item_3231501_8/component/file_3293688/content"]
   ],
   "note:renewal:barelwi": [
-    ["Brill EI3O: Aḥmad Riżā Khān Barelwī (Usha Sanyal)", "https://referenceworks.brill.com/display/entries/EI3O/COM-23995.xml"],
+    ["Brill EI3O: Barelwīs (Usha Sanyal)", "https://referenceworks.brill.com/display/entries/EI3O/COM-23995.xml"],
     ["TDV İslâm Ansiklopedisi: Rızâ Han Birelvî", "https://islamansiklopedisi.org.tr/riza-han-birelvi"]
   ],
   "note:renewal:nabulusi": [
@@ -2507,7 +2509,7 @@ const SOURCES = {
   ],
   "note:sufism-law:liu-zhi": [
     ["Harvard University Press: Sachiko Murata, William C. Chittick & Tu Weiming, The Sage Learning of Liu Zhi", "https://www.hup.harvard.edu/books/9780674033252"],
-    ["Brill EI3O: Liu Zhi", "https://referenceworks.brill.com/doi/10.1163/1573-3912_ei3_COM_35858"]
+    ["Brill (PDF): Tianfang Dianli: Norms and Rites of Islam in Imperial China", "https://brill.com/display/book/9789004319257/B9789004319257_003.pdf"]
   ],
   "note:sufism-law:raniri": [
     ["Cambridge University Press: Islamic Connections (Shari’a-mindedness in the Malay World and the contributions of Nur al-Din al-Raniri)", "https://www.cambridge.org/core/books/islamic-connections/shariamindedness-in-the-malay-world-and-the-indian-connection-the-contributions-of-nur-aldin-alraniri-and-nik-abdul-aziz-bin-haji-nik-mat/3E31F6C8CB33F7DFCBAF74ADB5CCDE9D"],
@@ -2557,7 +2559,8 @@ const SOURCES = {
   ],
   "note:unity-being:raniri": [
     ["Cambridge University Press: Islamic Connections (Shari’a-mindedness in the Malay World and the contributions of Nur al-Din al-Raniri)", "https://www.cambridge.org/core/books/islamic-connections/shariamindedness-in-the-malay-world-and-the-indian-connection-the-contributions-of-nur-aldin-alraniri-and-nik-abdul-aziz-bin-haji-nik-mat/3E31F6C8CB33F7DFCBAF74ADB5CCDE9D"],
-    ["Brill (PDF): G. W. J. Drewes on Nur al-Din al-Raniri", "https://brill.com/display/book/9789004454170/B9789004454170_s008.pdf"]
+    ["Brill (PDF): G. W. J. Drewes on Nur al-Din al-Raniri", "https://brill.com/display/book/9789004454170/B9789004454170_s008.pdf"],
+    ["TDV İslâm Ansiklopedisi: Nûreddin er-Rânîrî", "https://islamansiklopedisi.org.tr/nureddin-er-raniri", "1637–1644 tenure in Aceh and distinction between orthodox and heretical wujudiyya"]
   ],
   "note:unity-being:sinkili": [
     ["Brill EI3O: ʿAbd al-Raʾūf al-Sinkilī (Peter G. Riddell)", "https://referenceworks.brill.com/display/entries/EI3O/COM-0149.xml"],
@@ -2565,7 +2568,7 @@ const SOURCES = {
   ],
   "note:unity-being:wang-daiyu": [
     ["Matheson Trust / Journal of Sufi Studies 2 (2013, PDF): Kristian Petersen on Wang Daiyu", "https://www.themathesontrust.org/papers/fareasternreligions/petersen-heartofwangdaiyus.pdf"],
-    ["Brill EI3O: Wang Daiyu", "https://referenceworks.brill.com/display/entries/EI3O/COM-35928.xml"]
+    ["Religions (MDPI, 2026): Recasting Islamic Thought in China: Conceptual Reconfiguration in Wang Daiyu’s Han Kitab", "https://www.mdpi.com/2077-1444/17/10/1118"]
   ],
   "thread:caliphate-modern:1922": [
     ["Yale University Press: The Caliphate or Supreme Imamate", "https://yalebooks.yale.edu/book/9780300190274/the-caliphate-or-supreme-imamate/"]
@@ -2706,7 +2709,8 @@ const SOURCES = {
   ],
   "thread:ijtihad:955": [
     ["Encyclopaedia Iranica: Ejtehād", "https://www.iranicaonline.org/articles/ejtehad/"],
-    ["Institute of Ismaili Studies: al-Nuʿman, al-Qadi (d. 363 AH / 974 CE)", "https://www.iis.ac.uk/scholarly-contributions/al-numan-al-qadi-d-363-ah-974-ce/"]
+    ["Institute of Ismaili Studies: al-Nuʿman, al-Qadi (d. 363 AH / 974 CE)", "https://www.iis.ac.uk/scholarly-contributions/al-numan-al-qadi-d-363-ah-974-ce/"],
+    ["TDV İslâm Ansiklopedisi: Nu‘mân b. Muhammed", "https://islamansiklopedisi.org.tr/numan-b-muhammed", "al-Mansuriyya and Kitab ikhtilaf usul al-madhahib"]
   ],
   "thread:imamate:1515": [
     ["Cambridge University Press: Paul M. Love Jr., Ibadi Muslims of North Africa (2018), ch. 7", "https://www.cambridge.org/core/books/ibadi-muslims-of-north-africa/end-of-a-tradition/656A6A9B8E73B8B2D779AB9FE9A15D67"],
@@ -2730,9 +2734,10 @@ const SOURCES = {
     ["Encyclopaedia Iranica: Ḡayba", "https://www.iranicaonline.org/articles/gayba/"],
     ["Encyclopaedia Iranica: Islam in Iran ix. The Deputies of Mahdi", "https://www.iranicaonline.org/articles/islam-in-iran-ix-the-deputies-of-mahdi/"]
   ],
-  "thread:imamate:909": [
+  "thread:imamate:910": [
     ["Britannica: ʿUbayd Allāh al-Mahdī", "https://www.britannica.com/biography/Ubayd-Allah-al-Mahdi"],
-    ["Encyclopaedia Iranica: Fatimids", "https://www.iranicaonline.org/articles/fatimids/"]
+    ["Encyclopaedia Iranica: Fatimids", "https://www.iranicaonline.org/articles/fatimids/"],
+    ["Encyclopaedia Iranica: Isma’ilism iii. Isma’ili History (Farhad Daftary)", "https://www.iranicaonline.org/articles/ismailism/iii-ismaili-history/", "entry into Raqqada and proclamation as caliph in January 910"]
   ],
   "thread:imamate:941": [
     ["Encyclopaedia Iranica: Ḡayba", "https://www.iranicaonline.org/articles/gayba/"],
@@ -2740,7 +2745,7 @@ const SOURCES = {
   ],
   "thread:imamate:960": [
     ["Institute of Ismaili Studies: al-Nuʿman, al-Qadi (d. 363 AH / 974 CE)", "https://www.iis.ac.uk/scholarly-contributions/al-numan-al-qadi-d-363-ah-974-ce/"],
-    ["TDV İslâm Ansiklopedisi: Deâimü’l-İslâm", "https://islamansiklopedisi.org.tr/deaimul-islam"]
+    ["TDV İslâm Ansiklopedisi: Nu‘mân b. Muhammed", "https://islamansiklopedisi.org.tr/numan-b-muhammed", "al-Mansuriyya and Da’a’im al-Islam (c. 349/960)"]
   ],
   "thread:maqasid:1078": [
     ["TDV İslâm Ansiklopedisi: Cüveynî, İmâmü’l-Haremeyn", "https://islamansiklopedisi.org.tr/cuveyni-imamul-haremeyn"]
@@ -2767,10 +2772,6 @@ const SOURCES = {
     ["Encyclopaedia Iranica: Dāmād, Mīr(-e), Sayyed Moḥammad Bāqer", "https://www.iranicaonline.org/articles/damad-mir-e-sayyed-mohammad-baqer-b/"],
     ["TDV İslâm Ansiklopedisi: Dâmâd, Muhammed Bâkır", "https://islamansiklopedisi.org.tr/damad-muhammed-bakir"]
   ],
-  "thread:philosophy:1642": [
-    ["Matheson Trust / Journal of Sufi Studies 2 (2013, PDF): Kristian Petersen on Wang Daiyu", "https://www.themathesontrust.org/papers/fareasternreligions/petersen-heartofwangdaiyus.pdf"],
-    ["Brill EI3O: Wang Daiyu", "https://referenceworks.brill.com/display/entries/EI3O/COM-35928.xml"]
-  ],
   "thread:philosophy:838": [
     ["Oxford Academic: The rise of falsafa: al-Kindī, On First Philosophy", "https://academic.oup.com/edited-volume/38657/chapter-abstract/335767408"],
     ["Stanford Encyclopedia of Philosophy: al-Kindi", "https://plato.stanford.edu/entries/al-kindi/"]
@@ -2788,18 +2789,20 @@ const SOURCES = {
   ],
   "thread:reform:1867": [
     ["Britannica: Deoband school", "https://www.britannica.com/topic/Deoband-school"],
-    ["Brill EI3O: Deobandīs", "https://referenceworks.brill.com/display/entries/EI3O/COM-35956.xml"]
+    ["Brill EI3O: Madrasa in South Asia (Francis Robinson)", "https://referenceworks.brill.com/display/entries/EI3O/COM-35956.xml"]
   ],
   "thread:reform:1875": [
     ["Aligarh Muslim University: History", "https://www.amu.ac.in/about-us/history"]
   ],
   "thread:reform:1904": [
-    ["Brill EI3O: Aḥmad Riżā Khān Barelwī (Usha Sanyal)", "https://referenceworks.brill.com/display/entries/EI3O/COM-23995.xml"],
-    ["Brill EI3O: Deobandīs", "https://referenceworks.brill.com/display/entries/EI3O/COM-35956.xml"]
+    ["Brill EI3O: Barelwīs (Usha Sanyal)", "https://referenceworks.brill.com/display/entries/EI3O/COM-23995.xml"],
+    ["Brill EI3O: Madrasa in South Asia (Francis Robinson)", "https://referenceworks.brill.com/display/entries/EI3O/COM-35956.xml"]
   ],
   "thread:reform:1905": [
     ["Max Planck / Journal of Religious History (2021, PDF): Margrit Pernau & Max Stille on Bihishti zewar", "https://pure.mpg.de/rest/items/item_3231501_8/component/file_3293688/content"],
-    ["TDV İslâm Ansiklopedisi: Eşref Ali", "https://islamansiklopedisi.org.tr/esref-ali"]
+    ["TDV İslâm Ansiklopedisi: Eşref Ali", "https://islamansiklopedisi.org.tr/esref-ali"],
+    ["University of California Press: Barbara Daly Metcalf, Perfecting Women: Maulana Ashraf ʿAli Thanawi’s Bihishti Zewar", "https://www.ucpress.edu/books/perfecting-women/paper"],
+    ["Cambridge (CSSH, 2022): Sovereign and Virtuous Body: The Competent Muslim Woman’s Guide to Health in Thanawi’s Bihishti Zewar (1905)", "https://www.cambridge.org/core/journals/comparative-studies-in-society-and-history/article/sovereign-and-virtuous-body-the-competent-muslim-womans-guide-to-health-in-thanawis-bihishti-zewar-1905/889725055B23F6D4098313D2C5192269"]
   ],
   "thread:reform:1911": [
     ["Encyclopaedia Iranica: Behbudi", "https://www.iranicaonline.org/articles/behbudi-molla-mahmud-kaja/"]
@@ -2814,16 +2817,17 @@ const SOURCES = {
     ["Britannica: ʿAbd al-Ghanī al-Nābulusī", "https://www.britannica.com/biography/Abd-al-Ghani-al-Nabulusi"],
     ["Brill: Samer Akkach, Letters of a Sufi Scholar", "https://brill.com/display/title/14508"]
   ],
-  "thread:renewal:1785": [
+  "thread:renewal:1787": [
     ["Brill (PDF): Stefan Reichmuth on Murtaḍā al-Zabīdī", "https://brill.com/display/book/edcoll/9789047413349/B9789047413349_s011.pdf"],
-    ["TDV İslâm Ansiklopedisi: Zebîdî, Muhammed Murtazâ", "https://islamansiklopedisi.org.tr/zebidi-muhammed-murtaza"]
+    ["TDV İslâm Ansiklopedisi: Zebîdî, Muhammed Murtazâ", "https://islamansiklopedisi.org.tr/zebidi-muhammed-murtaza"],
+    ["ghazali.org: Itḥāf al-sadāh al-muttaqīn (colophon, 5 Jumada II 1201 AH / 1787 CE)", "https://www.ghazali.org/ithaf/", "completion in Jumada II 1201 AH (1787 CE)"]
   ],
   "thread:renewal:1840": [
     ["Revue de la FM6OA: The life and contribution of Nana Asmaʾu", "https://www.fm6oa.org/revue/article/the-life-and-contribution-of-nana-asmau/"],
     ["Brill: Sufi Feminism, Women Leaders in African Sufi Movements", "https://doi.org/10.1163/15700666-12340258"]
   ],
   "thread:renewal:1906": [
-    ["Brill EI3O: Aḥmad Riżā Khān Barelwī (Usha Sanyal)", "https://referenceworks.brill.com/display/entries/EI3O/COM-23995.xml"],
+    ["Brill EI3O: Barelwīs (Usha Sanyal)", "https://referenceworks.brill.com/display/entries/EI3O/COM-23995.xml"],
     ["TDV İslâm Ansiklopedisi: Rızâ Han Birelvî", "https://islamansiklopedisi.org.tr/riza-han-birelvi"]
   ],
   "thread:sama:1045": [
@@ -2882,9 +2886,10 @@ const SOURCES = {
     ["Mamluk Studies Review 7.1 (2003): Th. Emil Homerin, Living Love: The Mystical Writings of ʿĀʾishah al-Bāʿūnīyah", "https://knowledge.uchicago.edu/records/ec50p-6bg66", "her move to Cairo in 919 AH (1513–1514 CE) and licences to teach law and issue fatwas"],
     ["NYU Press: The Principles of Sufism (trans. Th. Emil Homerin)", "https://nyupress.org/9781479864683/the-principles-of-sufism/", "al-Muntakhab fi usul al-rutab"]
   ],
-  "thread:sufism-law:1785": [
+  "thread:sufism-law:1787": [
     ["Brill (PDF): Stefan Reichmuth on Murtaḍā al-Zabīdī", "https://brill.com/display/book/edcoll/9789047413349/B9789047413349_s011.pdf"],
-    ["TDV İslâm Ansiklopedisi: Zebîdî, Muhammed Murtazâ", "https://islamansiklopedisi.org.tr/zebidi-muhammed-murtaza"]
+    ["TDV İslâm Ansiklopedisi: Zebîdî, Muhammed Murtazâ", "https://islamansiklopedisi.org.tr/zebidi-muhammed-murtaza"],
+    ["ghazali.org: Itḥāf al-sadāh al-muttaqīn (colophon, 5 Jumada II 1201 AH / 1787 CE)", "https://www.ghazali.org/ithaf/", "completion in Jumada II 1201 AH (1787 CE)"]
   ],
   "thread:tafsir:1043": [
     ["TDV İslâm Ansiklopedisi: Kuşeyrî, Abdülkerîm b. Hevâzin", "https://islamansiklopedisi.org.tr/kuseyri-abdulkerim-b-hevazin", "beginning Lata’if al-isharat in 434 AH (1042–1043 CE)"],
@@ -2924,7 +2929,12 @@ const SOURCES = {
   ],
   "thread:unity-being:1640": [
     ["Cambridge University Press: Islamic Connections (Shari’a-mindedness in the Malay World and the contributions of Nur al-Din al-Raniri)", "https://www.cambridge.org/core/books/islamic-connections/shariamindedness-in-the-malay-world-and-the-indian-connection-the-contributions-of-nur-aldin-alraniri-and-nik-abdul-aziz-bin-haji-nik-mat/3E31F6C8CB33F7DFCBAF74ADB5CCDE9D"],
-    ["Brill (PDF): G. W. J. Drewes on Nur al-Din al-Raniri", "https://brill.com/display/book/9789004454170/B9789004454170_s008.pdf"]
+    ["Brill (PDF): G. W. J. Drewes on Nur al-Din al-Raniri", "https://brill.com/display/book/9789004454170/B9789004454170_s008.pdf"],
+    ["TDV İslâm Ansiklopedisi: Nûreddin er-Rânîrî", "https://islamansiklopedisi.org.tr/nureddin-er-raniri", "1637–1644 tenure in Aceh and distinction between orthodox and heretical wujudiyya"]
+  ],
+  "thread:unity-being:1642": [
+    ["Matheson Trust / Journal of Sufi Studies 2 (2013, PDF): Kristian Petersen on Wang Daiyu", "https://www.themathesontrust.org/papers/fareasternreligions/petersen-heartofwangdaiyus.pdf"],
+    ["Religions (MDPI, 2026): Recasting Islamic Thought in China: Conceptual Reconfiguration in Wang Daiyu’s Han Kitab", "https://www.mdpi.com/2077-1444/17/10/1118"]
   ],
   "thread:unity-being:1665": [
     ["Brill EI3O: ʿAbd al-Raʾūf al-Sinkilī (Peter G. Riddell)", "https://referenceworks.brill.com/display/entries/EI3O/COM-0149.xml"],
